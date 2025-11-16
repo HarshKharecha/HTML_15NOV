@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assest/image/HTML Logo.png" type="image/x-icon">
+    <title>My First HTML</title> <!-- Ans -->
+</head>
+
+<!-- Task 10: Basic webpage
+Question: Write code for a page with the title “My First HTML” and a heading “Welcome to HTML”. -->
+
+<body>
+    <h1>Welcome to HTML</h1> <!-- Ans -->
+    
+        <hr>
+    <button onclick="displaySourceCode()">More (Show Source Code)</button>
+
+    <pre id="sourceCodeOutput" 
+         style="border:1px solid #000;padding:10px;white-space:pre-wrap;font-size:14px;"></pre>
+
+<script>
+    function displaySourceCode() {
+        const sourceCode = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assest/image/HTML Logo.png" type="image/x-icon">
+    <title>My First HTML</title> <!-- Ans -->
+</head>
+
+<!-- Task 10: Basic webpage
+Question: Write code for a page with the title “My First HTML” and a heading “Welcome to HTML”. -->
+
+<body>
+    <h1>Welcome to HTML</h1> <!-- Ans -->
+</body>
+</html>`;
+                            
+        document.getElementById("sourceCodeOutput").innerText = sourceCode;
+    }
+</script>
+</body>
+</html>
