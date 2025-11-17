@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assest/image/HTML Logo.png" type="image/x-icon">
+    <title>Combined Example</title>
+    <style>
+        html p {
+            font-size: larger;
+        }
+        html ul {
+            font-size: larger;
+        }
+        html li {
+            font-size: 19px;
+            margin-bottom: 9px;
+        }
+    </style>
+</head>
+
+<!-- Task 15: Combined Example
+Question: Write HTML code that uses: -->
+
+<body>
+
+    <!-- Ans -->
+    <header>
+        <h1>My Article Title</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Understanding HTML Structure</h2>
+            <p>
+                This is an example article demonstrating how to use semantic HTML 
+                elements such as <code>header</code>, <code>main</code>, 
+                <code>article</code>, <code>aside</code>, and <code>footer</code>.
+            </p>
+        </article>
+
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">HTML Basics</a></li>
+                <li><a href="#">Semantic Elements</a></li>
+                <li><a href="#">CSS Styling Guide</a></li>
+            </ul>
+        </aside>
+    </main>
+
+            <hr>
+    <button onclick="displaySourceCode()">More (Show Source Code)</button>
+
+    <pre id="sourceCodeOutput" 
+         style="border:1px solid #000;padding:10px;white-space:pre-wrap;font-size:14px;"></pre>
+
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
+<script>
+    function displaySourceCode() {
+        const sourceCode = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assest/image/HTML Logo.png" type="image/x-icon">
+    <title>Combined Example</title>
+    <style>
+        html p {
+            font-size: larger;
+        }
+        html ul {
+            font-size: larger;
+        }
+        html li {
+            font-size: 19px;
+            margin-bottom: 9px;
+        }
+    </style>
+</head>
+
+<!-- Task 15: Combined Example
+Question: Write HTML code that uses: -->
+
+<body>
+
+    <!-- Ans -->
+    <header>
+        <h1>My Article Title</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Understanding HTML Structure</h2>
+            <p>
+                This is an example article demonstrating how to use semantic HTML 
+                elements such as <code>header</code>, <code>main</code>, 
+                <code>article</code>, <code>aside</code>, and <code>footer</code>.
+            </p>
+        </article>
+
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">HTML Basics</a></li>
+                <li><a href="#">Semantic Elements</a></li>
+                <li><a href="#">CSS Styling Guide</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>`;
+                            
+        document.getElementById("sourceCodeOutput").innerText = sourceCode;
+    }
+</script>
+</body>
+</html>

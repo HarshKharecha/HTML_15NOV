@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assest/image/HTML Logo.png" type="image/x-icon">
+    <title>Semantic Element Example</title>
+    <style>
+        html p {
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<!--Task 8: Semantic Element Example
+Question: Write a snippet with <header> and <footer>.-->
+
+<body>
+
+    <!--Ans-->
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to my webpage</p>
+    </header>
+
+    <p>This is the main content of the page.</p> <!--Ans-->
+
+    <hr>
+    <button onclick="displaySourceCode()">More (Show Source Code)</button>
+
+    <pre id="sourceCodeOutput" 
+         style="border:1px solid #000;padding:10px;white-space:pre-wrap;font-size:14px;"></pre>
+
+    
+    <!--Ans-->
+    <footer>
+    <p>© 2025 By HarshKharecha. All rights reserved.</p>
+    </footer>
+
+<script>
+    function displaySourceCode() {
+        const sourceCode = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html p {
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<!--Task 8: Semantic Element Example
+Question: Write a snippet with <header> and <footer>.-->
+
+<body>
+
+    <!--Ans-->
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to my webpage</p>
+    </header>
+
+    <p>This is the main content of the page.</p> <!--Ans-->
+
+    <!--Ans-->
+    <footer>
+    <p>© 2025 By HarshKharecha. All rights reserved.</p>
+    </footer>
+</body>
+</html>`;
+                            
+        document.getElementById("sourceCodeOutput").innerText = sourceCode;
+    }
+</script>
+</body>
+</html>
