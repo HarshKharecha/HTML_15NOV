@@ -30,55 +30,6 @@ Question: Write HTML code for an <aside> containing related links. -->
             <li><a href="https://example.com/article3">Related Article 3</a></li>
         </ul>
     </aside>
-    
-    <hr>
 
-    <button onclick="displaySourceCode()">More (Show Source Code)</button>
-
-    <pre id="sourceCodeOutput" 
-         style="border:1px solid #000;padding:10px;white-space:pre-wrap;font-size:14px;"></pre>
-
-<script>
-    function displaySourceCode() {
-        const sourceCode = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assest/image/HTML Logo.png" type="image/x-icon">
-    <title>Aside Element</title>
-    <style>
-        html ul {
-            font-size: larger;
-        }
-        html li {
-            font-size: 19px;
-            margin-bottom: 9px;
-        }
-    </style>
-</head>
-
-<!-- Task 10: <aside> Element
-Question: Write HTML code for an <aside> containing related links. -->
-
-<body>
-
-    <!-- Ans -->
-    <aside>
-        <h2>Related Links</h2>
-        <ul>
-            <li><a href="https://example.com/article1">Related Article 1</a></li>
-            <li><a href="https://example.com/article2">Related Article 2</a></li>
-            <li><a href="https://example.com/article3">Related Article 3</a></li>
-        </ul>
-    </aside>
-
-</body>
-</html>`;
-                            
-        document.getElementById("sourceCodeOutput").innerText = sourceCode;
-    }
-</script>
 </body>
 </html>
