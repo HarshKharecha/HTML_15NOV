@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../../assest/image/HTML_Logo.png" type="image/x-icon">
+    <title>Mastering HTML Forms: A Step-by-Step Assignment</title>
+</head>
+
+<body>
+
+    <h1>HTML Forms (with Hints & Answers)</h1>
+
+    <h2 >Task 1: Create a simple form with a text input for “Name” and a submit button.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;form&gt;</code></span>, <span style="color: #955023;"><code>&lt;input type="text"&gt;</code></span>, <span style="color: #955023;"><code>&lt;input type="submit"&gt;</code></span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h2>🚀 Here is a simple form with a text input for “Name” and a submit button.</h2></dt>
+        <dd>
+            <form>
+                <label for="name"><strong>Name:</strong></label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 2: Create a form with email input and password input.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;input type="email"&gt;</code></span> and <span style="color: #955023;"><code>&lt;input type="password"&gt;</code></span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a form with email input and password input.</h3></dt>
+        <dd>
+            <form>
+                <label for="email"><strong>Email:</strong></label>
+                <input type="text" id="email" name="email">
+                <br><br>
+                <label for="password"><strong>Password:</strong></label>
+                <input type="text" id="password" name="password">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 3: Make a search form using the GET method.</h2>
+    <h3>💡 Hint: Method should be <span style="color: #955023;">get</span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a search form using the GET method.</h3></dt>
+        <dd>
+            <form action="/search-results" method="get">
+                <label for="query"><strong>Search:</strong></label>
+                <input type="text" id="query" name="q" placeholder="Enter your search term">
+                <input type="submit" value="Search">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 4: Add a “Reset” button to clear form inputs.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;input type="reset"&gt;</code></span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a “Reset” button to clear form inputs.</h3></dt>
+        <dd>
+            <form action="/search-results" method="get">
+                <label for="query"><strong>Search:</strong></label>
+                <input type="text" id="query" name="q" placeholder="Enter your search term">
+                <input type="submit" value="Search">
+                <input type="reset" value="clear">
+            </form>            
+        </dd>
+    </dl>
+
+    <h2>Task 5: Create a radio button group for gender selection.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;">type="radio"</span> with the same <sapn style="color: #955023;">name</sapn>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a radio button group for gender selection.</h3></dt>
+        <dd>
+            <form>
+                <p><strong>Select your Gender:</strong></p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male"><strong>Male</strong></label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female"><strong>Female</strong></label><br>
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 6: Create a checkbox group for hobbies.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;">type="checkbox"</span> and different <sapn style="color: #955023;">value</sapn>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a checkbox group for hobbies.</h3></dt>
+        <dd>
+            <form>
+                <p><strong>Select ypur Hobbie (check all that apply):</strong></p>
+                <input type="checkbox" id="reading" name="hobbies" value="reading">
+                <label for="reading"><strong>Reading</strong></label><br>
+                <input type="checkbox" id="hiking" name="hobbies" value="hiking">
+                <label for="hiking"><strong>Hiking</strong></label><br>
+                <input type="checkbox" id="coding" name="hobbies" value="coding">
+                <label for="coding"><strong>Coding</strong></label><br>
+                <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+                <label for="cooking"><strong>Cooking</strong></label>
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 7: Add a drop-down selection for country.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;select&gt;</code></span> and <span style="color: #955023;"><code>&lt;option&gt;</code></span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a drop-down selection for country.</h3></dt>
+        <dd>
+            <form>
+                <label for="country"><strong>Select your Country:</strong></label>
+                <select id="country" name="country">
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="india">India</option>
+                    <option value="germany">Germany</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 8: Create a textarea for user comments.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;textarea&gt;</code></span> with rows and cols.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a textarea for user comments.</h3></dt>
+        <dd>
+            <form>
+                <label for="comments"><strong>Comments:</strong></label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Type your comments here..."></textarea>
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 9: Add a file upload input in a form.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;">type="file"</span> and <span style="color: #955023;">enctype="multipart/form-data"</span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a file upload input in a form.</h3></dt>
+        <dd>
+            <form action="/upload-target" method="post" enctype="multipart/form-data">
+                <label for="document"><strong>Upload Document (PDF, JPEG, etc.):</strong></label>
+                <input type="file" id="document" name="document">
+                <br><br>
+                <input type="submit" value="Upload">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 10: Create a form with <span style="color: #955023;">autocomplete="off"</span>.</h2>
+    <h3>💡 Hint: Add <span style="color: #955023;">autocomplete="off"</span> to <span style="color: #955023;"><code>&lt;form&gt;</code></span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a form with autocomplete="off".</h3></dt>
+        <dd>
+            <form action="/process-data" method="post" autocomplete="off">
+                <p><strong>This form is set to <span style="color: #955023;">autocomplete="off"</span>.</strong></p>
+                <label for="username"><strong>Username:</strong></label>
+                <input type="text" id="username" name="username">
+                <br><br>
+                <label for="password"><strong>Password:</strong></label>
+                <input type="password" id="password" name="password">
+                <br><br>
+                <input type="submit" value="Sign In">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 11: Create a form with <span style="color: #955023;">target="_blank"</span> to open submission in a new tab.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;">target="_blank"</span> in <span style="color: #955023;"><code>&lt;form&gt;</code></span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a form with target="_blank" to open submission in a new tab.</h3></dt>
+        <dd>
+            <form action="/process-data" method="post" target="_blank">
+                <p><strong>Submitting this form will open the results in a new tab.</strong></p>
+                <label for="feedback"><strong>Your Feedback:</strong></label>
+                <input type="text" id="feedback" name="feedback" required>
+                <br><br>
+                <input type="submit" value="Submit and Open New Tab">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 12: Add hidden input to a form.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;">type="hidden"</span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is hidden input to a form.</h3></dt>
+        <dd>
+            <form action="/process-order" method="post">
+                <p><strong>Please select your product options:</strong></p>
+                <label for="quantity"><strong>Quantity:</strong></label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <br><br>
+                <input type="hidden" id="product_id" name="product_id" value="P4783X"> <!--in value enter defolt 1 product_id-->
+                <input type="submit" value="Place Order">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 13: Create a form with placeholder text in input fields.</h2>
+    <h3>💡 Hint: Use <span style="color: #955023;">placeholder="..."</span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a form with placeholder text in input fields.</h3></dt>
+        <dd>
+            <form>
+                <h3>User Registration</h3>
+                <label for="name"><strong>Full Name:</strong></label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Full Name">
+                <br><br>
+                <label for="email"><strong>Email Address:</strong></label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Address">
+                <br><br>
+                <label for="phone"><strong>Phone Number:</strong></label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number">
+                <br><br>
+                <input type="submit" value="Register">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 14: Add a <span style="color: #955023;">name</span> attribute to all form elements.</h2>
+    <h3>💡 Hint: Every <span style="color: #955023;"><code>&lt;input&gt;</code></span> or <span style="color: #955023;"><code>&lt;select&gt;</code></span> should have <span style="color: #955023;">name</span>.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a name attribute to all form elements.</h3></dt>
+        <dd>
+            <form action="/submit-data" method="post">
+                <h3>User Feedback Form</h3>
+                <label for="user_name"><strong>Name:</strong></label>
+                <input type="text" id="user_name" name="user_name" placeholder="Enter Your Name" required>
+                <br><br>
+                <label for="user_email"><strong>Email:</strong></label>
+                <input type="email" id="user_email" name="user_email" placeholder="Enter Your Email" required>
+                <br><br>
+                <hr>
+                <p><strong>Select Contact Preference (must share same <span style="color: #955023;">name</span>):</strong></p>
+                <input type="radio" id="pref_email" name="contact_pref" value="email">
+                <label for="pref_email"><strong>Email</strong></label>
+                <input type="radio" id="pref_phone" name="contact_pref" value="phone">
+                <label for="pref_phone"><strong>Phone</strong></label>
+                <br><br>
+                <p><strong>How did you hear about us? (multiple options possible):</strong></p>
+                <input type="checkbox" id="source_search" name="source[]" value="search_engine">
+                <label for="source_search"><strong>Search Engine</strong></label>
+                <input type="checkbox" id="source_social" name="source[]" value="social_media">
+                <label for="source_social"><strong>Social Media</strong></label>
+                <br><br>
+                <label for="product_area"><strong>Product Area:</strong></label>
+                <select id="product_area" name="product_area">
+                    <option value="" disabled selected>-- Choose Area --</option>
+                    <option value="billing">Billing</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+                <br><br>
+                <label for="user_comments"><strong>Your Feedback:</strong></label><br>
+                <textarea id="user_comments" name="user_comments" rows="3" cols="40"></textarea>
+                <br><br>
+                <input type="submit" name="submit_button" value="Send Feedback">
+            </form>
+        </dd>
+    </dl>
+
+    <h2>Task 15: Create a complete registration form using text, email, password, radio buttons, checkboxes, select, and submit.</h2>
+    <h3>💡 Hint: Combine all input types.</h3>
+    <h3>Answer:</h3>
+
+    <dl>
+        <dt><h3>👇 Here is a complete registration form using text, email, password, radio buttons, checkboxes, select, and submit.</h3></dt>
+        <dd>
+            <form action="/register-user" method="post" id="registrationForm" autocomplete="off">
+                <h3>User Registration</h3>
+                <label for="full_name"><strong>Full Name:</strong></label>
+                <input type="text" id="full_name" name="full_name" placeholder="Enter your Full Name" required>
+                <br><br>
+                <label for="email_address"><strong>Email Address:</strong></label>
+                <input type="email" id="email_address" name="email_address" placeholder="Enter Your Email Address" required>
+                <br><br>
+                <label for="user_password"><strong>Password:</strong></label>
+                <input type="password" id="user_password" name="user_password" placeholder="Enter Min. 8 characters password" required>
+                <br><br>
+                <hr>
+                <p><strong>Select your Gender:</strong></p>
+                <input type="radio" id="gender_male" name="gender" value="male" required>
+                <label for="gender_male"><strong>Male</strong></label><br>
+                <input type="radio" id="gender_female" name="gender" value="female">
+                <label for="gender_female"><strong>Female</strong></label><br>
+                <br><br>
+                <label for="country"><strong>Country:</strong></label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="india">India</option>
+                    <option value="germany">Germany</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+                <br><br>
+                <hr>
+                <p><strong>Interests (check all that apply):</strong></p>
+                <input type="checkbox" id="interest_tech" name="interests[]" value="technology">
+                <label for="interest_tech"><strong>Technology</strong></label><br>
+                <input type="checkbox" id="interest_sports" name="interests[]" value="sports">
+                <label for="interest_sports"><strong>Sports</strong></label><br>
+                <input type="checkbox" id="interest_art" name="interests[]" value="art">
+                <label for="interest_art"><strong>Arts & Culture</strong></label>
+                <br><br>
+                <input type="checkbox" id="terms" name="terms_accepted" value="yes" required>
+                <label for="terms"><strong>I agree to the Terms and Conditions</strong></label>
+                <br><br>
+                <input type="submit" value="Register Account">
+            </form>
+        </dd>
+    </dl>
+
+</body>
+</html>
