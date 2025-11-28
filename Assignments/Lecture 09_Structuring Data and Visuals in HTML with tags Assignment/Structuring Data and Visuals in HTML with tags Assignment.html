@@ -5,36 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./../../assest/image/HTML_Logo.png" type="image/x-icon">
-    <title>HTML Navigation Absolute vs Relative Paths & The Power of a Assignment HTML Navigation</title>
+    <title>HTML Tables (<colgroup>, colspan, rowspan)</title>
 </head>
 
 <body>
 
-    <h1>HTML Headings, Lists, Blockquotes, Details & Summary and Navigation</h1>
+    <h1>HTML Tables (<span style="color: #955023;"><code>&lt;colgroup&gt;</code></span>, <span style="color: #955023;">colspan</span>, <span style="color: #955023;">rowspan</span>)</h1>
 
     <h2>Task 1: Create a simple table with 3 columns: Name, Age, Grade.</h2>
     <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;table&gt;</code></span>, <span style="color: #955023;"><code>&lt;tr&gt;</code></span>, <span style="color: #955023;"><code>&lt;th&gt;</code></span>, <span style="color: #955023;"><code>&lt;td&gt;</code></span>.</h3>
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h2>🚀 Here is a basic link to an external website.</h2></dt>
+        <dt><h2>🚀 Here is a simple table with 3 columns: Name, Age, Grade.</h2></dt>
         <dd>
-            <ul>
-                <li><a href="https://www.google.com/"><strong>Goggle</strong></a></li>
-            </ul>
+            <table border="2px">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Nimesh</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+                <tr>
+                    <td>Nikhil</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
-    <h2>Task 2: Add a <span style="color: #955023;">colgroup</span> to color the first column lightblue..</h2>
+    <h2>Task 2: Add a <span style="color: #955023;">colgroup</span> to color the first column lightblue.</h2>
     <h3>💡 Hint: Use <span style="color: #955023;"><code>&lt;colgroup&gt;</code></span> and <span style="color: #955023;">col</span> with <span style="color: #955023;">style</span>.</h3>
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a link to an internal page.</h3></dt>
+        <dt><h3>👇 Here is a <span style="color: #955023;">colgroup</span> to color the first column lightblue.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="./../Lecture 04_Tags and Elements, Attributes,semantic/Aside Element.html"><strong>About</strong></a></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;">
+                </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Nimesh</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+                <tr>
+                    <td>Nikhil</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -43,11 +74,29 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a link in a new browser tab.</h3></dt>
+        <dt><h3>👇 Here is Style the second and third columns.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="./../Lecture 04_Tags and Elements, Attributes,semantic/Aside Element.html" target="_blank"><strong>New Browser Tab</strong></a></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                <col span="1" style="background-color: lightblue;">
+                <col span="2" style="background-color: aqua;">
+            </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Nimesh</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+                <tr>
+                    <td>Nikhil</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -56,11 +105,28 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a download link for a file.</h3></dt>
+        <dt><h3>👇 Here is Merged the first row into a single header.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="resume.pdf" target="_blank" download><strong>Download File</strong></a></li>
-            </ul>
+            <table border="2px">
+                <tr>
+                    <th colspan="3">Student Information</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Nimesh</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+                <tr>
+                    <td>Nikhil</td>
+                    <td>19</td>
+                    <td>A1</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -69,11 +135,33 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is an email link that opens the user’s email client.</h3></dt>
+        <dt><h3>👇 Here is Merged two rows for the first student's name.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="mailto:info@example.com" target="_blank"><strong>Email Us</strong></a></li>
-            </ul>
+            <table border="2px">
+                <tr>
+                    <th>Name</th>
+                    <th>Standard</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nimesh</th>
+                    <td>9th</td>
+                    <td>75%</td>
+                </tr>
+                 <tr>
+                    <td>10th</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nikhil</th>
+                    <td>9th</td>
+                    <td>71%</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>86%</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -82,11 +170,39 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a phone call link for number.</h3></dt>
+        <dt><h3>👇 Here is a table with alternating column colors.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="tel:+911234567890" target="_blank"><strong>Call Us</strong></a></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;">
+                    <col span="1" style="background-color: aqua;">
+                    <col span="1" style="background-color: rgb(0, 195, 255);">
+                    <col span="1" style="background-color: rgb(255, 223, 119);">
+                </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Standard</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nimesh</th>
+                    <td>9th</td>
+                    <td>75%</td>
+                </tr>
+                 <tr>
+                    <td>10th</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nikhil</th>
+                    <td>9th</td>
+                    <td>71%</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>86%</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -95,11 +211,37 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a jump link that scrolls to a section.</h3></dt>
+        <dt><h3>👇 Here is a total row at the bottom using colspan.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="#" target="_blank"><strong>Call Us</strong></a></li>
-            </ul>
+            <table border="2px">
+                <tr>
+                    <th>Name</th>
+                    <th>Standard</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nimesh</th>
+                    <td>9th</td>
+                    <td>75%</td>
+                </tr>
+                 <tr>
+                    <td>10th</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nikhil</th>
+                    <td>9th</td>
+                    <td>71%</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>86%</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Total Students</th>
+                    <td>2</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -108,15 +250,30 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a navigation menu.</h3></dt>
+        <dt><h3>👇 Here is a table with a header row and 3 data rows.</h3></dt>
         <dd>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
+            <table border="2px">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Hobby</th>
+                </tr>
+                <tr>
+                    <th>Nimesh</th>
+                    <td>19</td>
+                    <td>Reading</td>
+                </tr>
+                <tr>
+                    <th>Nikhil</th>
+                    <td>19</td>
+                    <td>Drawing</td>
+                </tr>
+                <tr>
+                    <th>Shivam</th>
+                    <td>20</td>
+                    <td>Badminton</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -125,11 +282,33 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a tooltip for an abbreviation “HTML”.</h3></dt>
+        <dt><h3>👇 Here is Merged the subject cell vertically for a student.</h3></dt>
         <dd>
-            <ul>
-                <li><abbr title="HyperText Markup Language"><strong>HTML</strong></abbr></li>
-            </ul>
+            <table border="2px">
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Mark</th>
+            </tr>
+            <tr>
+                <td>Nimesh</td>
+                <th rowspan="2">Maths</th>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Nikhil</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Shivam</td>
+                <th rowspan="2">Science</th>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Bhuvi</td>
+                <td>84</td>
+            </tr>
+            </table>
         </dd>
     </dl>
 
@@ -138,11 +317,42 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is an image (logo.png) to the homepage.</h3></dt>
+        <dt><h3>👇 Here is a table with a title row spanning all columns and colored.</h3></dt>
         <dd>
-            <ul>
-                <li><img src="./../../assest/image/img.jpg" alt="(logo.png) to the homepage"></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;">
+                    <col span="1" style="background-color: aqua;">
+                    <col span="1" style="background-color: rgb(0, 195, 255);">
+                </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Standard</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nimesh</th>
+                    <td>9th</td>
+                    <td>75%</td>
+                </tr>
+                 <tr>
+                    <td>10th</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nikhil</th>
+                    <td>9th</td>
+                    <td>71%</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>86%</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Total Students</th>
+                    <td>2</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -151,11 +361,41 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a relative link to a file inside a folder.</h3></dt>
+        <dt><h3>👇 Here is style multiple columns at once with span.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="./../Lecture 04_Tags and Elements, Attributes,semantic/Aside Element.html"></a><strong>guide</strong></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;">
+                    <col span="2" style="background-color: aqua;">
+                </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Standard</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nimesh</th>
+                    <td>9th</td>
+                    <td>75%</td>
+                </tr>
+                 <tr>
+                    <td>10th</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nikhil</th>
+                    <td>9th</td>
+                    <td>71%</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>86%</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Total Students</th>
+                    <td>2</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -164,11 +404,35 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a relative link to go one folder back and open.</h3></dt>
+        <dt><h3>👇 Here is Combine rowspan and colspan in a table cell.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="./../Lecture 03_Introduction to HTML/Add a paragraph.html"><strong>about</strong></a></li>
-            </ul>
+            <table border="2px">
+                <tr>
+                    <th colspan="3">Government Polytechnic</th>
+                </tr>
+                <tr>
+                    <th>class</th>
+                    <th>Name</th>
+                    <th>Roll No.</th>
+                </tr>
+                <tr>
+                    <th rowspan="4">EC Enginering</th>
+                    <td>Nimesh</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Nikhil</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Shivam</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Bhuvi</td>
+                    <td>4</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -177,11 +441,45 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a link that points to the top of the same page.</h3></dt>
+        <dt><h3>👇 Here is a timetable-like table using rowspan for a subject repeated across days.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="#top"><strong>Top</strong></a></li>
-            </ul>
+            <table border="2px">
+                <tr>
+                    <th>Day</th>
+                    <th>09:00 TO 10:00</th>
+                    <th>10:00 To 11:00</th>
+                    <th>11:00 TO 11:30</th>
+                    <th>11:30 To 12:30</th>
+                    <th>12:30 To 01:30</th>
+                </tr>
+                <tr>
+                    <th>Monday</th>
+                    <td rowspan="2">Maths</td>
+                    <td>English</td>
+                    <td rowspan="2">Break</td>
+                    <td>Science</td>
+                    <td rowspan="2">Physics</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td>Computer</td>
+                    <td>Maths</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td>Science</td>
+                    <td>English</td>
+                    <td rowspan="2">Break</td>
+                    <td rowspan="2">computer</td>
+                    <td>Maths</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>English</td>
+                    <td>Maths</td>
+                    <td>Science</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -190,11 +488,39 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a link styled as a button using CSS.</h3></dt>
+        <dt><h3>👇 Here is Apply background color to all columns.</h3></dt>
         <dd>
-            <ul>
-                <li><a href="#" class="button-link">Click Me</a></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;">
+                    <col span="1" style="background-color: aqua;">
+                    <col span="1" style="background-color: rgb(0, 195, 255);">
+                    <col span="1" style="background-color: rgb(255, 223, 119);">
+                </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Standard</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nimesh</th>
+                    <td>9th</td>
+                    <td>75%</td>
+                </tr>
+                 <tr>
+                    <td>10th</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Nikhil</th>
+                    <td>9th</td>
+                    <td>71%</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>86%</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
@@ -203,13 +529,40 @@
     <h3>Answer:</h3>
 
     <dl>
-        <dt><h3>👇 Here is a link styled as a button using CSS.</h3></dt>
+        <dt><h3>👇 Here is a complete student report combining <span style="color: #955023;"><code>&lt;colgroup&gt;</code></span>, <span style="color: #955023;">rowspan</span>, and <span style="color: #955023;">colspan</span>.</h3></dt>
         <dd>
-            <ul>
-                <li><abbr title="Mix">Abbre Tag</abbr></li>
-                <li><a href="https://youtube.com/" target="_blank">YouTub</a></li>
-                <li><h3 id="contact">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum repellendus ducimus quibusdam nam reprehenderit consequuntur, ab voluptatum corporis temporibus est ad ipsam perferendis excepturi accusantium ipsa iusto. Placeat, aperiam!</h3></li>
-            </ul>
+            <table border="2px">
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;">
+                    <col span="1" style="background-color: aqua;">
+                    <col span="1" style="background-color: rgb(0, 195, 255);">
+                </colgroup>
+                <tr>
+                    <th colspan="3">Government Polytechnic</th>
+                </tr>
+                <tr>
+                    <th>class</th>
+                    <th>Name</th>
+                    <th>Roll No.</th>
+                </tr>
+                <tr>
+                    <th rowspan="4">EC Enginering</th>
+                    <td>Nimesh</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Nikhil</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Shivam</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Bhuvi</td>
+                    <td>4</td>
+                </tr>
+            </table>
         </dd>
     </dl>
 
