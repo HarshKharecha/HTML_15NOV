@@ -42,11 +42,11 @@
         <h2>Simple Practice Survey</h2>
         <p><strong>Please provide some basic information.</strong></p>
 
-        <label for="name"><strong>Your Name:</strong></label><br>
-        <input type="text" id="name" name="user_name" required><br><br>
+        <label for="user_name"><strong>Your Name:</strong></label><br>
+        <input type="text" id="user_name" name="user_name" required><br><br>
 
-        <label for="email"><strong>Email Address:</strong></label><br>
-        <input type="email" id="email" name="user_email" required><br><br>
+        <label for="user_email"><strong>Email Address:</strong></label><br>
+        <input type="email" id="user_email" name="user_email" required><br><br>
 
         <p><strong>Which is your favorite programming language?</strong></p>
         <input type="radio" id="html" name="fav_lang" value="HTML">
@@ -68,6 +68,90 @@
         <textarea id="feedback" name="user_feedback" rows="5" cols="40"></textarea><br><br>
 
         <input type="submit" value="Submit Survey">
+    </form>
+    <hr>
+    <form>
+        <h1>My feedback form</h1>
+        <ul>
+            <li>
+                <label for="use_name"><strong>Name:</strong></label>
+                <input type="text" id="use_name" name="use_name">
+            </li>
+            <li>
+                <label for="use_email"><strong>Email:</strong></label>
+                <input type="email" id="use_email" name="use_email">
+            </li>
+            <li>
+                <label for="use_password:"><strong>Password:</strong></label>
+                <input type="password" id="use_password" name="use_password">
+            </li><br>
+            <li>
+                <Strong>Please check all the emotions that apply to you:</Strong>
+                <ul>
+                    <li>
+                        <label for="emotions1"><strong>Angry</strong></label>
+                        <input type="checkbox" id="emotions1" name="emotions" value="Angry"><br>
+                    </li>
+                    <li>
+                        <label for="emotions2"><strong>Sad</strong></label>
+                        <input type="checkbox" id="emotions2" name="emotions" value="Sad"><br>
+                    </li>
+                    <li>
+                        <label for="emotions3"><strong>Happy</strong></label>
+                        <input type="checkbox" id="emotions3" name="emotions" value="Happy"><br>
+                    </li>
+                    <li>
+                        <label for="emotions4"><strong>Ambivalent</strong></label>
+                        <input type="checkbox" id="emotions4" name="emotions" value="Ambivalent"><br>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>How satisfied were with our service?</strong>
+                <ul>
+                    <li>
+                        <label for="service1"><strong>Very satisfied</strong></label>
+                        <input type="checkbox" id="service1" name="emotions" value="Very satisfied"><br>
+                    </li>
+                    <li>
+                        <label for="service2"><strong>Satisfied</strong></label>
+                        <input type="checkbox" id="service2" name="emotions" value="Satisfied"><br>
+                    </li>
+                    <li>
+                        <label for="service3"><strong>Didn't care</strong></label>
+                        <input type="checkbox" id="service3" name="emotions" value="Didn't care"><br>
+                    </li>
+                    <li>
+                        <label for="service4"><strong>Dissatisfied</strong></label>
+                        <input type="checkbox" id="service4" name="emotions" value="Dissatisfied"><br>
+                    </li>
+                    <li>
+                        <label for="service5"><strong>Very dissatisfied</strong></label>
+                        <input type="checkbox" id="service5" name="emotions" value="Very dissatisfied"><br>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="further_comm"><strong>Further comments:</strong></label>
+                <textarea id="further_comm" name="further_comm" rows="5" cols="40"></textarea>
+            </li>
+            <li>
+                <label for="bio_photo"><strong>Bio Photo:</strong></label>
+                <input type="file" id="bio_photo" name="bio_photo">
+            </li>
+            <li>
+                <label for="location_selecter"><strong>Location visited:</strong></label>
+                <select id="location_selecter" name="location_selecter" required>
+                    <option value="" disabled selected>-- Select location --</option>
+                    <option value="india">India</option>
+                    <option value="germany">Germany</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </li><br>
+            <li><input type="submit" value="Submit"></li>
+        </ul>
     </form>
 </body>
 </html>
