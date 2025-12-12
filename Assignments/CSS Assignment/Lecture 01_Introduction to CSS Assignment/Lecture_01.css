@@ -33,3 +33,26 @@
     font-weight: bold;
     border: 1px solid #eee;
 }
+
+.task_13 {
+    background: #B8724D !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border: 1px solid #eee !important;
+}
+
+.task_15 {
+    background-image: url(./../../../assest/image/img.jpg);
+    height: 24cap;
+    font-weight: bold;
+    border: 1px solid #eee;
+}
+
+.task_15>h2 {
+    background: #ffffff;
+    color: #955023;
+    width: fit-content;
+    border-radius: 19px;
+    margin: 20px;
+    padding: 5px;
+}
