@@ -86,3 +86,36 @@ dd {
 .task_10_heding ~ h2 {
     color: #A21A2E;
 }
+
+.task_11 {
+    color: #955023;
+    background: #F9F9F9;
+    font-weight: bold;
+    border: 1px solid #eecebd;
+}
+
+.task_11 span {
+    color: #A21A2E;
+}
+
+#task_12.task_12 {
+    color: #057505;
+    font-weight: bold;
+}
+
+#task_12.task_12>.pd{
+    font-weight: normal;
+}
+
+.task_13:not(.special) {
+    color: gray;
+}
+
+.task_14>nav>ul>li>a {
+    text-decoration: none;
+}
+
+div h2:not(.ignore),
+div h3:not(.ignore) {
+  color: red;
+}
