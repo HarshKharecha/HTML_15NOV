@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./../../../assest/image/HTML_Logo.png" type="image/x-icon">
     <title>CSS Selectors_Two Assignment Questions</title>
+    <link rel="stylesheet" href="Lecture_03.css">
 </head>
 
 <body>
@@ -13,77 +14,82 @@
     <h1>CSS Selectors — Tasks</h1>
 
     <h2>Task 1: Style elements with a specific attribute.</h2>
-    <h3>Question: Make all elements with the <span style="color: #955023;">title</span> attribute have blue text.</h3>
-    <h3>💡 Hint: Use an <span style="color: #955023;">attribute selector</span> <span style="color: #955023;">[attr]</span>.</h3>
+    <h3>Question: Make all elements with the <span>title</span> attribute have blue text.</h3>
+    <h3>💡 Hint: Use an <span>attribute selector</span> <span>[attr]</span>.</h3>
     <h3>Answer:</h3>
 
+    <div>
+        <h2 title="Hear is show blue title">🚀 Here is use an <span>attribute selector</span> <span>[attr]</span>.</h2>
+    </div>
+
     <h2>Task 2: Style input type text.</h2>
-    <h3>Question: Make all <span style="color: #955023;">input</span> elements with <span style="color: #955023;">type="text"</span> have a light yellow background.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">[attr="value"]</span> selector.</h3>
+    <h3>Question: Make all <span>input</span> elements with <span>type="text"</span> have a light yellow background.</h3>
+    <h3>💡 Hint: Use <span>[attr="value"]</span> selector.</h3>
+    <h3>Answer:</h3>
 
     <h2>Task 3: Style links starting with https.</h2>
-    <h3>Question: Make all <span style="color: #955023;"><code>&lt;a&gt;</code></span> tags whose <span style="color: #955023;">href</span> starts with <span style="color: #955023;">https</span> green.</h3>
-    <h3>💡 Hint: Use the <span style="color: #955023;">^=</span> operator in attribute selectors.</h3>
+    <h3>Question: Make all <span><code>&lt;a&gt;</code></span> tags whose <span>href</span> starts with <span>https</span> green.</h3>
+    <h3>💡 Hint: Use the <span>^=</span> operator in attribute selectors.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 4: Style links ending with .com.</h2>
-    <h3>Question: Change color of links whose <span style="color: #955023;">href</span> ends with <span style="color: #955023;">.com</span>.</h3>
-    <h3>💡 Hint: Use the <span style="color: #955023;">$=</span> operator in attribute selectors.</h3>
+    <h3>Question: Change color of links whose <span>href</span> ends with <span>.com</span>.</h3>
+    <h3>💡 Hint: Use the <span>$=</span> operator in attribute selectors.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 5: Style elements containing a specific word in class.</h2>
-    <h3>Question: Make all elements whose <span style="color: #955023;">class</span> contains <span style="color: #955023;">highlight</span> have a yellow background.</h3>
-    <h3>💡 Hint: Use the <span style="color: #955023;">*=</span> operator.</h3>
+    <h3>Question: Make all elements whose <span>class</span> contains <span>highlight</span> have a yellow background.</h3>
+    <h3>💡 Hint: Use the <span>*=</span> operator.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 6: Change link color on hover.</h2>
     <h3>Question: Make all links turn purple when hovered.</h3>
-    <h3>💡 Hint: Use the <span style="color: #955023;">:hover</span> pseudo-class.</h3>
+    <h3>💡 Hint: Use the <span>:hover</span> pseudo-class.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 7: Style first paragraph of a div.</h2>
-    <h3>Question: Make the first <span style="color: #955023;"><code>&lt;p&gt;</code></span> inside a <span style="color: #955023;"><code>&lt;div&gt;</code></span> bold.</h3>
-    <h3>💡 Hint: Use the <span style="color: #955023;">:first-child</span> pseudo-class..</h3>
+    <h3>Question: Make the first <span><code>&lt;p&gt;</code></span> inside a <span><code>&lt;div&gt;</code></span> bold.</h3>
+    <h3>💡 Hint: Use the <span>:first-child</span> pseudo-class..</h3>
     <h3>Answer:</h3>
 
     <h2>Task 8: Style checked checkboxes.</h2>
     <h3>Question: Make checked checkboxes green.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">:checked</span> pseudo-class.</h3>
+    <h3>💡 Hint: Use <span>:checked</span> pseudo-class.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 9: Style first letter of a paragraph.</h2>
     <h3>Question: Make the first letter of every paragraph red and larger.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">::first- letter</span> pseudo-element.</h3>
+    <h3>💡 Hint: Use <span>::first- letter</span> pseudo-element.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 10: Add content before a heading.</h2>
-    <h3>Question: Add a star symbol before every <span style="color: #955023;"><code>&lt;h2&gt;</code></span> element.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">::before</span> pseudo-element with <span style="color: #955023;">content</span>.</h3>
+    <h3>Question: Add a star symbol before every <span><code>&lt;h2&gt;</code></span> element.</h3>
+    <h3>💡 Hint: Use <span>::before</span> pseudo-element with <span>content</span>.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 11: Highlight selected text.</h2>
     <h3>Question: Make highlighted text appear with a yellow background and black text..</h3>
-    <h3>💡 Hint: Use multiple <span style="color: #955023;">::selection</span> pseudo-element.</h3>
+    <h3>💡 Hint: Use multiple <span>::selection</span> pseudo-element.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 12: Style the last item of a list.</h2>
-    <h3>Question: Make the last <span style="color: #955023;"><code>&lt;li&gt;</code></span> in every <span style="color: #955023;"><code>&lt;ul&gt;</code></span> bold.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">:last-child</span> pseudo-class.</h3>
+    <h3>Question: Make the last <span><code>&lt;li&gt;</code></span> in every <span><code>&lt;ul&gt;</code></span> bold.</h3>
+    <h3>💡 Hint: Use <span>:last-child</span> pseudo-class.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 13: Exclude specific paragraphs.</h2>
-    <h3>Question: Make all <span style="color: #955023;"><code>&lt;p&gt;</code></span> gray except those with class <span style="color: #955023;">important</span>.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">:not()</span> pseudo-class.</h3>
+    <h3>Question: Make all <span><code>&lt;p&gt;</code></span> gray except those with class <span>important</span>.</h3>
+    <h3>💡 Hint: Use <span>:not()</span> pseudo-class.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 14: Style inputs on focus.</h2>
-    <h3>Question: Add a blue border when any <span style="color: #955023;"><code>&lt;input&gt;</code></span> is focused.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">:focus</span> pseudo-class.</h3>
+    <h3>Question: Add a blue border when any <span><code>&lt;input&gt;</code></span> is focused.</h3>
+    <h3>💡 Hint: Use <span>:focus</span> pseudo-class.</h3>
     <h3>Answer:</h3>
 
     <h2>Task 15: Show attribute value using CSS.</h2>
-    <h3>Question: Display the <span style="color: #955023;">title</span> attribute after each link using <span style="color: #955023;">::after</span>.</h3>
-    <h3>💡 Hint: Use <span style="color: #955023;">content: attr(title)</span> with pseudo-element.</h3>
+    <h3>Question: Display the <span>title</span> attribute after each link using <span>::after</span>.</h3>
+    <h3>💡 Hint: Use <span>content: attr(title)</span> with pseudo-element.</h3>
     <h3>Answer:</h3>
 
 </body>

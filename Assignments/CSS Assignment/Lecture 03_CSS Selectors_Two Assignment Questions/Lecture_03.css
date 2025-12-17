@@ -1,0 +1,12 @@
+/** {
+    margin: 0;
+    padding: 0;
+}*/
+
+span {
+    color: #955023;
+}
+
+h2[title] {
+  color: blue;
+}
