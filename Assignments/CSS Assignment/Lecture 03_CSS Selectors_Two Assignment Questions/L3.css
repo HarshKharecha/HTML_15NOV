@@ -1,0 +1,79 @@
+span {
+    color: #955023;
+}
+
+h2[title="Hear is show blue title"] {
+  color: blue;
+}
+
+input[type="email"] {
+    background-color: lightyellow;
+}
+
+.task_3_link[href^="https"] {
+  color: green;
+}
+
+.task_4_link[href$=".com"] {
+  color: #955023;
+}
+
+.task_5 h2[class*="highlight"] {
+    background-color: #eecebd;
+}
+
+.task_6_link:hover{
+    color: #955023;
+}
+
+.task_7 p:first-child {
+    font-weight: bold;
+}
+
+.task_8 input:checked {
+    accent-color: green;
+}
+
+.task_9::first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+.task_10 h2::before {
+    content: "★";
+    color: gold;
+}
+
+.task_11 h2::selection {
+    background-color: aquamarine;
+}
+
+.task_12 dl {
+    color: #955023;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.task_12 dl dd:first-child {
+    color: #e26613;
+}
+
+.task_12 dl dd:last-child {
+    color: #e26613;
+}
+
+.task_13 h2:not(.important) {
+    color: gray;
+}
+
+.task_14 input:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+.task_15 a{
+        text-decoration: none;
+}
+.task_15 a::after {
+    content: " [" attr(title) "]";
+}

@@ -115,7 +115,7 @@ dd {
     text-decoration: none;
 }
 
-div h2:not(.ignore),
-div h3:not(.ignore) {
+.task_15 h2:not(.ignore),
+.task_15 h3:not(.ignore) {
   color: red;
 }

@@ -1,0 +1,124 @@
+span {
+    color: #955023;
+}
+
+.task_1 {
+    background-color: #f9f9f9;
+    color: #955023;
+    font-weight: bold;
+    border: 1px solid #eecebd;
+}
+
+body {
+  background-image: url(./../../../assest/image/img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: /*#2D4F4F*/ #29d1d1;
+}
+
+.task_3_bg_repeat {
+    background-image: url(./../../../assest/image/img.jpg);
+    height: 24cap;
+    font-weight: bold;
+    border: 1px solid #eecebd;
+}
+
+.task_3_bg_no_repeat {
+    background-image: url(./../../../assest/image/img.jpg);
+    height: 24cap;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    border: 1px solid #eecebd;
+}
+
+.task_4 {
+    background: url(./../../../assest/image/img.jpg);
+    height: 24cap;
+    background-repeat: no-repeat;
+    background-position: top right;
+    border: 1px solid #eecebd;
+}
+
+.task_5 {
+    background: url(./../../../assest/image/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #eecebd;
+}
+
+.task_6 {
+    background: url(./../../../assest/image/img.jpg);
+    background-attachment: fixed;
+    border: 1px solid #eecebd;
+}
+
+.task_7 {
+    background-color: rgba(162, 26, 46, 0.29);
+    color: #955023;
+    font-weight: bold;
+    border: 1px solid #eecebd;
+}
+
+.task_8 {
+    background-image: url(./../../../assest/image/img.jpg);
+    height: 24cap;
+    background-clip: padding-box;
+    border: 1px solid #eecebd;
+}
+
+.task_9 {
+    background-image: url(./../../../assest/image/img.jpg);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-color: #f9f9f9;
+    height: 24cap;
+    padding: 19px;
+    border: 1px solid #eecebd;
+}
+
+.task_10 {
+    background: #f9f9f9 url(./../../../assest/image/img.jpg) no-repeat center;
+    height: 24cap;
+    border: 1px solid #eecebd;
+}
+
+.task_11 {
+    background-image: url(./../../../assest/image/img.jpg),
+    linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5));
+    background-blend-mode: multiply;
+    height: 24cap;
+    border: 1px solid #eecebd;
+    
+}
+
+.task_12 {
+    background-color: #1a2a6c;
+    border: 1px solid #eecebd;
+}
+
+.task_12 h2 {
+    color: #955023;
+    mix-blend-mode: screen;
+}
+
+.task_13 {
+    background-image: url(./../../../assest/image/img.jpg);
+    background-repeat: repeat-x;
+    height: 24cap;
+    border: 1px solid #eecebd;
+
+}
+
+.task_14 {
+    background: url(./../../../assest/image/HTML_Logo.png) no-repeat center / 200px, url(./../../../assest/image/img.jpg) repeat center;
+    height: 24cap;
+    border: 1px solid #eecebd;
+}
+
+.task_15 {
+    background: url(./../../../assest/image/img.jpg),
+    linear-gradient(#955023, lightgreen) no-repeat center /*multiply*/;
+    background-blend-mode: multiply;
+    height: 24cap;
+}
