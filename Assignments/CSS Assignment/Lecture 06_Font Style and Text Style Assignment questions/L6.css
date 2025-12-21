@@ -1,0 +1,85 @@
+span {
+    color: #955023;
+}
+
+.task_1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.task_2 {
+    font-style: italic;
+}
+
+.task_3 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.task_4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.task_5 {
+    font-variant: small-caps;
+}
+
+.task_6 {
+    font: italic bold 18px Arial, Helvetica, sans-serif;
+}
+
+.task_7 div {
+    text-align: center;
+}
+
+.task_8 ol {
+        font-size: 19px;
+        font-weight: bold;
+}
+.task_8 .tu_1 {
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+
+.task_8 a {
+    color: #955023;
+    text-decoration: none;
+}
+
+.task_9 {
+    text-transform: uppercase;
+}
+
+.task_10 {
+    text-indent: 50px;
+}
+
+.task_11 {
+    letter-spacing: 2px;
+}
+
+.task_12 {
+    word-spacing: 10px;
+}
+
+.task_13 {
+    line-height: 2;
+}
+
+.task_14 {
+    font: bold italic 24px Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.task_15 h1{
+    font: 29px bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.task_15 h2{
+    text-indent: 199px;
+    text-align: left;
+    line-height: 1.8;
+}
