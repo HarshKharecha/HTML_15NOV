@@ -66,3 +66,69 @@ span {
     fill: none;
     stroke: blue;
 }
+
+.task_10 svg {
+    width: 100px;
+    height: 100px;
+}
+
+.task_10 circle {
+    cx: 50;
+    cy: 50;
+    r: 40;
+    fill: hsl(24, 62%, 36%);
+}
+
+.task_11 .tcu_1 {
+    color: #955023;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: green;
+}
+
+.task_11 .tcu_2 {
+    color: green;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #955023;
+}
+
+.task_12 h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.task_12 dl {
+    columns: 2;
+    column-rule: 5px solid;
+}
+
+.task_14 .tcu_1 {
+    color: #955023;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: green;
+}
+
+.task_14 .tcu_2 {
+    color: green;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #955023;
+}
+
+.task_15 svg {
+    width: 120px;
+    height: 120px;
+}
+
+.task_15 rect {
+    width: 100px;
+    height: 100px;
+    x: 10;
+    y: 10;
+    rx: 20;
+    ry: 20;
+    fill: rgb(211, 211, 211);
+    stroke: rgb(0, 128, 0);
+}
