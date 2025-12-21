@@ -1,0 +1,68 @@
+span {
+    color: #955023;
+}
+
+.task_1 {
+    color: blue;
+}
+
+.task_3 {
+    color: red;
+}
+
+.task_4 a {
+    color: #955023;
+    text-decoration-color: green;
+}
+
+.task_5 .underline{
+    color: unset;
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+
+.task_6 h3, .task_7 h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.task_6 dl {
+    column-count: 2;
+    column-rule-style: solid;
+    column-rule-color: blue;
+}
+
+.task_7 dl {
+    column-count: 3;
+    column-rule-style: solid;
+    column-rule-color: red;
+}
+
+.task_8 svg {
+    width: 100px;
+    height: 100px;
+}
+
+.task_8 circle {
+    cx: 50;
+    cy: 50;
+    r: 40;
+    fill: yellow;
+    stroke: black;
+}
+
+.task_9 svg {
+    width: 120px;
+    height: 120px;
+}
+
+.task_9 rect {
+    width: 100px;
+    height: 100px;
+    x: 10;
+    y: 10;
+    rx: 20;
+    ry: 20;
+    fill: none;
+    stroke: blue;
+}
