@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Unknown">
+    <title>Python Programmind (DI04011041) Sem:4 Assigment - 1</title>
+
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <!-- Font imports -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Gujarati:wght@300;400;500;600;700&display=swap');
+
+        @page {
+            size: A4;
+            margin: 2cm 2cm 2cm 2cm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            font-size: 11pt;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2d3748;
+            border-bottom: 3px solid #3182ce;
+            padding-bottom: 10px;
+            font-size: 20pt;
+            margin-top: 0;
+            margin-bottom: 30px;
+            page-break-after: avoid;
+        }
+
+        h2 {
+            color: #2c5282;
+            background: linear-gradient(to right, #e2e8f0, transparent);
+            padding: 10px 15px;
+            border-left: 4px solid #3182ce;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 14pt;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: #4a5568;
+            font-size: 12pt;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+
+        h4,
+        h5,
+        h6 {
+            color: #718096;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+
+        .ht, .hs {
+            font-size: medium;     
+        }
+
+        .q_9p {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            border-left: 4px solid #eecebd !important;
+            border-radius: 20px;
+        }
+
+        .q_9p .pclo {
+            font-size: medium;
+            border-left: none;
+        }
+
+        .q_11p {
+            background-color: #e6fffa;
+            font-weight: bold;
+            border-left: 4px solid #38b2ac !important;
+            border-radius: 20px;
+            padding: 19px 0 10px 0;
+        }
+
+        .q_12p {
+            text-indent: 29px;
+        }
+
+        .q_12pe {
+            background-color: #e6fffa;
+            font-weight: bold;
+            border-left: 4px solid #38b2ac !important;
+            border-radius: 20px;
+            padding: 19px 0 10px 0;
+
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            orphans: 3;
+            widows: 3;
+            text-indent: 0;
+        }
+
+        .poem-content,
+        .canvas-text.poem,
+        pre.poem {
+            white-space: pre-wrap !important;
+            text-indent: 0 !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+            text-align: left !important;
+            font-family: 'Georgia', serif !important;
+            font-style: italic !important;
+            border: none !important;
+            background: transparent !important;
+            line-height: 1.8 !important;
+            word-wrap: break-word !important;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e0;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #3182ce;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        pre {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #3182ce;
+            overflow-x: auto;
+            font-size: 9pt;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        code {
+            background-color: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 9pt;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #3182ce;
+            margin: 15px 0;
+            padding: 10px 20px;
+            background-color: #edf2f7;
+            font-style: italic;
+            page-break-inside: avoid;
+        }
+
+        strong,
+        b {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        ul,
+        ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .header-info {
+            text-align: center;
+            color: #718096;
+            font-size: 9pt;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Math styling */
+        .math-inline {
+            font-family: 'Computer Modern', 'Times New Roman', serif;
+            font-style: italic;
+            background-color: #f0f8ff;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .math-display {
+            font-family: 'Computer Modern', 'Times New Roman', serif;
+            font-style: italic;
+            background-color: #f0f8ff;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 4px solid #4299e1;
+        }
+
+        .katex {
+            font-size: 1.1em;
+        }
+
+        .katex-display {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        /* Mermaid diagram styling */
+        .mermaid-diagram {
+            margin: 20px 0;
+            page-break-inside: avoid;
+            text-align: center;
+        }
+
+        .mermaid-render {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .mermaid-render svg {
+            max-width: 100%;
+            max-height: 999px;
+            height: auto;
+            width: auto;
+        }
+
+        .mermaid-code {
+            display: none;
+            background-color: #f7fafc;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 9pt;
+            white-space: pre-wrap;
+            margin-top: 10px;
+        }
+
+        .mermaid-fallback {
+            background-color: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .mermaid-fallback::before {
+            content: "Mermaid Diagram:";
+            font-weight: bold;
+            color: #c53030;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        @media print {
+            body {
+                font-size: 10pt;
+            }
+
+            h1 {
+                font-size: 18pt;
+            }
+
+            h2 {
+                font-size: 13pt;
+            }
+
+            h3 {
+                font-size: 11pt;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            /* Show rendered diagrams in print, hide code */
+            .mermaid-code {
+                display: none !important;
+            }
+
+            .mermaid-render {
+                display: block !important;
+                padding: 10px !important;
+                page-break-inside: avoid;
+            }
+
+            /* Ensure SVG diagrams are visible and properly sized for print */
+            .mermaid-render svg {
+                max-width: 90% !important;
+                max-height: 300px !important;
+                height: auto !important;
+                width: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            /* Scale down oversized diagrams */
+            .mermaid-diagram {
+                margin: 10px 0 !important;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Shiki syntax highlighting styles for export */
+        pre.shiki {
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 6px !important;
+            padding: 15px !important;
+            overflow-x: auto;
+            margin: 15px 0;
+            page-break-inside: avoid;
+            font-size: 9pt;
+            line-height: 1.4;
+        }
+
+        pre.shiki code {
+            background: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+            font-size: inherit !important;
+        }
+
+        /* Shiki theme support - defaults to light theme for print/export */
+        .shiki,
+        .shiki span {
+            color: var(--shiki-light) !important;
+            background-color: var(--shiki-light-bg) !important;
+        }
+
+        /* Special handling for unsupported languages */
+        pre.plain-text,
+        pre.goat-diagram {
+            background-color: #f7fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 6px !important;
+            padding: 15px !important;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+            font-size: 9pt !important;
+            line-height: 1.4 !important;
+            overflow-x: auto;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        pre.goat-diagram {
+            border-left: 4px solid #38b2ac !important;
+            background-color: #e6fffa !important;
+        }
+
+        /* Override default pre/code styles for syntax highlighted blocks */
+        pre:has(.shiki),
+        pre.shiki {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            border-left: none !important;
+        }
+
+        @media print {
+
+            pre.shiki,
+            pre.plain-text,
+            pre.goat-diagram {
+                background-color: #f8f9fa !important;
+                border: 1px solid #dee2e6 !important;
+                font-size: 8pt !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-info">
+            <strong class="ht">Government Polytechnic, Ahmedabad</strong> <br>
+            <strong class="hs">Electronics & Communication Engineering</strong> <br>
+            <strong>Python Programmind (DI04011041) Sem:4 Assigment - 1</strong><br>
+            By: Harsh S Kharecha<br>
+            Generated on 02/01/2026 | Assigment - 1 Solution
+        </div>
+
+        <div class="content">
+            <h2>Q1. Define Problem Solving and List out the steps of problem solving.</h2>
+            <p><strong>Anser:</strong> Problem Solving is the systematic process of understanding a problem, identifying possible solutions, and selecting and implementing the best solution to resolve the problem effectively.</p>
+            <dl>
+                <dt>Steps of Problem Solving:</dt>
+                <ol>
+                    <li>Identify the Problem – Clearly understand and define what the problem is.</li>
+                    <li>Analyze the Problem – Gather relevant information and understand the causes and constraints of the problem.</li>
+                    <li>Generate Possible Solutions – Think of different ways to solve the problem.</li>
+                    <li>Evaluate Alternatives – Compare the possible solutions and choose the most suitable one.</li>
+                    <li>Implement the Solution – Put the chosen solution into action.</li>
+                    <li>Review and Evaluate – Check whether the solution has solved the problem and make improvements if needed.</li>
+                </ol>
+            </dl>
+
+            <h2>Q2. Define Algorithm. Explain the characteristics of an algorithm.</h2>
+            <p><strong>Anser:</strong> Definition of Algorithm:
+            An algorithm is a finite, step-by-step set of clear and unambiguous instructions used to solve a problem or perform a specific task. Algorithms are commonly used in computer science to design programs and solve computational problems.</p>
+            <dl>
+                <dt>Characteristics of an Algorithm:</dt>
+                <ol>
+                    <li>Input:
+                        <dd>                     
+                            An algorithm should have zero or more inputs that are clearly defined.
+                        </dd>
+                    </li>
+                    <li>Output:
+                        <dd>
+                            An algorithm must produce at least one output as a result of processing the input.
+                        </dd>
+                    </li>
+                    <li>Definiteness:
+                        <dd>
+                            Each step of the algorithm should be precise, clear, and unambiguous.
+                        </dd>
+                    </li>
+                    <li>Finiteness:
+                        <dd>
+                            The algorithm must terminate after a finite number of steps.
+                        </dd>
+                    </li>
+                    <li>Effectiveness:
+                        <dd>
+                            Each step of the algorithm should be simple and executable in a finite amount of time.
+                        </dd>
+                    </li>
+                    <li>Generality:
+                        <dd>
+                            An algorithm should be applicable to all valid inputs of a particular problem, not just a specific case.
+                        </dd>
+                    </li>
+                </ol>
+            </dl>
+            
+            <h2>Q3. Write an algorithm and draw flowchart to find sumn and average of any 5 numbers.</h2>
+            <p><strong>Anser:</strong> Algorithm to Find Sum and Average of Any 5 Numbers:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Read five numbers: N1, N2, N3, N4, N5</dd>
+                <dd>Step 3: Calculate Sum = N1 + N2 + N3 + N4 + N5</dd>
+                <dd>Step 4: Calculate Average = Sum / 5</dd>
+                <dd>Step 5: Display Sum and Average</dd>
+                <dd>Step 6: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Find Sum and Average of 5 Numbers:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[Input N1, N2, N3, N4, N5]
+                B --> C[Sum = N1+N2+N3+N4+N5]
+                C --> D[Average = Sum / 5]
+                D --> E[Display Sum and Average]
+                E --> F[Stop]</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart clearly show how to calculate the sum and average of any five numbers step by step.</strong></p>
+
+            <h2>Q4. Write an algorithm and draw flowchart to check entered number is divisible by 7 or not.</h2>
+            <p><strong>Anser:</strong> Algorithm to Check Whether a Number is Divisible by 7:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Read a number N</dd>
+                <dd>Step 3: If N mod 7 = 0, then go to Step 4, else go to Step 5</dd>
+                <dd>Step 4: Display “Number is divisible by 7”</dd>
+                <dd>Step 5: Display “Number is not divisible by 7”</dd>
+                <dd>Step 6: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Check Divisibility by 7:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[Input N]
+                B --> C[Is N mod 7 = 0 ?]
+                C -->|Yes| D[Display “Divisible”]
+                C -->|No| E[Display “Not Divisible”]
+                D & E --> F[Stop]</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart help in clearly determining whether an entered number is divisible by 7 or not.</strong></p>
+
+            <h2>Q5. Write an algorithm and draw flowchart to check entered number is even or odd.</h2>
+            <p><strong>Anser:</strong> Algorithm to Check Whether a Number is Even or Odd:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Read a number N</dd>
+                <dd>Step 3: If N mod 2 = 0, then go to Step 4, else go to Step 5</dd>
+                <dd>Step 4: Display “Number is Even”</dd>
+                <dd>Step 5: Display “Number is Odd”</dd>
+                <dd>Step 6: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Check Even or Odd:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[Input N]
+                B --> C[Is N mod 2 = 0 ?]
+                C -->|Yes| D[Display “Even”]
+                C -->|No| E[Display “Odd”]
+                D & E --> F[Stop]</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart clearly show how to determine whether the entered number is even or odd.</strong></p>
+            
+            <h2>Q6. Write an algorithm and draw flowchart to find minimum of two numbers.</h2>
+            <p><strong>Anser:</strong> Algorithm to Find the Minimum of Two Numbers:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Read two numbers A and B</dd>
+                <dd>Step 3: If A <code>&lt;</code> B, then go to Step 4, else go to Step 5</dd>
+                <dd>Step 4: Display “A is the minimum number”</dd>
+                <dd>Step 5: Display “B is the minimum number”</dd>
+                <dd>Step 6: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Find Minimum of Two Numbers:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[Input A, B]
+                B --> C[Is A <code>&lt;</code> B?]
+                C -->|Yes| D[Display “A is Min”]
+                C -->|No| E[Display “B is Min”]
+                D & E --> F[Stop]</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart clearly explain how to find the minimum of two numbers.</strong></p>
+
+            <h2>Q7.Write algorithm and draw flowchart to find entered number is positive or negative.</h2>
+            <p><strong>Anser:</strong> Algorithm to Check Whether a Number is Positive or Negative:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Read a number N</dd>
+                <dd>Step 3: If N ≥ 0, then go to Step 4, else go to Step 5</dd>
+                <dd>Step 4: Display “Number is Positive”</dd>
+                <dd>Step 5: Display “Number is Negative”</dd>
+                <dd>Step 6: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Check Positive or Negative Number:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[Input N]
+                B --> C[Is N ≥ 0?]
+                C -->|Yes| D[Display “Positive”]
+                C -->|No| E[Display “Negative”]
+                D & E --> F[Stop]</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart help in identifying whether the entered number is positive or negative.</strong></p>
+
+            <h2>Q8. Write algorithm and draw flowchart to print odd numbers between 1 to 100.</h2>
+            <p><strong>Anser:</strong> Algorithm to Print Odd Numbers from 1 to 100:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Set i = 1</dd>
+                <dd>Step 3: If i ≤ 100, go to Step 4, else go to Step 6</dd>
+                <dd>Step 4: If i mod 2 ≠ 0, display i</dd>
+                <dd>Step 5: Increment i = i + 1 and go back to Step 3</dd>
+                <dd>Step 6: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Print Odd Numbers from 1 to 100:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[i = 1]
+                B --> C{Is i &lt;= 100?}
+                C -->|Yes| D{Is i odd? i mod 2≠0}
+                C -->|No| G[Stop]
+                D -->|Yes| E[Print i]
+                D -->|No| F[i = i + 1]
+                E --> F
+                F --> C</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart clearly show how to print all odd numbers between 1 and 100.</strong></p>
+            
+            <h2>Q9. Write a program and draw flowchart to calculate simple interest using below equation. I=PRN/100, Where P=Principal amount, R=Rate of interest and N=Period</h2>
+            <p><strong>Anser:</strong> Program and Flowchart to Calculate Simple Interest.</p>
+            <p><strong>Formula:</strong> <ul><li><strong>I = <sup>P × R × N</sup>&frasl;<sub>100</sub></strong></li></ul></p>
+            <p><strong>Where:</strong>
+            <ul>
+                <li>P = Principal amount</li>
+                <li>R = Rate of interest</li>
+                <li>N = Period (Time)</li>
+            </ul></p>
+            <p><strong>Algorithm:</strong></p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Read values of P, R, and N</dd>
+                <dd>Step 3: Calculate I = (P × R × N) / 100</dd>
+                <dd>Step 4: Display the value of I</dd>
+                <dd>Step 5: Stop</dd>
+            </dl>
+
+            <!--<p><strong>Program (C-like Language)</strong></p>
+            <div class="q_9p">
+                <pre class="pclo"><code>
+                    #include &lt;stdio.h&gt;
+
+                        int main() { 
+                            float P, R, N, I;
+
+                            printf("Enter Principal amount: ");
+                            scanf("%f", &P);
+
+                            printf("Enter Rate of interest: ");
+                            scanf("%f", &R);
+
+                            printf("Enter Period: ");
+                            scanf("%f", &N);
+                            
+                            I = (P * R * N) / 100;
+
+                            printf("Simple Interest = %f", I);
+
+                            return 0;
+                        }</code></pre>
+            </div>-->
+
+            <p><strong>Flowchart to Calculate Simple Interest:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[Input P, R, N]
+                B --> C[I = P × R × N /100]
+                C --> D[Display I]
+                D --> E[Stop]</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This program and flowchart clearly explain how to calculate Simple Interest using the given formula.</strong></p>
+
+            <h2>Q10.Write algorithm and draw flowchart to print sum of 1 to 100 numbes</h2>
+            <p><strong>Anser:</strong> Algorithm to Find the Sum of Numbers from 1 to 100:</p>
+            <dl>
+                <dd>Step 1: Start</dd>
+                <dd>Step 2: Set sum = 0 and i = 1</dd>
+                <dd>Step 3: If i ≤ 100, go to Step 4, else go to Step 6</dd>
+                <dd>Step 4: Add i to sum → sum = sum + i</dd>
+                <dd>Step 5: Increment i = i + 1 and go back to Step 3</dd>
+                <dd>Step 6: Display the value of sum</dd>
+                <dd>Step 7: Stop</dd>
+            </dl>
+            
+            <p><strong>Flowchart to Find Sum of Numbers from 1 to 100:</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart TB
+                A[Start] --> B[sum = 0 i = 1]
+                B --> C{Is i ≤ 100?}
+                C -->|Yes| D{sum = sum+i}
+                C -->|No| E[Display sum]
+                E --> G[Stop]
+                D --> F[i = i + 1]
+                F --> C</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <p><strong>This algorithm and flowchart clearly show how to calculate and print the sum of numbers from 1 to 100.</strong></p>
+
+            <h2>Q11.Describe various types of control structures for algorithm and flowchart.</h2>
+            <p><strong>Anser:</strong> In programming and algorithm design, control structures define the order in which instructions are executed. They are essential for controlling the flow of a program or algorithm. Here’s a detailed explanation:</p>
+            <p><Strong>Types of Control Structures:</Strong></p>
+            <ol>
+                <li>Sequential Control Structure</li>
+                <ul>
+                    <li>Definition: Instructions are executed one after another in sequence.</li>
+                    <li>Characteristics:
+                        <ul>
+                            <li>The simplest control structure.</li>
+                            <li>No decision-making or repetition.</li>
+                        </ul>
+                    </li>
+                    <li>Example:
+                        <dl class="q_11p">
+                            <dd>Step 1: Read A</dd>
+                            <dd>Step 2: Read B</dd>
+                            <dd>Step 3: Sum = A + B</dd>
+                            <dd>Step 4:  Display Sum</dd>
+                        </dl>
+                    </li>
+                    <li>Flowchart Symbol: Straight sequence of processes connected by arrows.</li>
+                </ul>
+                
+                <li>Decision / Selection Control Structure</li>
+                <ul>
+                    <li>Definition: Execution depends on a condition; it allows the program to choose between two or more paths.</li>
+                    <li>Types:
+                        <ul>
+                            <li>If…Then – Executes a block if the condition is true.</li>
+                            <li>If…Then…Else – Executes one block if true, another if false.</li>
+                            <li>Switch / Case – Selects from multiple options based on a value.</li>
+                        </ul>
+                    </li>
+                    <li>Example:
+                        <dl class="q_11p">
+                            <dd>If A > B Then
+                                <dl><dd>Display "A is greater"</dd></dl>
+                            </dd>
+                            <dd>Else
+                                <dl><dd>Display "B is greater"</dd></dl>
+                            </dd>
+                            <dd>End If</dd>
+                        </dl>
+                    </li>
+                    <li>Flowchart Symbol: Diamond shape for condition, arrows for Yes/No paths.</li>
+                </ul>
+                
+                <li>Loop / Iteration Control Structure</li>
+                <ul>
+                    <li>Definition: Repeats a block of instructions until a condition is met.</li>
+                    <li>Types:
+                        <ul>
+                            <li>For Loop: Repeats a fixed number of times.</li>
+                            <li>While Loop: Repeats while a condition is true.</li>
+                            <li>Do…While Loop: Repeats at least once and continues while a condition is true.</li>
+                        </ul>
+                    </li>
+                    <li>Example:
+                        <dl class="q_11p">
+                            <dd>i = 1</dd>
+                            <dd>While i ≤ 5
+                                <dl><dd>Display i</dd></dl>
+                                <dl><dd>i = i + 1</dd></dl>
+                            </dd>
+                            <dd>End While</dd>
+                        </dl>
+                    </li>
+                    <li>Flowchart Symbol: Diamond for condition, arrows looping back to previous step.</li>
+                </ul>
+                
+                <li>Case / Multi-way Selection Control Structure</li>
+                <ul>
+                    <li>Definition: Selects one path among multiple alternatives based on a value or expression.</li>
+                    <li>Example: Determine day of the week
+                        <dl class="q_11p">
+                            <dd>Switch(day)
+                                <dl><dd>Case 1: Display "Sunday"</dd></dl>
+                                <dl><dd>Case 2: Display "Monday"</dd></dl>
+                                <dl><dd>...</dd></dl>
+                            </dd>
+                            <dd>End Switch</dd>
+                        </dl>
+                    </li>
+                    <li>Flowchart Symbol: Diamond for decision, multiple arrows for each case.</li>
+                </ul>
+            </ol>
+
+            <p><strong>Summary Table</strong></p>
+            <table>
+                <tr>
+                    <th>Control Structure</th>
+                    <th>Purpose</th>
+                    <th>Flow Representation</th>
+                </tr>
+                <tr>
+                    <td>Sequential</td>
+                    <td>Execute steps one after another</td>
+                    <td>Straight arrows</td>
+                </tr>
+                <tr>
+                    <td>Decision/Selection</td>
+                    <td>Make choices based on condition</td>
+                    <td>Diamond (Yes/No)</td>
+                </tr>
+                <tr>
+                    <td>Loop/Iteration</td>
+                    <td>Repeat steps until condition</td>
+                    <td>Diamond with loop back</td>
+                </tr>
+                <tr>
+                    <td>Case/Multi-way</td>
+                    <td>Select from multiple options</td>
+                    <td>Diamond with multiple branches</td>
+                </tr>
+            </table>
+
+            <h2>Q12.Define Pseudo Code and write the advantages of pseudo code.</h2>
+            <p><strong>Anser:</strong> Definition of Pseudo Code:</p>
+            <p class="q_12p"><strong>Pseudo code is a high-level description of an algorithm that uses plain English statements (or a mixture of English and programming-like keywords) to represent the steps of a program. It is not a real programming language, but it helps programmers design and plan the logic of a program before actual coding.</strong></p>
+            <ul>
+                <li>Example of Pseudo Code:
+                    <dl class="q_11p">
+                        <dd>START
+                            <dl>
+                                <dd>Read number N</dd>
+                                <dd>If N is even Then
+                                    <dl><dd>Display "Number is Even"</dd></dl>
+                                </dd>
+                                <dd>Else
+                                    <dl><dd>Display "Number is Odd"</dd></dl>
+                                </dd>
+                                <dd>End If</dd>
+                            </dl>
+                        </dd>
+                        <dd>STOP</dd>
+                    </dl>
+                </li>
+            </ul>
+
+            <p><strong>Advantages of Pseudo Code:</strong></p>
+            <ol>
+               <li>Easy to Understand
+                <ul><li>It uses plain English, so even non-programmers can understand the logic.</li></ul>
+               </li>
+               <li>Language Independent
+                <ul><li>Pseudo code is not tied to any programming language, so it can be used as a blueprint for any language.</li></ul>
+               </li>
+               <li>Reduces Errors
+                <ul><li>Helps programmers identify logical errors before writing actual code.</li></ul>
+               </li>
+               <li>Simplifies Complex Problems
+                <ul><li>Breaks down a problem into simple, manageable steps.</li></ul>
+               </li>
+               <li>Improves Communication
+                <ul><li>Useful for communicating ideas among team members or documenting algorithms.</li></ul>
+               </li>
+               <li>Easy to Modify
+                <ul><li>Changes in logic can be applied easily without worrying about syntax.</li></ul>
+               </li> 
+            </ol>
+
+
+            <h2>Q13.Write Pseudocode_(1) To compute the area of a circle (2) to find sum and average of 3 numbers (3) to find maximum of three given numbers (4) to solve the equation f=4x'+3y-8</h2>
+            <p><strong>Anser:</strong> Here is a clear set of pseudo code examples for all four functions mentioned:</p>
+            <p><strong>1️⃣ Pseudo Code to Compute the Area of a Circle:</strong></p>
+            <dl class="q_11p">
+                <dd>START
+                    <dl>
+                        <dd>Read radius R</dd>
+                        <dd>Area = 3.14159 * R * R</dd>
+                        <dd>Display "Area of Circle is", Area</dd>
+                    </dl>
+                </dd>
+                <dd>STOP</dd>
+            </dl>
+
+            <p><strong>2️⃣ Pseudo Code to Find Sum and Average of 3 Numbers:</strong></p>
+            <dl class="q_11p">
+                <dd>START
+                    <dl>
+                        <dd>Read A, B, C</dd>
+                        <dd>Sum = A + B + C</dd>
+                        <dd>Average = Sum / 3</dd>
+                        <dd>Display "Sum =", Sum</dd>
+                        <dd>Display "Average =", Average</dd>
+                    </dl>
+                </dd>
+                <dd>STOP</dd>
+            </dl>
+
+            <p><strong>3️⃣ Pseudo Code to Find Maximum of Three Given Numbers:</strong></p>
+            <dl class="q_11p">
+                <dd>START
+                    <dl>
+                        <dd>Read A, B, C</dd>
+                        <dd>If A > B AND A > C Then
+                            <dl><dd>Max = A</dd></dl>
+                        </dd>
+                        <dd>Else If B > C Then
+                            <dl><dd>Max = B</dd></dl>
+                        </dd>
+                        <dd>Else
+                            <dl><dd>Max = C</dd></dl>
+                        </dd>
+                        <dd>End If</dd>
+                        <dd>Display "Maximum Number =", Max</dd>
+                    </dl>
+                </dd>
+                <dd>STOP</dd>
+            </dl>
+
+            <p><strong>4️⃣ Pseudo Code to Solve the Equation f = 4x + 3y - 8:</strong></p>
+            <dl class="q_11p">
+                <dd>START
+                    <dl>
+                        <dd>Read x, y</dd>
+                        <dd>f = 4 * x + 3 * y - 8</dd>
+                        <dd>Display "Value of f =", f</dd>
+                    </dl>
+                </dd>
+                <dd>STOP</dd>
+            </dl>
+
+            <p><strong>These pseudo codes are language-independent and can easily be converted into actual programs or flowcharts.</strong></p>
+
+        </div>
+    </div>
+
+    <script>
+        // Initialize Mermaid with better error handling
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#3182ce',
+                primaryTextColor: '#1a202c',
+                primaryBorderColor: '#2c5282',
+                lineColor: '#4a5568',
+                secondaryColor: '#e2e8f0',
+                tertiaryColor: '#f7fafc'
+            },
+            fontFamily: 'Inter, sans-serif',
+            fontSize: 12,
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                nodeSpacing: 30,
+                rankSpacing: 40
+            },
+            sequence: {
+                useMaxWidth: true,
+                width: 150
+            },
+            gantt: {
+                useMaxWidth: true
+            }
+        });
+
+        // Render Mermaid diagrams with better error handling
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM loaded, starting Mermaid rendering...');
+
+            const diagrams = document.querySelectorAll('.mermaid-diagram');
+            console.log('Found', diagrams.length, 'Mermaid diagrams');
+
+            let renderedCount = 0;
+
+            diagrams.forEach((diagram, index) => {
+                const codeElement = diagram.querySelector('.mermaid-code');
+                const renderDiv = diagram.querySelector('.mermaid-render');
+
+                if (!codeElement || !renderDiv) {
+                    console.log('Missing elements for diagram', index);
+                    return;
+                }
+
+                const code = codeElement.textContent.trim();
+                const renderId = 'mermaid-svg-' + (index + 1);
+
+                console.log('Rendering diagram', index + 1, 'with code:', code.substring(0, 50) + '...');
+
+                try {
+                    mermaid.render(renderId, code).then(result => {
+                        console.log('Successfully rendered diagram', index + 1);
+                        renderDiv.innerHTML = result.svg;
+                        diagram.classList.add('rendered');
+                        renderedCount++;
+
+                        if (renderedCount === diagrams.length) {
+                            document.body.classList.add('mermaid-ready');
+                            console.log('All Mermaid diagrams rendered');
+                        }
+                    }).catch(error => {
+                        console.error('Mermaid rendering error for diagram', index + 1, ':', error);
+                        renderDiv.innerHTML = '<p style="color: #c53030; font-style: italic;">Diagram rendering failed</p>';
+                        codeElement.style.display = 'block';
+                        renderedCount++;
+
+                        if (renderedCount === diagrams.length) {
+                            document.body.classList.add('mermaid-ready');
+                        }
+                    });
+                } catch (error) {
+                    console.error('Mermaid setup error for diagram', index + 1, ':', error);
+                    renderDiv.innerHTML = '<p style="color: #c53030; font-style: italic;">Diagram setup failed</p>';
+                    codeElement.style.display = 'block';
+                    renderedCount++;
+
+                    if (renderedCount === diagrams.length) {
+                        document.body.classList.add('mermaid-ready');
+                    }
+                }
+            });
+
+            if (diagrams.length === 0) {
+                document.body.classList.add('mermaid-ready');
+                console.log('No Mermaid diagrams found, marking as ready');
+            }
+        });
+    </script>
+</body>
+
+</html>
