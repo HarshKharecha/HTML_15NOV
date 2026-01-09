@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PF.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+
+<body>
+    <section>
+        <div class="filter">
+            <div class="container">
+                <form> <!-- action="/submit-your-data" method="post" -->
+                    <h2>Sign in</h2>
+                    <div class="from-group">
+                        <label for="email_sing_in"><strong>Email</strong></label>
+                        <input type="email" name="email_sing_in" id="email_sing_in" placeholder="Enter Your Email" required>
+                        <i class='bx  bx-user'></i>
+                    </div>
+                    <div class="from-group">
+                        <label for="password"><strong>Password</strong></label>
+                        <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+                        <i class='bx bx-lock-alt' ></i>
+                    </div>
+                    <p><input type="checkbox" name="checkbox" id="checkbox" required> Remember or <a href="#">Forget Password</a></p>
+                    <input id="btn" type="submit" value="Sign In">
+                    <p>Don't have a account? <a href="#">Register</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
