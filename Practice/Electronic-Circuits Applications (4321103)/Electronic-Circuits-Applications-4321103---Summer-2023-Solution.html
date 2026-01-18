@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Unknown">
+    <title>Electronic Circuits &amp; Applications (4321103) - Summer 2023 Solution</title>
+
+    <!-- KaTeX  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <!-- Font imports -->
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Gujarati:wght@300;400;500;600;700&display=swap');
+
+        @page {
+            size: A4;
+            margin: 2cm 2cm 2cm 2cm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            font-size: 11pt;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2d3748;
+            border-bottom: 3px solid #3182ce;
+            padding-bottom: 10px;
+            font-size: 20pt;
+            margin-top: 0;
+            margin-bottom: 30px;
+            page-break-after: avoid;
+        }
+
+        h2 {
+            color: #2c5282;
+            background: linear-gradient(to right, #e2e8f0, transparent);
+            padding: 10px 15px;
+            border-left: 4px solid #3182ce;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 14pt;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: #4a5568;
+            font-size: 12pt;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+
+        h4,
+        h5,
+        h6 {
+            color: #718096;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            orphans: 3;
+            widows: 3;
+            text-indent: 0;
+        }
+
+        .poem-content,
+        .canvas-text.poem,
+        pre.poem {
+            white-space: pre-wrap !important;
+            text-indent: 0 !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+            text-align: left !important;
+            font-family: 'Georgia', serif !important;
+            font-style: italic !important;
+            border: none !important;
+            background: transparent !important;
+            line-height: 1.8 !important;
+            word-wrap: break-word !important;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e0;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #3182ce;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        pre {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #3182ce;
+            overflow-x: auto;
+            font-size: 9pt;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        code {
+            background-color: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 9pt;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #3182ce;
+            margin: 15px 0;
+            padding: 10px 20px;
+            background-color: #edf2f7;
+            font-style: italic;
+            page-break-inside: avoid;
+        }
+
+        strong,
+        b {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        ul,
+        ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .header-info {
+            text-align: center;
+            color: #718096;
+            font-size: 9pt;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Math styling */
+        .math-inline {
+            font-family: 'Computer Modern', 'Times New Roman', serif;
+            font-style: italic;
+            background-color: #f0f8ff;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .math-display {
+            font-family: 'Computer Modern', 'Times New Roman', serif;
+            font-style: italic;
+            background-color: #f0f8ff;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 4px solid #4299e1;
+        }
+
+        .katex {
+            font-size: 1.1em;
+        }
+
+        .katex-display {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        /* Mermaid diagram styling */
+        .mermaid-diagram {
+            margin: 20px 0;
+            page-break-inside: avoid;
+            text-align: center;
+        }
+
+        .mermaid-render {
+            background-color: #f8fafc;
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .mermaid-render svg {
+            max-width: 100%;
+            max-height: 400px;
+            height: auto;
+            width: auto;
+        }
+
+        .mermaid-code {
+            display: none;
+            background-color: #f7fafc;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 9pt;
+            white-space: pre-wrap;
+            margin-top: 10px;
+        }
+
+        .mermaid-fallback {
+            background-color: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .mermaid-fallback::before {
+            content: "Mermaid Diagram:";
+            font-weight: bold;
+            color: #c53030;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .node rect, .node circle, .node ellipse, .node polygon, .node path {
+            fill: #e5f5fc !important;
+            stroke: #2495aa !important;
+            stroke-width: 1px !important;
+        }
+
+        .cluster rect {
+            fill: #F9F9F9 !important;
+            stroke: #eecebd !important;
+            stroke-width: 1px !important;
+        }
+
+        .q2dcac {
+            display: flex;
+        }
+
+        .q2dcac img {
+            width: 299px;
+            height: 299px;
+        }
+
+        @media print {
+            body {
+                font-size: 10pt;
+            }
+
+            h1 {
+                font-size: 18pt;
+            }
+
+            h2 {
+                font-size: 13pt;
+            }
+
+            h3 {
+                font-size: 11pt;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            /* Show rendered diagrams in print, hide code */
+            .mermaid-code {
+                display: none !important;
+            }
+
+            .mermaid-render {
+                display: block !important;
+                padding: 10px !important;
+                page-break-inside: avoid;
+            }
+
+            /* Ensure SVG diagrams are visible and properly sized for print */
+            .mermaid-render svg {
+                max-width: 90% !important;
+                max-height: 300px !important;
+                height: auto !important;
+                width: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            /* Scale down oversized diagrams */
+            .mermaid-diagram {
+                margin: 10px 0 !important;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Shiki syntax highlighting styles for export */
+        pre.shiki {
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 6px !important;
+            padding: 15px !important;
+            overflow-x: auto;
+            margin: 15px 0;
+            page-break-inside: avoid;
+            font-size: 9pt;
+            line-height: 1.4;
+        }
+
+        pre.shiki code {
+            background: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+            font-size: inherit !important;
+        }
+
+        /* Shiki theme support - defaults to light theme for print/export */
+        .shiki,
+        .shiki span {
+            color: var(--shiki-light) !important;
+            background-color: var(--shiki-light-bg) !important;
+        }
+
+        /* Special handling for unsupported languages */
+        pre.plain-text,
+        pre.goat-diagram {
+            background-color: #f7fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 6px !important;
+            padding: 15px !important;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+            font-size: 9pt !important;
+            line-height: 1.4 !important;
+            overflow-x: auto;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        pre.goat-diagram {
+            border-left: 4px solid #38b2ac !important;
+            background-color: #e6fffa !important;
+        }
+
+        /* Override default pre/code styles for syntax highlighted blocks */
+        pre:has(.shiki),
+        pre.shiki {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            border-left: none !important;
+        }
+
+        @media print {
+
+            pre.shiki,
+            pre.plain-text,
+            pre.goat-diagram {
+                background-color: #f8f9fa !important;
+                border: 1px solid #dee2e6 !important;
+                font-size: 8pt !important;
+            }
+        }
+    </style> -->
+    <link rel="stylesheet" href="./assest/ECA.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-info">
+            <strong>Electronic Circuits &amp; Applications (4321103) - Summer 2023 Solution</strong><br>
+            By: Harsh S Kharecha<br>
+            Generated on 04/01/2026 | Content Converted System is VScode
+        </div>
+
+        <div class="content">
+            <h2>Q1 (a) થર્મલ રનઅવે વિગતવાર સમજાવો. [3 marks]</h2>
+            <p><strong>જવાબ</strong>: બીજેટી (BJT) ટ્રાન્ઝિસ્ટરમાં થર્મલ રનઅવે એક નુકસાનકારક પ્રક્રિયા છે, જેમાં વધતું તાપમાન એક એવું સ્વ-સંચાલિત ચક્ર (cycle) બનાવે છે જે અંતે ટ્રાન્ઝિસ્ટરને બગાડી નાખે છે અથવા તોડી નાખે છે.
+            </p>
+            <div class="mermaid-diagram" data-diagram-id="1">
+                <pre class="mermaid-code">flowchart LR
+                    A[Increase in Temperature 
+                       તાપમાનમાં વધારો] --> 
+                    B[Increase in Ic
+                       કલેક્ટર કરંટ I<sub>C</sub> માં વધારો]
+                    B --> C[Increase in Power Dissipation
+                             પાવર ડિસીપેશનમાં વધારો]
+                    C --> D[Further Increase in Temperature 
+                             તાપમાનમાં વધુ વધારો]
+                    D --> A
+                </pre>
+                <div class="mermaid-render" id="mermaid-1"></div>
+            </div>
+
+            <ul>
+                <li><strong>ગરમીની શરૂઆત (Heat Generation)</strong>: ટ્રાન્ઝિસ્ટરના સામાન્ય કામકાજ દરમિયાન તેનું તાપમાન
+                    વધે છે.</li>
+                <li><strong>લીકેજ કરંટ (Leakage Current)</strong>: તાપમાન વધવાની સાથે કલેક્ટર કરંટ ( I<sub>C</sub> ) માં
+                    વધારો થાય છે.</li>
+                <li><strong>પાવરનો વ્યય (Power Dissipation)</strong>: કરંટ વધવાથી પાવરનો વ્યય વધે છે, જેના કારણે તાપમાન
+                    હજુ વધારે ઊંચું જાય છે.</li>
+                <li><strong>વિનાશક ચક્ર (Destructive Cycle)</strong>: આ ચક્ર સતત ચાલતું રહે છે જ્યાં સુધી ટ્રાન્ઝિસ્ટર
+                    પોતાની મેળે બળીને નાશ ન પામે.</li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (યાદ રાખવાની ટૂંકી રીત (Mnemonic)):</strong> <strong>&quot;જેમ તાપમાન
+                    વધારે, તેમ કરંટ વધારે&quot;</strong> (The Higher Temperature, The Higher Current)</p>
+
+            <h2>Q1 (b) સરળ બ્લોક ડાયાગ્રામ વડે એમ્પ્લીફાયર વ્યાખ્યાયિત કરો એમ્પ્લીફાયર પરિમાણો લખો. [4 marks]</h2>
+            <p><strong>જવાબ</strong>: એમ્પ્લીફાયર એ એક ઇલેક્ટ્રોનિક ઉપકરણ છે જે ઇનપુટ સિગ્નલની પાવર, વોલ્ટેજ અથવા
+                કર્રેન્ટમાં વધારો કરે છે.</p>
+            <div class="mermaid-diagram" data-diagram-id="2">
+                <pre class="mermaid-code">flowchart LR
+                    A[Input 
+                       ઇનપુટ સિગ્નલ] -->|Vin| B[AMPLIFIER 
+                       એમ્પ્લીફાયર]
+                    B -->|Vout| C[Output Signal
+                    આઉટપુટ સિગ્નલ]
+                    D[Power Supply
+                    પાવર સપ્લાય] --> B
+                </pre>
+                <div class="mermaid-render" id="mermaid-2"></div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>એમ્પ્લીફાયર પેરામીટર (Amplifier Parameter)</th>
+                        <th>વર્ણન (ડિસ્ક્રિપ્શન, Description)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>વોલ્ટેજ ગેઇન (Av)</strong></td>
+                        <td>આઉટપુટ વોલ્ટેજ ભાગયા ઇનપુટ વોલ્ટેજનો ગુણોત્તર</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કરંટ ગેઇન (Ai)</strong></td>
+                        <td>આઉટપુટ કરંટ ભાગયા ઇનપુટ કરંટનો ગુણોત્તર</td>
+                    </tr>
+                    <tr>
+                        <td><strong>પાવર ગેઇન (Ap)</strong></td>
+                        <td>વોલ્ટેજ ગેઇન ભાગયા કરંટ ગેઇનનો ગુણાકાર ("Ap = Av × Ai")</td>
+                    </tr>
+                    <tr>
+                        <td><strong>બેન્ડવિડ્થ</strong></td>
+                        <td>એમ્પ્લીફાયર સંભાળી શકે તેવી ફ્રીક્વન્સીઝની શ્રેણી</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ઇનપુટ ઈમ્પૅડાન્સ</strong></td>
+                        <td>ઇનપુટ સ્ત્રોત દ્વારા જોવામાં આવતો રેઝિસ્ટન્સ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>આઉટપુટ ઈમ્પૅડાન્સ</strong></td>
+                        <td>ઇન્ટરનલ રેઝિસ્ટન્સ ઓફ અમ્પ્લીફાયર</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;VIPS-BIO&quot;</strong> ( વોલ્ટેજ ગેઇન
+                (Voltage Gain), ઇનપુટ ઈમ્પિડન્સ (Input impedance), પાવર ગેઇન (Power Gain), સપ્લાય (Supply), બેન્ડવિડ્થ
+                (Bandwidth), આઉટપુટ ઈમ્પિડન્સ (Impedance Output))</p>
+
+            <h2>Q1 (c) ટ્રાન્ઝિસ્ટરમાં બાયસિંગ વ્યાખ્યાયિત કરો? બાયસિંગ પદ્ધતિઓના પ્રકારો લખો. વોલ્ટેજ ડિવાઇડર બાયસિંગ
+                પદ્ધતિ વિગતવાર સમજાવો.ટ્રાન્ઝિસ્ટરમાં બાયસિંગ વ્યાખ્યાયિત કરો? બાયસિંગ પદ્ધતિઓના પ્રકારો લખો. વોલ્ટેજ
+                ડિવાઇડર બાયસિંગ પદ્ધતિ વિગતવાર સમજાવો. [7 marks]</h2>
+            <p><strong>જવાબ</strong>: બાયસિંગ એ ડીસી વોલ્ટેજ લાગુ કરીને ટ્રાન્ઝિસ્ટર માટે સ્થિર ઓપરેટિંગ પોઇન્ટ
+                (Q-પોઇન્ટ) સ્થાપિત કરવાની પ્રક્રિયા છે.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>બાએસીન્ગ મેથડ (Biasing Method)</th>
+                        <th>કી ફીચર્સ (Key Features)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ફિક્સ્ડ બાયસ</strong></td>
+                        <td>સરળ, નબળી સ્થિરતા</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કલેકટર ફીડબેક</strong></td>
+                        <td>સ્વ-વ્યવસ્થિત, વધુ સારી સ્થિરતા</td>
+                    </tr>
+                    <tr>
+                        <td><strong>વોલ્ટેજ ડિવાઈડર</strong></td>
+                        <td>શ્રેષ્ઠ સ્થિરતા, વ્યાપકપણે ઉપયોગમાં લેવાયેલ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>એમીટર બાયસ</strong></td>
+                        <td>સારી સ્થિરતા, નકારાત્મક ફીડબેક</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>વોલ્ટેજ ડિવાઈડર બાએસીન્ગ (Voltage Divider Biasing):</strong></p>
+
+            <div class="mermaid-diagram" data-diagram-id="3">
+                <pre class="mermaid-code">flowchart LR
+                VCC((+VCC)) --> R1
+                R1 --> R2 & B((Base))
+                R2 --> GND
+                B --> C((Collector))
+                B --> E((Emitter))
+                C --> RC --> VCC
+                E --> RE --> GND</pre>
+                <div class="mermaid-render" id="mermaid-3"></div>
+            </div>
+            <ul>
+                <li><strong>R1 &amp; R2</strong>: બેઝ વોલ્ટેજ (VB) નક્કી કરે છે</li>
+                <li><strong>RE</strong>: નકારાત્મક ફીડબેક દ્વારા સ્થિરીકરણ પૂરું પાડે છે</li>
+                <li><strong>RC</strong>: કલેક્ટર કરંટ અને વોલ્ટેજ ગેઇન નક્કી કરે છે</li>
+                <li><strong>Stability</strong>: તાપમાનના ફેરફારો સામે શ્રેષ્ઠ સ્થિરતા</li>
+            </ul>
+
+            <ul>
+                <p><strong>કાર્યપ્રણાલી:</strong></p>
+                <li>R1–R2 દ્વારા સ્થિર VB મળે છે</li>
+                <li>VB ના કારણે બેઝ-એમીટર જંકશન ફોરવર્ડ બાયસ થાય છે</li>
+                <li>જો તાપમાન વધે તો IC વધે છે, જેથી RE પર વોલ્ટેજ વધે છે</li>
+                <li>પરિણામે VBE ઘટે છે અને કરંટ પાછો ઘટે છે</li>
+                <li>આ નકારાત્મક ફીડબેક Q-પોઇન્ટને સ્થિર રાખે છે</li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;Divide Voltage Before Transistor
+                    Conducts&quot;</strong></p>
+
+            <h2>Q1 (c) હીટ સિંક સમજાવો. OR [7 marks]</h2>
+            <p><strong>જવાબ</strong>: હીટ સિંક એ એક પસ્સીવ હીટ એક્સ્ચેન્જર છે જે ઇલેક્ટ્રોનિક ઉપકરણોમાંથી ગરમીને આસપાસની
+                હવામાં સ્થાનાંતરિત કરે છે.</p>
+            <div class="mermaid-diagram" data-diagram-id="4">
+                <pre class="mermaid-code">flowchart LR
+                A[Heat Source/Transistor
+                    હીટ સોર્સ/ટ્રાન્ઝિસ્ટર] --> B[Interface Material
+                                             ઇન્ટરફેસ મટીરીયલ]
+                B --> C[Heat Sink Base
+                         હીટ સિંક બેઝ]
+                C --> D[Heat Sink Fins
+                         હીટ સિંક ફિન્સ]
+                D --> E[Ambient Air
+                         એમ્બિયન્ટ એર]</pre>
+                <div class="mermaid-render" id="mermaid-4"></div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>કોમ્પોનેન્ટ (Component)</th>
+                        <th>કાર્ય (ફંકશન, Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>બેઝ</strong></td>
+                        <td>ઉપકરણમાંથી ગરમીનું સંચાલન કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ફિન્સ</strong></td>
+                        <td>ગરમીના વિસર્જન માટે સપાટી વિસ્તાર વધારે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>થર્મલ ઇન્ટરફેસ સામગ્રી</strong></td>
+                        <td>ઉપકરણ અને સિંક વચ્ચેનો સંપર્ક સુધારે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>પ્રકારો</strong></td>
+                        <td>એક્સટ્રુડેડ, બોન્ડેડ, ફોલ્ડેડ, ડાઇ-કાસ્ટ</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>થર્મલ રેઝિસ્ટન્સ (Thermal Resistance)</strong>: ગરમીના વિસર્જન માટે નીચું સારું છે</li>
+                <li><strong>સામગ્રી (મટીરીયલ, Material)</strong>: સારી વાહકતા માટે સામાન્ય રીતે એલ્યુમિનિયમ અથવા તાંબુ
+                </li>
+                <li><strong>સપાટી ક્ષેત્રફળ (સુરફસ એરિયા,Surface Area)</strong>: વધુ ફિન્સ એટલે સારી ઠંડક</li>
+                <li><strong>હવાનો પ્રવાહ (એર ફલૉ, Air Flow)</strong>: કાર્યક્ષમ ગરમી દૂર કરવા માટે મહત્વપૂર્ણ</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;હીટ સિંક ટ્રાન્ઝિસ્ટરને ચાલુ રાખે
+                    છે&quot;</strong></p>
+
+            <h2>Q2(a) ડી.સી. અને એ.સી. લોડ લાઇન્સનું વર્ણન કરો. [3 marks]</h2>
+            <p><strong>જવાબ</strong>: લોડ લાઇનો ગ્રાફિકલી ટ્રાન્ઝિસ્ટરના લાક્ષણિક વળાંકો પરના શક્ય ઓપરેટિંગ બિંદુઓનું
+                પ્રતિનિધિત્વ કરે છે.</p>
+            <pre class="goat-diagram diag-split"><div class="q2dcacimg"><img src="./assest/image/Q2(a)D.C&A.C20260104_152954.jpg" alt=""></div><div>
+    <code>            Ic
+                ↑
+                |
+                |        DC Load Line
+                |       ╱
+    Q-point     |      ╱
+                |     *
+                |    ╱  AC Load Line
+                |   ╱
+                |  ╱
+                | ╱
+                |╱
+                +----------------→ Vce
+                0                Vcc
+    </code>
+            </div></pre>
+
+            <ul>
+                <li>
+                    <p><strong>ડીસી લોડ લાઇન (DC Load Line)</strong>: ડીસી પરિસ્થિતિઓ હેઠળ બધા શક્ય ઓપરેટિંગ પોઇન્ટ
+                        બતાવે છે</p>
+                    <ul>
+                        <li><strong>સમીકરણ (Equation)</strong>: Ic = (VCC - VCE)/RC</li>
+                        <li><strong>અંતિમ બિંદુઓ (Endpoints)</strong>: (0, VCC/RC) અને (VCC, 0)</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>એસી લોડ લાઇન (AC Load Line)</strong>: AC સિગ્નલ હેન્ડલિંગ દરમિયાન ઓપરેટિંગ પોઈન્ટ બતાવે
+                        છે</p>
+                    <ul>
+                        <li><strong>સ્ટીપર સ્લોપ (Steeper Slope)</strong>: AC રેઝિસ્ટન્સ DC કરતા ઓછો હોવાથી</li>
+                        <li><strong>Q-પોઇન્ટ પર કેન્દ્રિત (Centered at Q-point)</strong>: પક્ષપાત દ્વારા સ્થાપિત
+                            કાર્યકારી બિંદુ
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ડીસી સંપૂર્ણપણે ડ્રો કરે છે, એસી કોર્સ બદલે છે&quot;</strong></p>
+
+            <h2>Q2 (b) એમ્પ્લીફાયરના બેન્ડવિડ્થ અને ગેઇન-બેન્ડવિડ્થ ગુણાંકને સંક્ષિપ્તમાં સમજાવો. [4 marks]</h2>
+            <p><strong>જવાબ</strong>: એમ્પ્લીફાયર ફ્રીક્વન્સી કામગીરી માટે બેન્ડવિડ્થ અને ગેઇન-બેન્ડવિડ્થ પ્રોડક્ટ મુખ્ય
+                સ્પષ્ટીકરણો છે.</p>
+            <div class="mermaid-diagram" data-diagram-id="5">
+                <pre class="mermaid-code">flowchart LR
+                A[Input
+                ઇનપુટ] --> B[Amplifier
+                                Gain × Bandwidth
+                                એમ્પ્લીફાયર
+                                ગેઇન × બેન્ડવિડ્થ]
+                B --> C[Output
+                        આઉટપુટ]</pre>
+                <div class="mermaid-render" id="mermaid-5"></div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>પેરામીટર (Parameter)</th>
+                        <th>વર્ણન (ડિસ્ક્રિપ્શન, Description)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>બેન્ડવિડ્થ</strong></td>
+                        <td>ફ્રીક્વન્સી રેન્જ જ્યાં ગેઇન 3dB કરતા ઓછો ઘટે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>લોઅર કટઓફ (f₁)</strong></td>
+                        <td>નીચા સ્તરે જ્યાં ગેઇન 3dB ઘટે છે ત્યાં ફ્રીક્વન્સી</td>
+                    </tr>
+                    <tr>
+                        <td><strong>અપર કટઓફ (f₂)</strong></td>
+                        <td>ઉચ્ચ સ્તરે જ્યાં ગેઇન 3dB ઘટે છે ત્યાં ફ્રીક્વન્સી</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ગેઇન-બેન્ડવિડ્થ પ્રોડક્ટ</strong></td>
+                        <td>ગેઇન અને બેન્ડવિડ્થનું ઉત્પાદન, સ્થિર રહે છે</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>બેન્ડવિડ્થ ફોર્મ્યુલા</strong>: BW = f₂ - f₁</li>
+                <li><strong>ગેઇન-બેન્ડવિડ્થ</strong>: જ્યારે ગેઇન બદલાય છે ત્યારે તે સ્થિર રહે છે</li>
+                <li><strong>Trade-off</strong>: વધારે ગેઇન એટલે ઓછી બેન્ડવિડ્થ</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;સારી બેન્ડવિડ્થ સંપૂર્ણ ટ્રાન્સમિશન મેળવે છે&quot;</strong></p>
+
+            <h2>Q2 (c) બે તબક્કાના RC કપલ્ડ એમ્પ્લીફાયરના ફ્રીક્વન્સી રિસ્પોન્સ સમજાવો. [7 marks]</h2>
+            <p><strong>જવાબ</strong>: બે-તબક્કાના RC કપલ્ડ એમ્પ્લીફાયરનો ફ્રીક્વન્સી રિસ્પોન્સ બતાવે છે કે ગેઇન
+                ફ્રીક્વન્સી સાથે કેવી રીતે બદલાય છે.</p>
+            <div class="mermaid-diagram" data-diagram-id="6">
+                <pre class="mermaid-code">flowchart LR
+                A[Input
+                ઇનપુટ] --> B[First
+                              Amplifier
+                              Stage
+                              ફર્સ્ટ
+                              એમ્પ્લીફાયર
+                              સ્ટેજ]
+                B -->|RC Coupling
+                       આરસી કપલિંગ| C[Second
+                                       Amplifier
+                                       Stage
+                                       સેકન્ડ
+                                       એમ્પ્લીફાયર
+                                       સ્ટેજ]
+                C --> D[Output
+                         આઉટપુટ]</pre>
+                <div class="mermaid-render" id="mermaid-6"></div>
+            </div>
+            <pre class="goat-diagram diag-split"><div><img src="./assest/image/hq720.jpg" alt=""></div><div>
+    <code>    Gain(dB)
+        ↑
+        |    Mid-frequency band
+        |    ┌───────────────┐
+        |    │               │
+        |    │               │
+        |   ╱│               │╲
+        |  ╱ │               │ ╲
+        | ╱  │               │  ╲
+        |╱   │               │   ╲
+        +────┴───────────────┴────→ Frequency(Hz)
+            f₁                 f₂
+        Low freq.         High freq.
+    </code>
+            </div></pre>
+
+            <ul>
+                <li>
+                    <p><strong>લો ફ્રીક્વન્સી રેસ્પોન્સે</strong>: કપલિંગ કેપેસિટર્સ દ્વારા મર્યાદિત</p>
+                    <ul>
+                        <li><strong>રોલ-ઓફ રેટ</strong>: દરેક તબક્કા માટે -20 dB/દાયકા</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>મીડ ફ્રીક્વન્સી રેસ્પોન્સે</strong>: મહત્તમ અને સપાટ ગેઇન રિજયન</p>
+                    <ul>
+                        <li><strong>ટોટલ ગેઇન</strong>: વ્યક્તિગત તબક્કાના ગેઇન નું ઉત્પાદન</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>હાઈ ફ્રીક્વન્સી રેસ્પોન્સે</strong>: ટ્રાન્ઝિસ્ટર કેપેસિટેન્સ દ્વારા મર્યાદિત</p>
+                    <ul>
+                        <li><strong>રોલ-ઓફ રેટ</strong>: દરેક તબક્કા માટે -20 dB/દાયકા</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ઓછા કપલ્સ નબળા, ઉચ્ચ કેપેસીટન્સ બ્લોક્સ&quot;</strong> (Low Couples Weakly, High Capacitance Blocks)</p>
+
+            <h2>Q2 (a) ટ્રાન્ઝિસ્ટર બાયસિંગ માટે ફિક્સ્ડ બાયસ સર્કિટ સમજાવો. OR [3 marks]</h2>
+            <p><strong>જવાબ</strong>: ટ્રાન્ઝિસ્ટર માટે ફિક્સ્ડ બાયસ એ સૌથી સરળ બાયસિંગ પદ્ધતિ છે, જેમાં બેઝ સાથે
+                જોડાયેલા સિંગલ રેઝિસ્ટરનો ઉપયોગ થાય છે.</p>
+            <pre class="goat-diagram"><div class="q2fbimg"><img src="./assest/image/Q2(a)FB20260104_162453.jpg" alt=""></div><div>
+    <code>        +Vcc
+            |
+            R
+            |
+            |   C
+        ------+---o
+        |     |
+    Vin    |    RC
+        |     |     |
+        |     |    +Vcc
+        |     |
+        +-----+
+        Base  Collector
+            |
+            E
+            |
+            GND
+    </code>
+            </div></pre>
+
+            <ul>
+                <li><strong>સર્કિટ એલિમેન્ટ</strong>: બેઝ રેઝિસ્ટર (RB) અને કલેક્ટર રેઝિસ્ટર (RC)</li>
+                <li><strong>બેઝ કરંટ</strong>: IB = (VCC - VBE)/RB</li>
+                <li><strong>કલેક્ટર કરંટ</strong>: IC = β × IB</li>
+                <li><strong>ખામીઓ</strong>: નબળી સ્થિરતા, તાપમાનમાં ફેરફારથી પ્રભાવિત</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ફિક્સ્ડ બાયસ (પસંદ કરો), અને અસ્થિરતાનો મુશ્કેલીનો સામનો કરો.&quot;</strong> (Fix Bias, Face Burden) (of instability)</p>
+
+            <h2>Q2 (b) સિંગલ સ્ટેજ એમ્પ્લીફાયરનો ફ્રીક્વન્સી રિસ્પોન્સ સમજાવો. OR [4 marks]</h2>
+            <p><strong>જવાબ</strong>: સિંગલ-સ્ટેજ એમ્પ્લીફાયરનો ફ્રીક્વન્સી રિસ્પોન્સ વિવિધ ફ્રીક્વન્સીઝના ગેઇનમાં તફાવત જોવા મળે છે.</p>
+
+            <pre class="goat-diagram"><div><img src="./assest/image/Frequency-and-Phase-Response-Curves-of-a-Single-Stage-Amplifier-01.jpg" alt=""></div><div>
+    <code>    Gain(dB)
+    ↑
+    |    Mid-frequency band
+    |    ┌───────────────┐
+    |    │               │
+    |   ╱│               │╲
+    |  ╱ │               │ ╲
+    | ╱  │               │  ╲
+    |╱   │               │   ╲
+    +────┴───────────────┴────→ Frequency(Hz)
+        f₁                 f₂
+    Low freq.         High freq.
+</code>
+        </div></pre>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ફ્રીક્વન્સી રેઈજ (Frequency Range)</th>
+                        <th>લાક્ષણિકતાઓ (લાક્ષણિકતાઓ (Characteristics)s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>લો ફ્રીક્વન્સી રેસ્પોન્સે</strong></td>
+                        <td>કપલિંગ કેપેસિટરને કારણે ગેઇનમાં ઘટાડો</td>
+                    </tr>
+                    <tr>
+                        <td><strong>મીડ ફ્રીક્વન્સી રેસ્પોન્સે</strong></td>
+                        <td>મહત્તમ અને સતત ગેઇન</td>
+                    </tr>
+                    <tr>
+                        <td><strong>હાઈ ફ્રીક્વન્સી રેસ્પોન્સે</strong></td>
+                        <td>ટ્રાન્ઝિસ્ટર કેપેસિટેન્સને કારણે ગેઇન ઘટે છે</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>લોઅર કટોફ ફ્રીક્વન્સી</strong>: કપલિંગ કેપેસિટર્સ દ્વારા નક્કી</li>
+                <li><strong>અપર કટઓફ્ફ ફ્રીક્વન્સી</strong>: આંતરિક ટ્રાન્ઝિસ્ટર કેપેસિટેન્સ દ્વારા મર્યાદિત</li>
+                <li><strong>બેન્ડવિડ્થ</strong>: લોઅર અને અપર કટઓફ ફ્રીક્વન્સીઝ વચ્ચેની શ્રેણી</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;નીચું મધ્યમ ઉચ્ચ - કેપેસિટર્સ અહીં
+                    મહત્વપૂર્ણ છે&quot;</strong> (Low Middle High - Capacitors Matter Here)</p>
+
+            <h2>Q2 (c) ટ્રાન્સફોર્મર કપલ્ડ એમ્પ્લીફાયર અને આરસી કપલ્ડ એમ્પ્લીફાયરની સરખામણી કરો OR [7 marks]</h2>
+            <p><strong>જવાબ</strong>: RC coupled amplifier અને transformer coupled amplifier બે પ્રકારના amplifiers છે, જે સિગ્નલ ટ્રાન્સફર માટે અલગ coupling elements વાપરે છે અને તેઓના બૅન્ડવિડ્થ, કાર્યક્ષમતા, અને ઉપયોગમાં ફરક પડે છે.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>પેરામીટર (Parameter)</th>
+                        <th>આરસી કપલ્ડ એમ્પ્લીફાયર (RC Coupled Amplifier)</th>
+                        <th>ટ્રાન્સફોર્મર કપલ્ડ એમ્પ્લીફાયર (Transformer Coupled Amplifier)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>કપલિંગ એલિમેન્ટ</strong></td>
+                        <td>રેઝિસ્ટર અને કેપેસિટર</td>
+                        <td>ટ્રાન્સફોર્મર</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ફ્રીક્વન્સી રેસ્પોન્સે</strong></td>
+                        <td>વાઇડ બેન્ડવિડ્થ</td>
+                        <td>મર્યાદિત બેન્ડવિડ્થ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કાર્યક્ષમતા</strong></td>
+                        <td>નીચું (20-25%)</td>
+                        <td>ઉચ્ચ (50-60%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કદ &amp; વજન</strong></td>
+                        <td>નાનું અને હલકું</td>
+                        <td>ભારે અને ભારે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કિંમત</strong></td>
+                        <td>સસ્તું</td>
+                        <td>ખર્ચાળ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ઇમ્પિડન્સ મેચિંગ</strong></td>
+                        <td>ખરાબ મેચિંગ</td>
+                        <td>ઉત્તમ મેચિંગ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>વિકૃતિ</strong></td>
+                        <td>ઓછી વિકૃતિ</td>
+                        <td>કોર સેચ્યુરેશનને કારણે વધારે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DC આઇસોલેશન</strong></td>
+                        <td>સારું આઇસોલેશન</td>
+                        <td>ઉત્તમ આઇસોલેશન</td>
+                    </tr>
+                    <tr>
+                        <td><strong>એપ્લિકેશન્સ</strong></td>
+                        <td>સામાન્ય હેતુ</td>
+                        <td>ઑડિયો પાવર એમ્પ્લીફાયર</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mermaid-diagram" data-diagram-id="7">
+                <pre class="mermaid-code">flowchart TB
+            subgraph RC [RC આરસી]
+            A1[Transistor
+                ટ્રાન્ઝિસ્ટર 1] -->|Coupling Capacitor
+                                કપલિંગ કેપેસિટર| B1[Transistor 
+                                                  ટ્રાન્ઝિસ્ટર 2]
+            end
+            subgraph Transformer [Transformer ટ્રાન્સફોર્મર]
+            A2[Transistor
+                ટ્રાન્ઝિસ્ટર 1] -->|Transformer
+                                ટ્રાન્સફોર્મર| B2[Transistor 
+                                             ટ્રાન્ઝિસ્ટર 2]
+            end</pre>
+
+                <div class="mermaid-render" id="mermaid-7"></div>
+            </div>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;RC એટલે કે લંબાઈ (Breadth), અને
+                    ટ્રાન્સફોર્મર એટલે કે શક્તિ (Power).&quot;</strong> (RC Takes Breadth, Transformer Takes Power)</p>
+
+            <h2>Q3 (a) ડાયરેક્ટ કપલ્ડ એમ્પ્લીફાયરને સંક્ષિપ્તમાં સમજાવો. [3 marks]</h2>
+            <p><strong>જવાબ</strong>: ડાયરેક્ટ-કપ્લ્ડ એમ્પ્લીફાયર કપલિંગ કેપેસિટર્સ અથવા ટ્રાન્સફોર્મર્સ વિના સ્ટેજને
+                જોડે છે, જે ડીસી સિગ્નલ એમ્પ્લીફિકેશનને મંજૂરી આપે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="8">
+                <pre class="mermaid-code">flowchart LR
+            In[Input
+               ઇનપુટ] --> A[First Stage
+                            પહેલો સ્ટેજ]
+            A -- Direct Connection
+                 સીધું જોડાણ --> B[Second Stage
+                                  બીજો સ્ટેજ]
+            B --> Out[Output
+                      આઉટપુટ]</pre>
+
+                <div class="mermaid-render" id="mermaid-8"></div>
+            </div>
+
+            <ul>
+                <li><strong>DC સિગ્નલ હેન્ડલિંગ</strong>: ખૂબ ઓછી ફ્રીક્વન્સી અને ડીસીને એમ્પ્લીફાય કરી શકે છે</li>
+                <li><strong>કોઈ કપલિંગ તત્વો નથી</strong>: પ્રથમ તબક્કાનું આઉટપુટ સીધા આગામી તબક્કાના ઇનપુટ સાથે જોડાય
+                    છે</li>
+                <li><strong>ફ્રીક્વન્સી રિસ્પોન્સ</strong>: ઉત્તમ ઓછી-ફ્રીક્વન્સી પ્રતિભાવ</li>
+                <li><strong>ખામીઓ</strong>: થર્મલ ડ્રિફ્ટ, બાયસ સ્ટેબિલિટી સમસ્યાઓ</li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;સીધા જોડાયેલા, શૂન્ય ફ્રીક્વન્સી સુધી
+                    પૂર્ણ&quot;</strong> (Directly Connected, Down to Complete zero frequency)</p>
+
+            <h2>Q3 (b) એમ્પ્લીફાયરના ફ્રીક્વન્સી રિસ્પોન્સ પર એમીટર બાયપાસ કેપેસિટર અને કપલિંગ કેપેસિટરની અસરો સમજાવો.
+                [4 marks]</h2>
+            <p><strong>જવાબ</strong>:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>કેપેસિટર</th>
+                        <th>કાર્ય (Function)</th>
+                        <th>ફ્રીક્વન્સી રિસ્પોન્સ પર અસર</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>એમીટર બાયપાસ કેપેસિટર (Emitter Bypass Capacitor)</strong></td>
+                        <td>RE ની આસપાસ AC સિગ્નલને રસ્તો આપે છે.</td>
+                        <td>મિડ (Mid) અને હાઈ (High) ફ્રીક્વન્સી પર ગેઈન (Gain) વધારે છે.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કપલિંગ કેપેસિટર (Coupling Capacitor)</strong></td>
+                        <td>DC ને રોકે છે, AC ને પસાર થવા દે છે.</td>
+                        <td>લોઅર કટ-ઓફ (Lower cutoff) ફ્રીક્વન્સી નક્કી કરે છે.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mermaid-diagram" data-diagram-id="9">
+                <pre class="mermaid-code">
+                flowchart TB
+                    subgraph "Effects on Gain (ગેઈન પર અસરો)"
+                    A[Without Capacitors
+                      કેપેસિટર વગર] -->|"Low Gain
+                                        લો ગેઇન"| B[With Coupling Only
+                                                    માત્ર કપલિંગ સાથે]
+                    B -->|"Medium Gain
+                           મધ્યમ ગેઇન"| C[With Coupling + Bypass
+                                         કપલિંગ + બાયપાસ સાથે]
+                    C -->|"High Gain
+                           ઉચ્ચ ગેઇન"| D[Ideal Response
+                                        આદર્શ રિસ્પોન્સ]
+                    end
+                </pre>
+                <div class="mermaid-render" id="mermaid-9"></div>
+            </div>
+            <ul>
+                <li>
+                    <p><strong>એમીટર બાયપાસ કેપેસિટર (Emitter Bypass Capacitor)</strong>:</p>
+                    <ul>
+                        <li><strong>વગર</strong>: નેગેટિવ ફીડબેકને કારણે ગેઈન ઓછો મળે છે.</li>
+                        <li><strong>સાથે</strong>: AC સિગ્નલ માટે RE બાયપાસ થવાથી વધારે ગેઈન મળે છે.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>કપલિંગ કેપેસિટર (Coupling Capacitor)</strong>:</p>
+                    <ul>
+                        <li><strong>નાનું મૂલ્ય</strong>: લો-ફ્રીક્વન્સી રિસ્પોન્સ નબળો મળે છે.</li>
+                        <li><strong>મોટું મૂલ્ય</strong>: લો-ફ્રીક્વન્સી રિસ્પોન્સ સારો મળે છે.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;કપલિંગ લો-ફ્રીક્વન્સીને નિયંત્રણ કરે છે, બાયપાસ બધું જ બુસ્ટ કરે છે.&quot;</strong> (Coupling Controls Lows, Bypass Boosts All)</p>
+
+            <h2>Q3 (c) ટ્રાન્ઝિસ્ટર ટુ પોર્ટ નેટવર્ક દોરો અને તેના માટે h-પેરામીટર્સનું વર્ણન કરો. હાઇબ્રિડ પેરામીટર્સના ફાયદા લખો. [7 marks]</h2>
+            <p><strong>જવાબ</strong>: બે-પોર્ટ નેટવર્ક એ h-પેરામીટર્સ (હાઇબ્રિડ પેરામીટર્સ) નો ઉપયોગ કરીને ટ્રાન્ઝિસ્ટર વર્તણૂકનું વિશ્લેષણ કરવા માટેનું એક મોડેલ છે.</p>
+            <pre class="goat-diagram"><div class="q3tpimg"><img src="./assest/image/Q3(c)Twopot20260104_164654.jpg" alt=""></div><div>
+    <code>                i₁                 i₂
+                    →                  ←
+                    |                  |
+        +----------+------------------+---------+
+        |          |                  |         |
+        |          |                  |         |
+    v₁  |    +-----+------+    +-----+------+   |
+    ↓   |    |     |      |    |     |      |   |
+        |    |  Two-Port  |    |     ↓      |   |
+        +----+   Network  +----+     v₂     +---+
+        |    |            |    |            |   |
+        |    |            |    |            |   |
+        |    +------------+    +------------+   |
+        |                                       |
+        +---------------------------------------+
+    </code>
+            </div></pre>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>હાઇબ્રિડ પેરામીટર્સ (H-Parameter)</th>
+                        <th>વ્યાખ્યા (Definition)</th>
+                        <th>ભૌતિક અર્થ (Physical Meaning)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>h₁₁ (hᵢₑ)</strong></td>
+                        <td>આઉટપુટ શોર્ટ-સર્કિટ સાથે ઇનપુટ ઇમ્પિડન્સ</td>
+                        <td>બેઝ-એમીટર રેઝિસ્ટન્સ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>h₁₂ (hᵣₑ)</strong></td>
+                        <td>ઇનપુટ ઓપન-સર્કિટ સાથે રિવર્સ વોલ્ટેજ ગેઈન</td>
+                        <td>આઉટપુટથી ઇનપુટ તરફનું ફીડબેક</td>
+                    </tr>
+                    <tr>
+                        <td><strong>h₂₁ (hfₑ)</strong></td>
+                        <td>આઉટપુટ શોર્ટ-સર્કિટ સાથે ફોરવર્ડ કરંટ ગેઈન</td>
+                        <td>કરંટ ગેઈન (β)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>h₂₂ (hoₑ)</strong></td>
+                        <td>ઇનપુટ ઓપન-સર્કિટ સાથે આઉટપુટ એડમિટન્સ</td>
+                        <td>આઉટપુટ કન્ડક્ટન્સ</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>H-Parameters ના ફાયદા (Advantages of H-Parameters):</strong></p>
+            <ul>
+                <li><strong>સરળ માપન (Easily Measured)</strong>: સાદા સર્કિટ વડે સીધું માપન શક્ય છે.</li>
+                <li><strong>મિશ્રિત એકમો (Mixed Units)</strong>: વોલ્ટેજ અને કરંટના ગુણોત્તરનો ઉપયોગ કરે છે.</li>
+                <li><strong>મોડેલની ચોકસાઈ (Model Accuracy)</strong>: ટ્રાન્ઝિસ્ટરની વાસ્તવિક વર્તનની ખૂબ નજીક છે.</li>
+                <li><strong>ગાણિતિક સરળતા (Mathematical Simplicity)</strong>: વિશ્લેષણ માટે રેખીય (Linear) સમીકરણોનો ઉપયોગ થાય છે.</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ઇનપુટ, રિવર્સ, ફોરવર્ડ, આઉટપુટ - IRFO પેરામીટર્સ&quot;</strong> (Input, Reverse, Forward, Output - IRFO Parameters)</p>
+
+            <h2>Q3 (a) એમ્પ્લીફાયરનો ફ્રીક્વન્સી રિસ્પોન્સ દોરો અને તેમાં અપર કટ-ઓફ ફ્રીક્વન્સી, લોઅર કટ-ઓફ ફ્રીક્વન્સી, બેન્ડવિડ્થ અને મિડ-ફ્રીક્વન્સી ગેઈન દર્શાવો. OR [3 marks]</h2>
+            <p><strong>જવાબ</strong>: ફ્રીક્વન્સી રિસ્પોન્સ ગ્રાફ દર્શાવે છે કે ફ્રીક્વન્સી બદલાતા એમ્પ્લીફાયરના ગેઈનમાં કેવી રીતે ફેરફાર થાય છે.</p>
+            <pre class="goat-diagram"><div class="q3lg"><img src="./assest/image/Q3(a)L&U.png" alt=""></div><div>
+    <code>    Gain(dB)
+        ↑
+        |                Mid-frequency gain
+        |    ┌─────────────────────────────┐
+        |    │                             │
+    0.707×Av -+                             +-
+        |   /│                             │\
+        |  / │                             │ \
+        | /  │                             │  \
+        |/   │                             │   \
+        +────┴─────────────────────────────┴────→ Frequency(log scale)
+            f₁                              f₂
+            │                               │
+            │←───────── Bandwidth ─────────→│
+            │                               │
+        Lower cutoff                    Upper cutoff
+        frequency                       frequency
+    </code>
+            </div></pre>
+
+            <ul>
+                <li><strong>મિડ-ફ્રીક્વન્સી ગેઈન (Mid-frequency Gain - Av)</strong>: ફ્લેટ વિસ્તારમાં મળતો મહત્તમ ગેઈન.</li>
+                <li><strong>લોઅર કટ-ઓફ ફ્રીક્વન્સી (Lower Cutoff Frequency - f₁)</strong>: જે ફ્રીક્વન્સી પર ગેઈન ઘટીને 0.707×Av (-3dB) થાય તે.</li>
+                <li><strong>અપર કટ-ઓફ ફ્રીક્વન્સી (Upper Cutoff Frequency - f₂)</strong>: જે ફ્રીક્વન્સી પર ગેઈન ઘટીને 0.707×Av (-3dB) થાય તે.</li>
+                <li><strong>બેન્ડવિડ્થ (Bandwidth)</strong>: અપર અને લોઅર કટ-ઓફ ફ્રીક્વન્સી વચ્ચેનો તફાવત (f₂ - f₁).</li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;લોઅર બેન્ડવિડ્થ અપર એમ્પ્લીફાયર રિસ્પોન્સ બનાવે છે&quot;</strong> (Lower Bandwidth Upper Makes Amplifier Response)</p>
+
+            <h2>Q3 (b) ટ્યુન કરેલ એમ્પ્લીફાયર તરીકે ઉપયોગમાં લેવાતા ટ્રાન્ઝિસ્ટરનું વર્ણન કરો. OR [4 marks]</h2>
+            <p><strong>જવાબ</strong>: ટ્યુન કરેલ એમ્પ્લીફાયર ચોક્કસ ફ્રીક્વન્સીઝ પર પસંદગીયુક્ત રીતે સિગ્નલોને વિસ્તૃત કરવા માટે LC રેઝોનન્ટ સર્કિટનો ઉપયોગ કરે છે.</p>
+            
+            <div class="mermaid-diagram" data-diagram-id="10">
+                <pre class="mermaid-code">flowchart LR
+            A[Input Signal
+              ઇનપુટ સિગ્નલ] --> B[Transistor Amplifier
+                                 ટ્રાન્ઝિસ્ટર એમ્પ્લીફાયર]
+            B --> C[LC Tuned Circuit
+                    LC ટ્યુન્ડ સર્કિટ]
+            C --> D[Output Signal
+                    આઉટપુટ સિગ્નલ]</pre>
+                <div class="mermaid-render" id="mermaid-10"></div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>કોમ્પોનેન્ટ (Component)</th>
+                        <th>કાર્ય (Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LC ટાંકી સર્કિટ</strong></td>
+                        <td>ચોક્કસ ફ્રીક્વન્સી પર પડઘો પાડે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ટ્રાન્ઝિસ્ટર</strong></td>
+                        <td>એમ્પ્લીફિકેશન પૂરું પાડે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>રેઝોનન્સ ફ્રીક્વન્સી</strong></td>
+                        <td>f = 1/(2π√LC)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ગુણવત્તા પરિબળ (Q)</strong></td>
+                        <td>બેન્ડવિડ્થ નક્કી કરે છે</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li><strong>ઉચ્ચ પસંદગી (High Selectivity)</strong>: રેઝોનન્ટ ફ્રીક્વન્સી પર સિગ્નલોને વિસ્તૃત કરે છે</li>
+                <li><strong>એપ્લિકેશન્સ (Applications)</strong>: આરએફ રીસીવર, ટ્રાન્સમીટર, સંદેશાવ્યવહાર</li>
+                <li><strong>પ્રકારો (Types)</strong>: સિંગલ-ટ્યુન્ડ, ડબલ-ટ્યુન્ડ, સ્ટેગર-ટ્યુન્ડ</li>
+                <li><strong>બેન્ડવિડ્થ (Bandwidth)</strong>: Q પરિબળના વ્યસ્ત પ્રમાણસર</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;એલસી ટ્યુનિંગ સિગ્નલોને ચોક્કસ રીતે પસંદ કરે છે&quot;</strong> (Tuning LC Selects Signals Precisely)</p>
+
+            <h2>Q3 (c) બે પોર્ટ નેટવર્કમાં h પેરામીટર્સનું મહત્વ સમજાવો. CE એમ્પ્લીફાયર માટે h-પેરામીટર્સ સર્કિટ દોરો. OR [7 marks]</h2>
+            <p><strong>જવાબ</strong>: H-પેરામીટર્સ બે-પોર્ટ નેટવર્ક તરીકે ટ્રાન્ઝિસ્ટર સર્કિટનું વિશ્લેષણ કરવા માટે સંપૂર્ણ ગાણિતિક મોડેલ પૂરું પાડે છે.</p>
+            <p><strong>h-પેરામીટર્સનું મહત્વ (Importance of h-parameters):</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>પાસું (આસ્પેક્ટ, Aspect)</th>
+                        <th>મહત્વ (Importance)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>સર્કિટ વિશ્લેષણ</strong></td>
+                        <td>જટિલ સર્કિટ માટે સરળ સમીકરણો</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ડિઝાઇન ગણતરીઓ</strong></td>
+                        <td>પ્રેડિક્ટ ગેઇન, ઇનપુટ/આઉટપુટ ઈમ્પૅડાન્સ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ઉત્પાદક સ્પેક્સ</strong></td>
+                        <td>ટ્રાન્ઝિસ્ટર લાક્ષણિકતાઓ સ્પષ્ટ કરવાની માનક રીત</td>
+                    </tr>
+                    <tr>
+                        <td><strong>સ્થિરતા વિશ્લેષણ</strong></td>
+                        <td>સ્થિરતાની સ્થિતિ નક્કી કરો</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ફ્રીક્વન્સી નિર્ભરતા</strong></td>
+                        <td>વિવિધ ફ્રીક્વન્સીઝમાં મોડેલ વર્તન</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>CE એમ્પ્લીફાયર h-પેરામીટર સમકક્ષ સર્કિટ (CE Amplifier h-parameter equivalent circuit):</strong></p>
+            <pre class="goat-diagram"><div class="q3ceh"><img src="./assest/image/Q3(c)CE_H-P20260104_195822.jpg" alt=""></div><div>
+    <code>        +-------+      RC
+            |       |      ┌─┐
+        ┌─┐ |       |   ┌──┘ └──┐
+    IB─→ |       |   |       |
+            |       |   |       +---o Vout
+    Vin o───┤   hie  hre×Vce    |
+            |       |   |       |
+            |       |   |   hoe |
+            |  hfe×ib   |       |
+            |       |   |       |
+            +-------+   +-------+
+                |           |
+                └───────────┘
+                    GND
+    </code>
+            </div></pre>
+
+            <!-- <ul>
+                <li><strong>hie</strong>: ઇનપુટ અવબાધ (બેઝ-એમીટર પ્રતિકાર)</li>
+                <li><strong>hre</strong>: રિવર્સ વોલ્ટેજ ફીડબેક ગુણોત્તર</li>
+                <li><strong>hfe</strong>: ફોરવર્ડ કરંટ ગેઇન (β)</li>
+                <li><strong>hoe</strong>: આઉટપુટ પ્રવેશ</li>
+            </ul> -->
+
+            <ul>
+                <li><strong>ઇનપુટ બાજુ:</strong>
+                    <ul><li><strong>h<sub>ie</sub> (ઇનપુટ ઇમ્પીડેન્સ):</strong> બેઝ સાથે શ્રેણીમાં એક આંતરિક રેઝિસ્ટન્સ <strong>(AC સર્કિટમાં R<sub>B</sub>)</strong>, ઇનપુટ ઇમ્પીડેન્સનું પ્રતિનિધિત્વ કરે છે.</li></ul>
+                </li>
+                <li><strong>ઇનપુટ અને આઉટપુટ વચ્ચે:</strong>
+                    <ul>
+                        <li><strong>h<sub>fe</sub> (ફોરવર્ડ કરંટ ગેઇન):</strong> કલેક્ટર અને એમિટર વચ્ચે <strong>h<sub>fe</sub>I<sub>s</sub> (અથવા βI<sub>b</sub>)</strong> મૂલ્યનો કરન્ટ-કંટ્રોલ્ડ કરંટ સ્ત્રોત <strong>(CCCS)</strong>, આઉટપુટ કરંટ ઉત્પન્ન કરે છે.</li>
+                        <li><strong>h<sub>re</sub> (રિવર્સ વોલ્ટેજ ગેઇન):</strong> કલેક્ટરથી બેઝ સુધી એક નાનો વોલ્ટેજ સ્ત્રોત <strong>(h<sub>re</sub>V<sub>c</sub>)</strong>, સામાન્ય રીતે <strong>CE</strong> વિશ્લેષણમાં અવગણવામાં આવે છે કારણ કે તે ખૂબ નાનું હોય છે.</li>
+                    </ul>
+                </li>
+                <li><strong>આઉટપુટ બાજુ:</strong>
+                    <ul><li><strong>h<sub>oe</sub> (આઉટપુટ પ્રવેશ):</strong> કલેક્ટરની સમાંતરમાં ટ્રાન્ઝિસ્ટરના આઉટપુટ રેઝિસ્ટન્સ <strong>r<sub>o</sub>= 1 / h<sub>oe</sub></strong> દશાવે છે.</li></ul>
+                </li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ઇનપુટ રેઝિસ્ટન્સ , ફીડબેક ગુણોત્તર, ફોરવર્ડ ગેઇન, આઉટપુટ વાહકતા&quot;</strong> (Input Resistance, Feedback Ratio, Forward gain, Output conductance)</p>
+
+            <h2>Q4 (a) ડાયોડ ક્લિપર સર્કિટનું જરૂરી આકૃતિ સાથે વર્ણન કરો. [3 marks]</h2>
+            <p><strong>જવાબ</strong>: ક્લિપર સર્કિટ ચોક્કસ વોલ્ટેજ સ્તર કરતાં વધી ગયેલા ઇનપુટ સિગ્નલના એક ભાગને મર્યાદિત કરે છે અથવા ક્લિપ કરે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="11">
+                <pre class="mermaid-code">flowchart LR
+            A[Input Signal
+              ઇનપુટ સિગ્નલ] --> B[Diode Clipper
+                                 ડાયોડ ક્લિપર]
+            B --> C[Output Signal
+                    આઉટપુટ સિગ્નલ]</pre>
+                <div class="mermaid-render" id="mermaid-11"></div>
+            </div>
+            <pre class="goat-diagram"><div class="q4dyclimg"><img src="./assest/image/Q4(a)DyCle20260108_115652.jpg" alt=""></div><div>
+    <code>    Input                Output
+    o─────┬───────────────o
+        |
+        |    D1
+        ├────▶|─────┐
+        |          ─┴─
+        R           V
+        |           │
+        └───────────┘
+            Ground
+    </code>
+            </div></pre>
+
+            <ul>
+                <li><strong>ઓપરેશન (Operation)</strong>: જ્યારે વોલ્ટેજ થ્રેશોલ્ડ કરતાં વધી જાય ત્યારે ડાયોડ વાહક બને છે</li>
+                <li><strong>પ્રકારો (Types)</strong>:<ul>
+                        <li><strong>પોઝિટિવ ક્લિપર (Positive Clipper)</strong>: ક્લિપ પોઝિટિવ હાફ-સાયકલ</li>
+                        <li><strong>નેગેટિવ ક્લિપર (Negative Clipper)</strong>: ક્લિપ્સ નકારાત્મક અર્ધ-ચક્ર</li>
+                        <li><strong>પક્ષપાતી ક્લિપર (Biased Clipper)</strong>: શૂન્ય સિવાયના વોલ્ટેજ સ્તરે ક્લિપ્સ</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;પ્રીસેટ પોઈન્ટ પાસ કરીને ભાગોની ક્લિપ કરો&quot;</strong> (Clip Portions Passing Preset Points)</p>
+            
+            <h2>Q4 (b) LDR પર ટૂંકી નોંધ સમજાવો. [4 marks]</h2>
+            <p><strong>જવાબ</strong>: LDR (લાઇટ ડિપેન્ડન્ટ રેઝિસ્ટર) એ એક ફોટોરેઝિસ્ટર છે જેનો પ્રતિકાર પ્રકાશની તીવ્રતા વધવા સાથે ઘટે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="12">
+                <pre class="mermaid-code">flowchart LR
+            A[Light
+              પ્રકાશ] --> B[LDR
+                          એલડીઆર]
+            B --> C[Resistance Changes
+                    રેઝિસ્ટન્સ ફેરફારો]</pre>
+                <div class="mermaid-render" id="mermaid-12"></div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ગુણધર્મ (Property)</th>
+                        <th>વર્ણન (ડિસ્ક્રિપ્શન, Description)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>બનાવટ</strong></td>
+                        <td>કેડમિયમ સલ્ફાઇડ (CdS) અથવા કેડમિયમ સેલેનાઇડ (CdSe)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>રેઝિસ્ટન્સ  રેઈજ</strong></td>
+                        <td>1MΩ (dark) થી થોડા KΩ (bright light)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>રિસ્પોન્સ સમય</strong></td>
+                        <td>સામાન્ય રીતે 10-100ms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>સ્પેક્ટ્રલ રિસ્પોન્સ</strong></td>
+                        <td>દૃશ્યમાન સ્પેક્ટ્રમમાં મહત્તમ સંવેદનશીલતા</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>પ્રકાશ શોષણ (Light Absorption)</strong>: મફત કેરિયર્સ જનરેટ કરે છે</li>
+                <li><strong>રેઝિસ્ટન્સ (Resistance)</strong>: પ્રકાશની તીવ્રતાના વ્યસ્ત પ્રમાણસર</li>
+                <li><strong>એપ્લિકેશન્સ (Applications)</strong>: લાઇટ સેન્સર, ઓટોમેટિક લાઇટિંગ, કેમેરા એક્સપોઝર નિયંત્રણ</li>
+                <li><strong>પ્રતીક (Symbol)</strong>: અંદરની તરફ નિર્દેશ કરતા તીર સાથે ચલ રેઝિસ્ટર</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;પ્રકાશ પ્રતિકાર ઘટાડે છે&quot;</strong> (Light Decreases Resistance)</p>
+            
+            <h2>Q4 (c) ડાર્લિંગ્ટન જોડી અને તેના ઉપયોગો સમજાવો. [7 marks]</h2>
+            <p><strong>જવાબ</strong>: ડાર્લિંગ્ટન જોડીમાં બે ટ્રાન્ઝિસ્ટર જોડાયેલા હોય છે જેથી પહેલા દ્વારા વિસ્તૃત કરાયેલ કરંટ બીજા દ્વારા વધુ વિસ્તૃત થાય.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="13">
+                <pre class="mermaid-code">flowchart LR
+            A[Input Signal
+              ઇનપુટ સિગ્નલ] --> B[Transistor
+                                 ટ્રાન્ઝિસ્ટર 1]
+            B --> C[Transistor
+                    ટ્રાન્ઝિસ્ટર 2]
+            C --> D[Output Signal
+                    આઉટપુટ સિગ્નલ]</pre>
+
+                <div class="mermaid-render" id="mermaid-13"></div>
+            </div>
+            
+            <pre class="goat-diagram"><div class="q4djaimg"><img src="./assest/image/Q4(c)DJA20260108_120141.jpg" alt=""></div><div>
+    <code>             +Vcc
+                │
+                │
+                R
+                │
+                │
+        Base o─────┴───┐
+                |   |
+                |   |  Collector
+                |   +-------o
+                |   |
+                |   |
+                └─┬─┘
+                    │
+                    └─┐
+                |   |
+                |   | 
+                |   |
+                └─┬─┘
+                    │
+                    │
+                    GND
+    </code>
+                
+            </div></pre>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>લાક્ષણિકતાઓ (Characteristics)</th>
+                        <th>વર્ણન (ડિસ્ક્રિપ્શન, Description)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>કરંટ ગેઇન</strong></td>
+                        <td>β_total = β₁ × β₂ (very high)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ઇનપુટ ઈમ્પિડન્સ</strong></td>
+                        <td>Very high (β₂ × R_e1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>આઉટપુટ ઈમ્પિડન્સ</strong></td>
+                        <td>નીચું</td>
+                    </tr>
+                    <tr>
+                        <td><strong>સ્વિચિંગ સ્પીડ</strong></td>
+                        <td>સિંગલ ટ્રાન્ઝિસ્ટર કરતા ધીમું</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>એપ્લિકેશન્સ (Applications):</strong></p>
+            <ul>
+                <li><strong>પાવર એમ્પ્લીફાયર (Power Amplifiers)</strong>: ઉચ્ચ વર્તમાન લાભ કાર્યક્રમો</li>
+                <li><strong>ઑડિઓ એમ્પ્લીફાયર્સ (Audio Amplifiers)</strong>: ઉચ્ચ ઇન્પુટ ઇમ્પિડન્સ સ્ટેજ</li>
+                <li><strong>બફર સર્કિટ્સ (Buffer Circuits)</strong>: લોડિંગ અસરો ઓછી કરવી</li>
+                <li><strong>મોટર નિયંત્રણ (Motor Control)</strong>: ઉચ્ચ-કરંટના ભારણને ચલાવવું</li>
+                <li><strong>Touch Sensitive Switches (Touch Sensitive Switches)</strong>: ઊંચા લાભને કારણે ઉચ્ચ સંવેદનશીલતા</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ડબલ ટ્રાન્ઝિસ્ટર ખરેખર ખૂબ જ વિસ્તૃત કરે છે&quot;</strong> (Double Transistors Amplify Really Greatly)</p>
+
+            <h2>Q4 (a) ડાયોડ ક્લેમ્પર સર્કિટનું જરૂરી આકૃતિ સાથે વર્ણન કરો. OR [3 marks]</h2>
+            <p><strong>જવાબ</strong>: ક્લેમ્પર સર્કિટ તેના આકારમાં ફેરફાર કર્યા વિના DC કોમ્પોનેન્ટ ઉમેરીને સમગ્ર વેવફોર્મને ઉપર અથવા નીચે ખસેડે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="14">
+                <pre class="mermaid-code">flowchart LR
+            A[Input Signal
+              ઇનપુટ સિગ્નલ] --> B[Diode Clamper
+                                 ડાયોડ ક્લેમ્પર]
+            B --> C[Output Signal
+                    Shifted Waveform
+                    આઉટપુટ સિગ્નલ
+                    શિફ્ટેડ વેવફોર્મ]</pre>
+
+                <div class="mermaid-render" id="mermaid-14"></div>
+            </div>
+
+            <pre class="goat-diagram"><div class="q4dcimg"><img src="./assest/image/Q4(a)DC20260108_120530.jpg" alt=""></div><div>
+    <code>    Input         D           Output
+    o─────┬─────|◄──────┬─────o
+        |            ─┴─
+        C             │
+        |             R
+        └─────────────┘
+            Ground
+    </code>
+            </div></pre>
+
+            <ul>
+                <li><strong>ઓપરેશન (Operation)</strong>: Capacitor charges during one half-cycle, maintaining DC level</li>
+                <li><strong>પ્રકારો (Types)</strong>:<ul>
+                        <li><strong>પોઝિટિવ ક્લેમ્પર (Positive Clamper)</strong>: તરંગસ્વરૂપ ઉપર તરફ ખસે છે</li>
+                        <li><strong>નેગેટિવ ક્લેમ્પર (Negative Clamper)</strong>: તરંગસ્વરૂપ નીચે તરફ ખસે છે</li>
+                        <li><strong>આધારિત ક્લેમ્પર (Biased Clamper)</strong>: ચોક્કસ ડીસી સ્તર પર શિફ્ટ</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>ક્લેમ્પ્સ સતત ટોચ પર નીચે આવે છે</strong> (Clamps Peaks Down Consistently)</p>
+
+            <h2>Q4 (b) OLED ની કામગીરી અને ઉપયોગો સમજાવો. OR [4 marks]</h2>
+            <p><strong>જવાબ</strong>: OLED (ઓર્ગેનિક લાઇટ એમિટિંગ ડાયોડ) એ કાર્બનિક સંયોજનોનો ઉપયોગ કરતી એક ડિસ્પ્લે ટેકનોલોજી છે જે ઇલેક્ટ્રિક કરંટ પસાર થાય ત્યારે પ્રકાશ ઉત્સર્જન કરે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="15">
+                <pre class="mermaid-code">flowchart LR
+            A[Electric Current
+              વિદ્યુત કરંટ] --> B[OLED Layer
+                                OLED સ્તર]
+            B --> C[Light Emission
+                    પ્રકાશ ઉત્સર્જન]</pre>
+                <div class="mermaid-render" id="mermaid-15"></div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>સ્તર(Layer)</th>
+                        <th>કાર્ય (Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>કેથોડ</strong></td>
+                        <td>ઇલેક્ટ્રોન ઇન્જેક્ટ કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ઉત્સર્જન સ્તર</strong></td>
+                        <td>પ્રકાશ ફેંકતી કાર્બનિક સામગ્રી</td>
+                    </tr>
+                    <tr>
+                        <td><strong>વાહક સ્તર</strong></td>
+                        <td>એનોડમાંથી છિદ્રોનું સંચાલન કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>એનોડ</strong></td>
+                        <td>છિદ્રો દાખલ કરે છે (સામાન્ય રીતે પારદર્શક)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>કાર્યકારી સિદ્ધાંત (Working Principle)</strong>: ઇલેક્ટ્રોન-છિદ્ર પુનઃસંયોજન ફોટોન બનાવે છે</li>
+                <li><strong>સ્વયં પ્રકાશિત (Self-illuminating)</strong>: LCD ની જેમ બેકલાઇટની જરૂર નથી</li>
+                <li><strong>પ્રકારો (Types)</strong>: PMOLED (પેસિવ મેટ્રિક્સ) અને AMOLED (એક્ટિવ મેટ્રિક્સ)</li>
+                <li><strong>ફાયદા (Advantages)</strong>: પાતળા, હળવા, પહોળા જોવાના ખૂણા, વધુ સારો કોન્ટ્રાસ્ટ</li>
+            </ul>
+            <p><strong>એપ્લિકેશન્સ (Applications):</strong></p>
+            <ul>
+                <li>સ્માર્ટફોન અને ટેબ્લેટ</li>
+                <li>ટેલિવિઝન સ્ક્રીનો</li>
+                <li>ડિજિટલ કેમેરા ડિસ્પ્લે</li>
+                <li>પહેરવા યોગ્ય ઉપકરણો</li>
+                <li>લાઇટિંગ પેનલ્સ</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ઓર્ગેનિક સ્તરો ડાયોડ-લાઇટ ઉત્સર્જિત કરે છે&quot;</strong> (Organic Layers Emit Diode-light)</p>
+
+            <h2>Q4 (c) રિલે ડ્રાઇવર તરીકે વપરાતા ટ્રાન્ઝિસ્ટરનું વર્ણન કરો. OR [7 marks]</h2>
+            <p><strong>જવાબ</strong>: રિલે ડ્રાઇવર રિલેને નિયંત્રિત કરવા માટે ટ્રાન્ઝિસ્ટરનો ઉપયોગ કરે છે, જે નીચા-કરંટ નિયંત્રણ સિગ્નલને ઉચ્ચ-કરંટ લોડને સ્વિચ કરવાની મંજૂરી આપે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="16">
+                <pre class="mermaid-code">flowchart LR
+            A[Control Signal
+              નિયંત્રણ સંકેત] --> B[Transistor
+                                 ટ્રાન્ઝિસ્ટર]
+            B --> C[Relay Coil
+                    રિલે કોઇલ]
+            C --> D[Switched Load
+                    સ્વિચ્ડ લોડ]</pre>
+
+                <div class="mermaid-render" id="mermaid-16"></div>
+            </div>
+
+            <pre class="goat-diagram"><div class="q4rdtimg"><img src="./assest/image/Q4(c)RDT20260108_120742.jpg" alt=""></div><div>
+    <code>    +Vcc
+    │
+    ┌┐
+    ┌┘└┐ Relay
+    │  │ Coil
+    └┐┌┘
+    ││
+    ││    Flyback
+    ││    Diode
+    ││    ┌─┐
+    └┴────┤&lt;├─┐
+        └─┘ │
+            ┌──┴─┐
+            │    │
+            │    │ Transistor
+Input ─────┤    │
+            │    │
+            └────┘
+            │
+            GND
+    </code>
+            </div></pre>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>કોમ્પોનેન્ટ (Component)</th>
+                        <th>કાર્ય (Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ટ્રાન્ઝિસ્ટર</strong></td>
+                        <td>રિલે ચલાવવા માટે નિયંત્રણ સિગ્નલને વિસ્તૃત કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ફ્લાયબેક ડાયોડ</strong></td>
+                        <td>ટ્રાન્ઝિસ્ટરને પાછળના EMF થી સુરક્ષિત કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>બેઝ રેઝિસ્ટર</strong></td>
+                        <td>બેઝ કરંટ મર્યાદિત કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>રિલે કોઇલ</strong></td>
+                        <td>ઇલેક્ટ્રોમેગ્નેટિક સ્વીચ</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>એપ્લિકેશન્સ (Applications):</strong></p>
+            <ul>
+                <li>મોટર નિયંત્રણ સર્કિટ (Motor control circuits)</li>
+                <li>ઔદ્યોગિક ઓટોમેશન (Industrial automation)</li>
+                <li>ઓટોમોટિવ ઇલેક્ટ્રોનિક્સ (Automotive electronics)</li>
+                <li>ઘરનાં ઉપકરણોનું નિયંત્રણ (Home appliance control)</li>
+                <li>પાવર વિતરણ પ્રણાલીઓ (Power distribution systems)</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;ટાઈની રેગ્યુલેટ્સ ડ્રાઇવિંગ રિલે&quot;</strong> (Tiny Regulates Driving Relays)</p>
+
+            <h2>Q5 (a) LM317 IC નો ઉપયોગ કરીને ચલ પાવર સપ્લાયનો સર્કિટ ડાયાગ્રામ દોરો. [3 marks]</h2>
+            <p><strong>જવાબ</strong>: LM317 એક એડજસ્ટેબલ વોલ્ટેજ રેગ્યુલેટર છે જેનો ઉપયોગ ચલ પાવર સપ્લાય બનાવવા માટે થઈ શકે છે.</p>
+
+            <pre class="goat-diagram"><div class="q5lm317icimg"><img src="./assest/image/Q5(a)LM317IC20260108_121202.jpg" alt=""></div><div>
+    <code>              LM317
+    Input     ┌───┐
+    o─────────┤IN │
+            │   │
+            │ADJ├─┬─────┬───o Output
+            │   │ │     │
+            └───┘ │     │
+                │   │     │
+                R1  R2    C2
+                │   │     │
+                └───┴─────┘
+                    GND
+    </code>
+            </div></pre>
+
+            <ul>
+                <li>
+                    <p><strong>કોમ્પોનેન્ટ્સ (Components)</strong>:</p>
+                    <ul>
+                        <li><strong>LM317</strong>: એડજસ્ટેબલ વોલ્ટેજ રેગ્યુલેટર IC</li>
+                        <li><strong>R1</strong>: સ્થિર 240Ω રેઝિસ્ટર</li>
+                        <li><strong>R2</strong>: વેરિયેબલ રેઝિસ્ટર (પોટેન્ટિઓમીટર)</li>
+                        <li><strong>C1, C2</strong>: ફિલ્ટર કેપેસિટર્સ</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>આઉટપુટ વોલ્ટેજ (Output Voltage)</strong>: VOUT = 1.25 × (1 + R2/R1)</p>
+                </li>
+            </ul>
+            
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;LM317 વોલ્ટેજ એડજસ્ટેબલ બનાવે છે&quot;</strong> (LM317 Makes Voltage Adjustable)</p>
+
+            <h2>Q5 (b) UPS નું કાર્ય સમજાવો. [4 marks]</h2>
+            <p><strong>જવાબ</strong>: જ્યારે મુખ્ય પાવર નિષ્ફળ જાય છે ત્યારે UPS (અનઇન્ટરપટિબલ પાવર સપ્લાય) કટોકટીની વીજળી પૂરી પાડે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="17">
+                <pre class="mermaid-code">flowchart LR
+            A[AC Mains
+              એસી મેઇન્સ] --> B[Rectifier
+                               સુધારક]
+            B --> C[Battery Charger
+                    બેટરી ચાર્જર]
+            C --> D[Battery
+                    બેટરી]
+            D --> E[Inverter
+                    ઇન્વર્ટર]
+            E --> F[Output Load
+                    આઉટપુટ લોડ]
+            A -.Bypass.-> F</pre>
+
+                <div class="mermaid-render" id="mermaid-17"></div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>યુપીએસ પ્રકાર (UPS Type)</th>
+                        <th>ઓપરેશન (Operation)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ઑફલાઇન/સ્ટેન્ડબાય</strong></td>
+                        <td>પાવર નિષ્ફળ જાય ત્યારે બેટરી પર સ્વિચ કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>લાઇન-ઇન્ટરેક્ટિવ</strong></td>
+                        <td>વોલ્ટેજનું નિયમન કરે છે અને બેટરી પર સ્વિચ કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ઓનલાઇન/ડબલ-કન્વર્ઝન</strong></td>
+                        <td>હંમેશા બેટરીથી પાવર આપે છે, સતત ચાર્જ થાય છે</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>મુખ્ય કોમ્પોનેન્ટો (Main Components)</strong>: Rectifier, battery, inverter, control circuit</li>
+                <li><strong>કાર્યો (Functions)</strong>:<ul>
+                        <li>પાવર કન્ડીશનીંગ (Power conditioning)</li>
+                        <li>વોલ્ટેજ નિયમન (Voltage regulation)</li>
+                        <li>સર્જ પ્રોટેક્શન (Surge protection)</li>
+                        <li>બેટરી બેકઅપ (Battery backup)</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;બ્લેકઆઉટ દરમિયાન અવિરત વીજ પુરવઠો પૂરો પાડવામાં આવ્યો&quot;</strong> (Uninterrupted Power Supplied During Blackouts)</p>
+
+            <h2>Q5 (c) SMPS બ્લોક ડાયાગ્રામ દોરો અને સમજાવો. [7 marks]</h2>
+            <p><strong>જવાબ</strong>: SMPS (સ્વિચ મોડ પાવર સપ્લાય, Switch Mode Power Supply) વિદ્યુત શક્તિને કાર્યક્ષમ રીતે રૂપાંતરિત કરવા માટે સ્વિચિંગ નિયમનનો ઉપયોગ કરે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="18">
+                <pre class="mermaid-code">flowchart LR
+            A[AC Input
+              AC ઇનપુટ] --> B[EMI Filter
+                              EMI ફિલ્ટર]
+            B --> C[Rectifier & Filter
+                    રેક્ટિફાયર અને ફિલ્ટર]
+            C --> D[High Frequency
+                    Switching Circuit
+                    ઉચ્ચ ફ્રીક્વન્સી
+                    સ્વિચિંગ સર્કિટ]
+            D --> E[Transformer
+                    ટ્રાન્સફોર્મર]
+            E --> F[Output Rectifier & Filter
+                    આઉટપુટ રેક્ટિફાયર અને ફિલ્ટર]
+            F --> G[DC Output
+                    DC આઉટપુટ]
+            H[Feedback & Control
+              ફીડબેક અને નિયંત્રણ] --> D
+            F --> H</pre>
+                <div class="mermaid-render" id="mermaid-18"></div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>બ્લોક (Block)</th>
+                        <th>કાર્ય (Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>EMI ફિલ્ટર</strong></td>
+                        <td>ઇલેક્ટ્રોમેગ્નેટિક હસ્તક્ષેપ ઘટાડે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>રેક્ટિફાયર &amp; ફિલ્ટર</strong></td>
+                        <td>AC ને DC માં રૂપાંતરિત કરે છે અને તેને સુંવાળું બનાવે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>સ્વિચિંગ સર્કિટ</strong></td>
+                        <td>ઉચ્ચ ફ્રીક્વન્સી પર ડીસી ચોપ્સ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ટ્રાન્સફોર્મર</strong></td>
+                        <td>આઇસોલેશન અને વોલ્ટેજ કન્વર્ઝન પૂરું પાડે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>આઉટપુટ રેક્ટિફાયર</strong></td>
+                        <td>ઉચ્ચ-આવર્તન AC ને DC માં પાછું રૂપાંતરિત કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ફીડબેક સર્કિટ</strong></td>
+                        <td>આઉટપુટ વોલ્ટેજનું નિયમન કરે છે</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li><strong>ફાયદા (Advantages)</strong>: ઉચ્ચ કાર્યક્ષમતા (70-90%), નાનું કદ, ઓછું વજન</li>
+                <li><strong>ઓપરેશન (Operation)</strong>: 20-200 kHz પર PWM (પલ્સ પહોળાઈ મોડ્યુલેશન, Pulse Width Modulation) નો ઉપયોગ કરે છે</li>
+                <li><strong>પ્રકારો (Types)</strong>: આગળ, ફ્લાયબેક, પુશ-પુલ, અડધો પુલ, સંપૂર્ણ પુલ</li>
+                <li><strong>એપ્લિકેશન્સ (Applications)</strong>: કમ્પ્યુટર, ટીવી, મોબાઇલ ચાર્જર, એલઇડી ડ્રાઇવર્સ</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;સ્વિચ પાવરને સ્થિર બનાવે છે&quot;</strong> (Switch Makes Power Stable)</p>
+            
+            <h2>Q5 (a) +15 v પાવર સપ્લાય માટે તેના IC નો ઉપયોગ કરીને સર્કિટ ડાયાગ્રામ દોરો અને સંક્ષિપ્તમાં સમજાવો. OR [3 marks]</h2>
+            <p><strong>જવાબ</strong>: 7815 વોલ્ટેજ રેગ્યુલેટર IC નો ઉપયોગ કરીને +15V પાવર સપ્લાય બનાવી શકાય છે.</p>
+
+            <pre class="goat-diagram"><div class="q515v-dcpscimg"><img src="./assest/image/15V-DC-Power-Supply-Circuit-Diagram-Schematic(1).jpg" alt=""></div><div>
+    <code>    AC Input    Bridge     7815
+    o         Rectifier   ┌───┐
+    ~~~~~        ┌───┐      │   │
+    o          │   ├──────┤IN │
+                │   │      │   │         +15V
+                │   │ C1   │OUT├─────────o
+                │   ├──┐   │   │    C2
+                └───┘  │   │   │    │
+                        │   └───┘    │
+                        │     │      │
+                        └─────┴──────┘
+                            GND
+    </code>
+            </div></pre>
+
+            <ul>
+                <li>
+                    <p><strong>કોમ્પોનેન્ટ્સ (Components)</strong>:</p>
+                    <ul>
+                        <li><strong>7815</strong>: સ્થિર +15V વોલ્ટેજ રેગ્યુલેટર IC</li>
+                        <li><strong>બ્રિજ રેક્ટિફાયર (Bridge Rectifier)</strong>: AC ને ધબકતા DC માં રૂપાંતરિત કરે છે</li>
+                        <li><strong>C1</strong>: ઇનપુટ ફિલ્ટર કેપેસિટર (1000-2200µF)</li>
+                        <li><strong>C2</strong>: આઉટપુટ ફિલ્ટર કેપેસિટર (10-100µF)</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>કાર્યરત (Working)</strong>: AC ને સુધારે છે, તેને ફિલ્ટર કરે છે, પછી સ્થિર +15V DC પર નિયમન કરે છે</p>
+                    <dl>
+                        <dd>જે એક સર્કિટ બનાવે છે જ્યાં 7815 નું ઇનપુટ:
+                            <ul>
+                                <li><strong>Pin 1:</strong> રેક્ટિફાઇડ DC લે છે.</li>
+                                <li><strong>Pin 2:</strong> ગ્રાઉન્ડ (GND) સાથે જોડાય છે</li>
+                                <li><strong>Pin 3:</strong> સ્થિર +15V પ્રદાન કરે છે</li>
+                            </ul>
+                        કેપેસિટર્સ સ્થિરતા માટે ઇનપુટ અને આઉટપુટને સરળ બનાવે છે.
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;7815 વોલ્ટેજને પંદર સુધી સુધારે છે&quot;</strong> (7815 Fixes Voltage To Fifteen)</p>
+
+            <h2>Q5 (b) સૌર બેટરી ચાર્જર સર્કિટનું કાર્ય સમજાવો. OR [4 marks]</h2>
+            <p><strong>જવાબ</strong>: સૌર બેટરી ચાર્જર સૂર્યપ્રકાશને વિદ્યુત ઊર્જામાં રૂપાંતરિત કરીને બેટરી ચાર્જ કરે છે.</p>
+
+            <div class="mermaid-diagram" data-diagram-id="19">
+                <pre class="mermaid-code">flowchart LR
+            A[Solar Panel
+              સોલાર પેનલ] --> B[Charge Controller
+                              ચાર્જ કંટ્રોલર]
+            B --> C[Battery
+                    બેટરી]
+            C --> D[Load
+                    લોડ]</pre>
+                <div class="mermaid-render" id="mermaid-19"></div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>કોમ્પોનેન્ટ (Component)</th>
+                        <th>કાર્ય (Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>સોલાર પેનલ</strong></td>
+                        <td>સૂર્યપ્રકાશને વીજળીમાં રૂપાંતરિત કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>બ્લોકિંગ ડાયોડ</strong></td>
+                        <td>રાત્રે પેનલ દ્વારા બેટરી ડિસ્ચાર્જ થતી અટકાવે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ચાર્જ કંટ્રોલર</strong></td>
+                        <td>ચાર્જિંગ વોલ્ટેજ અને કરંટનું નિયમન કરે છે</td>
+                    </tr>
+                    <tr>
+                        <td><strong>બેટરી</strong></td>
+                        <td>વિદ્યુત ઉર્જાનો સંગ્રહ કરે છે</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li>
+                    <p><strong>ઓપરેટિંગ મોડ્સ (Operating Modes)</strong>:</p>
+                    <ul>
+                        <li><strong>બલ્ક ચાર્જિંગ (Bulk Charging)</strong>: ~80% ચાર્જ થાય ત્યાં સુધી મહત્તમ કરંટ</li>
+                        <li><strong>શોષણ (Absorption)</strong>: સતત વોલ્ટેજ, ઘટતો કરંટ</li>
+                        <li><strong>ફ્લોટ/ટ્રિકલ (Float/Trickle)</strong>: સંપૂર્ણ ચાર્જ જાળવી રાખે છે</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>સુરક્ષા સુવિધાઓ (Protection Features)</strong>: ઓવરચાર્જ, ઓવર-ડિસ્ચાર્જ, રિવર્સ પોલેરિટી</p>
+                </li>
+            </ul>
+
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;સૂર્ય બેટરીને સુરક્ષિત રીતે ચાર્જ કરે છે&quot;</strong> (Sun Charges Batteries Safely)</p>
+
+            <h2>Q5 (c) સ્વીચ મોડ પાવર સપ્લાય સાથે રેખીય નિયમન કરેલ પાવર સપ્લાયની સરખામણીની ચર્ચા કરો. OR [7 marks]</h2>
+            <p><strong>જવાબ</strong>:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>પેરામીટર્સ (Parameter)</th>
+                        <th>લિનિયર પાવર સપ્લાય (Linear Power Supply)</th>
+                        <th>સ્વિચ મોડ પાવર સપ્લાય (Switch Mode Power Supply)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>સંચાલન સિદ્ધાંત (ઓપરેટિંગ પ્રિન્સિપાલ)</strong></td>
+                        <td>સતત વોલ્ટેજ નિયમન</td>
+                        <td>ઉચ્ચ-ફ્રીક્વન્સી સ્વિચિંગ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કાર્યક્ષમતા</strong></td>
+                        <td>ઓછું (30-40%)</td>
+                        <td>ઉચ્ચ (70-90%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કદ &amp; વજન</strong></td>
+                        <td>મોટું અને ભારે</td>
+                        <td>કોમ્પેક્ટ અને હલકો</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ગરમીનો બગાડ</strong></td>
+                        <td>ઉચ્ચ</td>
+                        <td>ઓછું</td>
+                    </tr>
+                    <tr>
+                        <td><strong>આઉટપુટ અવાજ</strong></td>
+                        <td>ખૂબ જ ઓછું</td>
+                        <td>વધુ (સ્વિચિંગ અવાજ)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>રિસ્પોન્સ સમય</strong></td>
+                        <td>ઝડપી</td>
+                        <td>ધીમું</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કોમ્પોનેન્ટ સંખ્યા</strong></td>
+                        <td>નીચું</td>
+                        <td>ઉચ્ચ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>કિંમત</strong></td>
+                        <td>ઓછી શક્તિ માટે ઓછું ખર્ચાળ</td>
+                        <td>ઉચ્ચ શક્તિ માટે વધુ ખર્ચાળ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>જટિલતા</strong></td>
+                        <td>સરળ ડિઝાઇન</td>
+                        <td>જટિલ ડિઝાઇન</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EMI (એલેકટ્રોમેગ્નેટિક ઇન્ટરફેરેન્સ)</strong></td>
+                        <td>નીચું</td>
+                        <td>ઉચ્ચ (ફિલ્ટરિંગ જરૂરી છે)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mermaid-diagram" data-diagram-id="20">
+                <pre class="mermaid-code">flowchart TB
+            subgraph Linear [Linear લીનીયર]
+            A1[Transformer
+               ટ્રાન્સફોર્મર] --> B1[Rectifier
+                                રેક્ટિફાયર]
+            B1 --> C1[Filter
+                      ફિલ્ટર]
+            C1 --> D1[Series Pass Element
+                      શ્રેણી પાસ એલિમેન્ટ]
+            D1 --> E1[Output
+                      આઉટપુટ]
+            end
+
+            subgraph SMPS [SMPS “Switch Mode Power Supply
+                      સ્વિચ મોડ પાવર સપ્લાય”]
+            A2[Rectifier
+               રેક્ટિફાયર] --> B2[Switch
+                               સ્વિચ]
+            B2 --> C2[Transformer
+                      ટ્રાન્સફોર્મર]
+            C2 --> D2[Rectifier & Filter
+                      રેક્ટિફાયર અને ફિલ્ટર]
+            D2 --> E2[Output
+                      આઉટપુટ]
+            F2[Feedback
+               ફીડબેક] --> B2
+            end</pre>
+                <div class="mermaid-render" id="mermaid-20"></div>
+            </div>
+            <p><strong>એપ્લિકેશન્સ (Applications):</strong></p>
+            <ul>
+                <li><strong>લીનીયર (Linear)</strong>: ઑડિઓ સાધનો, પ્રયોગશાળાનાં સાધનો, સંવેદનશીલ સર્કિટ</li>
+                <li><strong>SMPS</strong>: કમ્પ્યુટર, ટીવી, મોબાઇલ ચાર્જર, ઔદ્યોગિક વીજ પુરવઠો</li>
+            </ul>
+            <p><strong>યાદ રાખવાની ટૂંકી રીત (Mnemonic):</strong> <strong>&quot;લીનિયરને ઓછો અવાજ ગમે છે, સ્વિચ કરવાથી કદ બચે છે&quot;</strong> (Linear Loves Low noise, Switching Saves Size)</p>
+
+        </div>
+    </div>
+
+    <script>
+        // Initialize Mermaid with better error handling
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#3182ce',
+                primaryTextColor: '#1a202c',
+                primaryBorderColor: '#2c5282',
+                lineColor: '#4a5568',
+                secondaryColor: '#e2e8f0',
+                tertiaryColor: '#f7fafc'
+            },
+            fontFamily: 'Inter, sans-serif',
+            fontSize: 12,
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                nodeSpacing: 30,
+                rankSpacing: 40
+            },
+            sequence: {
+                useMaxWidth: true,
+                width: 150
+            },
+            gantt: {
+                useMaxWidth: true
+            }
+        });
+
+        // Render Mermaid diagrams with better error handling
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM loaded, starting Mermaid rendering...');
+
+            const diagrams = document.querySelectorAll('.mermaid-diagram');
+            console.log('Found', diagrams.length, 'Mermaid diagrams');
+
+            let renderedCount = 0;
+
+            diagrams.forEach((diagram, index) => {
+                const codeElement = diagram.querySelector('.mermaid-code');
+                const renderDiv = diagram.querySelector('.mermaid-render');
+
+                if (!codeElement || !renderDiv) {
+                    console.log('Missing elements for diagram', index);
+                    return;
+                }
+
+                const code = codeElement.textContent.trim();
+                const renderId = 'mermaid-svg-' + (index + 1);
+
+                console.log('Rendering diagram', index + 1, 'with code:', code.substring(0, 50) + '...');
+
+                try {
+                    mermaid.render(renderId, code).then(result => {
+                        console.log('Successfully rendered diagram', index + 1);
+                        renderDiv.innerHTML = result.svg;
+                        diagram.classList.add('rendered');
+                        renderedCount++;
+
+                        if (renderedCount === diagrams.length) {
+                            document.body.classList.add('mermaid-ready');
+                            console.log('All Mermaid diagrams rendered');
+                        }
+                    }).catch(error => {
+                        console.error('Mermaid rendering error for diagram', index + 1, ':', error);
+                        renderDiv.innerHTML = '<p style="color: #c53030; font-style: italic;">Diagram rendering failed</p>';
+                        codeElement.style.display = 'block';
+                        renderedCount++;
+
+                        if (renderedCount === diagrams.length) {
+                            document.body.classList.add('mermaid-ready');
+                        }
+                    });
+                } catch (error) {
+                    console.error('Mermaid setup error for diagram', index + 1, ':', error);
+                    renderDiv.innerHTML = '<p style="color: #c53030; font-style: italic;">Diagram setup failed</p>';
+                    codeElement.style.display = 'block';
+                    renderedCount++;
+
+                    if (renderedCount === diagrams.length) {
+                        document.body.classList.add('mermaid-ready');
+                    }
+                }
+            });
+
+            if (diagrams.length === 0) {
+                document.body.classList.add('mermaid-ready');
+                console.log('No Mermaid diagrams found, marking as ready');
+            }
+        });
+    </script>
+</body>
+
+</html>
