@@ -1,0 +1,207 @@
+span {
+    color: #955023;
+}
+
+.task_1 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin: 20px;
+}
+
+.task_2 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    padding: 15px;
+}
+
+.task_3 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin: 10px 15px 20px 25px;
+}
+
+.task_4 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin: auto;
+    width: 800px;
+}
+
+.task_5 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin: 14.5px;
+    padding: 14.5px;
+}
+
+.task_6 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin: 15px 0 15px 0;
+}
+
+.task_7 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    padding-left: 19px;
+}
+
+.task_8 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin-top: -12px;
+    margin-left: -12px;
+}
+
+.task_9 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    width: 900px;
+    text-align: center;
+}
+
+.task_9sb, .task_9el {
+    color: #249529;
+    background: #f5fff5;
+    border: 1px solid #bdeebf;
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+    margin: auto auto 9px auto;
+    padding: 15px;
+}
+
+.task_9el {
+    box-sizing: border-box;
+}
+
+.task_10 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    text-align: center;
+    width:650px;
+}
+
+.task_10 span {
+    color: green;
+}
+
+.task_10el, .task_10sb {
+    color: #249529;
+    background: #f5fff5;
+    border: 1px solid #bdeebf;
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+    margin: auto auto 9px auto;
+    padding: 15px;
+}
+
+.task_10u * {
+    box-sizing: border-box;
+}
+
+.task_11 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    text-align: center;
+    width: 800px;
+}
+
+.task_11sp, .task_11lp {
+    color: #249529;
+    background: #f5fff5;
+    border: 1px solid #bdeebf;
+    text-align: center;
+    font-weight: bold;
+    width: 250px;
+    margin: auto auto 9px auto;
+    padding: 15px;
+}
+
+.task_11lp {
+    padding: 19px;
+}
+
+.task_12 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    margin-bottom: 15px;
+}
+
+.task_13 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    text-align: center;
+    width: 450px;
+}
+
+.task_13bm {
+    color: #249529;
+    background: #f5fff5;
+    border: 1px solid #bdeebf;
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+    margin: auto auto 9px auto;
+    padding: 15px;
+}
+
+.task_14 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    text-align: center;
+    width: 600px;
+}
+
+.task_14bo, .task_14bt {
+    color: #249529;
+    background: #f5fff5;
+    border: 1px solid #bdeebf;
+    text-align: center;
+    font-weight: bold;
+    width: 250px;
+    margin: auto auto 15px auto;
+    padding: 15px;
+}
+
+.task_14bt {
+    margin: auto auto 19px auto;
+    padding: 15px;
+}
+
+.task_15 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eecebd;
+    text-align: center;
+}
+
+.responsive-container {
+  /* This ensures padding/border don't increase the 100% width */
+  box-sizing: border-box; 
+  
+  width: 100%;
+  padding: 40px;
+  border: 9px solid #2ecc71;
+  background-color: #f1f1f1;
+  
+  /* Just for visibility */
+  text-align: center;
+  font-family: 'Gill Sans MT';
+  font-weight: bold;
+}
