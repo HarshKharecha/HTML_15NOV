@@ -1,0 +1,511 @@
+span {
+    color: #955023;
+}
+
+.task_1, .task_2, .task_3, .task_4, .task_5,
+.task_6 , .task_7, .task_8, .task_9, .task_10,
+.task_11, .task_12, .task_13, .task_14, .task_15 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eebdbd;
+    margin-bottom: 15px;
+}
+
+.task_1tc table {
+    color: #249529;
+    min-width: 400px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_1tc th, .task_1tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_1tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_1tc {
+    overflow-x: auto;
+}
+
+.task_2tc table {
+    color: #249529;
+    max-width: 600px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_2tc th, .task_2tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_2tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_2tc {
+    overflow-x: auto;
+}
+
+.task_3tc table {
+    color: #249529;
+    min-width: 400px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_3tc th, .task_3tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_3tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_3tc td {
+    min-height: 100px;
+}
+
+.task_3tc {
+    overflow-x: auto;
+}
+
+.task_4tc table {
+    color: #249529;
+    min-width: 400px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_4tc th, .task_4tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_4tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_4tc td {
+    max-height: 150px;
+    overflow: auto;
+}
+
+.task_4tc {
+    overflow-x: auto;
+}
+
+.task_5tc table {
+    color: #249529;
+    min-width: 400px;
+    max-width: 600px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_5tc th, .task_5tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_5tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_5tc {
+    overflow-x: auto;
+}
+
+.task_6tc table {
+    color: #249529;
+    min-height: 100px;
+    max-height: 150px;
+    height: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_6tc th, .task_6tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_6tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_6tc {
+    overflow-x: auto;
+}
+
+.task_7tc table {
+    color: #249529;
+    min-width: 400px;
+    max-width: 600px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+.task_7tc th, .task_7tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_7tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_7tc {
+    overflow-x: auto;
+}
+
+.task_8tc table {
+    color: #249529;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_8tc th, .task_8tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_8tc .td_1 {
+    min-width: 150px;
+}
+
+.task_8tc .td_2 {
+    min-width: 290px;
+}
+
+.task_8tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_8tc {
+    overflow-x: auto;
+}
+
+.task_9tc table {
+    color: #249529;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_9tc th, .task_9tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    /* text-align: left; */
+    vertical-align: top;
+}
+
+.task_9tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+/* .task_9tc {
+    overflow-x: auto;
+} */
+
+.task_9tc .sb {
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.task_9tc .sc {
+    max-height: 60px;
+    background-color: #fff4e5;
+}
+
+.task_9tc .tc {
+    max-height: 100px;
+    background-color: #e5f4ff;
+}
+
+.task_9tc .sb::-webkit-scrollbar {
+    width: 5px;
+}
+
+.task_9tc .sb::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.task_10tc{
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.task_10tc table {
+    color: #249529;
+    min-width: 400px;
+    max-width: 650px;
+    width: 100%;
+
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_10tc th, .task_10tc td {
+    padding: 12px 15px;
+    border: 1px solid #bdeebf;
+    text-align: left;
+}
+
+.task_10tc th {
+    background: #f5fff5;
+    color: #955023;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.task_10tc tr:nth-child(even) {
+    background-color: #d9ffec;
+}
+
+.task_10tc tr:hover {
+    background-color: #91e9ff;
+}
+
+.task_11tc table {
+    color: #249529;
+    max-width: 600px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_11tc th, .task_11tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.task_11tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_11tc {
+    overflow-x: auto;
+}
+
+.task_11tc .mh {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.task_12tc {
+    max-width: 600px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #bdeebf;
+    width: 100%;
+}
+
+.task_12tc table {
+    color: #249529;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_12tc th, .task_12tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_12tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_13tc table {
+    color: #249529;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_13tc th, .task_13tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_13tc th {
+    color: #955023;
+    /* text-align: center; */
+    background: #f5fff5;
+    vertical-align: top;
+}
+
+.task_13tc .csw {
+    max-height: 60px;
+    overflow-y: auto;
+    padding-right: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #f5f5f5;
+}
+
+.task_13tc .csw::-webkit-scrollbar {
+    width: 4px;
+}
+
+.task_13tc .csw::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.task_13tc {
+    overflow-x: auto;
+}
+
+.task_14tc table {
+    color: #249529;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_14tc th, .task_14tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    text-align: left;
+}
+
+.task_14tc th {
+    color: #955023;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_14tc .coid {
+    width: 50px;
+    text-align: center;
+    background-color: #e7f3ff;
+}
+
+.task_14tc .codesc {
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.task_14tc {
+    overflow-x: auto;
+}
+
+.task_15tc {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    overflow-x: auto;
+    border: 1px solid #bdeebf;
+    border-radius: 9px;
+}
+
+.task_15tc table {
+    color: #249529;
+    min-width: 600px;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+.task_15tc th, .task_15tc td {
+    border: 1px solid #bdeebf;
+    padding: 12px;
+    /* text-align: left; */
+    vertical-align: top;
+}
+
+.task_15tc th {
+    color: #955023;
+    font-weight: bold;
+    text-align: center;
+    background: #f5fff5;
+}
+
+.task_15tc .coid {
+    width: 50px;
+    text-align: center;
+}
+
+.task_15tc .comain {
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.task_15tc .sc {
+    min-height: 40px;
+    max-height: 100px;
+    overflow-y: auto;
+    padding-right: 5px;
+    font-size: 14px;
+}
+
+.task_15tc tr:hover {
+    background-color: #91e9ff;
+}
