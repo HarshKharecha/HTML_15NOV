@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.nav-bar {
+      background-color: #303030;
+      justify-content: space-around;
+      align-items: center;
+}
+
+.nav-bar li {
+    color: white;
+    display: inline;
+    margin: 0 9px;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.sec4 {
+    background: #e8631c;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec4text {
+    color: white;
+    padding: 0 0 0 60px;
+}
+
+.sec4text h2 {
+    font-size: 70px;
+}
+
+.sec4text p {
+    font-size: 35px;
+    width: 600px;
+    margin: 25px 0 25px 0;
+}
+
+.sec4sd img {
+    width: 100%;
+}
+
+.sec4 button {
+    background: #303030;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.sec5 {
+    background: #e8631c;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec5text {
+    color: white;
+    padding: 0 0 0 60px;
+}
+
+.sec5text h2 {
+    font-size: 70px;
+}
+
+.sec5text p {
+    font-size: 35px;
+    width: 700px;
+    margin: 25px 0 25px 0;
+}
+
+.sec5sd img {
+    width: 100%;
+}
+
+.sec5 button {
+    background: #303030;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.sec6 {
+    color: white;
+    background: #303030;
+    text-align: center;
+    padding: 150px 0 150px 0;
+}
+
+.sec6te1 h2 {
+    font-size: 70px;
+}
+
+.sec6te1 p {
+    font-size: 35px;
+    margin: 25px 0 200px 0;
+}
+
+.sec6te2 {
+    justify-content: space-around;
+}
+
+.sec6te2 .p1 h2, .sec6te2 .p2 h2, .sec6te2 .p3 h2 {
+    font-size: 70px;
+}
+
+.sec6te2 .p1 p, .sec6te2 .p2 p, .sec6te2 .p3 p {
+    font-size: 35px;
+    margin-top: 10px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakra rotation</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 440px;
+        }
+
+        .blue-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            /* Sudasan Chakra*/
+            background:
+                /*linear-gradient(#007bff, #955023, #00c6ff)*/
+                /* 1. Inner Hub (Small Golden Circle) */
+                radial-gradient(circle, #ffd700 20%, transparent 21%),
+                /* 2. Spokes/Serrated Edges (Repeating Pattern) */
+                repeating-conic-gradient(from 0deg,
+                    #ffd700 0deg 2deg,
+                    #b8860b 2deg 4deg,
+                    transparent 4deg 10deg),
+                /* 3. Outer Rim (Gold Ring) */
+                radial-gradient(circle, transparent 45%, #ffd700 46%, #ffd700 50%, transparent 51%);
+
+            position: relative;
+            offset-path: circle(150px at center);
+
+            /* Animation Property */
+            animation: spin 0.9s linear infinite,
+                go 2.9s linear infinite/*,
+                go 5s ease infinite alternate*/;
+
+            /* Adds a glow effect to simulate high-speed energy */
+            box-shadow: 0 0 29px
+                /*rgba(0, 123, 255, 0.8)*/
+                rgba(225, 215, 0, 0.8);
+            filter: blur(0.5px);
+        }
+
+        /* Define the rotation logic */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes go {
+            0% {
+                offset-distance: 0%;
+            }
+
+            100% {
+                offset-distance: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"><div class="blue-circle"></div></div>
+</body>
+
+</html>
