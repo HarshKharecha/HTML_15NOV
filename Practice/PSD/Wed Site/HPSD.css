@@ -1,27 +1,175 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
-}
-
-.nav-bar {
-      background-color: #303030;
-      justify-content: space-around;
-      align-items: center;
-}
-
-.nav-bar li {
-    color: white;
-    display: inline;
-    margin: 0 9px;
 }
 
 .col-50 {
     width: 50%;
+}
+
+.col-30 {
+    width: 33.33%;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-bar {
+    background-color: #303030;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar li {
+    color: #ffffff;
+    display: inline;
+    margin: 0 9px;
+}
+
+.sec1 {
+    background: url(./assest/image/sec1bg.png) no-repeat center / cover;
+    padding: 55px 0 0 0;
+}
+
+.sec1text {
+    color: #ffffff;
+    padding: 100px;
+}
+
+.sec1text h1 {
+    font-size: 100px;
+    padding: 100px 0 20px 0;
+}
+
+.sec1text p {
+    font-size: 35px;
+    padding: 0 0 20px 0;
+    width: 45%;
+}
+
+.sec1text button {
+    background: #e8631c;
+    border: none;
+    border-radius: 19px;
+    margin-top: 10px;
+    padding: 11px 50px;
+    /* width: 250px;
+    height: 50px; */
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.sec2 {
+    background: #e8631c;
+    padding: 100px 50px;
+}
+
+.sec2text {
+    color: #ffffff;
+    text-align: center;
+}
+
+.sec2text h2 {
+    font-size: 80px;
+}
+
+.sec2text p {
+    font-size: 29px;
+    margin: 25px 0 25px 0;
+    padding: 20px;
+}
+
+.sec2wa {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sec2blog {
+    color: #ffffff;
+    text-align: center;
+    background: #303030;
+    width: 372px;
+}
+
+.sec2blog img {
+    width: 100%;
+}
+
+.sec2blog h2 {
+    font-size: 40px;
+}
+
+.sec2blog p {
+    font-size: 25px;
+    width: 90%;
+    margin: 5px auto 15px auto;
+}
+
+.sec3 {
+    background: #303030;
+    padding: 100px 50px;
+}
+
+.sec3text {
+    color: #ffffff;
+    text-align: center;
+}
+
+.sec3text h2 {
+    font-size: 80px;
+}
+
+.sec3text p {
+    font-size: 29px;
+    padding: 20px;
+    margin: 25px 0 25px 0;
+}
+
+.sec3wa {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.sec3blog {
+    color: #ffffff;
+    text-align: center;
+    background: #e8631c;
+    border-radius: 15px;
+    width: 320px;
+}
+
+.sec3blog img {
+    padding: 29px;
+}
+
+.sec3blog h2 {
+    font-size: 40px;
+}
+
+.sec3blog p {
+    font-size: 25px;
+    width: 90%;
+    margin: 10px auto 10px auto;
+}
+
+.sec3blog button {
+    background: #303030;
+    border: none;
+    border-radius: 15px;
+    margin: 25px auto 25px auto;
+    padding: 10px 90px;
+    /* width: 250px;
+    height: 50px; */
+    font-size: 25px;
+    color: #ffffff;
 }
 
 .sec4 {
@@ -31,7 +179,7 @@
 }
 
 .sec4text {
-    color: white;
+    color: #ffffff;
     padding: 0 0 0 60px;
 }
 
@@ -47,16 +195,18 @@
 
 .sec4sd img {
     width: 100%;
+    height: 100%;
 }
 
 .sec4 button {
     background: #303030;
     border: none;
     border-radius: 10px;
-    width: 250px;
-    height: 50px;
+    padding: 5px 50px;
+    /* width: 250px;
+    height: 50px; */
     font-size: 20px;
-    color: white;
+    color: #ffffff;
 }
 
 .sec5 {
@@ -66,7 +216,7 @@
 }
 
 .sec5text {
-    color: white;
+    color: #ffffff;
     padding: 0 0 0 60px;
 }
 
@@ -82,20 +232,20 @@
 
 .sec5sd img {
     width: 100%;
+    height: 100%;
 }
 
 .sec5 button {
     background: #303030;
     border: none;
     border-radius: 10px;
-    width: 250px;
-    height: 50px;
+    padding: 5px 50px;
     font-size: 20px;
-    color: white;
+    color: #ffffff;
 }
 
 .sec6 {
-    color: white;
+    color: #ffffff;
     background: #303030;
     text-align: center;
     padding: 150px 0 150px 0;
@@ -107,18 +257,1164 @@
 
 .sec6te1 p {
     font-size: 35px;
-    margin: 25px 0 200px 0;
+    margin: 59px 100px 100px 100px;
+    padding: 20px 0 100px 0;
 }
 
 .sec6te2 {
     justify-content: space-around;
 }
 
-.sec6te2 .p1 h2, .sec6te2 .p2 h2, .sec6te2 .p3 h2 {
+.sec6te2 .p1 h2,
+.sec6te2 .p2 h2,
+.sec6te2 .p3 h2 {
     font-size: 70px;
 }
 
-.sec6te2 .p1 p, .sec6te2 .p2 p, .sec6te2 .p3 p {
+.sec6te2 .p1 p,
+.sec6te2 .p2 p,
+.sec6te2 .p3 p {
     font-size: 35px;
     margin-top: 10px;
+}
+
+.sec7bg {
+    color: #ffffff;
+    padding: 50px;
+    height: 900px;
+    background: url(./assest/image/sec7bg.png) #e8631c center / cover;
+    background-blend-mode: multiply;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec7text {
+    text-align: center;
+}
+
+.sec7text h2 {
+    font-size: 45px;
+}
+
+.sec7text p {
+    font-size: 40px;
+    padding: 100px;
+}
+
+.sec8 {
+    color: #ffffff;
+    background: #e8631c;
+    text-align: center;
+    padding: 150px 0 150px 0;
+}
+
+.sec8text h2 {
+    font-size: 70px;
+}
+
+.sec8text p {
+    font-size: 35px;
+    margin: 59px 100px 25px 100px;
+    padding: 20px 25px 0;
+}
+
+.sec8input input {
+    width: 500px;
+    height: 50px;
+    padding: 25px;
+    font-size: 25px;
+    border: none;
+    caret-color: #e8631c;
+}
+
+.sec8input label {
+    padding: 11px 25px 11px 25px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 25px;
+    border: none;
+    background: #303030;
+}
+
+.sec9 {
+    color: #ffffff;
+    background: #303030;
+    padding: 100px 50px;
+}
+
+.sec9p1 h2 {
+    font-size: 25px;
+    padding: 0 0 20px 0;
+}
+
+.sec9p1 p {
+    font-size: 22px;
+    padding: 0 100px 20px 0;
+}
+
+.sec9p1 img {
+    padding: 5px;
+}
+
+.sec9p2 h2 {
+    font-size: 25px;
+    padding: 0 0 20px 29px;
+}
+
+.sec9p2 p {
+    font-size: 22px;
+    padding: 0 0 10px 29px;
+}
+
+.sec9p3 h2 {
+    font-size: 25px;
+    padding: 0 0 20px 29px;
+}
+
+.sec9p3 p {
+    font-size: 22px;
+    padding: 0 0 10px 29px;
+}
+
+.sec9p4 h2 {
+    font-size: 25px;
+    padding: 0 0 20px 29px;
+}
+
+.sec9p4 p {
+    font-size: 22px;
+    padding: 0 0 10px 29px;
+}
+
+/* --------- Media quary -----------  */
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+    .contener {
+        width: 100%;
+    }
+
+    .sec1text {
+        padding: 29px;
+    }
+
+    .sec1text h1 {
+        font-size: 59px;
+        padding: 100px 0 6px 0;
+    }
+
+    .sec1text p {
+        font-size: 18px;
+        margin: 4px 0 4px 0;
+        padding: 0 0 10px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        padding: 5px 29px;
+        font-size: 15px;
+    }
+
+    .sec2 {
+        padding: 29px 25px;
+    }
+
+    .sec2text {
+        text-align: center;
+    }
+
+    .sec2text h2 {
+        font-size: 59px;
+    }
+
+    .sec2text p {
+        font-size: 18px;
+        margin: 10px 0 10px 0;
+    }
+
+    .sec2wa {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sec2blog {
+        text-align: center;
+        width: 190px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 18px;
+    }
+
+    .sec2blog p {
+        font-size: 16px;
+        width: 90%;
+        margin: auto auto 10px auto;
+    }
+} */
+
+/* // Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+    .contener {
+        width: 100%;
+    }
+
+    .sec1text {
+        padding: 29px;
+    }
+
+    .sec1text h1 {
+        font-size: 64px;
+        padding: 100px 0 6px 0;
+    }
+
+    .sec1text p {
+        font-size: 19px;
+        margin: 4px 0 4px 0;
+        padding: 0 0 10px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        padding: 5px 29px;
+        font-size: 15px;
+    }
+
+    .sec2 {
+        padding: 50px 40px;
+    }
+
+    .sec2text {
+        text-align: center;
+    }
+
+    .sec2text h2 {
+        font-size: 64px;
+    }
+
+    .sec2text p {
+        font-size: 19px;
+        margin: 10px 0 10px 0;
+    }
+
+    .sec2wa {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sec2blog {
+        text-align: center;
+        width: 190px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 19px;
+    }
+
+    .sec2blog p {
+        font-size: 16px;
+        width: 90%;
+        margin: auto auto 10px auto;
+    }
+} */
+
+/* // Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+    .contener {
+        width: 100%;
+    }
+
+    .sec1text {
+        padding: 45px;
+    }
+
+    .sec1text h1 {
+        font-size: 69px;
+        padding: 60px 0 6px 0;
+    }
+
+    .sec1text p {
+        font-size: 24px;
+        margin: 4px 0 4px 0;
+        padding: 0 0 10px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        padding: 5px 29px;
+        font-size: 15px;
+    }
+
+    .sec2 {
+        padding: 50px 50px;
+    }
+
+    .sec2text {
+        text-align: center;
+    }
+
+    .sec2text h2 {
+        font-size: 69px;
+    }
+
+    .sec2text p {
+        font-size: 24px;
+        margin: 15px 0 19px 0;
+    }
+
+    .sec2blog {
+        text-align: center;
+        width: 250px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 24px;
+    }
+
+    .sec2blog p {
+        font-size: 19px;
+        width: 90%;
+        margin: auto auto 10px auto;
+    }
+} */
+
+/* // X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+    .contener {
+        width: 100%;
+    }
+
+    .sec1text {
+        padding: 100px 100px 100px 80px;
+    }
+
+    .sec1text h1 {
+        font-size: 95px;
+        padding: 144px 0 10px 0;
+    }
+
+    .sec1text p {
+        font-size: 25px;
+        margin: 4px 0 4px 0;
+        padding: 0 0 15px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        padding: 5px 29px;
+        font-size: 22px;
+    }
+
+    .sec2 {
+        padding: 50px 50px;
+    }
+
+    .sec2text {
+        text-align: center;
+    }
+
+    .sec2text h2 {
+        font-size: 95px;
+    }
+
+    .sec2text p {
+        font-size: 25px;
+        margin: 19px 0 25px 0;
+    }
+
+    .sec2blog {
+        text-align: center;
+        width: 400px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 25px;
+    }
+
+    .sec2blog p {
+        font-size: 20px;
+        width: 90%;
+        margin: auto auto 10px auto;
+    }
+} */
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {
+    .contener {
+        width: 100%;
+    }
+
+    .sec1text {
+        padding: 100px 100px 100px 80px;
+    }
+
+    .sec1text h1 {
+        font-size: 100px;
+        padding: 100px 0 10px 0;
+    }
+
+    .sec1text p {
+        font-size: 29px;
+        margin: 4px 0 4px 0;
+        padding: 0 0 15px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        padding: 5px 29px;
+        font-size: 25px;
+    }
+
+    .sec2 {
+        padding: 50px 50px;
+    }
+
+    .sec2text {
+        text-align: center;
+    }
+
+    .sec2text h2 {
+        font-size: 100px;
+    }
+
+    .sec2text p {
+        font-size: 29px;
+        margin: 19px 0 25px 0;
+    }
+
+    .sec2blog {
+        text-align: center;
+        width: 395px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 29px;
+    }
+
+    .sec2blog p {
+        font-size: 25px;
+        width: 90%;
+        margin: auto auto 10px auto;
+    }
+} */
+
+/* @media (min-width: 1500px) {
+    .contener {
+        width: 100%;
+    }
+    
+    .sec1 {
+        padding: 50px 0 50px 0;
+    }
+
+    .sec1text {
+        padding: 100px 100px 100px 90px;
+    }
+
+    .sec1text h1 {
+        font-size: 100px;
+        padding: 100px 0 10px 0;
+    }
+
+    .sec1text p {
+        font-size: 35px;
+        margin: 5px 0 15px 0;
+        padding: 0 0 15px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        padding: 9px 29px;
+        font-size: 30px;
+    }
+
+    .sec2 {
+        padding: 50px 50px;
+    }
+
+    .sec2text {
+        text-align: center;
+    }
+
+    .sec2text h2 {
+        font-size: 100px;
+    }
+
+    .sec2text p {
+        font-size: 35px;
+        margin: 19px 0 25px 0;
+    }
+
+    .sec2blog {
+        text-align: center;
+        width: 400px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 29px;
+    }
+
+    .sec2blog p {
+        font-size: 25px;
+        width: 90%;
+        margin: auto auto 10px auto;
+    }
+} */
+
+@media (min-width: 2000px) {}
+
+@media (min-width: 2500px) {}
+
+@media (min-width: 3000px) {}
+
+@media (min-width: 3500px) {}
+
+@media (min-width: 3840px) {}
+
+@media (min-width: 4260px) {}
+
+@media (min-width: 4860px) {}
+
+@media (min-width: 5200px) {}
+
+@media (min-width: 5500px) {}
+
+@media (min-width:6000px) {}
+
+@media (min-width: 6500px) {}
+
+@media (min-width: 7000px) {
+    .contener {
+        width: 100%;
+    }
+
+    .nav-bar-logo img {
+        width: 600px;
+        height: 350px;
+        padding: 25px;
+    }
+
+    .nav-bar-search img {
+        width: 240px;
+        height: 240px;
+        padding: 15px;
+    }
+
+    .nav-bar li {
+        margin: 0 50px;
+        font-size: 140px;
+    }
+
+    .sec1 {
+        padding: 500px 0 500px 0;
+    }
+
+    .sec1text {
+        margin-top: 100px;
+        padding: 500px 0 0 400px;
+    }
+
+    .sec1text h1 {
+        font-size: 480px;
+        padding: 500px 0 100px 0;
+    }
+
+    .sec1text p {
+        font-size: 180px;
+        padding: 0 0 150px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        border-radius: 190px;
+        margin-top: 100px;
+        padding: 110px 500px;
+        /* width: 250px;
+    height: 50px; */
+        font-size: 170px;
+    }
+
+    .sec2 {
+        padding: 429px 150px;
+    }
+
+    .sec2text h2 {
+        font-size: 390px;
+    }
+
+    .sec2text p {
+        font-size: 270px;
+        margin: 25px 0 25px 0;
+        padding: 200px;
+    }
+
+    .sec2blog {
+        width: 1952px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 240px;
+    }
+
+    .sec2blog p {
+        font-size: 145px;
+        width: 90%;
+        margin: 50px auto 90px auto;
+    }
+
+    .sec3 {
+        padding: 429px 150px;
+    }
+
+    .sec3text h2 {
+        font-size: 400px;
+    }
+
+    .sec3text p {
+        font-size: 290px;
+        margin: 100px 0 100px 0;
+        padding: 100px;
+    }
+
+    .sec3wa {
+        margin-bottom: 55px;
+    }
+
+    .sec3blog {
+        border-radius: 150px;
+        width: 1957px;
+    }
+
+    .sec3blog img {
+        width: 850px;/*950*/
+        padding: 100px 0 100px 0;
+    }
+
+    .sec3blog h2 {
+        font-size: 250px;
+    }
+
+    .sec3blog p {
+        font-size: 155px;
+        width: 90%;
+        margin: 51px auto 51px auto;
+    }
+
+    .sec3blog button {
+        border-radius: 100px;
+        margin: 100px auto 150px auto;
+        padding: 50px 480px;
+        /* width: 250px;
+        height: 50px; */
+        font-size: 190px;
+    }
+
+    .sec4text {
+        padding: 0 0 0 190px;
+    }
+
+    .sec4text h2 {
+        font-size: 290px;
+    }
+
+    .sec4text p {
+        font-size: 190px;
+        width: 80%;
+        margin: 100px 0 100px 0;
+    }
+
+    .sec4sd img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sec4 button {
+        border-radius: 100px;
+        padding: 50px 450px;
+        /* width: 250px;
+    height: 50px; */
+        font-size: 150px;
+    }
+
+    .sec5text {
+        padding: 0 0 0 190px;
+    }
+
+    .sec5text h2 {
+        font-size: 290px;
+    }
+
+    .sec5text p {
+        font-size: 190px;
+        width: 80%;
+        margin: 100px 0 100px 0;
+    }
+
+    .sec5sd img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sec5 button {
+        border-radius: 100px;
+        padding: 50px 450px;
+        font-size: 150px;
+    }
+
+    .sec6 {
+        padding: 500px 0 500px 0;
+    }
+
+    .sec6te1 h2 {
+        font-size: 400px;
+    }
+
+    .sec6te1 p {
+        font-size: 290px;
+        margin: 100px;
+        padding: 400px 0 400px 0;
+    }
+
+    .sec6te2 .p1 h2,
+    .sec6te2 .p2 h2,
+    .sec6te2 .p3 h2 {
+        font-size: 400px;
+        margin: 100px 0 0 0;
+        padding: 100px 0 0 0;
+    }
+
+    .sec6te2 .p1 p,
+    .sec6te2 .p2 p,
+    .sec6te2 .p3 p {
+        font-size: 290px;
+        margin: 100px 0 100px 0;
+        padding: 0  0 100px 0;
+    }
+
+    .sec7bg {
+        height: 100vh;
+        padding: 50px;
+    }
+
+    .sec7text h2 {
+        font-size: 400px;
+    }
+
+    .sec7text p {
+        font-size: 290px;
+        padding: 400px;
+    }
+
+    .sec8 {
+        padding: 450px 0 450px 0;
+    }
+
+    .sec8text h2 {
+        font-size: 400px;
+    }
+
+    .sec8text p {
+        font-size: 290px;
+        margin: 91px 100px 65px 100px;
+        padding: 70px 65px 100px;
+    }
+
+    .sec8input input {
+        width: 49%;
+        font-size: 250px;
+        margin-top: 100px;
+        padding: 190px;
+    }
+
+    .sec8input label {
+        font-size: 250px;
+        margin-left: 29px;
+        padding: 59px 190px 59px 190px;
+    }
+
+    .sec9 {
+        padding: 500px 251px;
+    }
+
+    .sec9p1 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 0;
+    }
+
+    .sec9p1 p {
+        font-size: 190px;
+        padding: 0 100px 20px 0;
+    }
+
+    .sec9p1 img {
+        padding: 59px;
+        width: 450px;
+    }
+
+    .sec9p2 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 100px;
+    }
+
+    .sec9p2 p {
+        font-size: 190px;
+        padding: 0 0 15px 100px;
+    }
+
+    .sec9p3 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 100px;
+    }
+
+    .sec9p3 p {
+        font-size: 190px;
+        padding: 0 0 15px 100px;
+    }
+
+    .sec9p4 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 100px;
+    }
+
+    .sec9p4 p {
+        font-size: 190px;
+        padding: 0 0 15px 100px;
+    }
+}
+
+@media (min-width: 7680px) {
+    .contener {
+        width: 100%;
+    }
+
+    .nav-bar-logo img {
+        width: 650px;
+        height: 400px;
+        padding: 25px;
+    }
+
+    .nav-bar-search img {
+        width: 250px;
+        height: 250px;
+        padding: 15px;
+    }
+
+    .nav-bar li {
+        margin: 0 50px;
+        font-size: 150px;
+    }
+
+    .sec1 {
+        padding: 500px 0 500px 0;
+    }
+
+    .sec1text {
+        margin-top: 100px;
+        padding: 500px 0 0 500px;
+    }
+
+    .sec1text h1 {
+        font-size: 500px;
+        padding: 500px 0 100px 0;
+    }
+
+    .sec1text p {
+        font-size: 190px;
+        padding: 0 0 150px 0;
+        width: 45%;
+    }
+
+    .sec1text button {
+        border-radius: 190px;
+        margin-top: 100px;
+        padding: 110px 500px;
+        /* width: 250px;
+    height: 50px; */
+        font-size: 190px;
+    }
+
+    .sec2 {
+        padding: 429px 150px;
+    }
+
+    .sec2text h2 {
+        font-size: 400px;
+    }
+
+    .sec2text p {
+        font-size: 290px;
+        margin: 25px 0 25px 0;
+        padding: 200px;
+    }
+
+    .sec2blog {
+        width: 1972px;
+    }
+
+    .sec2blog img {
+        width: 100%;
+    }
+
+    .sec2blog h2 {
+        font-size: 250px;
+    }
+
+    .sec2blog p {
+        font-size: 155px;
+        width: 90%;
+        margin: 59px auto 100px auto;
+    }
+
+    .sec3 {
+        padding: 429px 150px;
+    }
+
+    .sec3text h2 {
+        font-size: 400px;
+    }
+
+    .sec3text p {
+        font-size: 290px;
+        margin: 100px 0 100px 0;
+        padding: 100px;
+    }
+
+    .sec3wa {
+        margin-bottom: 55px;
+    }
+
+    .sec3blog {
+        border-radius: 150px;
+        width: 1957px;
+    }
+
+    .sec3blog img {
+        width: 850px;/*950*/
+        padding: 100px 0 100px 0;
+    }
+
+    .sec3blog h2 {
+        font-size: 250px;
+    }
+
+    .sec3blog p {
+        font-size: 155px;
+        width: 90%;
+        margin: 51px auto 51px auto;
+    }
+
+    .sec3blog button {
+        border-radius: 100px;
+        margin: 100px auto 150px auto;
+        padding: 50px 480px;
+        /* width: 250px;
+        height: 50px; */
+        font-size: 190px;
+    }
+
+    .sec4text {
+        padding: 0 0 0 190px;
+    }
+
+    .sec4text h2 {
+        font-size: 290px;
+    }
+
+    .sec4text p {
+        font-size: 190px;
+        width: 80%;
+        margin: 100px 0 100px 0;
+    }
+
+    .sec4sd img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sec4 button {
+        border-radius: 100px;
+        padding: 50px 450px;
+        /* width: 250px;
+    height: 50px; */
+        font-size: 150px;
+    }
+
+    .sec5text {
+        padding: 0 0 0 190px;
+    }
+
+    .sec5text h2 {
+        font-size: 290px;
+    }
+
+    .sec5text p {
+        font-size: 190px;
+        width: 80%;
+        margin: 100px 0 100px 0;
+    }
+
+    .sec5sd img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sec5 button {
+        border-radius: 100px;
+        padding: 50px 450px;
+        font-size: 150px;
+    }
+
+    .sec6 {
+        padding: 500px 0 500px 0;
+    }
+
+    .sec6te1 h2 {
+        font-size: 400px;
+    }
+
+    .sec6te1 p {
+        font-size: 290px;
+        margin: 100px;
+        padding: 400px 0 400px 0;
+    }
+
+    .sec6te2 .p1 h2,
+    .sec6te2 .p2 h2,
+    .sec6te2 .p3 h2 {
+        font-size: 400px;
+        margin: 100px 0 0 0;
+        padding: 100px 0 0 0;
+    }
+
+    .sec6te2 .p1 p,
+    .sec6te2 .p2 p,
+    .sec6te2 .p3 p {
+        font-size: 290px;
+        margin: 100px 0 100px 0;
+        padding: 0  0 100px 0;
+    }
+
+    .sec7bg {
+        height: 100vh;
+        padding: 50px;
+    }
+
+    .sec7text h2 {
+        font-size: 400px;
+    }
+
+    .sec7text p {
+        font-size: 290px;
+        padding: 400px;
+    }
+
+    .sec8 {
+        padding: 450px 0 450px 0;
+    }
+
+    .sec8text h2 {
+        font-size: 400px;
+    }
+
+    .sec8text p {
+        font-size: 290px;
+        margin: 91px 100px 65px 100px;
+        padding: 70px 65px 100px;
+    }
+
+    .sec8input input {
+        width: 49%;
+        font-size: 250px;
+        margin-top: 100px;
+        padding: 190px;
+    }
+
+    .sec8input label {
+        font-size: 250px;
+        margin-left: 29px;
+        padding: 59px 190px 59px 190px;
+    }
+
+    .sec9 {
+        padding: 500px 251px;
+    }
+
+    .sec9p1 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 0;
+    }
+
+    .sec9p1 p {
+        font-size: 190px;
+        padding: 0 100px 20px 0;
+    }
+
+    .sec9p1 img {
+        padding: 59px;
+        width: 450px;
+    }
+
+    .sec9p2 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 100px;
+    }
+
+    .sec9p2 p {
+        font-size: 190px;
+        padding: 0 0 15px 100px;
+    }
+
+    .sec9p3 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 100px;
+    }
+
+    .sec9p3 p {
+        font-size: 190px;
+        padding: 0 0 15px 100px;
+    }
+
+    .sec9p4 h2 {
+        font-size: 250px;
+        padding: 0 0 91px 100px;
+    }
+
+    .sec9p4 p {
+        font-size: 190px;
+        padding: 0 0 15px 100px;
+    }
 }
