@@ -1,0 +1,173 @@
+span {
+    color: #955023;
+}
+
+.task_1, .task_2, .task_3, .task_4, .task_5,
+.task_6 , .task_7, .task_8, .task_9, .task_10,
+.task_11, .task_12, .task_13, .task_14, .task_15 {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eebdbd;
+    margin-bottom: 15px;
+}
+
+.task_1b span {
+    display: block;
+    color: #008000;
+}
+
+.task_2i {
+    display: inline-block;
+    color: #ffffff;
+    background: #008000;
+    padding: 10px;
+}
+
+.task_3 img {
+    float: right;
+    border-radius: 19px;
+}
+
+.task_4 img {
+    float: none;
+    border-radius: 19px;
+}
+
+.task_4 p {
+    font-size: 19px;
+}
+
+.task_5n {
+    padding: 10px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-bar {
+    background-color: slategrey;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar li {
+    color: #ffffff;
+    display: inline;
+    margin: 0 9px;
+}
+
+.task_6 p {
+    display: none;
+    font-size: 19px;
+}
+
+.task_7 p {
+    visibility: hidden;
+    font-size: 19px;
+}
+
+.task_8i {
+    display: inline-block;
+    color: #ffffff;
+    width: 40px;
+    height: 25px;
+    background: #008000;
+    padding: 10px;
+}
+
+.task_9 {
+    height: 150px;
+}
+
+.task_9i, .task_10i {
+    float: left;
+    margin-left: 10px;
+    color: #ffffff;
+    width: 40px;
+    background: #008000;
+    padding: 10px;
+}
+
+.task_10 {
+    overflow: auto;
+}
+
+.task_11tb {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
+}
+
+.task_11tr {
+  display: table-row;
+}
+
+.task_11tch {
+    text-align: center;
+    font-weight: bold;
+}
+
+.task_11tc, .task_11tch {
+  display: table-cell;
+  color: #ffffff;
+  border-radius: 15px;
+  background: #008000;
+  padding: 10px;
+  font-size: 19px;
+}
+
+.task_12i {
+    display: inline-block;
+    color: #ffffff;
+    width: 50px;
+    height: 25px;
+    background: #008000;
+    padding: 10px;
+}
+
+.task_13 {
+    width: 590px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.task_14t {
+    color: #008000;
+}
+
+.task_14t p {
+    font-size: 19px;
+    text-indent: 51px;
+}
+
+.task_14t span {
+    display: block;
+    margin: 15px;
+    color: unset;
+}
+
+.task_15t {
+    padding: 0 15px;
+}
+
+.task_15lt {
+  display: table;
+  width: 100%;
+  list-style: none;
+  border-collapse: collapse;
+}
+
+.task_15li {
+  display: table-cell;
+  padding: 12px;
+  text-align: center;
+  color: #ffffff;
+  background: #008000;
+  border: 9px solid #ffffff;
+}
