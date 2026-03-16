@@ -1,149 +1,74 @@
-🧠 Task 1: Create a Grid Container
-Question:
-How do you turn a normal container into a CSS Grid layout?
+<h2>🧠 Task 1: Create a Grid Container.</h2>
+<h3>Question: How do you turn a normal container into a CSS Grid layout?</h3>
+<h3>Description: Every grid starts by declaring display: grid on a parent container.</h3>
+<h3>Hint: Use display: grid; in CSS.</h3>
 
-Description:
-Every grid starts by declaring display: grid on a parent container.
+<h2>🧠 Task 2: Define Two Equal Columns.</h2>
+<h3>Question: Create two columns of equal width.</h3>
+<h3>Description: Use grid-template-columns to define column structure.</h3>
+<h3>Hint: Use 1fr 1fr for equal flexible columns.</h3>
 
-Hint:
-Use display: grid; in CSS.
+<h2>🧠 Task 3: Create Three Fixed-Width Columns.</h2>
+<h3>Question: Make a grid with 3 columns, each 100px wide.</h3>
+<h3>Description: Fixed widths give consistent layout sizes.</h3>
+<h3>Hint: Use pixel values.</h3>
 
-🧠 Task 2: Define Two Equal Columns
-Question:
-Create two columns of equal width.
+<h2>🧠 Task 4: Create Mixed Column Sizes.</h2>
+<h3>Question: Create a layout with one fixed column and two flexible ones.</h3>
+<h3>Description: Mixing px and fr makes adaptable layouts.</h3>
+<h3>Hint: Try 200px 1fr 2fr.</h3>
 
-Description:
-Use grid-template-columns to define column structure.
+<h2>🧠 Task 5: Define Row Heights.</h2>
+<h3>Question: Create two rows, one 100px and one 200px high.</h3>
+<h3>Description: grid-template-rows defines row height.</h3>
+<h3>Hint: Use pixel values for rows.</h3>
 
-Hint:
-Use 1fr 1fr for equal flexible columns.
+<h2>🧠 Task 6: Use repeat() for Columns.</h2>
+<h3>Question: Make a grid with 4 equal columns using repeat().</h3>
+<h3>Description: repeat() shortens repetitive patterns.</h3>
+<h3>Hint: Use repeat(4, 1fr).</h3>
 
-🧠 Task 3: Create Three Fixed-Width Columns
-Question:
-Make a grid with 3 columns, each 100px wide.
+<h2>🧠 Task 7: Add Space Between Items.</h2>
+<h3>Question: Add 20px of space between grid items.</h3>
+<h3>Description: The gap property controls both row and column spacing.</h3>
+<h3>Hint: Use gap: 20px;.</h3>
 
-Description:
-Fixed widths give consistent layout sizes.
+<h2>🧠 Task 8: Set Different Row and Column Gaps.</h2>
+<h3>Question: Add 10px between rows and 30px between columns.</h3>
+<h3>Description: row-gap and column-gap control spacing separately.</h3>
+<h3>Hint: Use both properties or shorthand.</h3>
 
-Hint:
-Use pixel values.
+<h2>🧠 Task 9: Create a Two-Row, Three-Column Grid.</h2>
+<h3>Question: Make a grid with 2 rows and 3 columns.</h3>
+<h3>Description: Combine both row and column templates.</h3>
+<h3>Hint: Use grid-template-rows and grid-template-columns.</h3>
 
-🧠 Task 4: Create Mixed Column Sizes
-Question:
-Create a layout with one fixed column and two flexible ones.
+<h2>🧠 Task 10: Use fr Units for Responsive Columns.</h2>
+<h3>Question: Create 3 columns that share available space equally.</h3>
+<h3>Description: fr units adapt automatically to screen size.</h3>
+<h3>Hint: Use 1fr 1fr 1fr.</h3>
 
-Description:
-Mixing px and fr makes adaptable layouts.
+<h2>🧠 Task 11: Automatically Fit Columns.</h2>
+<h3>Question: Make a responsive grid that adjusts the number of columns automatically.</h3>
+<h3>Description: Use auto-fit and minmax() to make layouts that resize gracefully.</h3>
+<h3>Hint: Use repeat(auto-fit, minmax(200px, 1fr)).</h3>
 
-Hint:
-Try 200px 1fr 2fr.
+<h2>🧠 Task 12: Center All Items in the Grid.</h2>
+<h3>Question: How do you center content both horizontally and vertically inside a grid?</h3>
+<h3>Description: place-items is shorthand for aligning items in both directions.</h3>
+<h3>Hint: Use place-items: center;.</h3>
 
-🧠 Task 5: Define Row Heights
-Question:
-Create two rows, one 100px and one 200px high.
+<h2>🧠 Task 13: Create a Layout with Header, Main, and Footer.</h2>
+<h3>Question: Build a 3-row grid layout representing a header, main content, and footer.</h3>
+<h3>Description: This task practices defining layout regions using grid rows.</h3>
+<h3>Hint: Use grid-template-rows with fixed and flexible heights.</h3>
 
-Description:
-grid-template-rows defines row height.
+<h2>🧠 Task 14: Create a Photo Gallery.</h2>
+<h3>Question: Make a responsive image grid that wraps based on screen size.</h3>
+<h3>Description: Responsive galleries use Grid with auto-fit and gap.</h3>
+<h3>Hint: Use repeat(auto-fit, minmax(150px, 1fr)).</h3>
 
-Hint:
-Use pixel values for rows.
-
-🧠 Task 6: Use repeat() for Columns
-Question:
-Make a grid with 4 equal columns using repeat().
-
-Description:
-repeat() shortens repetitive patterns.
-
-Hint:
-Use repeat(4, 1fr).
-
-🧠 Task 7: Add Space Between Items
-Question:
-Add 20px of space between grid items.
-
-Description:
-The gap property controls both row and column spacing.
-
-Hint:
-Use gap: 20px;.
-
-🧠 Task 8: Set Different Row and Column Gaps
-Question:
-Add 10px between rows and 30px between columns.
-
-Description:
-row-gap and column-gap control spacing separately.
-
-Hint:
-Use both properties or shorthand.
-
-🧠 Task 9: Create a Two-Row, Three-Column Grid
-Question:
-Make a grid with 2 rows and 3 columns.
-
-Description:
-Combine both row and column templates.
-
-Hint:
-Use grid-template-rows and grid-template-columns.
-
-🧠 Task 10: Use fr Units for Responsive Columns
-Question:
-Create 3 columns that share available space equally.
-
-Description:
-fr units adapt automatically to screen size.
-
-Hint:
-Use 1fr 1fr 1fr.
-
-🧠 Task 11: Automatically Fit Columns
-Question:
-Make a responsive grid that adjusts the number of columns automatically.
-
-Description:
-Use auto-fit and minmax() to make layouts that resize gracefully.
-
-Hint:
-Use repeat(auto-fit, minmax(200px, 1fr)).
-
-🧠 Task 12: Center All Items in the Grid
-Question:
-How do you center content both horizontally and vertically inside a grid?
-
-Description:
-place-items is shorthand for aligning items in both directions.
-
-Hint:
-Use place-items: center;.
-
-🧠 Task 13: Create a Layout with Header, Main, and Footer
-Question:
-Build a 3-row grid layout representing a header, main content, and footer.
-
-Description:
-This task practices defining layout regions using grid rows.
-
-Hint:
-Use grid-template-rows with fixed and flexible heights.
-
-🧠 Task 14: Create a Photo Gallery
-Question:
-Make a responsive image grid that wraps based on screen size.
-
-Description:
-Responsive galleries use Grid with auto-fit and gap.
-
-Hint:
-Use repeat(auto-fit, minmax(150px, 1fr)).
-
-🧠 Task 15: Dashboard Layout
-Question:
-Create a 2-column grid layout: a sidebar and a main content area.
-
-Description:
-Use fixed and flexible widths for typical dashboard layouts.
-
-Hint:
-Use grid-template-columns: 250px 1fr;.
+<h2>🧠 Task 15: Dashboard Layout.</h2>
+<h3>Question: Create a 2-column grid layout: a sidebar and a main content area.</h3>
+<h3>Description: Use fixed and flexible widths for typical dashboard layouts.</h3>
+<h3>Hint: Use grid-template-columns: 250px 1fr;.</h3>
