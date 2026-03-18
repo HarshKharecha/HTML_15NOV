@@ -10,3 +10,101 @@ span {
     border: 1px solid #eebdbd;
     margin-bottom: 15px;
 }
+
+.dflex {
+    display: grid;
+    gap: 10px;
+}
+
+.task_1gc {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.box {
+    color: white;
+    background-color: #3498db;
+    border-radius: 19px;
+    font-size: 19px;
+    font-weight: bold;
+    display: grid;
+    /* text-align: center; */
+    place-items: center;
+    padding: 15px;
+}
+
+.task_2gc {
+    grid-template-columns: 1fr 1fr;
+}
+
+.task_3gc {
+  grid-template-columns: 150px 150px 150px;
+  justify-content: center;
+}
+
+.task_4gc {
+    grid-template-columns: 200px 1fr 2fr;
+}
+
+.task_5gc {
+    grid-template-rows: 100px 200px;
+}
+
+.task_6 span {
+    color: #008000;
+}
+
+.task_6gc, .task_7gc, .task_12gc {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.task_8gc {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+}
+
+.task_9gc {
+    grid-template-columns: repeat(3, 1fr);
+    /* I write thi line becuse menson in hint but not need */
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+
+.task_10gc {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.task_11gc {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.task_13box {
+    color: white;
+    background-color: #3498db;
+    border-radius: 19px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+.task_13gc {
+    grid-template-columns: 200px repeat(5, 1fr);
+}
+
+.task_13gcm {
+    grid-template-columns: 1fr;
+    grid-template-rows: min(500px);
+}
+
+.task_13gcm img {
+    width: 500px;
+    height: 500px;
+}
+
+.task_13gca {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.lorem {
+    grid-row: 2 / 6;
+}

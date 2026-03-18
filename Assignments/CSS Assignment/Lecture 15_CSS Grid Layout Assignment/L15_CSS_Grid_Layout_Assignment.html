@@ -1,74 +1,262 @@
-<h2>🧠 Task 1: Create a Grid Container.</h2>
-<h3>Question: How do you turn a normal container into a CSS Grid layout?</h3>
-<h3>Description: Every grid starts by declaring display: grid on a parent container.</h3>
-<h3>Hint: Use display: grid; in CSS.</h3>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>🧠 Task 2: Define Two Equal Columns.</h2>
-<h3>Question: Create two columns of equal width.</h3>
-<h3>Description: Use grid-template-columns to define column structure.</h3>
-<h3>Hint: Use 1fr 1fr for equal flexible columns.</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../../../assest/image/HTML_Logo.png" type="image/x-icon">
+    <title>Display Property_Two Assignment</title>
+    <link rel="stylesheet" href="L15.css">
+</head>
 
-<h2>🧠 Task 3: Create Three Fixed-Width Columns.</h2>
-<h3>Question: Make a grid with 3 columns, each 100px wide.</h3>
-<h3>Description: Fixed widths give consistent layout sizes.</h3>
-<h3>Hint: Use pixel values.</h3>
+<body>
 
-<h2>🧠 Task 4: Create Mixed Column Sizes.</h2>
-<h3>Question: Create a layout with one fixed column and two flexible ones.</h3>
-<h3>Description: Mixing px and fr makes adaptable layouts.</h3>
-<h3>Hint: Try 200px 1fr 2fr.</h3>
+    <h1>CSS Grid Layout Tasks</h1>
 
-<h2>🧠 Task 5: Define Row Heights.</h2>
-<h3>Question: Create two rows, one 100px and one 200px high.</h3>
-<h3>Description: grid-template-rows defines row height.</h3>
-<h3>Hint: Use pixel values for rows.</h3>
+    <h2>🧠 Task 1: Create a Grid Container.</h2>
+    <h3>Question: How do you turn a normal container into a CSS Grid layout?</h3>
+    <h3>Description: Every grid starts by declaring <span>display: grid</span> on a parent container.</h3>
+    <h3>Hint: Use <span>display: grid;</span> in CSS.</h3>
+    <h3>Answer:</h3>
 
-<h2>🧠 Task 6: Use repeat() for Columns.</h2>
-<h3>Question: Make a grid with 4 equal columns using repeat().</h3>
-<h3>Description: repeat() shortens repetitive patterns.</h3>
-<h3>Hint: Use repeat(4, 1fr).</h3>
+    <div class="task_1">
+        <h2>🚀 Here is Create a Grid Container.</h2>
+    </div>
+    <div class="task_1gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+    </div>
 
-<h2>🧠 Task 7: Add Space Between Items.</h2>
-<h3>Question: Add 20px of space between grid items.</h3>
-<h3>Description: The gap property controls both row and column spacing.</h3>
-<h3>Hint: Use gap: 20px;.</h3>
+    <h2>🧠 Task 2: Define Two Equal Columns.</h2>
+    <h3>Question: Create two columns of equal width.</h3>
+    <h3>Description: Use <span>grid-template-columns</span> to define column structure.</h3>
+    <h3>Hint: Use <span>1fr 1fr</span> for equal flexible columns.</h3>
+    <h3>Answer:</h3>
 
-<h2>🧠 Task 8: Set Different Row and Column Gaps.</h2>
-<h3>Question: Add 10px between rows and 30px between columns.</h3>
-<h3>Description: row-gap and column-gap control spacing separately.</h3>
-<h3>Hint: Use both properties or shorthand.</h3>
+    <div class="task_2">
+        <h2>🚀 Here is Define Two Equal Columns.</h2>
+    </div>
+    <div class="task_2gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+    </div>
 
-<h2>🧠 Task 9: Create a Two-Row, Three-Column Grid.</h2>
-<h3>Question: Make a grid with 2 rows and 3 columns.</h3>
-<h3>Description: Combine both row and column templates.</h3>
-<h3>Hint: Use grid-template-rows and grid-template-columns.</h3>
+    <h2>🧠 Task 3: Create Three Fixed-Width Columns.</h2>
+    <h3>Question: Make a grid with 3 columns, each 100px wide.</h3>
+    <h3>Description: Fixed widths give consistent layout sizes.</h3>
+    <h3>Hint: Use pixel values.</h3>
+    <h3>Answer:</h3>
 
-<h2>🧠 Task 10: Use fr Units for Responsive Columns.</h2>
-<h3>Question: Create 3 columns that share available space equally.</h3>
-<h3>Description: fr units adapt automatically to screen size.</h3>
-<h3>Hint: Use 1fr 1fr 1fr.</h3>
+    <div class="task_3">
+        <h2>🚀 Here is Create Three Fixed-Width Columns.</h2>
+    </div>
+    <div class="task_3gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+    </div>
 
-<h2>🧠 Task 11: Automatically Fit Columns.</h2>
-<h3>Question: Make a responsive grid that adjusts the number of columns automatically.</h3>
-<h3>Description: Use auto-fit and minmax() to make layouts that resize gracefully.</h3>
-<h3>Hint: Use repeat(auto-fit, minmax(200px, 1fr)).</h3>
+    <h2>🧠 Task 4: Create Mixed Column Sizes.</h2>
+    <h3>Question: Create a layout with one fixed column and two flexible ones.</h3>
+    <h3>Description: Mixing <span>px</span> and <span>fr</span> makes adaptable layouts.</h3>
+    <h3>Hint: Try <span>200px 1fr 2fr</span>.</h3>
+    <h3>Answer:</h3>
 
-<h2>🧠 Task 12: Center All Items in the Grid.</h2>
-<h3>Question: How do you center content both horizontally and vertically inside a grid?</h3>
-<h3>Description: place-items is shorthand for aligning items in both directions.</h3>
-<h3>Hint: Use place-items: center;.</h3>
+    <div class="task_4">
+        <h2>🚀 Here is Create Mixed Column Sizes.</h2>
+    </div>
+    <div class="task_4gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+    </div>
 
-<h2>🧠 Task 13: Create a Layout with Header, Main, and Footer.</h2>
-<h3>Question: Build a 3-row grid layout representing a header, main content, and footer.</h3>
-<h3>Description: This task practices defining layout regions using grid rows.</h3>
-<h3>Hint: Use grid-template-rows with fixed and flexible heights.</h3>
+    <h2>🧠 Task 5: Define Row Heights.</h2>
+    <h3>Question: Create two rows, one 100px and one 200px high.</h3>
+    <h3>Description: <span>grid-template-rows</span> defines row height.</h3>
+    <h3>Hint: Use pixel values for rows.</h3>
+    <h3>Answer:</h3>
 
-<h2>🧠 Task 14: Create a Photo Gallery.</h2>
-<h3>Question: Make a responsive image grid that wraps based on screen size.</h3>
-<h3>Description: Responsive galleries use Grid with auto-fit and gap.</h3>
-<h3>Hint: Use repeat(auto-fit, minmax(150px, 1fr)).</h3>
+    <div class="task_5">
+        <h2>🚀 Here is Define Row Heights.</h2>
+    </div>
+    <div class="task_5gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+    </div>
 
-<h2>🧠 Task 15: Dashboard Layout.</h2>
-<h3>Question: Create a 2-column grid layout: a sidebar and a main content area.</h3>
-<h3>Description: Use fixed and flexible widths for typical dashboard layouts.</h3>
-<h3>Hint: Use grid-template-columns: 250px 1fr;.</h3>
+    <h2>🧠 Task 6: Use <span>repeat()</span> for Columns.</h2>
+    <h3>Question: Make a grid with 4 equal columns using <span>repeat()</span>.</h3>
+    <h3>Description: <span>repeat()</span> shortens repetitive patterns.</h3>
+    <h3>Hint: Use <span>repeat(4, 1fr)</span>.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_6">
+        <h2>🚀 Here is Use <span>repeat()</span> for Columns.</h2>
+    </div>
+    <div class="task_6gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+    </div>
+
+    <h2>🧠 Task 7: Add Space Between Items.</h2>
+    <h3>Question: Add 20px of space between grid items.</h3>
+    <h3>Description: The <span>gap</span> property controls both row and column spacing.</h3>
+    <h3>Hint: Use <span>gap: 20px;</span>.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_7">
+        <h2>🚀 Here is Add Space Between Items.</h2>
+    </div>
+    <div class="task_7gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+    </div>
+
+    <h2>🧠 Task 8: Set Different Row and Column Gaps.</h2>
+    <h3>Question: Add 10px between rows and 30px between columns.</h3>
+    <h3>Description: <span>row-gap</span> and <span>column-gap</span> control spacing separately.</h3>
+    <h3>Hint: Use both properties or shorthand.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_8">
+        <h2>🚀 Here is Set Different Row and Column Gaps.</h2>
+    </div>
+    <div class="task_8gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+    </div>
+
+    <h2>🧠 Task 9: Create a Two-Row, Three-Column Grid.</h2>
+    <h3>Question: Make a grid with 2 rows and 3 columns.</h3>
+    <h3>Description: Combine both row and column templates.</h3>
+    <h3>Hint: Use <span>grid-template-rows</span> and <span>grid-template-columns</span>.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_9">
+        <h2>🚀 Here is Create a Two-Row, Three-Column Grid.</h2>
+    </div>
+    <div class="task_9gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+        <div class="box">Pineapple</div>
+        <div class="box">Sapota</div>
+    </div>
+
+    <h2>🧠 Task 10: Use <span>fr</span> Units for Responsive Columns.</h2>
+    <h3>Question: Create 3 columns that share available space equally.</h3>
+    <h3>Description: <span>fr</span> units adapt automatically to screen size.</h3>
+    <h3>Hint: Use <span>1fr 1fr 1fr</span>.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_10">
+        <h2>🚀 Here is Use <span>fr</span> Units for Responsive Columns.</h2>
+    </div>
+    <div class="task_10gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+        <div class="box">Pineapple</div>
+        <div class="box">Sapota</div>
+    </div>
+
+    <h2>🧠 Task 11: Automatically Fit Columns.</h2>
+    <h3>Question: Make a responsive grid that adjusts the number of columns automatically.</h3>
+    <h3>Description: Use <span>auto-fit</span> and <span>minmax()</span> to make layouts that resize gracefully.</h3>
+    <h3>Hint: Use <span>repeat(auto-fit, minmax(200px, 1fr))</span>.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_11">
+        <h2>🚀 Here is Automatically Fit Columns.</h2>
+    </div>
+    <div class="task_11gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+    </div>
+
+    <h2>🧠 Task 12: Center All Items in the Grid.</h2>
+    <h3>Question: How do you center content both horizontally and vertically inside a grid?</h3>
+    <h3>Description: <span>place-items</span> is shorthand for aligning items in both directions.</h3>
+    <h3>Hint: Use <span>place-items: center;</span>.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_12">
+        <h2>🚀 Here is Center All Items in the Grid.</h2>
+    </div>
+    <div class="task_12gc dflex">
+        <div class="box">Mangoes</div>
+        <div class="box">Watermelons</div>
+        <div class="box">Custard Apple</div>
+        <div class="box">jamrukh</div>
+    </div>
+
+    <h2>🧠 Task 13: Create a Layout with Header, Main, and Footer.</h2>
+    <h3>Question: Build a 3-row grid layout representing a header, main content, and footer.</h3>
+    <h3>Description: This task practices defining layout regions using grid rows.</h3>
+    <h3>Hint: Use <span>grid-template-rows</span> with fixed and flexible heights.</h3>
+    <h3>Answer:</h3>
+
+    <div class="task_13">
+        <h2>🚀 Here is Create a Layout with Header, Main, and Footer.</h2>
+    </div>
+    <div class="dflex">
+        <div class="task_13gc dflex">
+            <div class="box"><img src="/../../assest/image/HTML_Logo.png" alt="Logo"></div>
+            <div class="box">Home</div>
+            <div class="box">Research</div>
+            <div class="box">Contact</div>
+            <div class="box">Login</div>
+            <div class="box">Sign Up</div>
+        </div>
+        <div class="task_13gcm dflex">
+            <div class="box"><img src="../../../assest/image/P1.jpg" alt="Main Content"></div>
+        </div>
+        <div class="task_13gca dflex">
+            <div class="task_13box">Company Details</div>
+            <div class="task_13box">Explore</div>
+            <div class="task_13box">Collaborate</div>
+            <div class="task_13box">About</div>
+            <div class="task_13box lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Go Pro</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> About</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Community</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Explore Designs</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Careers</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Design Tem</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Create Designs</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Supports</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Devloper Tem</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Playoffs</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code> Experts</div>
+            <div class="task_13box"><code><strong>&gt;</strong></code>Terms of Service</div>
+        </div>
+    </div>
+
+    <h2>🧠 Task 14: Create a Photo Gallery.</h2>
+    <h3>Question: Make a responsive image grid that wraps based on screen size.</h3>
+    <h3>Description: Responsive galleries use Grid with <span>auto-fit</span> and <span>gap</span>.</h3>
+    <h3>Hint: Use <span>repeat(auto-fit, minmax(150px, 1fr))</span>.</h3>
+    <h3>Answer:</h3>
+
+    <h2>🧠 Task 15: Dashboard Layout.</h2>
+    <h3>Question: Create a 2-column grid layout: a sidebar and a main content area.</h3>
+    <h3>Description: Use fixed and flexible widths for typical dashboard layouts.</h3>
+    <h3>Hint: Use <span>grid-template-columns: 250px 1fr;</span>.</h3>
+    <h3>Answer:</h3>
+
+</body>
+
+</html>
