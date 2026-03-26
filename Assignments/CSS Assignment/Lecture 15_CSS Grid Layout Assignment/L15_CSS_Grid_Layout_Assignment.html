@@ -214,7 +214,7 @@
     </div>
     <div class="dflex">
         <div class="task_13gc dflex">
-            <div class="box"><img src="/../../assest/image/HTML_Logo.png" alt="Logo"></div>
+            <div class="box"><img src="../../../assest/image/HTML_Logo.png" alt="Logo"></div>
             <div class="box">Home</div>
             <div class="box">Research</div>
             <div class="box">Contact</div>
@@ -222,7 +222,7 @@
             <div class="box">Sign Up</div>
         </div>
         <div class="task_13gcm dflex">
-            <div class="box"><img src="../../../assest/image/P1.jpg" alt="Main Content"></div>
+            <div class="box task_13gcmimg"></div>
         </div>
         <div class="task_13gca dflex">
             <div class="task_13box">Company Details</div>
@@ -251,11 +251,166 @@
     <h3>Hint: Use <span>repeat(auto-fit, minmax(150px, 1fr))</span>.</h3>
     <h3>Answer:</h3>
 
+    <div class="task_14">
+        <h2>🚀 Here is Create a Photo Gallery.</h2>
+    </div>
+
+    <div class="task_14gallery dflex">
+        <div class="task_14gi"><img src="https://picsum.photos/400/300?random=1" alt="Nature"></div>
+        <div class="task_14gi"><img src="https://picsum.photos/400/300?random=2" alt="Architecture"></div>
+        <div class="task_14gi"><img src="https://picsum.photos/400/300?random=3" alt="City"></div>
+        <div class="task_14gi"><img src="https://picsum.photos/400/300?random=4" alt="Ocean"></div>
+        <div class="task_14gi"><img src="https://picsum.photos/400/300?random=5" alt="Forest"></div>
+        <div class="task_14gi"><img src="https://picsum.photos/400/300?random=6" alt="Mountain"></div>
+    </div>
+
     <h2>🧠 Task 15: Dashboard Layout.</h2>
     <h3>Question: Create a 2-column grid layout: a sidebar and a main content area.</h3>
     <h3>Description: Use fixed and flexible widths for typical dashboard layouts.</h3>
     <h3>Hint: Use <span>grid-template-columns: 250px 1fr;</span>.</h3>
     <h3>Answer:</h3>
+
+    <div class="task_15">
+        <h2>🚀 Here is Create a Dashboard Layout.</h2>
+    </div>
+
+    <div class="task15body">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Vision UI</div>
+            <ul class="menu">
+                <li class="active">Dashboard</li>
+                <li>Analytics</li>
+                <li>Tables</li>
+                <li>Billing</li>
+                <li>User Profile</li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Header -->
+            <div class="header">
+                <input class="search" placeholder="Search...">
+                <div class="icons">
+                    <span>🔔</span>
+                    <span>⚙️</span>
+                    <span>👤</span>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="cards">
+                <div class="card">
+                    <h4>Total Revenue</h4>
+                    <h2>$45,000</h2>
+                    <p>+12%</p>
+                </div>
+                <div class="card">
+                    <h4>Users</h4>
+                    <h2>2,300</h2>
+                    <p>+5%</p>
+                </div>
+                <div class="card">
+                    <h4>Sales</h4>
+                    <h2>1,200</h2>
+                    <p>-2%</p>
+                </div>
+                <div class="card">
+                    <h4>Performance</h4>
+                    <h2>89%</h2>
+                    <p>+7%</p>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts">
+
+                <!-- Line Chart (Fake using CSS) -->
+                <div class="card">
+                    <h3>Sales Overview</h3>
+                    <div class="line-chart">
+                        <div class="line"></div>
+                        <!-- <div class="line-chart">
+                            <img src="../../../assest/image/Line_Chart.png" alt="Path Error" class="line">
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Bar Chart -->
+                <div class="card">
+                    <h3>User Activity</h3>
+                    <div class="barwaqper">
+                        <div class="bt1">
+                            <div class="">60%</div>
+                            <div class="">80%</div>
+                            <div class="">40%</div>
+                            <div class="">70%</div>
+                            <div class="">50%</div>
+                        </div>
+                        <div class="bar-chart">
+                            <div class="bar barper1"></div>
+                            <div class="bar barper2"></div>
+                            <div class="bar barper3"></div>
+                            <div class="bar barper4"></div>
+                            <div class="bar barper5"></div>
+                        </div>
+                        <div class="bar-text">
+                            <div class="">Jan</div>
+                            <div class="">Feb</div>
+                            <div class="">Mar</div>
+                            <div class="">Apr</div>
+                            <div class="">May</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Table -->
+            <div class="table">
+                <h3>Projects</h3>
+                <table>
+                    <tr>
+                        <th>Project</th>
+                        <th>Budget</th>
+                        <th>Progress</th>
+                    </tr>
+                    <tr>
+                        <td class="ls">UI Redesign</td>
+                        <td>$5,000</td>
+                        <td>
+                            <div class="progress">
+                                <div class="percent1"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>$8,000</td>
+                        <td>
+                            <div class="progress">
+                                <div class="percent2"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="timeline-item">📦 New order received</div>
+                <div class="timeline-item">💰 Payment completed</div>
+                <div class="timeline-item">🚀 Project deployed</div>
+            </div>
+
+            <div class="footer">
+                <p>© 2026 Vision UI Dashboard. Made by <strong>Harsh S Kharecha</strong>. All rights reserved.</p>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 
