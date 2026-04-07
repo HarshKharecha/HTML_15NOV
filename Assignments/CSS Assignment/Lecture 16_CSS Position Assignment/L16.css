@@ -10,3 +10,31 @@ span {
     border: 1px solid #eebdbd;
     margin-bottom: 15px;
 }
+
+.box {
+    color: white;
+    width: fit-content;
+    background-color: #3498db;
+    border-radius: 19px;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 10px;
+}
+
+.task_2main {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    margin-bottom: 40px;
+}
+
+.task_3p {
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.task_3c {
+    position: absolute;
+    background: rgb(0, 159, 0);
+}
