@@ -2,134 +2,228 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./../../../assest/image/HTML_Logo.png" type="image/x-icon">
-    <title>Display Property_Two Assignment</title>
-    <link rel="stylesheet" href="L16.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./../../../assest/image/HTML_Logo.png" type="image/x-icon">
+  <title>Display Property_Two Assignment</title>
+  <link rel="stylesheet" href="L16.css">
 </head>
 
 <body>
 
-    <h1>CSS Grid Layout Tasks</h1>
+  <h1>CSS Grid Layout Tasks</h1>
 
-    <h2>🧠 Task 1: Default Position Behavior.</h2>
-    <h3>Question: Create three <code>&lt;div&gt;</code> boxes and observe how they appear by default.</h3>
-    <h3>Description: Understand how elements behave with position: static (the default).</h3>
-    <h3>Hint: Do not set any position property.</h3>
-    <h3>✅ Result: All boxes stack vertically in normal document flow.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 1: Default Position Behavior.</h2>
+  <h3>Question: Create three <code>&lt;div&gt;</code> boxes and observe how they appear by default.</h3>
+  <h3>Description: Understand how elements behave with position: static (the default).</h3>
+  <h3>Hint: Do not set any position property.</h3>
+  <h3>✅ Result: All boxes stack vertically in normal document flow.</h3>
+  <h3>Answer:</h3>
 
-    <div class="task_1">
-        <h2>🚀 Here is Default Position Behavior.</h2>
+  <div class="task_1">
+    <h2>🚀 Here is Default Position Behavior.</h2>
+  </div>
+  <div class="task_1main">
+    <div class="box">Mangoes</div>
+    <div class="box">Watermelons</div>
+    <div class="box">Custard Apple</div>
+    <div class="box">jamrukh</div>
+  </div>
+
+  <h2>🧠 Task 2: Move an Element Using Relative Position.</h2>
+  <h3>Question: Move one element 30px down and 50px right using position: relative.</h3>
+  <h3>Description: Learn how relative position moves elements based on their original position.</h3>
+  <h3>Hint: Use top and left offsets.</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_2">
+    <h2>🚀 Here is Move an Element Using Relative Position.</h2>
+  </div>
+  <div class="task_2main">
+    <div class="box">Mangoes</div>
+    <div class="box">Watermelons</div>
+  </div>
+
+  <h2>🧠 Task 3: Create a Positioned Parent and Child.</h2>
+  <h3>Question: Place a child <code>&lt;div&gt;</code> absolutely inside a parent <code>&lt;div&gt;</code>.</h3>
+  <h3>Description: Learn how an absolutely positioned element depends on its nearest positioned ancestor.</h3>
+  <h3>Hint: Give parent position: relative and child position: absolute.</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_3">
+    <h2>🚀 Here is Move an Element Using Relative Position.</h2>
+  </div>
+  <div class="task_3main">
+    <div class="box task_3p">Hey! How is the project going?
+      <div class="box task_3c">It's going very well! and Everything is looking like solid.</div>
     </div>
-    <div class="task_1main">
-        <div class="box">Mangoes</div>
-        <div class="box">Watermelons</div>
-        <div class="box">Custard Apple</div>
-        <div class="box">jamrukh</div>
+  </div>
+
+  <h2>🧠 Task 4: Fixed Navigation Bar.</h2>
+  <h3>Question: Create a navbar that stays at the top of the page while scrolling.</h3>
+  <h3>Description: Practice position: fixed.</h3>
+  <h3>Hint: Use position: fixed; top: 0; width: 100%;.</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_4">
+    <h2>🚀 Here is Fixed Navigation Bar.</h2>
+  </div>
+  <div class="demopage scrollbar" id="bt4">
+    <nav class="nav-bar d-flex">
+      <ul>
+        <li><a href="#bt4">Logo</a></li>
+        <li><a href="#bt4">Home</a></li>
+        <li><a href="#bt4">About</a></li>
+        <li><a href="#bt4">Search</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="con d-flex">
+        <div>Content Here and Scroll down to see the navbar stay at the top of this box!</div>
+        <div>Scroll down to see the navbar stay at the top of this box!</div>
+        <div>End Scroll down!</div>
+      </div>
+    </section>
+  </div>
+
+  <h2>🧠 Task 5: Sticky Header.</h2>
+  <h3>Question: Make a header that sticks to the top of the page while scrolling its section.</h3>
+  <h3>Description: Use position: sticky to make headers that stick dynamically.</h3>
+  <h3>Hint: Use position: sticky; top: 0;.</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_5">
+    <h2>🚀 Here is Sticky Header.</h2>
+  </div>
+  <div class="task_5main scrollbar">
+    <section class="content-section">
+      <header class="sticky-header">Section 1: Basics</header>
+      <div class="text-block">
+        <p>Scroll down to see this header stick...</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <header class="sticky-header">Section 2: Advanced</header>
+      <div class="text-block">
+        <p>When Section 2 hits the top, the first header is pushed away!</p>
+      </div>
+    </section>
+  </div>
+
+  <h2>🧠 Task 6: Overlap Elements.</h2>
+  <h3>Question: Place one element overlapping another using absolute and z-index.</h3>
+  <h3>Description: Learn how stacking works with z-index.</h3>
+  <h3>Hint: Use higher z-index for the overlapping element.</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_6">
+    <h2>🚀 Here is Overlap Elements.</h2>
+  </div>
+  <div class="task_6main">
+    <h2>Layering with Z-Index</h2>
+    <div class="stack-container">
+      <div class="box box-1">Bottom Layer (Box 1)</div>
+      <div class="box box-2 d-flex">Top Layer (Box 2)</div>
     </div>
+  </div>
 
-    <h2>🧠 Task 2: Move an Element Using Relative Position.</h2>
-    <h3>Question: Move one element 30px down and 50px right using position: relative.</h3>
-    <h3>Description: Learn how relative position moves elements based on their original position.</h3>
-    <h3>Hint: Use top and left offsets.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 7: Bottom-Fixed Button.</h2>
+  <h3>Question: Add a "Back to Top" button fixed at the bottom-right corner.</h3>
+  <h3>Description: Fixed elements stay in view during scrolling.</h3>
+  <h3>Hint: Use position: fixed; bottom: 20px; right: 20px;.</h3>
+  <h3>Answer:</h3>
 
-    <div class="task_2">
-        <h2>🚀 Here is Move an Element Using Relative Position.</h2>
+  <div class="task_7">
+    <h2>🚀 Here is Bottom-Fixed Button.</h2>
+  </div>
+  <section class="demopage scrollbar">
+    <div class="task_7text" id="bt7">
+      <h2>Scroll down to see the button!</h2>
+      <p>The "Back to Top" button is pinned to the viewport.</p>
     </div>
-    <div class="task_2main">
-        <div class="box">Mangoes</div>
-        <div class="box">Watermelons</div>
+    <a href="#bt7" class="back-to-top">↑</a>
+  </section>
+
+  <h2>🧠 Task 8: Center Element Absolutely.</h2>
+  <h3>Question: Center an absolutely positioned element in its parent.</h3>
+  <h3>Description: Combine offsets and transform.</h3>
+  <h3>Hint: Use top: 50%; left: 50%; transform: translate(-50%, -50%).</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_8">
+    <h2>🚀 Here is Center Element Absolutely.</h2>
+  </div>
+  <div class="task_8main">
+    <div class="child">I am perfectly centered!</div>
+  </div>
+
+  <h2>🧠 Task 9: Relative Offset with Space Reserved.</h2>
+  <h3>Question: Move an element without affecting others’ layout.</h3>
+  <h3>Description: Relative positioning keeps the element’s original space.</h3>
+  <h3>Hint: Use position: relative with offsets.</h3>
+  <h3>Answer:</h3>
+
+  <div class="task_9">
+    <h2>🚀 Here is Relative Offset with Space Reserved.</h2>
+  </div>
+  <div class="task_9main">
+    <h2>👻 The "Ghost" Space</h2>
+    <div class="container">
+      <div class="sibling">Box A</div>
+      <div class="relative-box">Box B (Moving...)</div>
+      <div class="sibling">Box C</div>
     </div>
+  </div>
 
-    <h2>🧠 Task 3: Create a Positioned Parent and Child.</h2>
-    <h3>Question: Place a child <code>&lt;div&gt;</code> absolutely inside a parent <code>&lt;div&gt;</code>.</h3>
-    <h3>Description: Learn how an absolutely positioned element depends on its nearest positioned ancestor.</h3>
-    <h3>Hint: Give parent position: relative and child position: absolute.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 10: Layer Multiple Images.</h2>
+  <h3>Question: Stack 3 images on top of each other using absolute and z-index.</h3>
+  <h3>Description: Control overlapping with positioning and stacking order.</h3>
+  <h3>Hint: Assign different z-index values.</h3>
+  <h3>Answer:</h3>
 
-    <div class="task_3">
-        <h2>🚀 Here is Move an Element Using Relative Position.</h2>
+  <div class="task_10">
+    <h2>🚀 Here is Layer Multiple Images.</h2>
+  </div>
+  <div class="task_10main">
+    <h2>🖼️ Image Stacking Gallery</h2>
+    <div class="image-stack">
+      <img src="https://picsum.photos/400/300?random=1" class="img-1" alt="Bottom Layer">
+      <img src="https://picsum.photos/400/300?random=2" class="img-2" alt="Middle Layer">
+      <img src="https://picsum.photos/400/300?random=3" class="img-3" alt="Top Layer">
     </div>
-    <div class="task_3main">
-        <div class="box task_3p">Hey! How is the project going?
-            <div class="box task_3c">It's going very well! and Everything is looking like solid.</div>
-        </div>
-    </div>
+  </div>
 
-    <h2>🧠 Task 4: Fixed Navigation Bar.</h2>
-    <h3>Question: Create a navbar that stays at the top of the page while scrolling.</h3>
-    <h3>Description: Practice position: fixed.</h3>
-    <h3>Hint: Use position: fixed; top: 0; width: 100%;.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 11: Tooltip Using Absolute Position.</h2>
+  <h3>Question: Show a tooltip above a button using absolute position.</h3>
+  <h3>Description: Absolute positioning is ideal for tooltips and overlays.</h3>
+  <h3>Hint: Parent must be relative; tooltip is absolute.</h3>
+  <h3>Answer:</h3>
 
-    <h2>🧠 Task 5: Sticky Header.</h2>
-    <h3>Question: Make a header that sticks to the top of the page while scrolling its section.</h3>
-    <h3>Description: Use position: sticky to make headers that stick dynamically.</h3>
-    <h3>Hint: Use position: sticky; top: 0;.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 12: Absolute Element Inside Static Parent.</h2>
+  <h3>Question: See what happens when an absolute element has no positioned ancestor.</h3>
+  <h3>Description: It positions relative to the viewport.</h3>
+  <h3>Hint: Leave parent static.</h3>
+  <h3>Answer:</h3>
 
-    <h2>🧠 Task 6: Overlap Elements.</h2>
-    <h3>Question: Place one element overlapping another using absolute and z-index.</h3>
-    <h3>Description: Learn how stacking works with z-index.</h3>
-    <h3>Hint: Use higher z-index for the overlapping element.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 13: Sticky Sidebar.</h2>
+  <h3>Question: Make a sidebar that stays visible while scrolling its container.</h3>
+  <h3>Description: Sticky elements are great for fixed-like behaviors within sections.</h3>
+  <h3>Hint: Use position: sticky; top: 0;.</h3>
+  <h3>Answer:</h3>
 
-    <h2>🧠 Task 7: Bottom-Fixed Button.</h2>
-    <h3>Question: Add a "Back to Top" button fixed at the bottom-right corner.</h3>
-    <h3>Description: Fixed elements stay in view during scrolling.</h3>
-    <h3>Hint: Use position: fixed; bottom: 20px; right: 20px;.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 14: Fixed Footer Bar.</h2>
+  <h3>Question: Add a footer that stays at the bottom of the viewport.</h3>
+  <h3>Description: Fixed footers remain visible even when the page scrolls.</h3>
+  <h3>Hint: Use position: fixed; bottom: 0; width: 100%;.</h3>
+  <h3>Answer:</h3>
 
-    <h2>🧠 Task 8: Center Element Absolutely.</h2>
-    <h3>Question: Center an absolutely positioned element in its parent.</h3>
-    <h3>Description: Combine offsets and transform.</h3>
-    <h3>Hint: Use top: 50%; left: 50%; transform: translate(-50%, -50%).</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 9: Relative Offset with Space Reserved.</h2>
-    <h3>Question: Move an element without affecting others’ layout.</h3>
-    <h3>Description: Relative positioning keeps the element’s original space.</h3>
-    <h3>Hint: Use position: relative with offsets.</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 10: Layer Multiple Images.</h2>
-    <h3>Question: Stack 3 images on top of each other using absolute and z-index.</h3>
-    <h3>Description: Control overlapping with positioning and stacking order.</h3>
-    <h3>Hint: Assign different z-index values.</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 11: Tooltip Using Absolute Position.</h2>
-    <h3>Question: Show a tooltip above a button using absolute position.</h3>
-    <h3>Description: Absolute positioning is ideal for tooltips and overlays.</h3>
-    <h3>Hint: Parent must be relative; tooltip is absolute.</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 12: Absolute Element Inside Static Parent.</h2>
-    <h3>Question: See what happens when an absolute element has no positioned ancestor.</h3>
-    <h3>Description: It positions relative to the viewport.</h3>
-    <h3>Hint: Leave parent static.</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 13: Sticky Sidebar.</h2>
-    <h3>Question: Make a sidebar that stays visible while scrolling its container.</h3>
-    <h3>Description: Sticky elements are great for fixed-like behaviors within sections.</h3>
-    <h3>Hint: Use position: sticky; top: 0;.</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 14: Fixed Footer Bar.</h2>
-    <h3>Question: Add a footer that stays at the bottom of the viewport.</h3>
-    <h3>Description: Fixed footers remain visible even when the page scrolls.</h3>
-    <h3>Hint: Use position: fixed; bottom: 0; width: 100%;.</h3>
-    <h3>Answer:</h3>
-
-    <h2>🧠 Task 15: Create a Notification Badge.</h2>
-    <h3>Question: Add a red notification badge at the top-right corner of an icon.</h3>
-    <h3>Description: Absolute positioning is perfect for badges and indicators.</h3>
-    <h3>Hint: Parent relative, badge absolute with small offsets.</h3>
-    <h3>Answer:</h3>
+  <h2>🧠 Task 15: Create a Notification Badge.</h2>
+  <h3>Question: Add a red notification badge at the top-right corner of an icon.</h3>
+  <h3>Description: Absolute positioning is perfect for badges and indicators.</h3>
+  <h3>Hint: Parent relative, badge absolute with small offsets.</h3>
+  <h3>Answer:</h3>
 
 </body>
 

@@ -11,6 +11,15 @@ span {
     margin-bottom: 15px;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.scrollbar {
+    scrollbar-color: #00d9ff #ffffff00;
+    scrollbar-width: thin;
+}
+
 .box {
     color: white;
     width: fit-content;
@@ -37,4 +46,237 @@ span {
 .task_3c {
     position: absolute;
     background: rgb(0, 159, 0);
+}
+
+.demopage {
+    position: relative;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-bar {
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00515f;
+    position: sticky;
+    top: 0;
+}
+
+.nav-bar li {
+    color: #ffffff;
+    display: inline;
+    margin: 0 9px;
+}
+
+.con {
+    height: 900px;
+    font-weight: bold;
+    border: 5px solid #955023;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.task_5main {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.content-section {
+    height: 400px;
+    position: relative;
+}
+
+.sticky-header {
+    color: white;
+    font-weight: bold;
+    background-color: #00515f;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.text-block {
+    height: 290px;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+
+.stack-container {
+    width: 300px;
+    height: 300px;
+    background-color: #f9f9f9;
+    border: 2px dashed #eebdbd;
+    position: relative;
+}
+
+
+.box-1 {
+    width: 150px;
+    height: 150px;
+    color: #ffffff;
+    background-color: #00515f;
+    position: absolute;
+    top: 29px;
+    left: 29px;
+    z-index: 1;
+}
+
+
+.box-2 {
+    color: #ffffff;
+    width: 150px;
+    height: 150px;
+    background-color: #955023;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 80px;
+    left: 80px;
+    z-index: 10;
+}
+
+.task_7text {
+    height: 500px;
+    padding: 20px;
+}
+
+.back-to-top {
+    /* 1. Positioning */
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    margin-left: auto;
+    
+    /* 2. Styling the Circle */
+    width: 50px;
+    height: 50px;
+    background-color: #955023;
+    color: white;
+    text-decoration: none;
+    
+    /* 3. Centering the Arrow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 50%;
+    
+    /* 4. Layering and Shadow */
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #00515f;
+}
+
+.task_8main {
+    width: 100%;
+    height: 300px;
+    background-color: #f9f9f9;
+    border: 2px solid #00515f;
+    margin-top: 20px;
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    
+    /* 1. Move the top-left corner to the center of the parent */
+    top: 50%;
+    left: 50%;
+    
+    /* 2. Shift the element back by 50% of its OWN size */
+    transform: translate(-50%, -50%);
+    
+    padding: 20px;
+    background-color: #955023;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.task_9main {
+    /*Use as Experimental*/ width: calc-size(fit-content , size + 50px);
+    /* width: fit-content;
+    padding-right: 50px; */
+
+}
+
+.container {
+    border: 2px solid #00515f;
+    padding: 20px;
+}
+
+.sibling {
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.relative-box {
+    padding: 15px;
+    background-color: #955023;
+    color: white;
+    
+    /* 1. Set position to relative */
+    position: relative;
+    
+    /* 2. Move it 30px down and 50px to the right */
+    top: 20px;
+    left: 50px;
+    z-index: 2;
+    margin-bottom: 29px;
+}
+
+.image-stack {
+    position: relative;
+    height: 250px;
+    margin: 20px;
+}
+
+.image-stack img {
+    position: absolute;
+    width: 159px;
+    height: 159px;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* 1. The Bottom Image */
+.img-1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* 2. The Middle Image */
+.img-2 {
+    top: 30px;
+    left: 30px;
+    z-index: 5;
+}
+
+/* 3. The Top Image */
+.img-3 {
+    top: 60px;
+    left: 60px;
+    z-index: 10;
+}
+
+.image-stack img:hover {
+    transform: scale(1.05);
+    z-index: 20;
 }
