@@ -150,27 +150,20 @@ span {
 }
 
 .back-to-top {
-    /* 1. Positioning */
     position: sticky;
     bottom: 20px;
     right: 20px;
     margin-left: auto;
-    
-    /* 2. Styling the Circle */
     width: 50px;
     height: 50px;
     background-color: #955023;
     color: white;
     text-decoration: none;
-    
-    /* 3. Centering the Arrow */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     border-radius: 50%;
-    
-    /* 4. Layering and Shadow */
     z-index: 1;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
@@ -191,14 +184,9 @@ span {
 
 .child {
     position: absolute;
-    
-    /* 1. Move the top-left corner to the center of the parent */
     top: 50%;
     left: 50%;
-    
-    /* 2. Shift the element back by 50% of its OWN size */
     transform: translate(-50%, -50%);
-    
     padding: 20px;
     background-color: #955023;
     color: #ffffff;
@@ -228,11 +216,7 @@ span {
     padding: 15px;
     background-color: #955023;
     color: white;
-    
-    /* 1. Set position to relative */
     position: relative;
-    
-    /* 2. Move it 30px down and 50px to the right */
     top: 20px;
     left: 50px;
     z-index: 2;
@@ -255,21 +239,18 @@ span {
     transition: transform 0.3s ease;
 }
 
-/* 1. The Bottom Image */
 .img-1 {
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-/* 2. The Middle Image */
 .img-2 {
     top: 30px;
     left: 30px;
     z-index: 5;
 }
 
-/* 3. The Top Image */
 .img-3 {
     top: 60px;
     left: 60px;
@@ -279,4 +260,147 @@ span {
 .image-stack img:hover {
     transform: scale(1.05);
     z-index: 20;
+}
+
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px; 
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #00515f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #555;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.static-parent {
+    width: 300px;
+    height: 200px;
+    background-color: #f9f9f9;
+    border: 2px dashed #eebdbd;
+    padding: 20px;
+}
+
+.lost-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #955023;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.main-layout {
+    display: flex;
+    gap: 20px;
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.sidebar {
+    position: sticky;
+    color: #ffffff;
+    background-color: #955023;
+    top: 0;
+    width: 150px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.content-body {
+    flex: 1;
+}
+
+.filler-text {
+    height: 800px;
+    background: linear-gradient(#f9f9f9, #e0e0e0);
+    margin-top: 10px;
+}
+
+.content-area {
+    height: 1200px;
+    padding: 20px;
+    background: linear-gradient(#ffffff, #e0e0e0);
+}
+
+.fixed-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #00515f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+.footer-btn {
+    background-color: #955023;
+    color: #ffffff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    margin: 50px;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
