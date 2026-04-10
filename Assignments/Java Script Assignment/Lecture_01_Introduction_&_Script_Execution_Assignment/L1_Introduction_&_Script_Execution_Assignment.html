@@ -44,11 +44,12 @@
     </ul>
     <h3>Goal:</h3>
     <p>Understand top-to-bottom synchronous execution.</p>
-    <h3>Answer:</h3><hr>
+    <h3>Answer:</h3>
+    <hr>
 
     <h2>1. First Script Execution</h2>
     <p class="paragraph">JavaScript runs line by line from top to bottom.
-    This is called synchronous execution.</p>
+        This is called synchronous execution.</p>
 
     <h3>👉 That means:</h3>
     <ul>
@@ -68,7 +69,8 @@
     </ul>
     <h3>Goal:</h3>
     <p>Learn how scripts are loaded and executed.</p>
-    <h3>Answer:</h3><hr>
+    <h3>Answer:</h3>
+    <hr>
 
     <h2>2. Inline vs External Script</h2>
     <div class="paragraph">There are two ways to write JavaScript:</div>
@@ -92,15 +94,33 @@
     <h3>Task:</h3>
     <ul>
         <li>Predict output before running:</li>
-        <div class="code">
-            <p><code>console.log("One");</code></p>
-            <p><code>console.log("Two");</code></p>
-            <p><code>console.log("Three");</code></p>
-        </div>
     </ul>
+    <div class="code">
+        <p><code>console.log("One");</code></p>
+        <p><code>console.log("Two");</code></p>
+        <p><code>console.log("Three");</code></p>
+    </div>
     <h3>Goal:</h3>
     <p>Build execution reasoning instead of trial-and-error.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>3. Execution Order Prediction</h2>
+    <p class="paragraph">JavaScript does not guess or rearrange code.</p>
+
+    <h3>👉 It simply runs:</h3>
+    <ul>
+        <li>First statement → first output</li>
+        <li>Second statement → second output</li>
+    </ul>
+    <div class="code">
+        <p><code>console.log("One"); // Fist Output</code></p>
+        <p><code>console.log("Two"); // Second Output</code></p>
+        <p><code>console.log("Three"); // Third Output</code></p>
+    </div>
+
+    <p>💡 So output always follows the written order.</p>
+    <hr>
 
     <h2>4. Blocking Script Experiment</h2>
     <h3>Task:</h3>
@@ -111,6 +131,20 @@
     <h3>Goal:</h3>
     <p>Understand blocking behavior.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>4. Blocking Script Behavior</h2>
+    <p class="paragraph">JavaScript runs on a single thread (one task at a time).</p>
+
+    <h3>👉 If you run a heavy task (like a big loop):</h3>
+    <ul>
+        <li>Browser becomes slow 😵</li>
+        <li>Page may freeze</li>
+        <li>Other actions must wait</li>
+    </ul>
+
+    <p>💡 This is called blocking.</p>
+    <hr>
 
     <h2>5. Script Placement Test</h2>
     <h3>Task:</h3>
@@ -123,6 +157,24 @@
     <h3>Goal:</h3>
     <p>Learn why script placement matters.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>5. Script Placement (Head vs Body)</h2>
+
+    <h3>🔹 Script in <span><code>&lt;head&gt;</code></span></h3>
+    <ul>
+        <li>Runs before page loads</li>
+        <li>Can slow down page display</li>
+    </ul>
+
+    <h3>🔹 Script before <span><code>&lt;/body&gt;</code></span></h3>
+    <ul>
+        <li>Runs after page loads</li>
+        <li>Faster user experience 🚀</li>
+    </ul>
+
+    <p>👉 Best practice: place scripts at the bottom.</p>
+    <hr>
 
     <h2>🟡 Intermediate Level (Real-World Usage)</h2>
 
@@ -134,6 +186,24 @@
     <h3>Goal:</h3>
     <p>Understand deferred execution.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>6. Sync vs Async Execution</h2>
+
+    <h3>🔹 Synchronous</h3>
+    <ul>
+        <li>Runs step-by-step</li>
+        <li>Waits for each line</li>
+    </ul>
+
+    <h3>🔹 Asynchronous (like setTimeout)</h3>
+    <ul>
+        <li>Does not block</li>
+        <li>Runs later ⏳</li>
+    </ul>
+
+    <p>💡 Example idea: "Do this later, continue now."</p>
+    <hr>
 
     <h2>7. UI Freeze Simulation</h2>
     <h3>Task:</h3>
@@ -144,6 +214,18 @@
     <h3>Goal:</h3>
     <p>Experience main-thread blocking firsthand.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>7. UI Freeze</h2>
+
+    <h3>When JavaScript is busy:</h3>
+    <ul>
+        <li>Buttons don’t respond</li>
+        <li>Page feels stuck</li>
+    </ul>
+
+    <p>👉 Because JS blocks the main thread.</p>
+    <hr>
 
     <h2>8. Non-Blocking Refactor</h2>
     <h3>Task:</h3>
@@ -153,6 +235,18 @@
     <h3>Goal:</h3>
     <p>Apply async thinking to real problems.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>8. Non-Blocking Concept</h2>
+
+    <h3>To avoid freezing:</h3>
+    <ul>
+        <li>Break big tasks into small parts</li>
+        <li>Use async methods</li>
+    </ul>
+
+    <p>💡 This keeps UI smooth 👍</p>
+    <hr>
 
     <h2>9. Script Execution Timeline</h2>
     <h3>Task:</h3>
@@ -162,6 +256,18 @@
     <h3>Goal:</h3>
     <p>Visualize execution cost.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>9. Execution Timeline</h2>
+
+    <h3>Browser tools show:</h3>
+    <ul>
+        <li>Which code runs first</li>
+        <li>Which takes more time</li>
+    </ul>
+
+    <p>👉 Helps understand performance.</p>
+    <hr>
 
     <h2>10. Execution Debugging</h2>
     <h3>Task:</h3>
@@ -171,6 +277,18 @@
     <h3>Goal:</h3>
     <p>Learn to debug execution flow issues.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>10. Debugging Execution</h2>
+
+    <h3>Sometimes output is wrong because:</h3>
+    <ul>
+        <li>Async runs later than expected</li>
+        <li>Order is misunderstood</li>
+    </ul>
+
+    <p>👉 Debugging = finding when and why code runs</p>
+    <hr>
 
     <h2>🟠 Advanced Intermediate (Project-Ready)</h2>
 
@@ -182,6 +300,18 @@
     <h3>Goal:</h3>
     <p>Develop interview-level execution clarity.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>11. Predict Without Running</h2>
+
+    <h3>A good developer:</h3>
+    <ul>
+        <li>Reads code</li>
+        <li>Understands order mentally 🧠</li>
+    </ul>
+
+    <p>👉 Important for interviews!</p>
+    <hr>
 
     <h2>12. Refactor Blocking Code</h2>
     <h3>Task:</h3>
@@ -191,6 +321,17 @@
     <h3>Goal:</h3>
     <p>Improve responsiveness.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>12. Breaking Long Tasks</h2>
+
+    <h3>Instead of one big task:</h3>
+    <ul>
+        <li>Divide into smaller chunks</li>
+    </ul>
+
+    <p>👉 Improves speed and responsiveness</p>
+    <hr>
 
     <h2>13. Script Load Optimization</h2>
     <h3>Task:</h3>
@@ -200,6 +341,23 @@
     <h3>Goal:</h3>
     <p>Understand production script loading strategies.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>13. Script Loading (async & defer)</h2>
+
+    <h3>🔹 defer</h3>
+    <ul>
+        <li>Loads in background</li>
+        <li>Runs after HTML loads</li>
+    </ul>
+
+    <h3>🔹 async</h3>
+    <ul>
+        <li>Loads and runs anytime</li>
+    </ul>
+
+    <p>👉 Used for performance optimization 🚀</p>
+    <hr>
 
     <h2>14. Event-Driven Execution</h2>
     <h3>Task:</h3>
@@ -209,6 +367,18 @@
     <h3>Goal:</h3>
     <p>Control when code executes.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>14. Event-Driven Execution</h2>
+
+    <h3>Code runs only when needed:</h3>
+    <ul>
+        <li>Button click</li>
+        <li>User action</li>
+    </ul>
+
+    <p>👉 Saves performance + better UX</p>
+    <hr>
 
     <h2>15. Execution Flow Documentation</h2>
     <h3>Task:</h3>
@@ -218,6 +388,19 @@
     <h3>Goal:</h3>
     <p>Practice professional documentation.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>15. Execution Documentation</h2>
+
+    <h3>Explain:</h3>
+    <ul>
+        <li>What runs first</li>
+        <li>What runs later</li>
+        <li>Why</li>
+    </ul>
+
+    <p>👉 Important in real projects 💼</p>
+    <hr>
 
     <h2>🔴 Industry Level (Production Perspective)</h2>
 
@@ -229,6 +412,18 @@
     <h3>Goal:</h3>
     <p>Think like a performance engineer.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>16. Performance Check</h2>
+
+    <h3>Developers check:</h3>
+    <ul>
+        <li>Slow code</li>
+        <li>Heavy scripts</li>
+    </ul>
+
+    <p>👉 Using browser tools</p>
+    <hr>
 
     <h2>17. Execution-Related Bug Fix</h2>
     <h3>Task:</h3>
@@ -238,6 +433,17 @@
     <h3>Goal:</h3>
     <p>Handle real production issues.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>17. Bug Fixing</h2>
+
+    <h3>Sometimes bugs happen because:</h3>
+    <ul>
+        <li>Code runs earlier/later than expected</li>
+    </ul>
+
+    <p>👉 Fix = correct execution timing</p>
+    <hr>
 
     <h2>18. Third-Party Script Impact Test</h2>
     <h3>Task:</h3>
@@ -247,6 +453,18 @@
     <h3>Goal:</h3>
     <p>Understand execution cost of dependencies.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>18. Third-Party Scripts</h2>
+
+    <h3>External scripts can:</h3>
+    <ul>
+        <li>Slow website</li>
+        <li>Block execution</li>
+    </ul>
+
+    <p>👉 Use carefully ⚠️</p>
+    <hr>
 
     <h2>19. Execution Best-Practice Refactor</h2>
     <h3>Task:</h3>
@@ -256,6 +474,17 @@
     <h3>Goal:</h3>
     <p>Write clean, execution-aware JavaScript.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>19. Best Practices</h2>
+
+    <h3>Good JavaScript:</h3>
+    <ul>
+        <li>Runs fast</li>
+        <li>Does not block UI</li>
+        <li>Has clear execution order</li>
+    </ul>
+    <hr>
 
     <h2>20. Production-Ready Mini Project</h2>
     <h3>Task:</h3>
@@ -271,6 +500,18 @@
     <h3>Goal:</h3>
     <p>Demonstrate production-ready execution knowledge.</p>
     <h3>Answer:</h3>
+    <hr>
+
+    <h2>20. Production-Level Idea</h2>
+
+    <h3>A perfect website:</h3>
+    <dl>
+        <dd>✅ Loads fast</dd>
+        <dd>✅ No freezing</dd>
+        <dd>✅ Smooth interaction</dd>
+        <dd>✅ Predictable behavior</dd>
+    </dl>
+    <hr>
 
 </body>
 
