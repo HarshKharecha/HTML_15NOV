@@ -154,9 +154,9 @@
 
     <script>
         let task1 = "Task 1"
+        console.log(task1);
         var task1a = 1245
         const task1b = 5490
-        console.log(task1);
         console.log(task1a);
         console.log(task1b);
 
@@ -165,30 +165,168 @@
         console.log(task2);
 
         let task3 = "task3"
+        console.log(task3);
         if (true) {
             let a = 10;
             var ab = 15;
             const b = 20;
 
-            console.log(task3);
             console.log(ab);
             console.log(a);
             console.log(b);
         }
-        // console.log(task3);
         // console.log(ab);
         // console.log(a);     // Not Working
         // console.log(b);     // Not Working
 
         let task4 = "task4"
-        let task4a = 11;
-        var task4b = 12;
         console.log(task4);
+        let task4a = 11;
+        // let task4a = 9;     // Not Redeclaration
+        var task4b = 12;
+        var task4b = 15;
         console.log(task4a);
         console.log(task4b);
-        
-        
-        
+
+        let task5 = "task5"
+        console.log(task5);
+        // console.log(task5a); // Uncaught ReferenceError: Cannot access 'task5a' before initialization
+        let task5a = "I Am"
+        console.log(task5a);
+
+        let task6 = "task6"
+        console.log(task6);
+
+        const user = {
+            name: "Alice",
+            age: 25
+        };
+
+        user.age = 26;
+        console.log(user.age); // Output: 26
+
+        // user = { name: "Bob", age: 30 }; // Uncaught TypeError: Assignment to constant variable.
+
+        let task7 = "task7"
+        console.log(task7);
+        for (var i = 1; i <= 5; i++) {
+            setTimeout(() => {
+                console.log("var i:", i);
+            }, 1000);
+        }
+        for (let i = 1; i <= 5; i++) {
+            setTimeout(() => {
+                console.log("let i:", i);
+            }, 1000);
+        }
+
+        let task8 = "task8"
+        console.log(task8);
+
+        //Uncaught ReferenceError: Cannot access 'temp' before initialization
+        // for (let i = 1; i <= 1;) {
+        //     if (i === 1) {
+        //         console.log("The current temp is: " + temp);
+        //         let temp = 22;
+        //         break
+        //     }
+        // }
+
+        for (let i = 1; i <= 1;) {
+            if (i === 1) {
+                let temp = 22;
+                console.log("The current temp is: " + temp);
+                break
+            }
+        }
+
+        // or Function
+        //Uncaught ReferenceError: Cannot access 'temp' before initialization
+        // function checkTemperature() {
+        //     // Attempting to access 'temp' while it's in the TDZ
+        //     console.log("The current temp is: " + temp);
+
+        //     let temp = 22;
+        // }
+
+        // checkTemperature();
+
+        // function checkTemperature() {
+        //     let temp = 22; // Declaration & Initialization move to the top
+
+        //     console.log("The current temp is: " + temp);
+        // }
+
+        // checkTemperature(); // Output: The current temp is: 22
+
+        let task9 = "task9"
+        console.log(task9);
+
+        function scopeTest() {
+            if (true) {
+                var functionScoped = "I am visible everywhere in the function";
+                let blockScoped = "I am trapped in this if-block";
+
+                console.log("Inside block (var):", functionScoped);
+                console.log("Inside block (let):", blockScoped);
+            }
+
+            // Attempting to access them outside the if-block
+            console.log("Outside block (var):", functionScoped);
+
+            // console.log("Outside block (let):", blockScoped);     // Uncaught ReferenceError: blockScoped is not defined at scopeTest
+        }
+
+        scopeTest();
+
+        let task10 = "task10"
+        console.log(task10);
+
+        const appConfig = {
+            name: "Harsh",
+            password: "Harsh00",
+            id: "1234567890",
+        };
+
+        appConfig.name = "Harsh Kharech"
+        appConfig.password = "Harsh007"
+        appConfig.id = "1024567891"
+
+        console.log("Update", appConfig);
+        console.log(appConfig.lele);
+
+        let task11 = "task11"
+        console.log(task11);
+        let points = 100
+        console.log("Global level:", points);
+        {
+            let points = 50
+            console.log("Inside first block:", points);
+            {
+                let points = 10
+                console.log("Inside nested block:", points);
+
+            }
+            console.log("Back to first block:", points);
+        }
+        console.log("Back to global level:", points);
+
+        let task12 = "task12"
+        console.log(task12);
+        // Legacy Code
+        // var API_URL = "https://api.service.com";
+        // var retryCount = 0;
+        // var maxRetries = 3;
+
+        // for (var i = 0; i < maxRetries; i++) {
+        //     var message = "Attempting connection " + i;
+        //     console.log(message);
+        //     retryCount++;
+        // }
+
+        // var status = "Process complete with " + retryCount + " retries.";
+        // console.log(status);
+
     </script>
 </body>
 
