@@ -103,10 +103,26 @@
     <h3>Focus: Legacy code modernization</h3>
     <h3>Answer: Check in console</h3>
 
+    <!-- <div class="task12main">
+        <input type="number" name="num12" value="" readonly>
+        <div class="task12co">
+            <button onclick="adds()"><code>+</code></button>
+            <button onclick="sub()"><code>-</code></button>
+        </div>
+    </div> -->
+
     <h2>Task 13: Counter Logic</h2>
     <h3>Build a counter that increments correctly using the appropriate variable type.</h3>
     <h3>Focus: Choosing <span>let</span> vs <span>const</span></h3>
     <h3>Answer: Check in console</h3>
+
+    <div class="task13">
+        <input type="number" name="num13" value="" readonly>
+        <div class="task13co">
+            <button onclick="handleIncrement()">+</button>
+            <button onclick="handleDecrement()">-</button>
+        </div>
+    </div>
 
     <h2>Task 14: Prevent Accidental Reassignment</h2>
     <h3>Design a small script where accidental reassignment causes a bug, then fix it using <span>const</span>.</h3>
@@ -313,19 +329,84 @@
 
         let task12 = "task12"
         console.log(task12);
-        // Legacy Code
-        // var API_URL = "https://api.service.com";
-        // var retryCount = 0;
-        // var maxRetries = 3;
+        // var unitPrice = 100;
+        // var quantity = 5;
+        // var memberType = "Premium";
+        // var grandTotal = 0;
 
-        // for (var i = 0; i < maxRetries; i++) {
-        //     var message = "Attempting connection " + i;
-        //     console.log(message);
-        //     retryCount++;
+        // var discountPerItem = (memberType === "Premium") ? 20 : 0;
+        // var finalItemPrice = unitPrice - discountPerItem;
+
+        // for (var i = 0; i < quantity; i++) {
+        //     console.log("Processing item " + (i + 1));
+        //     grandTotal += finalItemPrice; // This adds 80 each time the loop runs
         // }
 
-        // var status = "Process complete with " + retryCount + " retries.";
-        // console.log(status);
+        // console.log("Grand Total: " + grandTotal); // ✅ Now it equals 240!
+
+        // var replase const use because cannot be accidentally overwritten.
+        // var replase let use because function or condition through updet it in future.
+        const unitPrice = 100;
+        let quantity = 5;
+        let memberType = "Premium";
+        let grandTotal = 0;
+
+        const discountPerItem = (memberType === "Premium") ? 20 : 0;
+        const finalItemPrice = unitPrice - discountPerItem;
+
+        for (let i = 0; i < quantity; i++) {
+            console.log(`Processing item ${i + 1}`);
+            grandTotal += finalItemPrice; // This adds 80 each time the loop runs
+        }
+
+        console.log(`Grand Total: ${grandTotal}`); // ✅ Now it equals 240!
+
+        // For Add To cart fetcher
+        // let index = 0;
+        // const n = [0, 1, 2, 3, 4];
+        // let count = document.getElementsByName("num12")
+        // upcount = count = images
+
+        // function count(i) {
+        //     const input = document.getElementsByName("num12");
+
+        //     if (i >= 0 && i < n.length) {
+        //         input.value = n[i];
+        //         index = i;
+        //         input[0].value = n[index];
+        //     }
+        // }
+
+        // function adds() {
+        //     count(index + 1);
+        // }
+
+        // function sub() {
+        //     count(index - 1);
+        // }
+
+        let task13 = "task13"
+        console.log(task13);
+        let task13_counter = 0;
+
+        function updateUI() {
+            const display = document.getElementsByName("num13")[0];
+            display.value = task13_counter;
+        }
+
+        function handleIncrement() {
+            task13_counter = task13_counter + 1; // Reassignment happens here
+            // console.log("Current Count:", task13_counter);
+            updateUI();
+        }
+
+        function handleDecrement() {
+            // Basic safety: Don't let the counter go below 0
+            if (task13_counter > 0) {
+                task13_counter = task13_counter - 1;
+                updateUI();
+            }
+        }
 
     </script>
 </body>
