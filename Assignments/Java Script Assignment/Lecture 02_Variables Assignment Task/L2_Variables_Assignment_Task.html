@@ -141,6 +141,14 @@
     <h3>Focus: Entry-point design</h3>
     <h3>Answer: Check in console</h3>
 
+    <div class="task15">
+        <label for="nam15">UserName:</label>
+        <span><input type="name" name="nam15" required>*</span>
+        <div class="task15co">
+            <button onclick="loginbtn()">LogIn</button>
+        </div>
+    </div>
+
     <h2>Task 16: Module Scope Isolation</h2>
     <h3>Write a module that exports values using <span>const</span> and keeps internal variables private.</h3>
     <h3>Focus: Encapsulation</h3>
@@ -169,18 +177,19 @@
     <h3>Answer: Check in console</h3>
 
     <script>
-        let task1 = "Task 1"
+        let task1 = "Task 1: Declare and Log"
         console.log(task1);
         var task1a = 1245
         const task1b = 5490
         console.log(task1a);
         console.log(task1b);
 
-        let task2 = "task"
-        task2 = "task2"
+        let task2 = "Task 2"
+        console.log(task2);
+        task2 = "Task 2: Reassignment Check"
         console.log(task2);
 
-        let task3 = "task3"
+        let task3 = "Task 3: Block Scope Test"
         console.log(task3);
         if (true) {
             let a = 10;
@@ -195,7 +204,7 @@
         // console.log(a);     // Not Working
         // console.log(b);     // Not Working
 
-        let task4 = "task4"
+        let task4 = "Task 4: Redeclaration Experiment"
         console.log(task4);
         let task4a = 11;
         // let task4a = 9;     // Not Redeclaration
@@ -204,13 +213,13 @@
         console.log(task4a);
         console.log(task4b);
 
-        let task5 = "task5"
+        let task5 = "Task 5: Hoisting Observation"
         console.log(task5);
         // console.log(task5a); // Uncaught ReferenceError: Cannot access 'task5a' before initialization
         let task5a = "I Am"
         console.log(task5a);
 
-        let task6 = "task6"
+        let task6 = "Task 6: Const Object Mutation"
         console.log(task6);
 
         const user = {
@@ -223,7 +232,7 @@
 
         // user = { name: "Bob", age: 30 }; // Uncaught TypeError: Assignment to constant variable.
 
-        let task7 = "task7"
+        let task7 = "Task 7: Loop Counter Bug"
         console.log(task7);
         for (var i = 1; i <= 5; i++) {
             setTimeout(() => {
@@ -236,7 +245,7 @@
             }, 1000);
         }
 
-        let task8 = "task8"
+        let task8 = "Task 8: TDZ Error Investigation"
         console.log(task8);
 
         //Uncaught ReferenceError: Cannot access 'temp' before initialization
@@ -275,7 +284,7 @@
 
         // checkTemperature(); // Output: The current temp is: 22
 
-        let task9 = "task9"
+        let task9 = "Task 9: Function Scope vs Block Scope"
         console.log(task9);
 
         function scopeTest() {
@@ -295,7 +304,7 @@
 
         scopeTest();
 
-        let task10 = "task10"
+        let task10 = "Task 10: Const Configuration Object"
         console.log(task10);
 
         const appConfig = {
@@ -311,7 +320,7 @@
         console.log("Update", appConfig);
         console.log(appConfig.lele);
 
-        let task11 = "task11"
+        let task11 = "Task 11: Variable Shadowing"
         console.log(task11);
         let points = 100
         console.log("Global level:", points);
@@ -327,7 +336,7 @@
         }
         console.log("Back to global level:", points);
 
-        let task12 = "task12"
+        let task12 = "Task 12: Replace var with let/const"
         console.log(task12);
         // var unitPrice = 100;
         // var quantity = 5;
@@ -385,7 +394,7 @@
         //     count(index - 1);
         // }
 
-        let task13 = "task13"
+        let task13 = "Task 13: Counter Logic"
         console.log(task13);
         let task13_counter = 0;
 
@@ -406,6 +415,81 @@
                 task13_counter = task13_counter - 1;
                 updateUI();
             }
+        }
+
+        let task14 = "Task 14: Prevent Accidental Reassignment"
+        console.log(task14);
+
+        let textratea = 0.18
+
+        function calculatetotala(price) {
+            return price + (price * textratea)
+        }
+
+        console.log("Before bug solve", calculatetotala(100));
+        
+        textratea = 0.20
+        
+        console.log("After accidental reassignment causes a bug", calculatetotala(100));
+
+        const textrateb = 0.18
+
+        function calculatetotalb(price) {
+            return price + (price * textrateb)
+        }
+
+        console.log("After bug solve", calculatetotalb(100));
+        
+        // textrateb = 0.20 // you accidental reassignment value so code stope here show error
+        
+        // console.log("After accidental reassignment causes a bug", calculatetotalb(100));
+
+        let task15 = "Task 15: App Initialization Variables";
+
+        // 1. Immutable Constants (Application Configuration)
+        const APP_NAME = "TaskMaster Pro";
+        const APP_VERSION = "1.0.0";
+        const MAX_LOGIN_ATTEMPTS = 6;
+
+        // 2. Mutable State Variables (Application Live State)
+        let currentLoggedUser = null;
+        let loginAttemptCount = 0;
+        let isAppInitialized = false;
+
+        // 3. Entry-Point Initialization Function
+        function initializeApp(username) {
+            console.log(task15);
+            console.log(`--- Starting ${APP_NAME} (v${APP_VERSION}) ---`);
+            
+            // Simulate initial checks using mutable state
+            if (loginAttemptCount >= MAX_LOGIN_ATTEMPTS) {
+                console.error("Initialization Failed: Too many failed login attempts.");
+                return;
+            }
+
+            // Mutating state variables upon successful setup
+            currentLoggedUser = username;
+            isAppInitialized = true;
+            
+            console.log(`Status: System initialized successfully.`);
+            console.log(`Logged User: ${currentLoggedUser}`);
+        }
+
+        function loginbtn() {
+            
+            // 4. Grab the input element from the HTML
+            let usernameInput = document.getElementsByName("nam15")[0];
+            
+            // 5. Get the text that the user typed
+            let usernameValue = usernameInput.value;
+
+            loginAttemptCount = loginAttemptCount + 1;
+
+            // 6. Trigger the Entry Point
+            initializeApp(usernameValue);
+    
+            // Verify final app state in console
+            console.log("Final State Check:", { isAppInitialized, currentLoggedUser, MAX_LOGIN_ATTEMPTS, loginAttemptCount });
         }
 
     </script>

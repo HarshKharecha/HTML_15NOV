@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "E:\\Keil_v5\\C51\\INC\\**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "sbit=char",
+                "sfr=char",
+                "bit=char",
+                "interrupt=",
+                "using= "
+            ],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerPath": "E:\\Keil_v5\\C51\\BIN\\C51.EXE"
+        }
+    ],
+    "version": 4
+}
