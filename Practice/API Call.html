@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style></style>
+</head>
+
+<body>
+    <h2>API</h2>
+    <!-- This is where the 29 users will be displayed -->
+    <div id="user-list"></div>
+</body>
+<script>
+    // Method 1
+    let API = [];
+
+    function initializeApp(data) {
+        API = data;
+        // console.log("API content:", API);
+        console.log("Data successfully stored in API variable:", API);
+          // Target the HTML element from your website page
+        const container = document.getElementById("user-list");
+        // Now .map() loops through the 29 individual user objects properly
+        const userCards = API.map(user => {
+            return `
+            <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+              <h3>${user.name}</h3>
+              <p>Email: ${user.email}</p>
+              <p>Number: ${user.number}</p>
+              <small>ID Number: ${user.id}</small>
+            </div>
+          `;
+        });
+          // Join the strings together and inject them into the DOM layout
+        container.innerHTML = userCards.join("");
+        console.log("Successfully displayed 29 users on the screen!");
+    }
+
+    function loginbtn() {
+        fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
+            .then(res => res.json())
+            .then(data => initializeApp(data));
+    }
+
+    // Run the function immediately
+    loginbtn();
+
+    // Method 2
+    // // 1. Your original API promise variable setup
+    // let API = fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
+    //     .then(res => res.json())
+    //     .then(data => data);
+
+    // // 2. Access the array inside your variable using .then()
+    // API.then(dataArray => {
+
+    //     // 3. Use .map() to transform each item directly into an HTML layout string
+    //     let userCards = dataArray.map(item => {
+    //         return `
+    //         <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+    //           <h3>${item.name}</h3>
+    //           <p>Email: ${item.email}</p>
+    //           <p>Number: ${item.number}</p>
+    //           <small>ID Number: ${item.id}</small>
+    //         </div>
+    //         `;
+    //     });
+
+    //     // 4. Target the HTML element from your website page
+    //     const container = document.getElementById("user-list");
+
+    //     // 5. Join the strings together and inject them into the DOM layout
+    //     container.innerHTML = userCards.join("");
+
+    //     console.log("Successfully displayed users using Method 2!");
+    // });
+
+    // // Clean Alternative: Map Directly in the Variable Chain
+    // let mappedAPI = fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
+    //     .then(res => res.json())
+    //     .then(data => {
+
+    //         // FIX 1: Assign the map output to the 'userCards' variable name
+    //         let userCards = data.map(item => {
+    //             return `
+    //             <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+    //               <h3>${item.name}</h3>
+    //               <p>Email: ${item.email}</p>
+    //               <p>Number: ${item.number}</p>
+    //               <small>ID Number: ${item.id}</small>
+    //             </div>`;
+    //         });
+
+    //         // 4. Target the HTML element from your website page
+    //         const container = document.getElementById("user-list");
+
+    //         // 5. Join the strings together and inject them into the DOM layout
+    //         container.innerHTML = userCards.join("");
+
+    //         console.log("Successfully displayed users using Method 3!");
+
+    //         // FIX 2: Return the cards so the 'mappedAPI' variable stores the result
+    //         return userCards;
+    //     });
+
+    // Method 3
+    // // 1. Declare the API variable globally
+    // let API = [];
+
+    // // 2. Fetch the data from your mock URL
+    // fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
+    //     .then(res => res.json())
+    //     .then(data => {
+
+    //         // 3. Store the 29 items in your API variable
+    //         API = data;
+
+    //         // 4. Get the HTML container element from your webpage
+    //         const container = document.getElementById("user-list");
+
+    //         // 5. Use .map() to transform each user object into HTML text strings
+    //         const userCards = API.map(user => {
+    //             return `
+    //     <div style="border: 1px solid #ccc; padding: 10px; margin: 10px; border-radius: 5px;">
+    //       <h3>${user.name}</h3>
+    //       <p>Email: ${user.email}</p>
+    //       <p>Number: ${user.number}</p>
+    //       <small>ID Number: ${user.id}</small>
+    //     </div>
+    //   `;
+    //         });
+
+    //         // 6. Join the array items into one single string and display them on screen
+    //         container.innerHTML = userCards.join("");
+
+    //         console.log("Successfully displayed 29 users on the screen!");
+    //     });
+
+//Website for custom API json fill to URL Convert: https://mocki.io/
+</script>
+
+</html>
