@@ -1,0 +1,931 @@
+// This API URL = https://mocki.io/v1/ef143c16-ca23-4f24-afac-46a4510fe92a
+[
+  {
+    "id": 1,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 Ultra",
+    "reviews_and_ratings": {
+      "average_rating": 4.7,
+      "total_reviews_count": 14250,
+      "aspect_ratings": {
+        "display": 9.8,
+        "design_and_ergonomics": 9.5,
+        "performance": 10,
+        "rear_camera": 9.5,
+        "videography": 9.4,
+        "battery_and_charging": 8.7,
+        "software_and_ui": 10,
+        "value_for_money": 9
+      },
+      "sentiments": {
+        "pros": [
+          "Class-leading Snapdragon 8 Elite performance with significantly smoother One UI 7 animations.",
+          "Refined premium design featuring comfortable rounded corners and a lighter Grade 5 titanium frame.",
+          "Outstanding 6.9-inch Dynamic AMOLED display with a highly efficient anti-reflective coating.",
+          "Powerful, locally processed Galaxy AI features like Audio Eraser and upgraded Select options."
+        ],
+        "cons": [
+          "Incremental camera hardware upgrades over the predecessor, making it a pricey option for current S24 Ultra owners.",
+          "Screen still suffers from low PWM dimming frequencies, potentially causing eye strain at low brightness.",
+          "Charging speeds are still capped at 45W, falling behind rapidly charging competitors."
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "brand": "Apple",
+    "product_name": "iPhone 17 Pro Max",
+    "reviews_and_ratings": {
+      "average_rating": 4.8,
+      "total_reviews_count": 18900,
+      "aspect_ratings": {
+        "display": 9.6,
+        "design_and_ergonomics": 9.2,
+        "performance": 10,
+        "rear_camera": 9.7,
+        "videography": 9.9,
+        "battery_and_charging": 9.8,
+        "software_and_ui": 9.1,
+        "value_for_money": 8.5
+      },
+      "sentiments": {
+        "pros": [
+          "Incredible, record-smashing battery life that outlasts almost every premium device tested.",
+          "All-new unibody aluminum design integrated with a vapor cooling chamber that keeps the phone completely chill under load.",
+          "Uniformly high-resolution 48MP triple rear camera layout delivering superb flexibility and unmatched video stabilization.",
+          "Blazing fast performance from the Apple A19 Pro chip paired with a major jump to 12GB RAM."
+        ],
+        "cons": [
+          "The bold body-wide 'camera plateau' and new color schemes split aesthetic opinions.",
+          "Anodized color coating on the aluminum frame shows early tendencies to chip or scratch easily if left uncased.",
+          "Large, bulky 6.9-inch footprint remains entirely unmanageable for comfortable one-handed operation."
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "brand": "Google",
+    "product_name": "Google Pixel 10 Pro XL",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 9430,
+      "aspect_ratings": {
+        "display": 9.9,
+        "design_and_ergonomics": 9.4,
+        "performance": 8.9,
+        "rear_camera": 9.8,
+        "videography": 9.2,
+        "battery_and_charging": 9.1,
+        "software_and_ui": 9.7,
+        "value_for_money": 9.2
+      },
+      "sentiments": {
+        "pros": [
+          "Remarkably accurate and ultra-bright Super Actua OLED display that easily hits top-tier outdoor visibility numbers.",
+          "Unrivaled daylight image processing and realistic skin-tone reproduction via Google's signature computational photography.",
+          "Massive 16GB RAM allocation provides fluid multitasking and futureproofs complex on-device Gemini AI models.",
+          "Clean Pixel UI software experience backed by a lengthy and dependable update promise."
+        ],
+        "cons": [
+          "Tensor G5 raw processing clock speeds continue to lag behind Qualcomm and Apple flagships in intensive synthetic benchmarks.",
+          "The clean, minimalist design approach leaves little room for hardware-based gimmicks or extreme charging upgrades.",
+          "Low-light video zoom introduces slight noise artifacts when shifting between different lenses."
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
+    "brand": "OnePlus",
+    "product_name": "OnePlus 13 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.7,
+      "total_reviews_count": 11200,
+      "aspect_ratings": {
+        "display": 9.5,
+        "design_and_ergonomics": 9.3,
+        "performance": 9.9,
+        "rear_camera": 9.2,
+        "videography": 9,
+        "battery_and_charging": 10,
+        "software_and_ui": 9.3,
+        "value_for_money": 9.6
+      },
+      "sentiments": {
+        "pros": [
+          "Monstruous 6000mAh battery combined with exceptionally rapid wired and wireless charging solutions.",
+          "Top-tier performance stability from the Snapdragon 8 Elite, showing excellent thermal control over long gaming sessions.",
+          "Gorgeous BOE X2 display presenting deep blacks, precise clarity, and excellent responsiveness.",
+          "Strong cost-to-performance ratio offering flagship specs undercutting mainstream market giants."
+        ],
+        "cons": [
+          "Hasselblad camera post-processing remains slightly inconsistent with aggressive exposure highlights in tricky scenarios.",
+          "OxygenOS UI shifts farther away from its stock-like heritage, drawing polarized opinions from loyal enthusiasts.",
+          "Lacks the ultra-deep variable zoom options found on other competing premium flagship tiers."
+        ]
+      }
+    }
+  },
+  {
+    "id": 5,
+    "brand": "Xiaomi",
+    "product_name": "Xiaomi 15 Ultra",
+    "reviews_and_ratings": {
+      "average_rating": 4.7,
+      "total_reviews_count": 6800,
+      "aspect_ratings": {
+        "display": 9.4,
+        "design_and_ergonomics": 9,
+        "performance": 9.8,
+        "rear_camera": 10,
+        "videography": 9.5,
+        "battery_and_charging": 9.3,
+        "software_and_ui": 8.8,
+        "value_for_money": 9.1
+      },
+      "sentiments": {
+        "pros": [
+          "Absolute photography titan with a groundbreaking 200MP 5x periscope lens capturing unbelievable zoom details.",
+          "Sturdy, unique aesthetic utilizing premium ceramic finishes and high-grade titanium construction choices.",
+          "Blazing performance utilizing the raw speed capabilities of the Snapdragon 8 Elite engine.",
+          "Robust IP69 build engineering allows superior dust and high-pressure water defense over typical flagships."
+        ],
+        "cons": [
+          "The massive rear camera housing creates a top-heavy layout that feels awkward in tighter pockets.",
+          "HyperOS skin includes excessive pre-installed utility services that require manual cleanups.",
+          "Limited international availability and high price thresholds hinder adoption outside core markets."
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
+    "brand": "iQOO",
+    "product_name": "iQOO 13 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 8200,
+      "aspect_ratings": {
+        "display": 9.5,
+        "design_and_ergonomics": 9.2,
+        "performance": 9.9,
+        "rear_camera": 9,
+        "videography": 8.9,
+        "battery_and_charging": 9.9,
+        "software_and_ui": 8.9,
+        "value_for_money": 9.5
+      },
+      "sentiments": {
+        "pros": [
+          "Outstanding mobile gaming platform offering sustained frame rates, a dedicated display chip, and excellent cooling.",
+          "Massive 6150mAh battery provides security for extended heavy multimedia use without top-up anxieties.",
+          "Rapid charging protocols replenish the substantial cell within minutes.",
+          "Striking aesthetics with distinct accents appealing heavily to gaming and tech enthusiasts."
+        ],
+        "cons": [
+          "Funtouch OS software implementation carries bloated notification systems and unnecessary alerts.",
+          "The ultra-wide and tertiary camera sensors are perceptibly weaker than the excellent main imaging shooter.",
+          "A heavy chassis design that fatigues the wrist over long, continuous holding sessions."
+        ]
+      }
+    }
+  },
+  {
+    "id": 7,
+    "brand": "Vivo",
+    "product_name": "Vivo X200 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.8,
+      "total_reviews_count": 7900,
+      "aspect_ratings": {
+        "display": 9.7,
+        "design_and_ergonomics": 9.3,
+        "performance": 9.6,
+        "rear_camera": 9.9,
+        "videography": 9.4,
+        "battery_and_charging": 9.6,
+        "software_and_ui": 9,
+        "value_for_money": 9.3
+      },
+      "sentiments": {
+        "pros": [
+          "Magnificent Zeiss-engineered camera array led by a breathtaking 200MP telephoto periscope system.",
+          "The MediaTek Dimensity 9400 delivers astonishing efficiency and incredible multi-core processing speeds.",
+          "Vibrant LTPO AMOLED panel pushing immense peak brightness levels that conquer direct sunlight.",
+          "Generous 6000mAh structural battery design packed cleanly inside a relatively sleek framework."
+        ],
+        "cons": [
+          "Funtouch OS software layers still lack the elegant polish seen in competing premium Android interfaces.",
+          "Noticeable lens flares can present themselves when shooting directly into stark light sources.",
+          "The device relies on slightly slower wireless power delivery standard support compared to its fast wired solutions."
+        ]
+      }
+    }
+  },
+  {
+    "id": 8,
+    "brand": "Realme",
+    "product_name": "Realme GT 7 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 10100,
+      "aspect_ratings": {
+        "display": 9.3,
+        "design_and_ergonomics": 9.1,
+        "performance": 9.8,
+        "rear_camera": 8.7,
+        "videography": 8.6,
+        "battery_and_charging": 10,
+        "software_and_ui": 8.8,
+        "value_for_money": 9.7
+      },
+      "sentiments": {
+        "pros": [
+          "Unmatched power-per-dollar ratio pairing a premium Snapdragon 8 Elite with high capacity options.",
+          "Gigantic 6500mAh Eco2 battery tech offers world-class endurance thresholds across intense working loops.",
+          "Bold, eye-catching Mars Orange design language that stands out completely from boring gray blocks.",
+          "Highly responsive specialized high-efficiency display panel that saves energy intelligently."
+        ],
+        "cons": [
+          "The ultra-wide camera system uses an aging 8MP sensor that struggles with finer details and low light.",
+          "Realme UI contains frequent promotional recommendations and system-level applications out of the box.",
+          "The aggressive thermal management can slightly throttle peak frame rates in longer benchmarking cycles."
+        ]
+      }
+    }
+  },
+  {
+    "id": 9,
+    "brand": "Asus",
+    "product_name": "Asus ROG Phone 9 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.7,
+      "total_reviews_count": 3100,
+      "aspect_ratings": {
+        "display": 9.8,
+        "design_and_ergonomics": 9.4,
+        "performance": 10,
+        "rear_camera": 8.5,
+        "videography": 8.8,
+        "battery_and_charging": 9.5,
+        "software_and_ui": 9.2,
+        "value_for_money": 8.8
+      },
+      "sentiments": {
+        "pros": [
+          "Astonishing 185Hz display refresh rate creating an unmatched fluid scrolling and gaming sensory environment.",
+          "Massive 24GB RAM and 1TB storage configurations manage heavy emulation and task loads effortlessly.",
+          "Ingenious cooling solutions combined with tactical AirTrigger shoulder control sensors.",
+          "Greatly improved primary camera setup that elevates it beyond traditional low-tier gaming phone expectations."
+        ],
+        "cons": [
+          "Exorbitant price point shifts it directly into a highly niche enthusiast product bracket.",
+          "Bulky aesthetic and heavy structural profile make it less practical for everyday corporate use.",
+          "Software support lifespan is noticeably shorter than standard flagship rivals like Apple or Google."
+        ]
+      }
+    }
+  },
+  {
+    "id": 10,
+    "brand": "Motorola",
+    "product_name": "Motorola Edge 60 Ultra",
+    "reviews_and_ratings": {
+      "average_rating": 4.4,
+      "total_reviews_count": 5200,
+      "aspect_ratings": {
+        "display": 9.4,
+        "design_and_ergonomics": 9.6,
+        "performance": 9.1,
+        "rear_camera": 9.2,
+        "videography": 8.9,
+        "battery_and_charging": 8.8,
+        "software_and_ui": 9.5,
+        "value_for_money": 9.1
+      },
+      "sentiments": {
+        "pros": [
+          "Exquisite Nordic Wood and tactile premium material options providing class-leading comfort and hand grip.",
+          "Beautifully fluid 144Hz pOLED curved screen presenting crisp visuals and clean view boundaries.",
+          "Hello UI offers a highly desirable, near-stock Android ecosystem layered with subtle, functional smart gestures.",
+          "Very capable camera arrangement featuring an impressively sharp 64MP 3x periscope shooter."
+        ],
+        "cons": [
+          "The 4700mAh internal cell capacity trails significantly behind the huge batteries favored by competitors.",
+          "Slightly confusing reliance on older generation naming conventions for current performance components.",
+          "Software version rollout timelines remain historically sluggish and unpredictable."
+        ]
+      }
+    }
+  },
+  {
+    "id": 11,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy Fold 7",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 4200,
+      "aspect_ratings": {
+        "display": 9.6,
+        "design_and_ergonomics": 8.9,
+        "performance": 9.8,
+        "rear_camera": 8.8,
+        "videography": 9,
+        "battery_and_charging": 8.2,
+        "software_and_ui": 9.7,
+        "value_for_money": 8
+      },
+      "sentiments": {
+        "pros": [
+          "Stunning, expansive 7.6-inch folding workspace with a significantly minimized center crease.",
+          "Incredible multi-window software optimization and maturity unmatched in the foldable market segment.",
+          "Sleek and slimmed-down hinge design makes the phone far more pocketable than prior iterations.",
+          "Robust flagship computing power handling desktop-tier productivity environments smoothly."
+        ],
+        "cons": [
+          "Extremely expensive financial barrier restricts entry to a luxury enthusiast user base.",
+          "Battery life is constrained by the physical limits of a split 4500mAh structure powering dual panels.",
+          "Camera capabilities match standard flagship configurations instead of the premium Ultra camera layouts."
+        ]
+      }
+    }
+  },
+  {
+    "id": 12,
+    "brand": "Apple",
+    "product_name": "iPhone 17 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.7,
+      "total_reviews_count": 22400,
+      "aspect_ratings": {
+        "display": 9.5,
+        "design_and_ergonomics": 9.5,
+        "performance": 9.9,
+        "rear_camera": 9.6,
+        "videography": 9.8,
+        "battery_and_charging": 9,
+        "software_and_ui": 9.2,
+        "value_for_money": 8.9
+      },
+      "sentiments": {
+        "pros": [
+          "Perfect palm-friendly ergonomic sizing without compromising on pro-tier computing performance.",
+          "Upgraded 5x optical periscope lens brings high-tier zoom range to the more compact frame size.",
+          "Excellent heat management assisted by an integrated internal vapor cooling setup.",
+          "Brilliant 6.3-inch screen matching the outdoor clarity of its larger sibling model."
+        ],
+        "cons": [
+          "Base configuration model remains frustratingly locked to 128GB storage at a premium price tier.",
+          "Physical layout design changes feel very safe and lack a striking aesthetic shift.",
+          "Charging velocity is stable but unexciting when compared to modern rapid charge standards."
+        ]
+      }
+    }
+  },
+  {
+    "id": 13,
+    "brand": "Google",
+    "product_name": "Google Pixel 10 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 11100,
+      "aspect_ratings": {
+        "display": 9.6,
+        "design_and_ergonomics": 9.6,
+        "performance": 8.8,
+        "rear_camera": 9.7,
+        "videography": 9.1,
+        "battery_and_charging": 8.9,
+        "software_and_ui": 9.7,
+        "value_for_money": 9.1
+      },
+      "sentiments": {
+        "pros": [
+          "Ideal 6.3-inch sizing offering a zero-compromise triple-camera arrangement in a smaller form factor.",
+          "Abundant 16GB RAM overhead effortlessly manages on-device AI tasks and maintains fluid app memory.",
+          "Beautiful matte design paired with highly comfortable rounded edge frameworks.",
+          "Outstanding AI portrait photography processing that handles diverse lighting situations effortlessly."
+        ],
+        "cons": [
+          "Raw silicon compute performance trailing in dense graphic intensive gaming titles.",
+          "Charging rates are conservative and require a longer window for complete fill cycles.",
+          "Pricing bridges a premium gap that makes it less competitive against raw specification leaders."
+        ]
+      }
+    }
+  },
+  {
+    "id": 14,
+    "brand": "OnePlus",
+    "product_name": "OnePlus 13",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 14500,
+      "aspect_ratings": {
+        "display": 9.4,
+        "design_and_ergonomics": 9.2,
+        "performance": 9.8,
+        "rear_camera": 8.9,
+        "videography": 8.8,
+        "battery_and_charging": 9.9,
+        "software_and_ui": 9.2,
+        "value_for_money": 9.6
+      },
+      "sentiments": {
+        "pros": [
+          "Phenomenal daily usage lifespan derived from a massive 6000mAh structural battery core.",
+          "Blazing processing fluidity powered by the top-tier Snapdragon 8 Elite SoC configuration.",
+          "Highly appealing Eco-Leather option provides great texture grip and smudge resistance.",
+          "Aggressively attractive base pricing tier for authentic high-end performance hardware."
+        ],
+        "cons": [
+          "Lacks the upgraded sensor refinements and periscope optics exclusive to the Pro version.",
+          "Large footprint profile might feel excessive for users seeking compact device layouts.",
+          "A subtle shift in software UI design away from heritage aesthetic preferences."
+        ]
+      }
+    }
+  },
+  {
+    "id": 15,
+    "brand": "Sony",
+    "product_name": "Sony Xperia 1 VII",
+    "reviews_and_ratings": {
+      "average_rating": 4.4,
+      "total_reviews_count": 1900,
+      "aspect_ratings": {
+        "display": 9.7,
+        "design_and_ergonomics": 9,
+        "performance": 9.7,
+        "rear_camera": 9.5,
+        "videography": 9.8,
+        "battery_and_charging": 8.7,
+        "software_and_ui": 9.1,
+        "value_for_money": 8.1
+      },
+      "sentiments": {
+        "pros": [
+          "Unrivaled 4K OLED display panel ideal for meticulous film buffs and cinema preview workflows.",
+          "True continuous optical zoom mechanism catering perfectly to professional manual camera shooters.",
+          "Exceptional professional video recording software tools and pristine manual microphone controls.",
+          "Retains enthusiast-favorite hardware provisions like the 3.5mm jack and expandable storage."
+        ],
+        "cons": [
+          "Extremely expensive pricing model designed exclusively for a narrow niche user base.",
+          "The point-and-shoot automated camera mode trails behind competitors who prioritize instant processing algorithms.",
+          "The unique narrow form factor presents a learning curve for typing layouts."
+        ]
+      }
+    }
+  },
+  {
+    "id": 16,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 Plus",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 13200,
+      "aspect_ratings": {
+        "display": 9.5,
+        "design_and_ergonomics": 9.4,
+        "performance": 9,
+        "rear_camera": 8.9,
+        "videography": 8.9,
+        "battery_and_charging": 9,
+        "software_and_ui": 9.6,
+        "value_for_money": 8.8
+      },
+      "sentiments": {
+        "pros": [
+          "Highly refined balanced weight distribution mixed with a spacious, crisp 6.7-inch display workspace.",
+          "Excellent endurance metrics provided by a well-optimized 4900mAh battery configuration.",
+          "Guaranteed long-term software upgrade roadmap paired with full access to Galaxy AI software suites.",
+          "Great day-to-day main camera performance delivering sharp, social-media-ready images."
+        ],
+        "cons": [
+          "Exynos 2500 processing variants display mild performance variations under high-load synthetic gaming benchmarks.",
+          "Camera configuration is mostly iterative, missing out on the high-end zoom setups of the Ultra.",
+          "Positioned at an awkward price tier that sits uncomfortably close to premium flagships."
+        ]
+      }
+    }
+  },
+  {
+    "id": 17,
+    "brand": "Nothing",
+    "product_name": "Nothing Phone (3)",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 8900,
+      "aspect_ratings": {
+        "display": 9.2,
+        "design_and_ergonomics": 9.6,
+        "performance": 9.1,
+        "rear_camera": 8.6,
+        "videography": 8.5,
+        "battery_and_charging": 9.1,
+        "software_and_ui": 9.7,
+        "value_for_money": 9.4
+      },
+      "sentiments": {
+        "pros": [
+          "Highly unique transparent back aesthetic paired with a fun, upgraded functional Glyph Interface.",
+          "Nothing OS offers an incredibly clean, distinct, bloatware-free, and beautifully stylized interface solution.",
+          "The Snapdragon 8s Gen 3 provides responsive performance while keeping operating power draw low.",
+          "Well-balanced lightweight build profile featuring symmetrical display bezels."
+        ],
+        "cons": [
+          "The camera tuning can occasionally miscalculate exposure dynamics in complex mixed lighting setups.",
+          "Lacks a high-magnification periscope zoom lens, capping physical telephoto ranges at 2x.",
+          "Waterproofing standard is slightly lower than the absolute rugged defenses of its rivals."
+        ]
+      }
+    }
+  },
+  {
+    "id": 18,
+    "brand": "Honor",
+    "product_name": "Honor Magic 7 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 5100,
+      "aspect_ratings": {
+        "display": 9.5,
+        "design_and_ergonomics": 9.1,
+        "performance": 9.8,
+        "rear_camera": 9.7,
+        "videography": 9.1,
+        "battery_and_charging": 9.6,
+        "software_and_ui": 8.7,
+        "value_for_money": 9.2
+      },
+      "sentiments": {
+        "pros": [
+          "Incredible 200MP telephoto system capturing impressive fidelity at long-distance ranges.",
+          "High-capacity 5850mAh silicon-carbon battery technology ensures robust multi-day standby performance.",
+          "High-frequency PWM eye protection technology dramatically minimizes eye strain in low-light environments.",
+          "Excellent burst photography speeds capable of freezing fast action cleanly."
+        ],
+        "cons": [
+          "MagicOS styling heavily mimics Apple iOS elements, lacking a unique operating identity.",
+          "The large pill-shaped front camera notch takes up a noticeable chunk of display real estate.",
+          "Slightly aggressive beauty mode processing requires manual tuning for realistic portrait results."
+        ]
+      }
+    }
+  },
+  {
+    "id": 19,
+    "brand": "Oppo",
+    "product_name": "Oppo Find X8 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.7,
+      "total_reviews_count": 6200,
+      "aspect_ratings": {
+        "display": 9.5,
+        "design_and_ergonomics": 9.3,
+        "performance": 9.7,
+        "rear_camera": 9.8,
+        "videography": 9.3,
+        "battery_and_charging": 9.5,
+        "software_and_ui": 9,
+        "value_for_money": 9.1
+      },
+      "sentiments": {
+        "pros": [
+          "Highly versatile dual-periscope camera setup offering distinct, sharp 3x and 6x physical zoom perspectives.",
+          "The Dimensity 9400 architecture drives fluid, low-temperature performance metrics across daily apps.",
+          "Excellent 5910mAh battery packaging keeps the overall frame surprisingly thin and ergonomic.",
+          "Premium glass finishes that feel high-end while mitigating fingerprint smudging."
+        ],
+        "cons": [
+          "ColorOS includes a few repetitive pre-loaded software alerts that need manual modification.",
+          "Slow automated lens-switching animations can show mild stutters inside the camera viewport.",
+          "Global distribution pathways are scarce, limiting direct warranty coverage access."
+        ]
+      }
+    }
+  },
+  {
+    "id": 20,
+    "brand": "Vivo",
+    "product_name": "Vivo V40 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 14100,
+      "aspect_ratings": {
+        "display": 9.3,
+        "design_and_ergonomics": 9.5,
+        "performance": 9.1,
+        "rear_camera": 9.3,
+        "videography": 8.9,
+        "battery_and_charging": 9.2,
+        "software_and_ui": 8.6,
+        "value_for_money": 9.4
+      },
+      "sentiments": {
+        "pros": [
+          "Beautifully tuned Zeiss portrait photography options that outclass mid-range category competitors.",
+          "Extremely sleek, lightweight structural build that remains comfortable in hand for hours.",
+          "Innovative Aura Light ring flash provides soft, flattering illumination for night portrait photography.",
+          "Impressive 5500mAh cell squeezed expertly inside a highly slender frame profile."
+        ],
+        "cons": [
+          "Funtouch OS software layer contains notable notification bloat out of the box.",
+          "Plastic side frame choices feel slightly less premium than standard aluminum alternatives.",
+          "Sustained extreme performance benchmarks show minor throttling under prolonged gaming loops."
+        ]
+      }
+    }
+  },
+  {
+    "id": 21,
+    "brand": "Realme",
+    "product_name": "Realme 14 Pro Plus",
+    "reviews_and_ratings": {
+      "average_rating": 4.4,
+      "total_reviews_count": 16500,
+      "aspect_ratings": {
+        "display": 9.2,
+        "design_and_ergonomics": 9.4,
+        "performance": 8.5,
+        "rear_camera": 9.1,
+        "videography": 8.4,
+        "battery_and_charging": 9,
+        "software_and_ui": 8.5,
+        "value_for_money": 9.5
+      },
+      "sentiments": {
+        "pros": [
+          "Incredible 3x telephoto performance brings premium zoom optics down to a highly accessible price point.",
+          "Gorgeously designed curved luxury aesthetic that punches way above its actual weight class.",
+          "Dependable day-long battery life matched with efficient fast-charging capabilities.",
+          "Lightweight and ergonomic in-hand feel that minimizes wrist fatigue."
+        ],
+        "cons": [
+          "The MediaTek Dimensity 7300 chip is tuned strictly for daily tasks rather than heavy high-frame-rate gaming.",
+          "Realme UI skin configuration comes packed with abundant pre-installed app recommendations.",
+          "The secondary 8MP ultra-wide sensor delivers soft, mediocre images in dimmer indoor environments."
+        ]
+      }
+    }
+  },
+  {
+    "id": 22,
+    "brand": "Poco",
+    "product_name": "Poco F7 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 12300,
+      "aspect_ratings": {
+        "display": 9.4,
+        "design_and_ergonomics": 9,
+        "performance": 9.7,
+        "rear_camera": 8.6,
+        "videography": 8.6,
+        "battery_and_charging": 9.4,
+        "software_and_ui": 8.7,
+        "value_for_money": 9.6
+      },
+      "sentiments": {
+        "pros": [
+          "Top-tier Snapdragon 8 Gen 3 performance delivered at an incredibly aggressive mid-range price index.",
+          "Beautifully sharp 1440p OLED display offering immense clarity and rapid input touch responsiveness.",
+          "Super fast charging implementation that tops up the battery in well under half an hour.",
+          "Solid frame build quality tailored precisely for competitive mobile gaming requirements."
+        ],
+        "cons": [
+          "HyperOS implementation features heavy application pre-loads and repetitive tool notifications.",
+          "Camera performance drops off noticeably in low-light conditions, displaying software smoothing artifacts.",
+          "The plastic structural midframe lacks the premium tactile elegance found on aluminum devices."
+        ]
+      }
+    }
+  },
+  {
+    "id": 23,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 FE",
+    "reviews_and_ratings": {
+      "average_rating": 4.4,
+      "total_reviews_count": 9800,
+      "aspect_ratings": {
+        "display": 9.3,
+        "design_and_ergonomics": 9.1,
+        "performance": 9.2,
+        "rear_camera": 8.8,
+        "videography": 8.7,
+        "battery_and_charging": 8.5,
+        "software_and_ui": 9.6,
+        "value_for_money": 9
+      },
+      "sentiments": {
+        "pros": [
+          "Excellent entry point into the Galaxy flagship lifestyle, boasting full Galaxy AI compatibility.",
+          "The Dimensity 9400 chipset provides snappy day-to-day operation and reliable multitasking.",
+          "Bright, flat Dynamic AMOLED panel making visibility clear under challenging ambient lighting.",
+          "Long-term security patch roadmaps match premium device lifespans."
+        ],
+        "cons": [
+          "Slightly thick screen bezels detract from an otherwise modern flagship appearance.",
+          "Charging remains locked to a slower standard compared to rapid competitor speeds.",
+          "The 8MP telephoto camera produces soft zoom details when pushing past its native 3x limits."
+        ]
+      }
+    }
+  },
+  {
+    "id": 24,
+    "brand": "OnePlus",
+    "product_name": "OnePlus Nord 5",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 15200,
+      "aspect_ratings": {
+        "display": 9.2,
+        "design_and_ergonomics": 9.2,
+        "performance": 9,
+        "rear_camera": 8.5,
+        "videography": 8.4,
+        "battery_and_charging": 9.6,
+        "software_and_ui": 9.1,
+        "value_for_money": 9.5
+      },
+      "sentiments": {
+        "pros": [
+          "Fantastic longevity delivered via a robust 5500mAh integrated battery block.",
+          "The Snapdragon 7+ Gen 3 chip delivers smooth performance that closely mirrors elite premium tier setups.",
+          "Clean, comfortable build framework highlighting a highly distinctive premium metal backplate style.",
+          "Very responsive display paired with functional fast charging tools included in the retail box."
+        ],
+        "cons": [
+          "Omits a dedicated telephoto camera lens entirely, relying on digital sensor cropping modes instead.",
+          "The 8MP secondary ultra-wide lens shows notable edge warping and purple fringing details.",
+          "Omission of an official alert slider option breaks away from a highly valued brand tradition."
+        ]
+      }
+    }
+  },
+  {
+    "id": 25,
+    "brand": "Motorola",
+    "product_name": "Motorola Edge 60 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.4,
+      "total_reviews_count": 7300,
+      "aspect_ratings": {
+        "display": 9.3,
+        "design_and_ergonomics": 9.6,
+        "performance": 8.7,
+        "rear_camera": 8.9,
+        "videography": 8.6,
+        "battery_and_charging": 9.1,
+        "software_and_ui": 9.5,
+        "value_for_money": 9.2
+      },
+      "sentiments": {
+        "pros": [
+          "Industry-leading hand ergonomics enhanced by a soft, luxurious vegan leather rear panel.",
+          "Immersive curved display featuring vibrant color mapping and smooth interface tracking.",
+          "Highly intuitive, clean Hello UI software experience providing elegant customization utilities.",
+          "Features a native 3x optical telephoto lens, a rarity at this particular sub-flagship price point."
+        ],
+        "cons": [
+          "The 4500mAh internal battery capacity runs dry rapidly under demanding GPS or hotspot workflows.",
+          "The Snapdragon 7 Gen 3 platform can exhibit minor stutters when processing heavy video rendering.",
+          "Water-repellent curved edge glass designs can be prone to accidental touch inputs."
+        ]
+      }
+    }
+  },
+  {
+    "id": 26,
+    "brand": "Apple",
+    "product_name": "iPhone SE 4",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 21500,
+      "aspect_ratings": {
+        "display": 9.1,
+        "design_and_ergonomics": 9.4,
+        "performance": 9.8,
+        "rear_camera": 8.9,
+        "videography": 9.3,
+        "battery_and_charging": 8.4,
+        "software_and_ui": 9.4,
+        "value_for_money": 9.6
+      },
+      "sentiments": {
+        "pros": [
+          "Incredible value-for-money entry model integrating modern notched OLED panels and full Face ID functionality.",
+          "Elite processing capability derived from the flagship Apple A18 platform, unlocking Apple Intelligence features.",
+          "Highly dependable and crisp single 48MP primary shooter delivering outstanding daylight photography.",
+          "Extremely compact, lightweight, and pocket-friendly build footprint layout."
+        ],
+        "cons": [
+          "Lacks any secondary ultra-wide or telephoto perspectives, restricting shooting diversity.",
+          "The display refresh rate is capped at a legacy 60Hz standard, feeling choppy to high-refresh users.",
+          "Modest battery capacity requires strategic management or top-ups on long travel days."
+        ]
+      }
+    }
+  },
+  {
+    "id": 27,
+    "brand": "Google",
+    "product_name": "Google Pixel 10a",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 13400,
+      "aspect_ratings": {
+        "display": 9.1,
+        "design_and_ergonomics": 9.2,
+        "performance": 8.6,
+        "rear_camera": 9.5,
+        "videography": 8.8,
+        "battery_and_charging": 8.5,
+        "software_and_ui": 9.7,
+        "value_for_money": 9.4
+      },
+      "sentiments": {
+        "pros": [
+          "Class-leading point-and-shoot camera clarity driven by Google's top-tier image processing engineering.",
+          "Full access to premium Google Tensor G5 smart software features and Gemini AI capabilities.",
+          "Clean Pixel software implementation backed by extensive year-over-year update security commitments.",
+          "Comfortable, lightweight design using durable matte-finish composite materials."
+        ],
+        "cons": [
+          "Charging input rates are noticeably slow, matching older generation power specs.",
+          "Thicker screen bezels compared to competing mid-range options diminish visual immersion.",
+          "Sustained processing workloads can cause the internal frame to warm up relatively quickly."
+        ]
+      }
+    }
+  },
+  {
+    "id": 28,
+    "brand": "Xiaomi",
+    "product_name": "Redmi Note 14 Pro Plus",
+    "reviews_and_ratings": {
+      "average_rating": 4.5,
+      "total_reviews_count": 19200,
+      "aspect_ratings": {
+        "display": 9.3,
+        "design_and_ergonomics": 9.1,
+        "performance": 8.6,
+        "rear_camera": 9,
+        "videography": 8.3,
+        "battery_and_charging": 9.8,
+        "software_and_ui": 8.5,
+        "value_for_money": 9.6
+      },
+      "sentiments": {
+        "pros": [
+          "Outstanding mid-range photography value featuring a highly capable 50MP 2.5x optical portrait lens.",
+          "Gigantic 6200mAh battery core provides elite endurance metrics for continuous multi-day standby loops.",
+          "Beautiful high-resolution 1220p AMOLED screen presenting excellent contrast scales.",
+          "Robust physical drop durability certifications matching much more expensive hardware alternatives."
+        ],
+        "cons": [
+          "HyperOS environment features persistent bloatware recommendations out of the box.",
+          "The Dimensity 7300 Ultra processor prioritizes basic efficiency over intensive high-frame-rate gaming.",
+          "4K video capture tools lack the refined stabilization capabilities seen in standard premium flagships."
+        ]
+      }
+    }
+  },
+  {
+    "id": 29,
+    "brand": "iQOO",
+    "product_name": "iQOO Neo 10 Pro",
+    "reviews_and_ratings": {
+      "average_rating": 4.6,
+      "total_reviews_count": 11500,
+      "aspect_ratings": {
+        "display": 9.4,
+        "design_and_ergonomics": 9,
+        "performance": 9.8,
+        "rear_camera": 8.7,
+        "videography": 8.8,
+        "battery_and_charging": 9.7,
+        "software_and_ui": 8.6,
+        "value_for_money": 9.6
+      },
+      "sentiments": {
+        "pros": [
+          "Incredible processing value pairing the flagship Dimensity 9400 with gaming-optimized hardware layers.",
+          "Generous 6100mAh dual-cell structure ensures superb performance endurance margins under heavy system usage.",
+          "Ultra-responsive LTPO display perfect for fast action title track inputs and competitive gaming response.",
+          "Very effective cooling design layout that delays thermal performance drop-offs."
+        ],
+        "cons": [
+          "Lacks any dedicated optical telephoto lenses, causing digital zoom crops to lose clarity.",
+          "Funtouch OS interface feels cluttered due to frequent notification prompts and software recommendations.",
+          "The plastic body material choice feels somewhat basic given the premium interior hardware power."
+        ]
+      }
+    }
+  }
+]

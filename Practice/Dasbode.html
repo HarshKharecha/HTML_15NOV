@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L12_Promises_&_Fetch</title>
+</head>
+
+<body>
+   
+    <div id="dashboard"></div>
+    </div>
+
+</body>
+<script>
+    
+    // Task 20: E-Commerce Product Dashboard
+
+    console.log("\nTask 20");
+
+    Promise.all([
+        fetch("https://mocki.io/v1/c8e11c9f-fa96-4993-b8d8-f20a5725b8a6").then(r => r.json()),
+        fetch("https://mocki.io/v1/ef143c16-ca23-4f24-afac-46a4510fe92a").then(r => r.json()),
+        fetch("https://mocki.io/v1/8adf3257-a15f-4b41-8a60-bd326de411ff").then(r => r.json())
+    ])
+        // Access All Three APIs All Particular Datas Useing .map()
+        .then(([products, reviews, categories]) => items([products, reviews, categories])).catch(error => console.log(error));
+
+    function items([products, reviews, categories]) {
+        // let productsDone = false;
+        // let reviewsDone = false;
+        // let categoriesDone = false;
+        const dataArray = [products, reviews, categories]
+        // Run Match on dataArray (products, reviews, categories)
+        dataArray.map(subArray => {
+            // Now run loop in side of subArray eash item
+            subArray.map(u => {
+                //If User data so Run This
+                if (u.id !== undefined && u.brand !== undefined && u.product_name !== undefined && u.specifications !== undefined) {
+                    console.log("Products Loaded");
+                    const container = document.getElementById("dashboard");
+                    const productsuserCards = products.map(user => {
+                        return `
+                        <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                            <h3>${user.brand}</h3>
+                            <p>Product Name: ${user.product_name}</p>
+                            <p>
+                                Specifications:
+                                <ul>
+                                    <li>Processor${user.specifications?.processor?.name || "N/A"} ${user.specifications?.processor?.clock_speed_ghz || "N/A"}</li>
+                                    <li>Memory Ram:${user.memory_ram_gb}GB</li>
+                                    <li>Storage Options:${user.storage_options_gb?.join(", ") || "N/A"}GB</li>
+                                    <li>Display: ${user.display?.size_inches || "N/A"} ${user.display?.panel_type || "N/A"} ${user.display?.resolution || "N/A"}</li>
+                                    <li>camera_system: Main camera Mp:${user.camera_system?.main_mp || "N/A"}, Ultra Wide Mp:${user.camera_system?.ultra_wide_mp || "N/A"}, telephoto:${user.camera_system?.telephoto?.[0] || "N/A"}</li>
+                                    <li>Video Max Resolution:${user.video_max_resolution}</li>
+                                    <li>Battery Capacity MAh:${user.battery_capacity_mah}</li>
+                                    <li>Variants Colors: Standard Colors:${user.variants_colors?.standard_colors?.join(", ") || "N/A"}, Premium Exclusive Colors:${user.variants_colors?.premium_exclusive_colors?.join(", ") || "N/A"}</li>
+                                    <li>Price of Each variants: Storage Options:${user.variants?.storage_gb || "N/A"}, MRP${user.variants?.mrp || "N/A"}, Estimated retail Price:${user.variants?.estimated_retail_price || "N/A"}</li>
+                                </ul>
+                            </p>
+                            <div id="dashboardr"></div>`;
+                        // productsDone = true;
+                    });
+                    // Join the strings together and inject them into the DOM layout
+                    container.innerHTML += productsuserCards.join("");
+                    // if (productsDone === true) {
+                    //     document.getElementById("dashboardr").style.display = "block";
+                    // }
+                } else if (u.id !== undefined && u.brand !== undefined && u.product_name !== undefined && u.reviews_and_ratings !== undefined) {
+                    console.log("Reviews Loaded");
+                    array = products
+                    for (let id = 0; id < array.length; id++) {
+                        const element = array[id];
+                        const container = document.getElementById("dashboardr");
+                        const reviewsuserCards = reviews.map(user => {
+                            return `
+                        <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                            <!--<h3>${user.brand}</h3>
+                            <p>Product Name: ${user.product_name}</p>-->
+                            <p>
+                                Reviews and Ratings:
+                                <ul>
+                                    <li>Average Rating:${user.reviews_and_ratings?.average_rating || "N/A"}, Total Reviews Count:${user.reviews_and_ratings?.total_reviews_count || "N/A"}</li>
+                                    <li>Aspect Ratings: Display:${user.aspect_ratings?.display || "N/A"}, Design And Ergonomics:${user.aspect_ratings?.design_and_ergonomics || "N/A"}, Performance:${user.aspect_ratings?.performance || "N/A"}, Rear Camera:${user.aspect_ratings?.rear_camera || "N/A"}, Videography:${user.aspect_ratings?.videography || "N/A"}, Battery And Charging:${user.aspect_ratings?.battery_and_charging || "N/A"}, Software And UI:${user.aspect_ratings?.software_and_ui || "N/A"}, Value For Money:${user.aspect_ratings?.value_for_money || "N/A"}</li>
+                                </ul>
+                            </p>
+                            <div id="dashboardc"></div>
+                        </div>`;
+                        });
+                        // Join the strings together and inject them into the DOM layout
+                        container.innerHTML = reviewsuserCards.join("");
+                    }
+
+                } else if (u.id !== undefined && u.brand !== undefined && u.product_name !== undefined && u.category_details !== undefined) {
+                    console.log("Categories Loaded");
+                    array = products
+                    for (let id = 0; id < array.length; id++) {
+                        const element = array[id];
+                        const container = document.getElementById("dashboardc");
+                        const categoriesuserCards = categories.map(user => {
+                            return `
+                        <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                            <!--<h3>${user.brand}</h3>
+                            <p>Product Name: ${user.product_name}</p>-->
+                            <p>
+                                Category Details:
+                                <ul>
+                                    <li>Primary Category:${user.category_details.primary_category}</li>
+                                    <li>Sub Category:${user.category_details.sub_category}</li>
+                                    <li>Target Market Segment:${user.category_details.target_market_segment}</li>
+                                    <li>Product Lifecycle Stage:${user.category_details.product_lifecycle_stage}</li>
+                                    <li>Ecosystem Tags:${user.category_details?.ecosystem_tags?.join(", ") || "N/A"}</li>
+                                </ul>
+                            </p>
+                        </div>`;
+                        });
+                        // Join the strings together and inject them into the DOM layout
+                        container.innerHTML = categoriesuserCards.join("");
+                    }
+                }
+            });
+        });
+        console.log("\nDashboard Ready");
+    }
+</script>
+
+</html>

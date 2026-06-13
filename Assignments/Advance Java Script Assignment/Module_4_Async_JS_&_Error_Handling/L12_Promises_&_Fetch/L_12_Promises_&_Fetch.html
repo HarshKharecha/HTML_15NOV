@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L12_Promises_&_Fetch</title>
+</head>
+
+<body>
+    <h1>Lecture 12: Promises, Fetch API & Promise Combinators - Practical Tasks</h1>
+
+    <h2>Task 1: Create Your First Promise</h2>
+    <h3>Description: Create a Promise that resolves successfully after 2 seconds.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use<span>`new Promise()`</span></li>
+        <li>Use<span>`setTimeout()`</span></li>
+        <li>Resolve after 2 seconds</li>
+        <li>Display result using<span>`.then()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Loading... <br>Promise Resolved Successfully</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 2: Create a Rejected Promise</h2>
+    <h3>Description: Create a Promise that rejects after 2 seconds.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use<strong>`reject()`</strong></li>
+        <li>Handle error using<strong>`.catch()`</strong></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Loading... <br>Network Error</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 3: Promise State Demonstration</h2>
+    <h3>Description: Create a Promise that randomly resolves or rejects.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Generate random success/failure</li>
+        <li>Use<strong>`.then()`</strong></li>
+        <li>Use<strong>`.catch()`</strong></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Success OR Failed</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 4: User Login Simulation</h2>
+    <h3>Description: Simulate a login process using Promises.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create login function</li>
+        <li>Return Promise</li>
+        <li>Resolve with success message</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Checking Credentials...<br>Login Successful</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 5: Product Loading Simulation</h2>
+    <h3>Description: Load product data asynchronously.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Return Promise</li>
+        <li>Delay for 2 seconds</strong></li>
+        <li>Return product information</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Loading Products...<br>Product:<br>Laptop<br>₹50000</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 6: Promise Chaining Basics</h2>
+    <h3>Description: Create a sequence of three tasks using Promise chaining.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+        <li>Use <span>`.then()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Task 1 Complete <br>
+        Task 2 Complete <br>
+        Task 3 Complete
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 7: Student Registration Workflow</h2>
+    <h3>Description: Simulate student registration steps.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Register Student</li>
+        <li>Verify Email</li>
+        <li>Generate ID Card</li>
+        <li>Use Promise chaining</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Student Registered <br>
+        Email Verified <br>
+        ID Card Generated
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 8: Error Handling with catch()</h2>
+    <h3>Description: Simulate an API failure.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Reject Promise</li>
+        <li>Catch error</li>
+        <li>Display error message</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        API Error: Server Unavailable
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 9: Using finally()</h2>
+    <h3>Description: Demonstrate Promise cleanup using finally().</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create Promise</li>
+        <li>Resolve or reject</li>
+        <li>Execute cleanup logic</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Operation Finished
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 10: Fetch User Data from API</h2>
+    <h3>Description: Fetch user information from an API.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use Fetch API</li>
+        <li>Convert response to JSON</li>
+        <li>Display user names</li>
+        <li>Suggested API: https://jsonplaceholder.typicode.com/users</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Leanne Graham <br>
+        Ervin Howell ...
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 11: Fetch Single User</h2>
+    <h3>Description: Fetch a single user by ID.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use Fetch API</li>
+        <li>Display name</li>
+        <li>Display email</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Name: Leanne Graham <br>
+        Email: ...
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 12: Fetch Posts Data</h2>
+    <h3>Description: Load posts from an API.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch posts</li>
+        <li>Display titles</li>
+        <li>Use <span>`.then()`</span></li>
+        <li>Suggested API: https://jsonplaceholder.typicode.com/posts</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Post Titles Displayed
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 13: Create a Loading Indicator</h2>
+    <h3>Description: Display a loader before Fetch completes.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Show "Loading..."</li>
+        <li>Hide after response</li>
+        <li>Display fetched data</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Loading... <br>
+        Data Loaded
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 14: Promise.all() – Dashboard Loader</h2>
+    <h3>Description: Load users, posts, and comments simultaneously.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use Promise.all()</li>
+        <li>Fetch three APIs</li>
+        <li>Display all results</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Users Loaded <br>
+        Posts Loaded <br>
+        Comments Loaded
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 15: Promise.all() Failure Scenario</h2>
+    <h3>Description: Demonstrate what happens when one Promise fails.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create three Promises</li>
+        <li>Reject one Promise</li>
+        <li>Observe Promise.all() behavior</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Operation Failed
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 16: Promise.allSettled() Example</h2>
+    <h3>Description: Handle multiple Promises regardless of failures.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create success Promise</li>
+        <li>Create failed Promise</li>
+        <li>Use allSettled()</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        fulfilled <br>
+        rejected <br>
+        fulfilled
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 17: Promise.race() Example</h2>
+    <h3>Description: Create two Promises with different delays.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>One fast Promise</li>
+        <li>One slow Promise</li>
+        <li>Use Promise.race()</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Fast Promise Won
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 18: Promise.any() Example</h2>
+    <h3>Description: Return the first successful Promise.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create failed Promise</li>
+        <li>Create successful Promise</li>
+        <li>Use Promise.any()</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Success
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 19: Multi-Server Failover System</h2>
+    <h3>Description: Simulate three servers.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Server A fails</li>
+        <li>Server B fails</li>
+        <li>Server C succeeds</li>
+        <li>Use Promise.any()</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Connected to Server C
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 20: E-Commerce Product Dashboard</h2>
+    <h3>Description: Build a mini dashboard that loads multiple resources simultaneously.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch Products</li>
+        <li>Fetch Reviews</li>
+        <li>Fetch Categories</li>
+        <li>Use Promise.all()</li>
+        <li>Display dashboard after all data loads</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Products Loaded <br>
+        Reviews Loaded <br>
+        Categories Loaded <br><br>
+        Dashboard Ready
+    </output>
+    <h3>Answer: Check in console</h3>
+    <div id="dashboard"></div>
+    </div>
+
+</body>
+<script>
+    // Task 1: Create Your First Promise
+
+    // console.log("Task 1");
+    // console.log("Loading...");
+
+    // const promise1 = new Promise((resolve) => {
+    //     setTimeout(() => {
+    //         resolve("Promise Resolved Successfully");
+    //     }, 2000);
+    // });
+
+    // promise1.then(result => console.log(result));
+
+    // Task 2: Create a Rejected Promise
+
+    // console.log("\nTask 2");
+    // console.log("Loading...");
+
+    // const promise2 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         reject("Network Error");
+    //     }, 2000);
+    // });
+
+    // promise2.catch(error => console.log(error));
+
+    // Task 3: Promise State Demonstration
+
+    // console.log("\nTask 3");
+
+    // const promise3 = new Promise((resolve, reject) => {
+    //     Math.random() > 0.5
+    //         ? resolve("Success")
+    //         : reject("Failed");
+    // });
+
+    // promise3
+    //     .then(result => console.log(result))
+    //     .catch(error => console.log(error));
+
+    // Task 4: User Login Simulation
+
+    // console.log("\nTask 4");
+
+    // function login() {
+    //     return new Promise((resolve) => {
+    //         console.log("Checking Credentials...");
+    //         setTimeout(() => {
+    //             resolve("Login Successful");
+    //         }, 2000);
+    //     });
+    // }
+
+    // login().then(msg => console.log(msg));
+
+    // Task 5: Product Loading Simulation
+
+    // console.log("\nTask 5");
+
+    // function loadProduct() {
+    //     return new Promise((resolve) => {
+    //         console.log("Loading Products...");
+    //         setTimeout(() => {
+    //             resolve({
+    //                 name: "Laptop",
+    //                 price: "₹50000"
+    //             });
+    //         }, 2000);
+    //     });
+    // }
+
+    // loadProduct().then(product => {
+    //     console.log("Product:");
+    //     console.log(product.name);
+    //     console.log(product.price);
+    // });
+
+    // Task 6: Promise Chaining Basics
+
+    // console.log("\nTask 6");
+
+    // Promise.resolve()
+    //     .then(() => {
+    //         console.log("Task 1 Complete");
+    //     })
+    //     .then(() => {
+    //         console.log("Task 2 Complete");
+    //     })
+    //     .then(() => {
+    //         console.log("Task 3 Complete");
+    //     });
+
+    // Task 7: Student Registration Workflow
+
+    // console.log("\nTask 7");
+
+    // function registerStudent() {
+    //     return Promise.resolve("Student Registered");
+    // }
+
+    // function verifyEmail() {
+    //     return Promise.resolve("Email Verified");
+    // }
+
+    // function generateID() {
+    //     return Promise.resolve("ID Card Generated");
+    // }
+
+    // registerStudent()
+    //     .then(msg => {
+    //         console.log(msg);
+    //         return verifyEmail();
+    //     })
+    //     .then(msg => {
+    //         console.log(msg);
+    //         return generateID();
+    //     })
+    //     .then(msg => console.log(msg));
+
+    // Task 8: Error Handling with catch()
+
+    // console.log("\nTask 8");
+
+    // const apiPromise = new Promise((resolve, reject) => {
+    //     reject("API Error: Server Unavailable");
+    // });
+
+    // apiPromise.catch(error => console.log(error));
+
+    // Task 9: Using finally()
+
+    // console.log("\nTask 9");
+
+    // new Promise((resolve) => {
+    //     resolve("Success");
+    // })
+    //     .then(result => console.log(result))
+    //     .catch(error => console.log(error))
+    //     .finally(() => {
+    //         console.log("Operation Finished");
+    //     });
+
+    // Task 10: Fetch User Data from API
+
+    // console.log("\nTask 10");
+
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //     .then(response => response.json())
+    //     .then(users => {
+    //         users.forEach(user => console.log(user.name));// or find
+    //     })
+    //     .catch(error => console.log(error));
+
+    // Task 11: Fetch Single User
+
+    // console.log("\nTask 11");
+
+    // fetch("https://jsonplaceholder.typicode.com/users/1")
+    //     .then(response => response.json())
+    //     .then(user => {
+    //         console.log("Name:", user.name);
+    //         console.log("Email:", user.email);
+    //     })
+    //     .catch(error => console.log(error));
+
+    // Task 12: Fetch Posts Data
+
+    // console.log("\nTask 12");
+
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    //     .then(response => response.json())
+    //     .then(posts => {
+    //         posts.forEach(post => console.log(post.title));// or find
+    //     })
+    //     .catch(error => console.log(error));
+
+    // Task 13: Create a Loading Indicator
+
+    // console.log("\nTask 13");
+    // console.log("Loading...");
+
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log("Data Loaded");
+    //         console.log(data);
+    //     })
+    //     .catch(error => console.log(error));
+
+    // Task 14: Promise.all() Dashboard Loader
+
+    // console.log("\nTask 14");
+
+    // Promise.all([
+    //     fetch("https://jsonplaceholder.typicode.com/users").then(r => r.json()),
+    //     fetch("https://jsonplaceholder.typicode.com/posts").then(r => r.json()),
+    //     fetch("https://jsonplaceholder.typicode.com/comments").then(r => r.json())
+    // ])
+
+    //     .then(([users, posts, comments]) => {
+    //         console.log("Users Loaded", users);// They Return In Arry so Users Lode users indax 0: users[0].username
+    //         console.log("Posts Loaded", posts);// They Return In Arry so Posts Lode posts indax 0: posts[0].username
+    //         console.log("Comments Loaded", comments);// They Return In Arry so Comments Lode comments indax 0: comments[0].username
+    //     })
+    //     .catch(error => console.log(error));
+
+    // Task 15: Promise.all() Failure Scenario
+
+    // console.log("\nTask 15");
+
+    // const p1 = Promise.resolve("Task 1");
+    // const p2 = Promise.reject("Operation Failed");
+    // const p3 = Promise.resolve("Task 3");
+
+    // Promise.all([p1, p2, p3])
+    //     .then(result => console.log(result))
+    //     .catch(error => console.log(error));
+
+    // Task 16: Promise.allSettled() Example
+
+    // console.log("\nTask 16");
+
+    // Promise.allSettled([
+    //     Promise.resolve("Success 1"),
+    //     Promise.reject("Failed"),
+    //     Promise.resolve("Success 2")
+    // ])
+    //     .then(results => {
+    //         results.forEach(result => {
+    //             console.log(result.status);
+    //         });
+    //     });
+
+    // Task 17: Promise.race() Example
+
+    // console.log("\nTask 17");
+
+    // const fastPromise = new Promise(resolve => {
+    //     setTimeout(() => resolve("Fast Promise Won"), 1000);
+    // });
+
+    // const slowPromise = new Promise(resolve => {
+    //     setTimeout(() => resolve("Slow Promise"), 2000);
+    // });
+
+    // Promise.race([fastPromise, slowPromise])
+    //     .then(result => console.log(result));
+
+    // Task 18: Promise.any() Example
+
+    // console.log("\nTask 18");
+
+    // Promise.any([
+    //     Promise.reject("Failed"),
+    //     Promise.resolve("Success")
+    // ])
+    //     .then(result => console.log(result))
+    //     .catch(error => console.log(error));
+
+    // Task 19: Multi-Server Failover System
+
+    // console.log("\nTask 19");
+
+    // const serverA = Promise.reject("Server A Failed");
+    // const serverB = Promise.reject("Server B Failed");
+    // const serverC = Promise.resolve("Connected to Server C");
+
+    // Promise.any([serverA, serverB, serverC])
+    //     .then(result => console.log(result))
+    //     .catch(error => console.log(error));
+
+    // Task 20: E-Commerce Product Dashboard
+
+    console.log("\nTask 20");
+
+    Promise.all([
+        fetch("https://mocki.io/v1/c8e11c9f-fa96-4993-b8d8-f20a5725b8a6").then(r => r.json()),
+        fetch("https://mocki.io/v1/ef143c16-ca23-4f24-afac-46a4510fe92a").then(r => r.json()),
+        fetch("https://mocki.io/v1/8adf3257-a15f-4b41-8a60-bd326de411ff").then(r => r.json())
+    ])
+        // Access All Three APIs All Particular Datas Useing .map()
+        .then(([products, reviews, categories]) => items(products, reviews, categories)).catch(error => console.log(error));
+
+    function items(products, reviews, categories) {
+        const dashboard = document.getElementById("dashboard");
+
+        dashboard.innerHTML = products.map(product => {
+
+            const spec = product.specifications;
+
+            return `
+            <div class="user-card" id="product-${product.id}"
+                style="border:1px solid #ccc; padding:10px; margin:10px;">
+
+                <h3>${product.brand}</h3>
+                <p><b>Product Name:</b> ${product.product_name}</p>
+
+                <h4>Specifications</h4>
+                <ul>
+                    <li>Processor: ${spec?.processor?.name || "N/A"} ${spec?.processor?.clock_speed_ghz || ""}</li>
+                    <li>Memory RAM: ${spec?.memory_ram_gb || "N/A"}GB</li>
+                    <li>Storage Options: ${spec?.storage_options_gb?.join(", ") || "N/A"}GB</li>
+                    <li>Display: ${spec?.display?.size_inches || "N/A"} ${spec?.display?.panel_type || ""} ${spec?.display?.resolution || ""}</li>
+                    <li>Camera System: Main ${spec?.camera_system?.main_mp || "N/A"}MP, Ultra ${spec?.camera_system?.ultra_wide_mp || "N/A"}MP</li>
+                    <li>Video Max Resolution: ${spec?.camera_system?.video_max_resolution || "N/A"}</li>
+                    <li>Battery: ${spec?.battery_capacity_mah || "N/A"} mAh</li>
+                    <li>
+                        Variants Colors:
+                        Standard Colors: ${product.variants_colors?.standard_colors?.join(", ") || "N/A"},
+                        Premium Exclusive Colors: ${product.variants_colors?.premium_exclusive_colors?.join(", ") || "N/A"}
+                    </li>
+
+                    <li>
+                        Price of Each Variant:
+                        <ul>
+                            ${product.variants?.map(v => `
+                                <li>
+                                    Storage Options: ${v.storage_gb}GB |
+                                    MRP: ${v.mrp} |
+                                    Estimated Retail Price: ${v.estimated_retail_price}
+                                </li>`).join("") || "N/A"}
+                        </ul>
+                    </li>
+                </ul>
+
+                <div id="review-${product.id}"></div>
+                <div id="category-${product.id}"></div>
+
+            </div>`;
+        }).join("");
+
+        console.log("Products Loaded");
+
+        renderReviews(reviews);
+        renderCategories(categories);
+        console.log("\nDashboard Ready");
+    }
+
+    function renderReviews(reviews) {
+        reviews.forEach(review => {
+
+            const container = document.getElementById(`review-${review.id}`);
+
+            container.innerHTML = `
+                <h4> Reviews & Ratings</h4 >
+                    <ul>
+                        <li>Average Rating: ${review?.reviews_and_ratings?.average_rating || "N/A"}</li>
+                        <li>Total Reviews Count: ${review?.reviews_and_ratings?.total_reviews_count || "N/A"}</li>
+                        <li>
+                            Aspect Ratings:
+                            <ul>
+                                <li>Display: ${review?.reviews_and_ratings?.aspect_ratings?.display || "N/A"}</li>
+                                <li>Design And Ergonomics: ${review?.reviews_and_ratings?.aspect_ratings?.design_and_ergonomics || "N/A"}</li>
+                                <li>Performance: ${review?.reviews_and_ratings?.aspect_ratings?.performance || "N/A"}</li>
+                                <li>Rear Camera: ${review?.reviews_and_ratings?.aspect_ratings?.rear_camera || "N/A"}</li>
+                                <li>Videography: ${review?.reviews_and_ratings?.aspect_ratings?.videography || "N/A"}</li>
+                                <li>Battery And Charging: ${review?.reviews_and_ratings?.aspect_ratings?.battery_and_charging || "N/A"}</li>
+                                <li>Software And UI: ${review?.reviews_and_ratings?.aspect_ratings?.software_and_ui || "N/A"}</li>
+                                <li>Value For Money: ${review?.reviews_and_ratings?.aspect_ratings?.value_for_money || "N/A"}</li>
+                            <ul>
+                        </li>
+                    </ul>`;
+        });
+        console.log("Reviews Loaded");
+    }
+
+    function renderCategories(categories) {
+        categories.forEach(categories => {
+
+            const container = document.getElementById(`category-${categories.id}`);
+
+            container.innerHTML = `
+                <h4> Category Details</h4 >
+                <ul>
+                    <li>Primary Category:${categories.category_details?.primary_category || "N/A"}</li>
+                    <li>Sub Category: ${categories.category_details?.sub_category || "N/A"}</li>
+                    <li>Target Market Segment: ${categories.category_details?.target_market_segment || "N/A"}</li>
+                    <li>Product Lifecycle Stage:${categories.category_details?.product_lifecycle_stage || "N/A"}</li>
+                    <li>Ecosystem Tags:${categories.category_details?.ecosystem_tags?.join(", ") || "N/A"}</li>
+                </ul>`;
+        });
+        console.log("Categories Loaded");
+    }
+</script>
+
+</html>

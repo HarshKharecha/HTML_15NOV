@@ -1,0 +1,1514 @@
+// This API URL = https://mocki.io/v1/c8e11c9f-fa96-4993-b8d8-f20a5725b8a6
+[
+  {
+    "id": 1,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 Ultra",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256,
+        512,
+        1024
+      ],
+      "display": {
+        "size_inches": 6.9,
+        "panel_type": "Dynamic AMOLED 2X",
+        "resolution": "3120 x 1440 (QHD+)"
+      },
+      "camera_system": {
+        "main_mp": 200,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 10
+          },
+          {
+            "zoom": "5x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 5000
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Titanium Silverblue",
+        "Titanium Gray",
+        "Titanium Black",
+        "Titanium Whitesilver"
+      ],
+      "premium_exclusive_colors": [
+        "Titanium Jetblack",
+        "Titanium Jadegreen",
+        "Titanium Pinkgold"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 129999,
+        "estimated_retail_price": 93600
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 141999,
+        "estimated_retail_price": 112000
+      },
+      {
+        "storage_gb": 1024,
+        "mrp": 165999,
+        "estimated_retail_price": 165999
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "brand": "Apple",
+    "product_name": "iPhone 17 Pro Max",
+    "specifications": {
+      "processor": {
+        "name": "Apple A19 Pro",
+        "clock_speed_ghz": 4.12
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256,
+        512,
+        1024
+      ],
+      "display": {
+        "size_inches": 6.9,
+        "panel_type": "Super Retina XDR OLED",
+        "resolution": "2868 x 1320"
+      },
+      "camera_system": {
+        "main_mp": 48,
+        "ultra_wide_mp": 48,
+        "telephoto": [
+          {
+            "zoom": "5x",
+            "resolution_mp": 48
+          }
+        ],
+        "video_max_resolution": "4K @ 120fps"
+      },
+      "battery_capacity_mah": 4910
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Natural Titanium",
+        "White Titanium",
+        "Black Titanium"
+      ],
+      "premium_exclusive_colors": [
+        "Dark Green Titanium"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 159900,
+        "estimated_retail_price": 159900
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 179900,
+        "estimated_retail_price": 179900
+      },
+      {
+        "storage_gb": 1024,
+        "mrp": 199900,
+        "estimated_retail_price": 199900
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "Google",
+    "product_name": "Google Pixel 10 Pro XL",
+    "specifications": {
+      "processor": {
+        "name": "Google Tensor G5",
+        "clock_speed_ghz": 3.4
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.8,
+        "panel_type": "Super Actua OLED",
+        "resolution": "2992 x 1344"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 48,
+        "telephoto": [
+          {
+            "zoom": "5x",
+            "resolution_mp": 48
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 5060
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Obsidian",
+        "Porcelain",
+        "Hazel"
+      ],
+      "premium_exclusive_colors": [
+        "Rose Quartz"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 124999,
+        "estimated_retail_price": 109999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 136999,
+        "estimated_retail_price": 122999
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "OnePlus",
+    "product_name": "OnePlus 13 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.82,
+        "panel_type": "BOE X2 BOLED",
+        "resolution": "3168 x 1440"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 6000
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Obsidian Black",
+        "Arctic White"
+      ],
+      "premium_exclusive_colors": [
+        "Midnight Blue"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 79999,
+        "estimated_retail_price": 74999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 89999,
+        "estimated_retail_price": 84999
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "brand": "Xiaomi",
+    "product_name": "Xiaomi 15 Ultra",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        512
+      ],
+      "display": {
+        "size_inches": 6.73,
+        "panel_type": "LTPO AMOLED",
+        "resolution": "3200 x 1440"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3.2x",
+            "resolution_mp": 50
+          },
+          {
+            "zoom": "5x",
+            "resolution_mp": 200
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 5400
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Black Ceramic",
+        "White Ceramic"
+      ],
+      "premium_exclusive_colors": [
+        "Titanium Gray"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 109999,
+        "estimated_retail_price": 99999
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "brand": "iQOO",
+    "product_name": "iQOO 13 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "LTPO AMOLED",
+        "resolution": "3200 x 1440"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 6150
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Alpha",
+        "Legend Edition"
+      ],
+      "premium_exclusive_colors": [
+        "Track Edition"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 69999,
+        "estimated_retail_price": 64999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 76999,
+        "estimated_retail_price": 71999
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "brand": "Vivo",
+    "product_name": "Vivo X200 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 9400",
+        "clock_speed_ghz": 3.63
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        512
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "LTPO AMOLED",
+        "resolution": "2800 x 1260"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3.7x",
+            "resolution_mp": 200
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 6000
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Midnight Black",
+        "Titanium Grey"
+      ],
+      "premium_exclusive_colors": [
+        "Ocean Blue"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 94999,
+        "estimated_retail_price": 89999
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "brand": "Realme",
+    "product_name": "Realme GT 7 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "Eco2 OLED Plus",
+        "resolution": "2780 x 1264"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 8,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "8K @ 24fps"
+      },
+      "battery_capacity_mah": 6500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Mars Orange",
+        "Galaxy Grey"
+      ],
+      "premium_exclusive_colors": [
+        "White Shadow Edition"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 65999,
+        "estimated_retail_price": 59999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 72999,
+        "estimated_retail_price": 66999
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "brand": "Asus",
+    "product_name": "Asus ROG Phone 9 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 24,
+      "storage_options_gb": [
+        1024
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "LTPO AMOLED (185Hz)",
+        "resolution": "2400 x 1080"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 13,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 32
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 5800
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Phantom Black"
+      ],
+      "premium_exclusive_colors": [
+        "Storm White"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 1024,
+        "mrp": 124999,
+        "estimated_retail_price": 119999
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "brand": "Motorola",
+    "product_name": "Motorola Edge 60 Ultra",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Gen 4",
+        "clock_speed_ghz": 4
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        512
+      ],
+      "display": {
+        "size_inches": 6.7,
+        "panel_type": "pOLED (144Hz)",
+        "resolution": "2712 x 1220"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 64
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 4700
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Forest Grey",
+        "Nordic Wood"
+      ],
+      "premium_exclusive_colors": [
+        "Peach Fuzz Luxe"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 74999,
+        "estimated_retail_price": 69999
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy Fold 7",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        512,
+        1024
+      ],
+      "display": {
+        "size_inches": 7.6,
+        "panel_type": "Foldable Dynamic AMOLED 2X",
+        "resolution": "2160 x 1856"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 12,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 10
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 4500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Navy",
+        "Shadow Silver"
+      ],
+      "premium_exclusive_colors": [
+        "Crafted Black",
+        "White"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 176999,
+        "estimated_retail_price": 164999
+      },
+      {
+        "storage_gb": 1024,
+        "mrp": 197999,
+        "estimated_retail_price": 189999
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "brand": "Apple",
+    "product_name": "iPhone 17 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Apple A19 Pro",
+        "clock_speed_ghz": 4.12
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        128,
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.3,
+        "panel_type": "Super Retina XDR OLED",
+        "resolution": "2622 x 1206"
+      },
+      "camera_system": {
+        "main_mp": 48,
+        "ultra_wide_mp": 48,
+        "telephoto": [
+          {
+            "zoom": "5x",
+            "resolution_mp": 48
+          }
+        ],
+        "video_max_resolution": "4K @ 120fps"
+      },
+      "battery_capacity_mah": 3900
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Natural Titanium",
+        "White Titanium",
+        "Desert Titanium"
+      ],
+      "premium_exclusive_colors": [
+        "Black Titanium"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 128,
+        "mrp": 129900,
+        "estimated_retail_price": 129900
+      },
+      {
+        "storage_gb": 256,
+        "mrp": 139900,
+        "estimated_retail_price": 139900
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 159900,
+        "estimated_retail_price": 159900
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "brand": "Google",
+    "product_name": "Google Pixel 10 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Google Tensor G5",
+        "clock_speed_ghz": 3.4
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        128,
+        256
+      ],
+      "display": {
+        "size_inches": 6.3,
+        "panel_type": "Super Actua OLED",
+        "resolution": "2856 x 1280"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 48,
+        "telephoto": [
+          {
+            "zoom": "5x",
+            "resolution_mp": 48
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 4700
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Obsidian",
+        "Porcelain"
+      ],
+      "premium_exclusive_colors": [
+        "Hazel"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 128,
+        "mrp": 109999,
+        "estimated_retail_price": 96999
+      },
+      {
+        "storage_gb": 256,
+        "mrp": 119999,
+        "estimated_retail_price": 106999
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "brand": "OnePlus",
+    "product_name": "OnePlus 13",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256
+      ],
+      "display": {
+        "size_inches": 6.82,
+        "panel_type": "BOE X2 AMOLED",
+        "resolution": "3168 x 1440"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 6000
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Black Obsidian",
+        "White"
+      ],
+      "premium_exclusive_colors": [
+        "Blue Eco-Leather"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 64999,
+        "estimated_retail_price": 61999
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "brand": "Sony",
+    "product_name": "Sony Xperia 1 VII",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256
+      ],
+      "display": {
+        "size_inches": 6.5,
+        "panel_type": "OLED (120Hz)",
+        "resolution": "3840 x 1644 (4K)"
+      },
+      "camera_system": {
+        "main_mp": 48,
+        "ultra_wide_mp": 48,
+        "telephoto": [
+          {
+            "zoom": "3.5x-7.1x continuous",
+            "resolution_mp": 48
+          }
+        ],
+        "video_max_resolution": "4K @ 120fps"
+      },
+      "battery_capacity_mah": 5200
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Black",
+        "Khaki Green"
+      ],
+      "premium_exclusive_colors": [
+        "Platinum Silver"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 114999,
+        "estimated_retail_price": 114999
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 Plus",
+    "specifications": {
+      "processor": {
+        "name": "Exynos 2500",
+        "clock_speed_ghz": 3.3
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.7,
+        "panel_type": "Dynamic AMOLED 2X",
+        "resolution": "3120 x 1440"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 12,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 10
+          }
+        ],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 4900
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Midnight Black",
+        "Moonrock Grey"
+      ],
+      "premium_exclusive_colors": [
+        "Sparkling Blue"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 99999,
+        "estimated_retail_price": 84999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 109999,
+        "estimated_retail_price": 93999
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "brand": "Nothing",
+    "product_name": "Nothing Phone (3)",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8s Gen 3",
+        "clock_speed_ghz": 3
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256
+      ],
+      "display": {
+        "size_inches": 6.7,
+        "panel_type": "LTPO Flexible OLED",
+        "resolution": "2412 x 1080"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "2x",
+            "resolution_mp": 32
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 5000
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Dark Grey",
+        "White"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 49999,
+        "estimated_retail_price": 44999
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "brand": "Honor",
+    "product_name": "Honor Magic 7 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Elite",
+        "clock_speed_ghz": 4.47
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        512
+      ],
+      "display": {
+        "size_inches": 6.8,
+        "panel_type": "LTPO OLED",
+        "resolution": "2800 x 1280"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 200
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 5850
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Black",
+        "Moon Shadow Grey"
+      ],
+      "premium_exclusive_colors": [
+        "Sky Blue"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 89999,
+        "estimated_retail_price": 84999
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "brand": "Oppo",
+    "product_name": "Oppo Find X8 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 9400",
+        "clock_speed_ghz": 3.63
+      },
+      "memory_ram_gb": 16,
+      "storage_options_gb": [
+        512
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "AMOLED (120Hz)",
+        "resolution": "2780 x 1264"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 50
+          },
+          {
+            "zoom": "6x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 5910
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Starry Black",
+        "Pearl White"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 99999,
+        "estimated_retail_price": 94999
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "brand": "Vivo",
+    "product_name": "Vivo V40 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 9200+",
+        "clock_speed_ghz": 3.35
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "AMOLED",
+        "resolution": "2800 x 1260"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [
+          {
+            "zoom": "2x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 5500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Ganges Blue",
+        "Titanium Grey"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 54999,
+        "estimated_retail_price": 49999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 59999,
+        "estimated_retail_price": 54999
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "brand": "Realme",
+    "product_name": "Realme 14 Pro Plus",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 7300",
+        "clock_speed_ghz": 2.5
+      },
+      "memory_ram_gb": 8,
+      "storage_options_gb": [
+        256
+      ],
+      "display": {
+        "size_inches": 6.7,
+        "panel_type": "Curved OLED",
+        "resolution": "2412 x 1080"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 8,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "4K @ 30fps"
+      },
+      "battery_capacity_mah": 5200
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Navigator Beige",
+        "Submarine Blue"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 34999,
+        "estimated_retail_price": 29999
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "brand": "Poco",
+    "product_name": "Poco F7 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 8 Gen 3",
+        "clock_speed_ghz": 3.3
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256,
+        512
+      ],
+      "display": {
+        "size_inches": 6.67,
+        "panel_type": "OLED Flow",
+        "resolution": "3200 x 1440"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 8,
+        "telephoto": [
+          {
+            "zoom": "2x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "8K @ 24fps"
+      },
+      "battery_capacity_mah": 5000
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Black",
+        "White"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 44999,
+        "estimated_retail_price": 38999
+      },
+      {
+        "storage_gb": 512,
+        "mrp": 49999,
+        "estimated_retail_price": 43999
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 FE",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 9400",
+        "clock_speed_ghz": 3.63
+      },
+      "memory_ram_gb": 8,
+      "storage_options_gb": [
+        128,
+        256
+      ],
+      "display": {
+        "size_inches": 6.4,
+        "panel_type": "Dynamic AMOLED 2X",
+        "resolution": "2340 x 1080"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 12,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 8
+          }
+        ],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 4500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Graphite",
+        "Mint"
+      ],
+      "premium_exclusive_colors": [
+        "Tangerine"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 128,
+        "mrp": 64999,
+        "estimated_retail_price": 54999
+      },
+      {
+        "storage_gb": 256,
+        "mrp": 69999,
+        "estimated_retail_price": 59999
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "brand": "OnePlus",
+    "product_name": "OnePlus Nord 5",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 7+ Gen 3",
+        "clock_speed_ghz": 2.8
+      },
+      "memory_ram_gb": 8,
+      "storage_options_gb": [
+        128,
+        256
+      ],
+      "display": {
+        "size_inches": 6.74,
+        "panel_type": "AMOLED (120Hz)",
+        "resolution": "2772 x 1240"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 8,
+        "telephoto": []
+      },
+      "video_max_resolution": "4K @ 60fps",
+      "battery_capacity_mah": 5500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Mercurial Silver",
+        "Oasis Green"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 128,
+        "mrp": 32999,
+        "estimated_retail_price": 29999
+      },
+      {
+        "storage_gb": 256,
+        "mrp": 36999,
+        "estimated_retail_price": 33999
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "brand": "Motorola",
+    "product_name": "Motorola Edge 60 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Snapdragon 7 Gen 3",
+        "clock_speed_ghz": 2.63
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256
+      ],
+      "display": {
+        "size_inches": 6.7,
+        "panel_type": "pOLED",
+        "resolution": "2712 x 1220"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 13,
+        "telephoto": [
+          {
+            "zoom": "3x",
+            "resolution_mp": 10
+          }
+        ],
+        "video_max_resolution": "4K @ 30fps"
+      },
+      "battery_capacity_mah": 4500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Black Beauty",
+        "Luxe Lavender"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 45999,
+        "estimated_retail_price": 39999
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "brand": "Apple",
+    "product_name": "iPhone SE 4",
+    "specifications": {
+      "processor": {
+        "name": "Apple A18",
+        "clock_speed_ghz": 3.89
+      },
+      "memory_ram_gb": 8,
+      "storage_options_gb": [
+        128,
+        256
+      ],
+      "display": {
+        "size_inches": 6.1,
+        "panel_type": "Super Retina XDR OLED",
+        "resolution": "2532 x 1170"
+      },
+      "camera_system": {
+        "main_mp": 48,
+        "ultra_wide_mp": 0,
+        "telephoto": [],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 3279
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Midnight",
+        "Starlight",
+        "Product(RED)"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 128,
+        "mrp": 49900,
+        "estimated_retail_price": 49900
+      },
+      {
+        "storage_gb": 256,
+        "mrp": 59900,
+        "estimated_retail_price": 59900
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "brand": "Google",
+    "product_name": "Google Pixel 10a",
+    "specifications": {
+      "processor": {
+        "name": "Google Tensor G5",
+        "clock_speed_ghz": 3.4
+      },
+      "memory_ram_gb": 8,
+      "storage_options_gb": [
+        128
+      ],
+      "display": {
+        "size_inches": 6.1,
+        "panel_type": "OLED",
+        "resolution": "2424 x 1080"
+      },
+      "camera_system": {
+        "main_mp": 64,
+        "ultra_wide_mp": 13,
+        "telephoto": [],
+        "video_max_resolution": "4K @ 60fps"
+      },
+      "battery_capacity_mah": 4500
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Charcoal",
+        "Porcelain"
+      ],
+      "premium_exclusive_colors": [
+        "Aloe"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 128,
+        "mrp": 45999,
+        "estimated_retail_price": 39999
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "brand": "Xiaomi",
+    "product_name": "Redmi Note 14 Pro Plus",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 7300 Ultra",
+        "clock_speed_ghz": 2.5
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        512
+      ],
+      "display": {
+        "size_inches": 6.67,
+        "panel_type": "AMOLED (1220p)",
+        "resolution": "2712 x 1220"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 8,
+        "telephoto": [
+          {
+            "zoom": "2.5x",
+            "resolution_mp": 50
+          }
+        ],
+        "video_max_resolution": "4K @ 30fps"
+      },
+      "battery_capacity_mah": 6200
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Midnight Black",
+        "Aurora Purple"
+      ],
+      "premium_exclusive_colors": [
+        "Sand Gold"
+      ]
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 512,
+        "mrp": 32999,
+        "estimated_retail_price": 28999
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "brand": "iQOO",
+    "product_name": "iQOO Neo 10 Pro",
+    "specifications": {
+      "processor": {
+        "name": "Dimensity 9400",
+        "clock_speed_ghz": 3.63
+      },
+      "memory_ram_gb": 12,
+      "storage_options_gb": [
+        256
+      ],
+      "display": {
+        "size_inches": 6.78,
+        "panel_type": "LTPO AMOLED",
+        "resolution": "2800 x 1260"
+      },
+      "camera_system": {
+        "main_mp": 50,
+        "ultra_wide_mp": 50,
+        "telephoto": [],
+        "video_max_resolution": "8K @ 30fps"
+      },
+      "battery_capacity_mah": 6100
+    },
+    "variants_colors": {
+      "standard_colors": [
+        "Fighting Black",
+        "Rally Orange"
+      ],
+      "premium_exclusive_colors": []
+    },
+    "currency": "INR",
+    "variants": [
+      {
+        "storage_gb": 256,
+        "mrp": 42999,
+        "estimated_retail_price": 37999
+      }
+    ]
+  }
+]

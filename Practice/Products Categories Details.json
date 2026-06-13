@@ -1,0 +1,629 @@
+// This API URL = https://mocki.io/v1/8adf3257-a15f-4b41-8a60-bd326de411ff
+[
+  {
+    "id": 1,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 Ultra",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Flagship Smartphones",
+      "target_market_segment": "Enthusiasts & Power Users",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Samsung Galaxy Ecosystem",
+        "Galaxy AI"
+      ],
+      "intended_use_cases": [
+        "High-end mobile photography & videography",
+        "On-the-go productivity & multitasking with S-Pen",
+        "Advanced on-device AI operations",
+        "Premium gaming and heavy media consumption"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "brand": "Apple",
+    "product_name": "iPhone 17 Pro Max",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Flagship Smartphones",
+      "target_market_segment": "Premium Tier Consumers & Content Creators",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "iOS",
+        "Apple Ecosystem",
+        "Apple Intelligence"
+      ],
+      "intended_use_cases": [
+        "Professional mobile filmmaking & videography",
+        "Seamless multi-device Apple ecosystem integration",
+        "Extreme-end performance gaming",
+        "All-day intensive business and personal use"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "brand": "Google",
+    "product_name": "Google Pixel 10 Pro XL",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Flagship Smartphones",
+      "target_market_segment": "Android Purists & AI Enthusiasts",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Google Pixel Ecosystem",
+        "Gemini AI"
+      ],
+      "intended_use_cases": [
+        "Computational point-and-shoot portrait photography",
+        "Cutting-edge conversational & on-device AI tools",
+        "Clean, untampered stock Android user experience",
+        "High-brightness outdoor media viewing"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "brand": "OnePlus",
+    "product_name": "OnePlus 13 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Value-Premium Flagship Smartphones",
+      "target_market_segment": "Tech Savvy Users & Performance Enthusiasts",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "OnePlus Ecosystem",
+        "OxygenOS"
+      ],
+      "intended_use_cases": [
+        "Sustained heavy mobile gaming sessions",
+        "Ultra-fast charging rapid top-up workflows",
+        "Fluid high-refresh multitasking",
+        "Long endurance multimedia consumption"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "brand": "Xiaomi",
+    "product_name": "Xiaomi 15 Ultra",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Photography Flagships",
+      "target_market_segment": "Mobile Photographers & Camera Enthusiasts",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Xiaomi HyperOS",
+        "Leica Partnership"
+      ],
+      "intended_use_cases": [
+        "Extreme long-range periscope optical zoom photography",
+        "Pro-grade manual camera studio operations",
+        "Heavy-duty outdoor and rugged water-exposure usage",
+        "High-performance media processing"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "brand": "iQOO",
+    "product_name": "iQOO 13 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Gaming-Centric Flagships",
+      "target_market_segment": "Competitive Mobile Gamers & Power Seekers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Funtouch OS / Vivo Ecosystem"
+      ],
+      "intended_use_cases": [
+        "High-frame-rate eSports mobile gaming",
+        "Extended battery multi-day casual standby use",
+        "Rapid burst battery replenishment",
+        "Immersive haptic feedback media gameplay"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "brand": "Vivo",
+    "product_name": "Vivo X200 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Photography Flagships",
+      "target_market_segment": "Content Creators & Camera Enthusiasts",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Funtouch OS",
+        "Zeiss Optics Co-engineering"
+      ],
+      "intended_use_cases": [
+        "Cinematic portrait and low-light night photography",
+        "Extreme high-speed MediaTek performance tasks",
+        "Intensive outdoor social media vlogging",
+        "Long-duration travel mobile productivity"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "brand": "Realme",
+    "product_name": "Realme GT 7 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Affordable Performance Flagships",
+      "target_market_segment": "Value-Seeking Power Users & Gamers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Realme UI"
+      ],
+      "intended_use_cases": [
+        "Maximum computing power under strict budget thresholds",
+        "Extreme multi-day marathon battery configurations",
+        "Fast-paced competitive game processing",
+        "Vibrant high-contrast media playbacks"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "brand": "Asus",
+    "product_name": "Asus ROG Phone 9 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Dedicated Niche Gaming Devices",
+      "target_market_segment": "Hardcore Mobile Gamers & Streamers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "ROG Gaming Ecosystem"
+      ],
+      "intended_use_cases": [
+        "Maximized ultra-high 185Hz refresh rate gameplay",
+        "Console-like shoulder trigger command inputs",
+        "Heavy game console emulation pipelines",
+        "External active-cooling peripheral attachments"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "brand": "Motorola",
+    "product_name": "Motorola Edge 60 Ultra",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Design & Lifestyle Flagships",
+      "target_market_segment": "Style-Conscious Professionals",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Hello UI",
+        "Moto Smart Ecosystem"
+      ],
+      "intended_use_cases": [
+        "Ergonomic, texture-driven tactile everyday premium usage",
+        "Clean, ad-free gesture-based interaction workflows",
+        "Smooth high-refresh curved panel media viewing",
+        "Mid-to-long range portrait photography"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy Fold 7",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Foldable Devices",
+      "target_market_segment": "Executives, Luxury Buyers & Power Producers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Samsung Foldable Ecosystem",
+        "Galaxy AI"
+      ],
+      "intended_use_cases": [
+        "Multi-window spreadsheet & document multi-tasking",
+        "Pocketable mini-tablet presentation environments",
+        "Hands-free flex-mode video conferencing",
+        "Premium media canvas content consumption"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "brand": "Apple",
+    "product_name": "iPhone 17 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Compact Premium Flagships",
+      "target_market_segment": "Premium Enthusiasts Preferring Smaller Sizes",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "iOS",
+        "Apple Ecosystem",
+        "Apple Intelligence"
+      ],
+      "intended_use_cases": [
+        "High-fidelity pro-level optical zoom in small frames",
+        "Comfortable one-handed premium daily productivity",
+        "Uncompromised flagship video logging & capture",
+        "Smooth ecosystem app syncing and tracking"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "brand": "Google",
+    "product_name": "Google Pixel 10 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Compact Premium Flagships",
+      "target_market_segment": "Photography Purists Seeking Compact Profiles",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Google Pixel Ecosystem",
+        "Gemini AI"
+      ],
+      "intended_use_cases": [
+        "Pro-grade zoom photography without carrying bulkier frames",
+        "On-device smart AI translation and drafting tools",
+        "Pocket-friendly stock Android deployment",
+        "High-accuracy color matching digital editing"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "brand": "OnePlus",
+    "product_name": "OnePlus 13",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Value Flagships",
+      "target_market_segment": "General Mainstream Consumers & Students",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "OnePlus Ecosystem"
+      ],
+      "intended_use_cases": [
+        "High-speed everyday communication & application looping",
+        "Multi-day standard usage routines without charge limits",
+        "Tactile, non-slip textured design handling",
+        "Affordable entrance into tier-1 mobile silicon power"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "brand": "Sony",
+    "product_name": "Sony Xperia 1 VII",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Niche Multimedia Pro-Tools",
+      "target_market_segment": "Audiophiles, Cinephiles & Alpha Camera Users",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Sony Alpha Professional Link"
+      ],
+      "intended_use_cases": [
+        "Unscaled native 4K cinematic video reviewing",
+        "Continuous physical camera optical lens operations",
+        "High-resolution wired audio production monitoring",
+        "Manual parameter control broadcast capture"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 Plus",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Mainstream Upper Mid-Range / Flagship",
+      "target_market_segment": "General Premium Upgraders & Families",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Samsung Galaxy Ecosystem",
+        "Galaxy AI"
+      ],
+      "intended_use_cases": [
+        "Balanced spacious screen daily office productivity",
+        "Safe, long-lifecycle multi-year family device setups",
+        "Standard social media capture and post layouts",
+        "Consistent cloud-connected smart home control hubs"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "brand": "Nothing",
+    "product_name": "Nothing Phone (3)",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Design-First Mid-Range Plus",
+      "target_market_segment": "Gen-Z, Creators & Design Enthusiasts",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Nothing OS",
+        "Glyph Ecosystem"
+      ],
+      "intended_use_cases": [
+        "Visual alert management via custom rear tracking lights",
+        "Highly stylized minimalist software utilization",
+        "Mid-tier balanced everyday photography & video stuff",
+        "Symmetrical aesthetic display visual processing"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "brand": "Honor",
+    "product_name": "Honor Magic 7 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Flagship Smartphones",
+      "target_market_segment": "Power Users Preferring Advanced Battery Tech",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "MagicOS"
+      ],
+      "intended_use_cases": [
+        "Long-range telephoto action sports photography",
+        "Sub-zero and cold climate extreme battery resilience",
+        "Low-strain dim night-time workspace operation",
+        "High-speed multi-frame burst photo capturing"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "brand": "Oppo",
+    "product_name": "Oppo Find X8 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Premium Photography Flagships",
+      "target_market_segment": "Advanced Mobile Photographers & Travelers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "ColorOS"
+      ],
+      "intended_use_cases": [
+        "Dual-perspective multi-focal periscope telephoto tracking",
+        "Sleek pocket-friendly travel landscape imagery",
+        "Efficient low-thermal everyday multitasking operations",
+        "Premium gloss aesthetic corporate placement"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "brand": "Vivo",
+    "product_name": "Vivo V40 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Portrait-Focused Mid-Range",
+      "target_market_segment": "Social Media Influencers & Youth",
+      "product_lifecycle_stage": "Previous Generation / Mainstay",
+      "ecosystem_tags": [
+        "Android",
+        "Funtouch OS",
+        "Zeiss Mid-tier integration"
+      ],
+      "intended_use_cases": [
+        "Studio-quality soft lit portrait fill flash photography",
+        "Sleek and lightweight casual pocket carry layouts",
+        "Vibrant high-contrast beauty vlogging capture",
+        "Standard multi-app social engagement checking"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "brand": "Realme",
+    "product_name": "Realme 14 Pro Plus",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Affordable Design Mid-Rangers",
+      "target_market_segment": "Budget-Conscious Trendy Buyers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Realme UI"
+      ],
+      "intended_use_cases": [
+        "Entry-level periscope zoom experimentation",
+        "Luxury faux-leather design aesthetic display",
+        "Casual everyday media streaming loops",
+        "Ergonomic lightweight low-fatigue handling"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "brand": "Poco",
+    "product_name": "Poco F7 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Performance Value-Disruptors",
+      "target_market_segment": "Budget Mobile Gamers & Specs Hunters",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Xiaomi HyperOS"
+      ],
+      "intended_use_cases": [
+        "Maximized flagship computing benchmarks on lower budgets",
+        "High-definition sharp 1440p mobile gaming sessions",
+        "Rapid emergency brief battery turnaround periods",
+        "Heavy game app installation sets"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "brand": "Samsung",
+    "product_name": "Samsung Galaxy S25 FE",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Entry-Level Premium (Fan Edition)",
+      "target_market_segment": "Students & Value-Minded Brand Devotees",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Samsung Galaxy Ecosystem",
+        "Galaxy AI"
+      ],
+      "intended_use_cases": [
+        "Affordable entry into premium ecosystem AI pipelines",
+        "Flat screen utility daily operations",
+        "Standardized multi-year software version longevity",
+        "Reliable baseline corporate enterprise tool deployment"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "brand": "OnePlus",
+    "product_name": "OnePlus Nord 5",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Core Mid-Range Devices",
+      "target_market_segment": "Mainstream Budget Upgraders",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "OnePlus Nord Lineup"
+      ],
+      "intended_use_cases": [
+        "Durable, long-lasting single-charge daily workflows",
+        "Responsive smooth interface standard browsing tasks",
+        "Premium metallic-feel build deployment without price weight",
+        "Standard high-volume communication utility"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "brand": "Motorola",
+    "product_name": "Motorola Edge 60 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Design-First Sub-Flagships",
+      "target_market_segment": "Value Aesthetics Seekers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Hello UI"
+      ],
+      "intended_use_cases": [
+        "Tactile vegan leather handling comfort use cases",
+        "Clean stock Android interface operations",
+        "Mid-tier curved screen immersive view looping",
+        "Baseline optical telephoto distance capturing"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "brand": "Apple",
+    "product_name": "iPhone SE 4",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Entry-Level Premium Smartphones",
+      "target_market_segment": "First-Time iOS Buyers & Minimalists",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "iOS",
+        "Apple Ecosystem",
+        "Apple Intelligence Entry"
+      ],
+      "intended_use_cases": [
+        "Affordable access to Apple Intelligence processing",
+        "Ultra-light compact one-handed pocketable usage",
+        "High-speed primary lens snap daylight capture",
+        "Long-term basic operating system support longevity"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "brand": "Google",
+    "product_name": "Google Pixel 10a",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Affordable AI Mid-Rangers",
+      "target_market_segment": "Budget Photo Enthusiasts & AI Starters",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Google Pixel Ecosystem",
+        "Gemini AI Link"
+      ],
+      "intended_use_cases": [
+        "High-tier algorithmic point-and-shoot camera execution",
+        "Affordable multi-year feature drop security access",
+        "Everyday Google Smart Assistant cloud workflows",
+        "Lightweight composite material handling routines"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "brand": "Xiaomi",
+    "product_name": "Redmi Note 14 Pro Plus",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Mass-Market Premium Mid-Rangers",
+      "target_market_segment": "Mainstream Value Buyers & Utility Seekers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Redmi Product Family",
+        "HyperOS"
+      ],
+      "intended_use_cases": [
+        "Extreme marathon multi-day runtime operations",
+        "Rugged casual drop and splash environment security",
+        "High-clarity budget media film watching",
+        "Mid-range optical portraits deployment"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "brand": "iQOO",
+    "product_name": "iQOO Neo 10 Pro",
+    "category_details": {
+      "primary_category": "Smartphones",
+      "sub_category": "Performance-Value Upper Mid-Rangers",
+      "target_market_segment": "Value-Focused Mobile Gamers",
+      "product_lifecycle_stage": "Current Generation",
+      "ecosystem_tags": [
+        "Android",
+        "Funtouch OS / Neo Sub-brand"
+      ],
+      "intended_use_cases": [
+        "Sustained performance high-frame gaming on tighter budgets",
+        "Long-duration intense app execution periods",
+        "Fast response tactile screen interactions",
+        "Everyday active power processing"
+      ]
+    }
+  }
+]
