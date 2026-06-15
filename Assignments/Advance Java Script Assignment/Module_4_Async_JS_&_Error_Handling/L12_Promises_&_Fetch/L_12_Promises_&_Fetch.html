@@ -580,114 +580,155 @@
 
     console.log("\nTask 20");
 
+    function fetchProducts() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log("Products Loaded");
+                resolve("Products");
+            }, 1000);
+        });
+    }
+
+    function fetchReviews() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log("Reviews Loaded");
+                resolve("Reviews");
+            }, 1500);
+        });
+    }
+
+    function fetchCategories() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log("Categories Loaded");
+                resolve("Categories");
+            }, 1200);
+        });
+    }
+
     Promise.all([
-        fetch("https://mocki.io/v1/c8e11c9f-fa96-4993-b8d8-f20a5725b8a6").then(r => r.json()),
-        fetch("https://mocki.io/v1/ef143c16-ca23-4f24-afac-46a4510fe92a").then(r => r.json()),
-        fetch("https://mocki.io/v1/8adf3257-a15f-4b41-8a60-bd326de411ff").then(r => r.json())
+        fetchProducts(),
+        fetchReviews(),
+        fetchCategories()
     ])
-        // Access All Three APIs All Particular Datas Useing .map()
-        .then(([products, reviews, categories]) => items(products, reviews, categories)).catch(error => console.log(error));
-
-    function items(products, reviews, categories) {
-        const dashboard = document.getElementById("dashboard");
-
-        dashboard.innerHTML = products.map(product => {
-
-            const spec = product.specifications;
-
-            return `
-            <div class="user-card" id="product-${product.id}"
-                style="border:1px solid #ccc; padding:10px; margin:10px;">
-
-                <h3>${product.brand}</h3>
-                <p><b>Product Name:</b> ${product.product_name}</p>
-
-                <h4>Specifications</h4>
-                <ul>
-                    <li>Processor: ${spec?.processor?.name || "N/A"} ${spec?.processor?.clock_speed_ghz || ""}</li>
-                    <li>Memory RAM: ${spec?.memory_ram_gb || "N/A"}GB</li>
-                    <li>Storage Options: ${spec?.storage_options_gb?.join(", ") || "N/A"}GB</li>
-                    <li>Display: ${spec?.display?.size_inches || "N/A"} ${spec?.display?.panel_type || ""} ${spec?.display?.resolution || ""}</li>
-                    <li>Camera System: Main ${spec?.camera_system?.main_mp || "N/A"}MP, Ultra ${spec?.camera_system?.ultra_wide_mp || "N/A"}MP</li>
-                    <li>Video Max Resolution: ${spec?.camera_system?.video_max_resolution || "N/A"}</li>
-                    <li>Battery: ${spec?.battery_capacity_mah || "N/A"} mAh</li>
-                    <li>
-                        Variants Colors:
-                        Standard Colors: ${product.variants_colors?.standard_colors?.join(", ") || "N/A"},
-                        Premium Exclusive Colors: ${product.variants_colors?.premium_exclusive_colors?.join(", ") || "N/A"}
-                    </li>
-
-                    <li>
-                        Price of Each Variant:
-                        <ul>
-                            ${product.variants?.map(v => `
-                                <li>
-                                    Storage Options: ${v.storage_gb}GB |
-                                    MRP: ${v.mrp} |
-                                    Estimated Retail Price: ${v.estimated_retail_price}
-                                </li>`).join("") || "N/A"}
-                        </ul>
-                    </li>
-                </ul>
-
-                <div id="review-${product.id}"></div>
-                <div id="category-${product.id}"></div>
-
-            </div>`;
-        }).join("");
-
-        console.log("Products Loaded");
-
-        renderReviews(reviews);
-        renderCategories(categories);
-        console.log("\nDashboard Ready");
-    }
-
-    function renderReviews(reviews) {
-        reviews.forEach(review => {
-
-            const container = document.getElementById(`review-${review.id}`);
-
-            container.innerHTML = `
-                <h4> Reviews & Ratings</h4 >
-                    <ul>
-                        <li>Average Rating: ${review?.reviews_and_ratings?.average_rating || "N/A"}</li>
-                        <li>Total Reviews Count: ${review?.reviews_and_ratings?.total_reviews_count || "N/A"}</li>
-                        <li>
-                            Aspect Ratings:
-                            <ul>
-                                <li>Display: ${review?.reviews_and_ratings?.aspect_ratings?.display || "N/A"}</li>
-                                <li>Design And Ergonomics: ${review?.reviews_and_ratings?.aspect_ratings?.design_and_ergonomics || "N/A"}</li>
-                                <li>Performance: ${review?.reviews_and_ratings?.aspect_ratings?.performance || "N/A"}</li>
-                                <li>Rear Camera: ${review?.reviews_and_ratings?.aspect_ratings?.rear_camera || "N/A"}</li>
-                                <li>Videography: ${review?.reviews_and_ratings?.aspect_ratings?.videography || "N/A"}</li>
-                                <li>Battery And Charging: ${review?.reviews_and_ratings?.aspect_ratings?.battery_and_charging || "N/A"}</li>
-                                <li>Software And UI: ${review?.reviews_and_ratings?.aspect_ratings?.software_and_ui || "N/A"}</li>
-                                <li>Value For Money: ${review?.reviews_and_ratings?.aspect_ratings?.value_for_money || "N/A"}</li>
-                            <ul>
-                        </li>
-                    </ul>`;
+        .then(() => {
+            console.log("\nDashboard Ready");
+        })
+        .catch((error) => {
+            console.error("Error loading dashboard:", error);
         });
-        console.log("Reviews Loaded");
-    }
 
-    function renderCategories(categories) {
-        categories.forEach(categories => {
+    // //Practice For Make E-Commerce Product Dashboard
 
-            const container = document.getElementById(`category-${categories.id}`);
+    // Promise.all([
+    //     fetch("https://mocki.io/v1/c8e11c9f-fa96-4993-b8d8-f20a5725b8a6").then(r => r.json()),
+    //     fetch("https://mocki.io/v1/ef143c16-ca23-4f24-afac-46a4510fe92a").then(r => r.json()),
+    //     fetch("https://mocki.io/v1/8adf3257-a15f-4b41-8a60-bd326de411ff").then(r => r.json())
+    // ])
+    //     // Access All Three APIs All Particular Datas Useing .map()
+    //     .then(([products, reviews, categories]) => items(products, reviews, categories)).catch(error => console.log(error));
 
-            container.innerHTML = `
-                <h4> Category Details</h4 >
-                <ul>
-                    <li>Primary Category:${categories.category_details?.primary_category || "N/A"}</li>
-                    <li>Sub Category: ${categories.category_details?.sub_category || "N/A"}</li>
-                    <li>Target Market Segment: ${categories.category_details?.target_market_segment || "N/A"}</li>
-                    <li>Product Lifecycle Stage:${categories.category_details?.product_lifecycle_stage || "N/A"}</li>
-                    <li>Ecosystem Tags:${categories.category_details?.ecosystem_tags?.join(", ") || "N/A"}</li>
-                </ul>`;
-        });
-        console.log("Categories Loaded");
-    }
+    // function items(products, reviews, categories) {
+    //     const dashboard = document.getElementById("dashboard");
+
+    //     dashboard.innerHTML = products.map(product => {
+
+    //         const spec = product.specifications;
+
+    //         return `
+    //         <div class="user-card" id="product-${product.id}"
+    //             style="border:1px solid #ccc; padding:10px; margin:10px;">
+
+    //             <h3>${product.brand}</h3>
+    //             <p><b>Product Name:</b> ${product.product_name}</p>
+
+    //             <h4>Specifications</h4>
+    //             <ul>
+    //                 <li>Processor: ${spec?.processor?.name || "N/A"} ${spec?.processor?.clock_speed_ghz || ""}</li>
+    //                 <li>Memory RAM: ${spec?.memory_ram_gb || "N/A"}GB</li>
+    //                 <li>Storage Options: ${spec?.storage_options_gb?.join(", ") || "N/A"}GB</li>
+    //                 <li>Display: ${spec?.display?.size_inches || "N/A"} ${spec?.display?.panel_type || ""} ${spec?.display?.resolution || ""}</li>
+    //                 <li>Camera System: Main ${spec?.camera_system?.main_mp || "N/A"}MP, Ultra ${spec?.camera_system?.ultra_wide_mp || "N/A"}MP</li>
+    //                 <li>Video Max Resolution: ${spec?.camera_system?.video_max_resolution || "N/A"}</li>
+    //                 <li>Battery: ${spec?.battery_capacity_mah || "N/A"} mAh</li>
+    //                 <li>
+    //                     Variants Colors:
+    //                     Standard Colors: ${product.variants_colors?.standard_colors?.join(", ") || "N/A"},
+    //                     Premium Exclusive Colors: ${product.variants_colors?.premium_exclusive_colors?.join(", ") || "N/A"}
+    //                 </li>
+
+    //                 <li>
+    //                     Price of Each Variant:
+    //                     <ul>
+    //                         ${product.variants?.map(v => `
+    //                             <li>
+    //                                 Storage Options: ${v.storage_gb}GB |
+    //                                 MRP: ${v.mrp} |
+    //                                 Estimated Retail Price: ${v.estimated_retail_price}
+    //                             </li>`).join("") || "N/A"}
+    //                     </ul>
+    //                 </li>
+    //             </ul>
+
+    //             <div id="review-${product.id}"></div>
+    //             <div id="category-${product.id}"></div>
+
+    //         </div>`;
+    //     }).join("");
+
+    //     console.log("Products Loaded");
+
+    //     renderReviews(reviews);
+    //     renderCategories(categories);
+    //     console.log("\nDashboard Ready");
+    // }
+
+    // function renderReviews(reviews) {
+    //     reviews.forEach(review => {
+
+    //         const container = document.getElementById(`review-${review.id}`);
+
+    //         container.innerHTML = `
+    //             <h4> Reviews & Ratings</h4 >
+    //                 <ul>
+    //                     <li>Average Rating: ${review?.reviews_and_ratings?.average_rating || "N/A"}</li>
+    //                     <li>Total Reviews Count: ${review?.reviews_and_ratings?.total_reviews_count || "N/A"}</li>
+    //                     <li>
+    //                         Aspect Ratings:
+    //                         <ul>
+    //                             <li>Display: ${review?.reviews_and_ratings?.aspect_ratings?.display || "N/A"}</li>
+    //                             <li>Design And Ergonomics: ${review?.reviews_and_ratings?.aspect_ratings?.design_and_ergonomics || "N/A"}</li>
+    //                             <li>Performance: ${review?.reviews_and_ratings?.aspect_ratings?.performance || "N/A"}</li>
+    //                             <li>Rear Camera: ${review?.reviews_and_ratings?.aspect_ratings?.rear_camera || "N/A"}</li>
+    //                             <li>Videography: ${review?.reviews_and_ratings?.aspect_ratings?.videography || "N/A"}</li>
+    //                             <li>Battery And Charging: ${review?.reviews_and_ratings?.aspect_ratings?.battery_and_charging || "N/A"}</li>
+    //                             <li>Software And UI: ${review?.reviews_and_ratings?.aspect_ratings?.software_and_ui || "N/A"}</li>
+    //                             <li>Value For Money: ${review?.reviews_and_ratings?.aspect_ratings?.value_for_money || "N/A"}</li>
+    //                         <ul>
+    //                     </li>
+    //                 </ul>`;
+    //     });
+    //     console.log("Reviews Loaded");
+    // }
+
+    // function renderCategories(categories) {
+    //     categories.forEach(categories => {
+
+    //         const container = document.getElementById(`category-${categories.id}`);
+
+    //         container.innerHTML = `
+    //             <h4> Category Details</h4 >
+    //             <ul>
+    //                 <li>Primary Category:${categories.category_details?.primary_category || "N/A"}</li>
+    //                 <li>Sub Category: ${categories.category_details?.sub_category || "N/A"}</li>
+    //                 <li>Target Market Segment: ${categories.category_details?.target_market_segment || "N/A"}</li>
+    //                 <li>Product Lifecycle Stage:${categories.category_details?.product_lifecycle_stage || "N/A"}</li>
+    //                 <li>Ecosystem Tags:${categories.category_details?.ecosystem_tags?.join(", ") || "N/A"}</li>
+    //             </ul>`;
+    //     });
+    //     console.log("Categories Loaded");
+    // }
 </script>
 
 </html>
