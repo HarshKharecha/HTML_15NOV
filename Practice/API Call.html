@@ -14,39 +14,51 @@
   <div id="user-list"></div>
 </body>
 <script>
+
+  fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
+    .then(response => response.json())
+    .then(users => Call(users)
+      // users.forEach(user => console.log(user.name));// or find
+    )
+    .catch(error => console.log(error));
+
+  function Call(users) {
+    API = users
+    console.log(API);
+  }
   // Method 1
-  let API = [];
+  // let API = [];
 
-  function initializeApp(data) {
-    API = data;
-    // console.log("API content:", API);
-    console.log("Data successfully stored in API variable:", API);
-    // Target the HTML element from your website page
-    const container = document.getElementById("user-list");
-    // Now .map() loops through the 29 individual user objects properly
-    const userCards = API.map(user => {
-      return `
-            <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
-              <h3>${user.name}</h3>
-              <p>Email: ${user.email}</p>
-              <p>Number: ${user.number}</p>
-              <small>ID Number: ${user.id}</small>
-            </div>
-          `;
-    });
-    // Join the strings together and inject them into the DOM layout
-    container.innerHTML = userCards.join("");
-    console.log("Successfully displayed 29 users on the screen!");
-  }
+  // function initializeApp(data) {
+  //   API = data;
+  //   // console.log("API content:", API);
+  //   console.log("Data successfully stored in API variable:", API);
+  //   // Target the HTML element from your website page
+  //   const container = document.getElementById("user-list");
+  //   // Now .map() loops through the 29 individual user objects properly
+  //   const userCards = API.map(user => {
+  //     return `
+  //           <div class="user-card" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+  //             <h3>${user.name}</h3>
+  //             <p>Email: ${user.email}</p>
+  //             <p>Number: ${user.number}</p>
+  //             <small>ID Number: ${user.id}</small>
+  //           </div>
+  //         `;
+  //   });
+  //   // Join the strings together and inject them into the DOM layout
+  //   container.innerHTML = userCards.join("");
+  //   console.log("Successfully displayed 29 users on the screen!");
+  // }
 
-  function loginbtn() {
-    fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
-      .then(res => res.json())
-      .then(data => initializeApp(data));
-  }
+  // function loginbtn() {
+  //   fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
+  //     .then(res => res.json())
+  //     .then(data => initializeApp(data));
+  // }
 
-  // Run the function immediately
-  loginbtn();
+  // // Run the function immediately
+  // loginbtn();
 
   //Alternative:
   // fetch("https://mocki.io/v1/18b9c21e-9e88-420e-81bc-7f05106924c6")
