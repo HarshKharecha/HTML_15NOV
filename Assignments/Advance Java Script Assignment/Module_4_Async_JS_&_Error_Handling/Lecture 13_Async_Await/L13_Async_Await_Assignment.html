@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L13_Async/Await</title>
+</head>
+
+<body>
+    <h1>Lecture 13: Async/Await - Practical Tasks</h1>
+    
+    <h2>Task 1: Create Your First Async Function</h2>
+    <h3>Description: Create an async function that returns a welcome message.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a function named <span>welcomeUser()</span></li>
+        <li>Use the <span>async</span> keyword</li>
+        <li>Return <span>"Welcome to JavaScript"</span></li>
+        <li>Display the result using <span>.then()</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Welcome to JavaScript</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 2: Await a Resolved Promise</h2>
+    <h3>Description: Learn how await works with a Promise.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a Promise using <span>Promise.resolve()</span></li>
+        <li>Store <span>"Learning Async/Await"</span> inside it</li>
+        <li>Use <span>await</span> to retrieve the value</li>
+        <li>Display the value in console</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Learning Async/Await</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 3: Simulate Data Loading</h2>
+    <h3>Description: Simulate an API call using setTimeout().</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a Promise</li>
+        <li>Resolve it after 2 seconds</li>
+        <li>Return <span>"Data Loaded Successfully"</span></li>
+        <li>Use Async/Await to display the message</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Data Loaded Successfully</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 4: Display User Information</h2>
+    <h3>Description: Retrieve mock user information asynchronously.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a Promise</li>
+        <li>Resolve with:
+            <pre>
+{
+    id: 1,
+    name: "John"
+}
+        </pre>
+        </li>
+        <li>Use <span>await</span></li>
+        <li>Print user name only</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 5: Handle Promise Rejection</h2>
+    <h3>Description: Practice handling errors using try/catch.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a Promise that rejects</li>
+        <li>Message should be <span>"Server Error"</span></li>
+        <li>Handle error using <span>try/catch</span></li>
+        <li>Display error message</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Server Error</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 6: Create a Delay Function</h2>
+    <h3>Description: Build a reusable delay utility.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>delay(seconds)</span></li>
+        <li>Return a Promise</li>
+        <li>Resolve after specified seconds</li>
+        <li>Display <span>"Task Completed"</span> after 3 seconds</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Task Completed</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 7: Fetch All Users</h2>
+    <h3>Description: Fetch user data from a public API.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use Fetch API</li>
+        <li>URL: <span>https://jsonplaceholder.typicode.com/users</span></li>
+        <li>Convert response into JSON</li>
+        <li>Display complete user list</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Complete users list displayed</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 8: Display First User Name</h2>
+    <h3>Description: Access specific data from API response.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch users API</li>
+        <li>Use Async/Await</li>
+        <li>Display first user's name only</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Leanne Graham</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 9: Display All User Names</h2>
+    <h3>Description: Practice looping through fetched data.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch users</li>
+        <li>Use <span>forEach()</span></li>
+        <li>Display all user names</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Leanne Graham<br>
+        Ervin Howell<br>
+        Clementine Bauch<br>
+        ...
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 10: Count Total Users</h2>
+    <h3>Description: Calculate data length from API response.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch users API</li>
+        <li>Display total number of users</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Total Users: 10</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 11: Fetch Single Post</h2>
+    <h3>Description: Fetch a specific post.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>API: <span>https://jsonplaceholder.typicode.com/posts/1</span></li>
+        <li>Display title only</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>sunt aut facere repellat...</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 12: Fetch and Display Email Addresses</h2>
+    <h3>Description: Extract specific fields from API response.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch users API</li>
+        <li>Display all email addresses</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        user1@gmail.com<br>
+        user2@gmail.com<br>
+        ...
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 13: Create a Loading Message</h2>
+    <h3>Description: Show loading state before receiving data.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Display <span>Loading...</span> before API call</li>
+        <li>Fetch users</li>
+        <li>Display <span>Data Received</span> after response</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Loading...<br>
+        Data Received
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 14: Use Finally Block</h2>
+    <h3>Description: Understand cleanup operations.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create async function</li>
+        <li>Use <span>try/catch/finally</span></li>
+        <li>Finally block should display <span>Request Finished</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Request Finished</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 15: Sequential Async Operations</h2>
+    <h3>Description: Execute tasks one after another.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>login()</span></li>
+        <li>Create <span>loadProfile()</span></li>
+        <li>Create <span>logout()</span></li>
+        <li>Execute sequentially using await</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Login Success<br>
+        Profile Loaded<br>
+        Logout Success
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 16: Parallel Async Operations</h2>
+    <h3>Description: Run multiple operations simultaneously.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>getUsers()</span></li>
+        <li>Create <span>getProducts()</span></li>
+        <li>Create <span>getOrders()</span></li>
+        <li>Use <span>Promise.all()</span></li>
+        <li>Display all results together</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Users Data<br>
+        Products Data<br>
+        Orders Data
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 17: Fetch Posts and Comments</h2>
+    <h3>Description: Work with multiple APIs.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch <span>/posts</span></li>
+        <li>Fetch <span>/comments</span></li>
+        <li>Use Async/Await</li>
+        <li>Display Posts Count and Comments Count</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Posts Count: 100<br>
+        Comments Count: 500
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 18: Create User Data Service</h2>
+    <h3>Description: Build a reusable API utility.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>async function getUsers()</span></li>
+        <li>Fetch users API</li>
+        <li>Return data</li>
+        <li>Call function from another async function</li>
+        <li>Display first user</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>First user object displayed</output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 19: Check API Response Status</h2>
+    <h3>Description: Learn production-level validation.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch users API</li>
+        <li>Check <span>response.ok</span></li>
+        <li>Throw custom error if request fails</li>
+        <li>Handle using try/catch</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Request Successful
+        <br>or<br>
+        Request Failed
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <hr>
+
+    <h2>Task 20: Mini User Dashboard</h2>
+    <h3>Description: Create a small dashboard using Async/Await.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Fetch <span>/users</span></li>
+        <li>Fetch <span>/posts</span></li>
+        <li>Fetch <span>/todos</span></li>
+        <li>Use <span>Promise.all()</span></li>
+        <li>Display Total Users, Total Posts, and Total Todos</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Total Users: 10<br>
+        Total Posts: 100<br>
+        Total Todos: 200
+    </output>
+    <h3>Answer: Check in console</h3>
+</body>
+
+</html>
