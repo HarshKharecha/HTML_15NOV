@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's List</title>
+</head>
+<body>
+    <h2>Student's List</h2>
+    <form action="">
+        <div style="display: flex;">
+            <input type="text" id="input" placeholder="Enter Student's Name">
+            <button type="button" onclick="add()">Add</button>
+        </div>
+        <div style="display: none;" id="output"></div>
+    </form>
+</body>
+<script>
+    let input = document.querySelector("input");
+    let out = document.querySelector("#output");
+
+    function insert(data) {
+        // InnerHTML Use Options
+        out.innerHTML += `<input type="text" value="${data}" readonly>`;
+        // out.innerHTML += `<li>${data}</li>`;
+        out.style.display = "block";
+    }
+
+    function insert(data) {
+        // InnerHTML Use Options
+        out.innerHTML += `<div class="hide">
+            <input type="text" value="${data}" readonly>
+            <button type="button" onclick="edit(this)">Edit</button>
+            <button type="button" onclick="delete(this)">Delete</button>
+        </div>`;
+        // out.innerHTML += `<li>${data}</li>`;
+        out.style.display = "block";
+    }
+
+    function edit(e) {
+        let input = e.parentElement.querySelector("input");
+        input.removeAttribute("readonly");
+        let value = e.value;
+        if (value === e.value) {
+            e.innerText += "Save";
+            e.setAttribute("onclick", "save(this)");
+            function save() {
+                input.setAttribute("readonly", true);
+                e.innerText = "Edit";
+            }
+        }
+    }
+
+    function add() {
+        insert(input.value);
+        input.value = "";
+    }
+</script>
+</html>

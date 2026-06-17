@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L15 Error Handling & Regex</title>
+</head>
+
+<body>
+    <h1>Lecture 15: Error Handling, Regex & Debugging – Practical Tasks</h1>
+
+    <h2>Task 1: Handle a Reference Error</h2>
+    <h3>Description: Learn how to catch runtime errors using try/catch.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Access an undefined variable</li>
+        <li>Use <span>try/catch</span></li>
+        <li>Display a custom error message</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Something went wrong</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 2: Display Error Details</h2>
+    <h3>Description: Inspect Error object properties.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Generate a <span>ReferenceError</span></li>
+        <li>Print <span>error.name</span></li>
+        <li>Print <span>error.message</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        ReferenceError <br>
+        user is not defined
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 3: Use Finally Block</h2>
+    <h3>Description: Understand cleanup operations.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a <span>try</span> block</li>
+        <li>Create a <span>catch</span> block</li>
+        <li>Create a <span>finally</span> block</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        Operation Completed <br>
+        inside finally
+    </output>
+    <h3>Goal: Verify that finally always executes.</h3>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 4: Create Your First Custom Error</h2>
+    <h3>Description: Learn how to throw errors manually.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>checkAge(age)</span></li>
+        <li>If age is below 18, throw an error</li>
+        <li>Display error message using <span>catch</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Age must be 18 or older</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 5: Validate Positive Numbers</h2>
+    <h3>Description: Use custom errors for business rules.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>withdraw(amount)</span></li>
+        <li>Amount must be greater than 0</li>
+        <li>Throw custom error otherwise</li>
+    </ul>
+    <h3>Example:</h3>
+    <output>withdraw(-100);</output>
+    <h3>Expected Output:</h3>
+    <output>Invalid withdrawal amount</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 6: Graceful API Error Simulation</h2>
+    <h3>Description: Simulate API failure handling.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>getUsers()</span></li>
+        <li>Throw an error manually</li>
+        <li>Catch the error</li>
+        <li>Display a user-friendly message</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Unable to load users</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 7: Regex test() Basics</h2>
+    <h3>Description: Check if a word exists.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create regex <span>/hello/</span></li>
+        <li>Use <span>test()</span></li>
+        <li>Check text: <span>hello world</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>true</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 8: Validate an Email Address</h2>
+    <h3>Description: Build a simple email validator.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>validateEmail(email)</span></li>
+        <li>Return true for valid email</li>
+        <li>Return false for invalid email</li>
+    </ul>
+    <h3>Test Cases:</h3>
+    <output>
+        john@gmail.com <br>
+        john.com
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 9: Validate Phone Number</h2>
+    <h3>Description: Use regex to validate phone numbers.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Accept: <span>9876543210</span></li>
+        <li>Reject: <span>12345</span></li>
+        <li>Exactly 10 digits only</li>
+    </ul>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 10: Password Validation</h2>
+    <h3>Description: Create secure password validation.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Minimum 8 characters</li>
+        <li>At least one uppercase letter</li>
+        <li>At least one number</li>
+    </ul>
+    <h3>Examples:</h3>
+    <output>
+        Password1 → Valid <br>
+        pass → Invalid
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 11: Extract Numbers Using exec()</h2>
+    <h3>Description: Learn how exec() returns matches.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Extract numbers from <span>Order123</span></li>
+        <li>Use <span>exec()</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>123</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 12: Find All Numbers</h2>
+    <h3>Description: Use Global Regex.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Extract all numbers from:</li>
+        <li><span>Item12 Cost500 Qty5</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>
+        12 <br>
+        500 <br>
+        5
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 13: Find All Email Addresses</h2>
+    <h3>Description: Extract multiple emails from text.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Find all email addresses using regex</li>
+    </ul>
+    <h3>Text:</h3>
+    <output>
+        john@gmail.com <br>
+        sarah@yahoo.com <br>
+        admin@test.com
+    </output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 14: Case Insensitive Search</h2>
+    <h3>Description: Practice regex flags.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Search <span>HELLO</span></li>
+        <li>Use regex <span>/hello/i</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>true</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 15: Replace Invalid Characters</h2>
+    <h3>Description: Clean user input.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Input: <span>John@123!</span></li>
+        <li>Remove <span>@</span> and <span>!</span></li>
+        <li>Use regex replacement</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John123</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 16: Debug with Console Methods</h2>
+    <h3>Description: Explore DevTools console features.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Use <span>console.log()</span></li>
+        <li>Use <span>console.warn()</span></li>
+        <li>Use <span>console.error()</span></li>
+        <li>Use <span>console.table()</span></li>
+        <li>Display sample user data</li>
+    </ul>
+    <h3>Goal: Understand different console outputs.</h3>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 17: Debug Using Breakpoints</h2>
+    <h3>Description: Practice step-by-step debugging.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>calculateTotal()</span></li>
+        <li>Inside function:</li>
+    </ul>
+    <output>
+        let total = 100; <br>
+        total += 50; <br>
+        total *= 2;
+    </output>
+    <h3>Task:</h3>
+    <ul>
+        <li>Add breakpoint</li>
+        <li>Inspect variable values after every line</li>
+    </ul>
+    <h3>Answer: Use Browser DevTools</h3>
+
+    <h2>Task 18: Inspect the Call Stack</h2>
+    <h3>Description: Understand function execution flow.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>first()</span></li>
+        <li>Create <span>second()</span></li>
+        <li>Create <span>third()</span></li>
+    </ul>
+    <h3>Task:</h3>
+    <ul>
+        <li>Place breakpoint inside <span>third()</span></li>
+        <li>Observe Call Stack</li>
+    </ul>
+    <h3>Goal: Identify caller functions.</h3>
+    <h3>Answer: Use Browser DevTools</h3>
+
+    <h2>Task 19: Debug Async/Await</h2>
+    <h3>Description: Practice debugging asynchronous code.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>async function loadUsers()</span></li>
+        <li>Fetch user data</li>
+        <li>Add breakpoint after <span>await</span></li>
+        <li>Inspect response</li>
+    </ul>
+    <h3>Goal: Understand async execution flow.</h3>
+    <h3>Answer: Use Browser DevTools</h3>
+
+    <h2>Task 20: Mini Form Validator</h2>
+    <h3>Description: Combine Error Handling and Regex.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create a form validation system</li>
+        <li>Validate Name, Email, Phone and Password</li>
+    </ul>
+
+    <h3>Validation Rules:</h3>
+    <ul>
+        <li><strong>Name:</strong> Minimum 3 characters</li>
+        <li><strong>Email:</strong> Valid email format</li>
+        <li><strong>Phone:</strong> Exactly 10 digits</li>
+        <li><strong>Password:</strong> Minimum 8 characters</li>
+        <li>At least 1 uppercase letter</li>
+        <li>At least 1 number</li>
+    </ul>
+
+    <h3>Error Handling:</h3>
+    <ul>
+        <li>Use <span>try</span></li>
+        <li>Use <span>catch</span></li>
+        <li>Use <span>throw</span></li>
+    </ul>
+
+    <h3>Expected Output:</h3>
+    <output>
+        Registration Successful
+        <br>or<br>
+        Invalid Email Address
+    </output>
+
+    <h3>Answer: Check in console</h3>
+</body>
+<script>
+    // Task 1: Handle a Reference 
+    console.log("Task 1");
+
+    try {
+        console.log(user); // This will throw a ReferenceError
+    } catch (error) {
+        console.error("Something went wrong");
+    }
+
+    // Task 2: Display Error Details
+    console.log("Task 2");
+
+    try {
+        console.log(user); // This will throw a ReferenceError
+    } catch (error) {
+        console.error(error.name); // ReferenceError
+        console.error(error.message); // user is not defined
+    }
+
+    // Task 3: Use Finally Block
+    console.log("Task 3");
+
+    try {
+        console.log("Operation Completed");
+        throw new Error("An error occurred");
+    } catch (error) {
+        console.error(error.message);
+    } finally {
+        console.log("inside finally");
+    }
+
+    // Task 4: Create Your First Custom Error
+    console.log("Task 4");
+
+    function checkAge(age) {
+        if (age < 18) {
+            throw new Error("Age must be 18 or older");
+        }
+        return "Access granted";
+    }
+    
+    try {
+        console.log(checkAge(16));
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    // Task 5: Validate Positive Numbers
+    console.log("Task 5");
+
+    function withdraw(amount) {
+        if (amount <= 0) {
+            throw new Error("Invalid withdrawal amount");
+        }
+        return `Withdrew ${amount}`;
+    }
+
+    try {
+        console.log(withdraw(-100));// This will throw an error
+        // console.log(withdraw(200)); // This will work
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    // Task 6: Graceful API Error Simulation
+    console.log("Task 6");
+
+    function getUsers() {
+        throw new Error("Unable to load users or Simulating API failure");
+    }
+
+    try {
+        console.log(getUsers());
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    // Task 7: Regex test() Basics
+    console.log("Task 7");
+
+    // Create a custom regex to validate email addresses that end with @gmail.com or @hotmail.com and can have letters or numbers or both before the @ symbol.
+    const regex = /^[a-zA-Z0-9]+@(gmail\.com|hotmail\.com)$/;;
+    const text = "G@gmail.com";
+    const text1 = "G19@gmail.com";
+    console.log(regex.test(text)); // true
+    console.log(regex.test(text1)); // true
+
+    // Task 8: Validate an Email Address
+    console.log("Task 8");
+
+    function validateEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9]+@(gmail\.com|hotmail\.com)$/;
+        // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+    }
+
+    console.log(validateEmail("G@gmail.com")); // true
+    console.log(validateEmail("G19@gmail.com")); // true
+    console.log(validateEmail("invalid-email")); // false
+
+    // Task 9: Validate Phone Number
+    console.log("Task 9");
+
+    function validatePhoneNumber(phone) {
+        const phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+    }
+
+    console.log(validatePhoneNumber("5550192905")); // true
+    console.log(validatePhoneNumber("12345")); // false
+
+    // Task 10: Password Validation
+    console.log("Task 10");
+    // Task 11: Extract Numbers Using exec()
+    console.log("Task 11");
+    // Task 12: Find All Numbers
+    console.log("Task 12");
+    // Task 13: Find All Email Addresses
+    console.log("Task 13");
+    // Task 14: Case Insensitive Search
+    console.log("Task 14");
+    // Task 15: Replace Invalid Characters
+    console.log("Task 15");
+    // Task 16: Debug with Console Methods
+    console.log("Task 16");
+    // Task 17: Debug Using Breakpoints
+    console.log("Task 17");
+    // Task 18: Inspect the Call Stack
+    console.log("Task 18");
+    // Task 19: Debug Async/Await
+    console.log("Task 19");
+    // Task 20: Mini Form Validator
+    console.log("Task 20");
+</script>
+</html>

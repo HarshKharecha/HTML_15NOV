@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L14 Event Loop</title>
+</head>
+<style>
+    span {
+        color: #008000;
+    }
+    output,pre {
+        color: #955023;
+    }
+    .task1ans,
+    .task2ans,
+    .task3ans,
+    .task4ans,
+    .task5ans,
+    .task6ans,
+    .task7ans,
+    .task8ans,
+    .task9ans,
+    .task10ans,
+    .task11ans,
+    .task12ans,
+    .task13ans,
+    .task14ans,
+    .task15ans,
+    .task16ans,
+    .task17ans,
+    .task18ans,
+    .task19ans,
+    .task20ans {
+    color: #955023;
+    background: #f9f9f9;
+    border: 1px solid #eebdbd;
+    margin-bottom: 15px;
+    padding: 19px;
+    border-radius: 19px;
+    }
+</style>
+
+<body>
+    <h1>Lecture 14: Event Loop, Concurrency & JavaScript Internals - Practical Tasks</h1>
+
+    <h2>Task 1: Understanding Execution Order</h2>
+    <h3>Description: Learn how JavaScript executes synchronous code line by line.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create the following code:</li>
+    </ul>
+    <output>
+        console.log("A"); <br>
+        console.log("B"); <br>
+        console.log("C")
+    </output>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Predict the output before running.</li>
+        <li>Verify the output.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task1ans">
+        <h3><span>Expected Output:</span></h3>
+        <output>
+            A <br>
+            B <br>
+            C
+        </output>
+        <p>Becouse JavaScript is Run Synchronousle so Fist in Fist Out</p>
+    </div>
+
+    <h2>Task 2: Visualize the Call Stack</h2>
+    <h3>Description: Observe how functions enter and leave the Call Stack.</h3>
+    <h3>Requirements:</h3>
+    <pre>
+    first()
+    second()
+    third()
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Draw the Call Stack at each step.</li>
+        <li>Identify which function executes first and last.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task2ans">
+        <h3>Answer:</h3>
+
+        <p><strong>Call Stack:</strong></p>
+
+        <output>
+            Global() <br>
+            first() <br>
+            Global() <br>
+            second() <br>
+            Global() <br>
+            third() <br>
+            Global()
+        </output>
+
+        <p>First Function Execute: first()</p>
+        <p>Last Function Execute: third()</p>
+        <p>Call Stack Follow Last In First Out (LIFO).</p>
+    </div>
+
+    <h2>Task 3: Function Execution Context</h2>
+    <h3>Description: Understand how JavaScript creates a new Execution Context for every function call.</h3>
+    <h3>Requirements:</h3>
+    <p>Create:</p>
+    <pre>
+    function greet() {
+        let message = "Hello";
+    }
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain what variables exist in the function context.</li>
+        <li>Identify when the context is created
+            and destroyed.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task3ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>Variable Inside Function Context:</p>
+
+        <output>
+            message = "Hello"
+        </output>
+
+        <p>Execution Context Create When greet() Function Called.</p>
+        <p>Execution Context Destroy After Function Execution Complete.</p>
+    </div>
+
+    <h2>Task 4: Hoisting Investigation</h2>
+    <h3>Description: Observe JavaScript's Memory Creation Phase.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <output>console.log(name);<br>
+        var name = "John";
+    </output>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Predict the output.</li>
+        <li>Explain why the output occurs.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task4ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            undefined
+        </output>
+
+        <p>Because var Variable is Hoisted and Initialized with undefined During Memory Creation Phase.</p>
+    </div>
+
+    <h2>Task 5: Web API Demonstration</h2>
+    <h3>Description: Learn how Web APIs handle asynchronous operations.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    console.log("Start");
+
+    setTimeout(() => {
+        console.log("Timer Finished");
+    }, 2000);
+    
+    console.log("End");
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain why "End" appears before "Timer Finished".</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task5ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            Start <br>
+            End <br>
+            Timer Finished
+        </output>
+
+        <p>setTimeout Run Inside Web API. JavaScript Continue Executing Next Lines. So End Print Before Timer Finished.
+        </p>
+    </div>
+
+    <h2>Task 6: Zero Millisecond Timer</h2>
+    <h3>Description: Understand that setTimeout(0) is not immediate.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    console.log("Start");
+        setTimeout(() => {
+            console.log("Timeout");
+        }, 0);
+    
+    console.log("End");
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Predict the output.</li>
+        <li>Explain Event Loop process.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task6ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            Start <br>
+            End <br>
+            Timeout
+        </output>
+
+        <p>setTimeout(0) Is Not Immediate. Callback Goes To Task Queue And Runs After Main Code Finishes.</p>
+    </div>
+
+    <h2>Task 7: Promise Microtask</h2>
+    <h3>Description: Learn how Promises enter the Microtask Queue.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    console.log("Start");
+    
+    Promise.resolve()
+    .then(() => {
+        console.log("Promise");
+    });
+    
+    console.log("End");
+   </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain why Promise executes after End.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task7ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            Start <br>
+            End <br>
+            Promise
+        </output>
+
+        <p>Promise Callback Goes To Microtask Queue. Microtasks Execute After Synchronous Code Finishes.</p>
+    </div>
+
+    <h2>Task 8: Task Queue vs Microtask Queue</h2>
+    <h3>Description: Compare callback priority.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    console.log("Start");
+    setTimeout(() => {
+        console.log("Timer");
+    }, 0);
+    
+    Promise.resolve()
+    .then(() => {
+        console.log("Promise");
+    });
+    
+    console.log("End");
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Predict output.</li>
+        <li>Explain why Promise executes first.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task8ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            Start <br>
+            End <br>
+            Promise <br>
+            Timer
+        </output>
+
+        <p>Microtask Queue Has Higher Priority Than Task Queue. Therefore Promise Execute Before Timer.</p>
+    </div>
+
+    <h2>Task 9: Event Loop Flow Analysis</h2>
+    <h3>Description: Trace complete Event Loop lifecycle.</h3>
+    <h3>Requirements:</h3>
+    <p>Analyze:</p>
+    <pre>
+    console.log("1");
+    setTimeout(() => {
+        console.log("2");
+    }, 0);
+    
+    Promise.resolve()
+    .then(() => {
+        console.log("3");
+    });
+    
+    console.log("4");
+    </pre>
+    <h3>Answer:</h3>
+    <div class="task9ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            1 <br>
+            4 <br>
+            3 <br>
+            2
+        </output>
+
+        <p>Promise Callback Execute Before Timer Callback Because Microtask Queue Has Higher Priority.</p>
+    </div>
+
+    <h2>Task 10: Multiple Promises</h2>
+    <h3>Description: Observe Microtask Queue ordering.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    Promise.resolve()
+    .then(() => console.log("A"));
+    
+    Promise.resolve()
+    .then(() => console.log("B"));
+    
+    Promise.resolve()
+    .then(() => console.log("C"));
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Predict execution order.</li>
+        <li>Explain queue processing.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task10ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            A <br>
+            B <br>
+            C
+        </output>
+
+        <p>Microtask Queue Follow FIFO (First In First Out) Order.</p>
+    </div>
+
+    <h2>Task 11: Multiple Timers</h2>
+    <h3>Description: Study Task Queue execution order.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    setTimeout(() => console.log("1"), 0);
+    
+    setTimeout(() => console.log("2"), 0);
+    
+    setTimeout(() => console.log("3"), 0);
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Determine execution order.</li>
+        <li>Explain FIFO behavior.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task11ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            1 <br>
+            2 <br>
+            3
+        </output>
+
+        <p>Task Queue Follow FIFO (First In First Out) Order.</p>
+    </div>
+
+    <h2>Task 12: Async/Await Internals</h2>
+    <h3>Description: Understand how Async/Await uses Microtasks.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    async function test() {
+        
+        console.log("A");
+        
+        await Promise.resolve();
+        
+        console.log("B");
+    }
+    
+    test();
+    
+    console.log("C");
+    </pre>
+    <h3>Answer:</h3>
+    <div class="task12ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            A <br>
+            C <br>
+            B
+        </output>
+
+        <p>await Pause Function Execution. Remaining Code Runs As Microtask After Synchronous Code Finishes.</p>
+    </div>
+
+    <h2>Task 13: Event Listener Queue</h2>
+    <h3>Description: Understand event-driven execution.</h3>
+    <h3>Requirements:</h3>
+    <p>Create:</p>
+    <pre>
+    &lt;button id="btn"&gt;Click Me&lt;/button&gt;
+    
+    document.getElementById("btn")
+    .addEventListener("click", () => {
+        console.log("Button Clicked");
+    });
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain where callback waits before clicking.</li>
+        <li>Explain what happens after click.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task13ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>Before Click Callback Wait In Browser Event System.</p>
+
+        <p>After Click:</p>
+
+        <output>
+            Button Clicked
+        </output>
+
+        <p>Callback Goes To Task Queue Then Event Loop Pushes It To Call Stack.</p>
+    </div>
+
+    <h2>Task 14: Memory Heap Exploration</h2>
+    <h3>Description: Understand object storage.</h3>
+    <h3>Requirements:</h3>
+    <p>Create:</p>
+    <pre>
+    const user = {
+        name: "John",
+        age: 25
+    };
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain Stack storage.</li>
+        <li>Explain Heap storage.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task14ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>Stack Store Reference Of Object.</p>
+
+        <p>Heap Store Actual Object Data:</p>
+
+        <output>
+            name: "John" <br>
+            age: 25
+        </output>
+    </div>
+
+    <h2>Task 15: Array Memory Usage</h2>
+    <h3>Description: Observe memory allocation.</h3>
+    <h3>Requirements:</h3>
+    <p>Create:</p>
+    <pre>const users = new Array(10000);</pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain where array is stored.</li>
+        <li>Describe memory impact.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task15ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>Array Stored In Heap Memory.</p>
+
+        <p>Variable Reference Stored In Stack Memory.</p>
+
+        <p>Large Arrays Consume More Heap Memory.</p>
+    </div>
+
+    <h2>Task 16: Garbage Collection Basics</h2>
+    <h3>Description: Understand unreachable objects.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    let user = {
+        name: "John"
+    };
+    
+    user = null;
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain garbage collection eligibility.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task16ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>After user = null Object Has No Reference.</p>
+
+        <p>Object Become Eligible For Garbage Collection.</p>
+    </div>
+
+    <h2>Task 17: Detect a Memory Leak</h2>
+    <h3>Description: Identify bad memory management.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    let data = [];
+    
+    setInterval(() => {
+        data.push(new Array(1000));
+    }, 1000);
+    </pre>
+    <h3>Your Task:</h3>
+    <ul>
+        <li>Explain memory growth.</li>
+        <li>Suggest solution.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task17ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>Memory Keep Growing Because New Arrays Are Continuously Added.</p>
+
+        <p>This Can Cause Memory Leak.</p>
+
+        <p>Solution: Remove Unused Data Or Stop Interval.</p>
+    </div>
+
+    <h2>Task 18: Clear Timers Properly</h2>
+    <h3>Description: Prevent memory leaks.</h3>
+    <h3>Requirements:</h3>
+    <p>Create:</p>
+    <pre>
+    const timer = setInterval(() => {
+        console.log("Running");
+    }, 1000);
+    </pre>
+    <h3>Your Task</h3>
+    <ul>
+        <li>Stop the interval after 5 seconds using:</li>
+    </ul>
+    <pre>clearInterval()</pre>
+    <h3>Answer:</h3>
+    <div class="task18ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <pre>
+    const timer = setInterval(() => {
+        console.log("Running");
+    }, 1000);
+
+    setTimeout(() => {
+        clearInterval(timer);
+    }, 5000);
+    </pre>
+
+        <p>clearInterval() Stops Interval After 5 Seconds.</p>
+    </div>
+
+    <h2>Task 19: Complete Event Loop Challenge</h2>
+    <h3>Description: Combine all Event Loop concepts.</h3>
+    <h3>Requirements:</h3>
+    <p>Write:</p>
+    <pre>
+    console.log("Start");
+    
+    setTimeout(() => {
+        console.log("Timer 1");
+    }, 0);
+    
+    Promise.resolve()
+    .then(() => {
+        console.log("Promise 1");
+    });
+    
+    setTimeout(() => {
+        console.log("Timer 2");
+    }, 0);
+    
+    Promise.resolve()
+    .then(() => {
+        console.log("Promise 2");
+    });
+    
+    console.log("End");
+    </pre>
+    <h3>Ypur Task</h3>
+    <ul>
+        <li>Predict output.</li>
+        <li>Explain execution step-by-step.</li>
+    </ul>
+    <h3>Answer:</h3>
+    <div class="task19ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <output>
+            Start <br>
+            End <br>
+            Promise 1 <br>
+            Promise 2 <br>
+            Timer 1 <br>
+            Timer 2
+        </output>
+
+        <p>First Synchronous Code Execute.</p>
+        <p>Then Microtask Queue Execute.</p>
+        <p>Finally Task Queue Execute.</p>
+    </div>
+
+    <h2>Task 20: Build an Event Loop Visualizer</h2>
+    <h3>Description: Create a mini project demonstrating JavaScript internals.</h3>
+    <h3>Requirements</h3>
+    <p>Create a webpage that:</p>
+    <h3>Features:</h3>
+    <ul>
+        <li>Button to execute Synchronous Code</li>
+        <li>Button to execute Promise Code</li>
+        <li>Button to execute setTimeout Code</li>
+        <li>Display execution logs on screen</li>
+        <li>Show execution order</li>
+    </ul>
+    <h3>Concepts Covered:</h3>
+    <ul>
+        <li>Call Stack</li>
+        <li>Event Loop</li>
+        <li>Task Queue</li>
+        <li>Microtask Queue</li>
+    </ul>
+    <h3>Answer: Check browser output and logs panel.</h3>
+    <div class="task20ans">
+        <h3><span>Expected Output:</span></h3>
+
+        <p>Project Demonstrates:</p>
+
+        <output>
+            Call Stack <br>
+            Event Loop <br>
+            Task Queue <br>
+            Microtask Queue <br>
+            Promise <br>
+            setTimeout
+        </output>
+    </div>
+</body>
+
+</html>
