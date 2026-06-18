@@ -110,6 +110,10 @@
         font-size: 24px;
         cursor: pointer;
     }
+
+    #Deco {
+        background-color: rgb(192, 50, 15);
+    }
 </style>
 
 <body>
@@ -138,7 +142,7 @@
                 <li>${data}</li>
             </ul>
             <button type="button" onclick="Edit(this)">Edit</button>
-            <button type="button" onclick="Delete(this)">Delete</button>
+            <button type="button" id="Deco" onclick="Delete(this)">Delete</button>
         </div>`
         output.style.display = "block"
     }
@@ -174,7 +178,6 @@
     function Delete(d) {
         btn = d;
         d.parentElement.remove();
-        d.style.backgroundColor = "red";
 
         if (output.children.length === 0) {
             output.style.display = "none";
