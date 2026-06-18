@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's List</title>
+</head>
+<style>
+    :root {
+        --bg: #ffffff;
+        --text: #111111;
+        --card: #f0f0f0;
+        --btn: #ff9800;
+        --bgsado: rgb(197, 133, 38);
+        --input: #1e293b;
+        --input-bg: #ffffff;
+        --input-text: #1f2937;
+        --input-border: #d1d5db;
+        --input-focus: #3b82f6;
+    }
+
+    .dark {
+        --bg: #121212;
+        --text: #ffffff;
+        --card: #1f1f1f;
+        --btn: #ff9800;
+        --bgsado: rgb(38, 102, 197);
+        --input-bg: #1e293b;
+        --input-text: #f8fafc;
+        --input-border: #334155;
+        --input-focus: #60a5fa;
+    }
+
+    body {
+        /* font-family: Arial, sans-serif; */
+        margin: 0;
+        padding: 0;
+        /* color: rgb(255, 255, 255); */
+        color: var(--text);
+        background: var(--bg);
+        /* background: rgb(0, 0, 0); */
+        transition: .3s;
+    }
+
+    section,
+    .waper {
+        padding: 100px;
+    }
+
+    .container {
+        width: 251px;
+        margin: 0 auto;
+        text-align: center;
+        background: var(--card);
+        /* background: rgba(140, 140, 140, 0.17); */
+        box-shadow: 0 0px 151px -19px var(--bgsado);
+        border-radius: 90px;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        gap: 5px;
+    }
+
+    .container input {
+        /* border: none; */
+        border: 2px solid var(--input-border);
+        border-radius: 5px;
+        /* color: rgb(255, 255, 255); */
+        color: var(--input-text);
+        background: var(--input-bg);
+        /* background-color: rgba(140, 140, 140, 0.17); */
+        padding: 5px 9px;
+        transition: all .25s ease;
+    }
+
+    .container input:focus {
+        outline: none;
+        border-color: var(--input-focus);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--input-focus) 20%, transparent);
+    }
+
+    .container button {
+        color: rgb(255, 255, 255);
+        background: rgb(192, 109, 15);
+        border: none;
+        border-radius: 5px;
+        padding: 5px 9px;
+    }
+
+    .row ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .row li {
+        list-style: none;
+        margin: 0;
+    }
+
+    #theme-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <section>
+        <button type="button" id="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <div class="waper">
+            <div class="waper container">
+                <h1>Student's List</h1>
+
+                <form action="">
+                    <input type="text" id="in">
+                    <button type="button" onclick="add()">Add</button>
+                    <div id="out" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let input = document.getElementById("in");
+    let output = document.getElementById("out");
+
+    function inset(data) {
+        output.innerHTML += `<div class="row">
+            <ul>
+                <li>${data}</li>
+            </ul>
+            <button type="button" onclick="Edit(this)">Edit</button>
+            <button type="button" onclick="Delete(this)">Delete</button>
+        </div>`
+        output.style.display = "block"
+    }
+
+    function Edit(e) {
+        btn = e;
+        const element = e.parentElement.firstElementChild;
+
+        if (btn.innerText === "Edit") {
+            const text = element.innerText;
+
+            const inputField = document.createElement("input");
+            inputField.type = "text";
+            inputField.value = text;
+
+            element.replaceWith(inputField);
+
+            btn.innerText = "Save";
+            inputField.focus();
+        } else {
+            const text = element.value;
+
+            const li = document.createElement("li");
+            li.innerText = text;
+
+            element.replaceWith(li);
+
+            btn.innerText = "Edit";
+        }
+
+    }
+
+    function Delete(d) {
+        btn = d;
+        d.parentElement.remove();
+        d.style.backgroundColor = "red";
+
+        if (output.children.length === 0) {
+            output.style.display = "none";
+        }
+    }
+
+    function add() {
+        if (input.value && input.value.trim() !== null) {
+            inset(input.value);
+            input.value = "";
+        }
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    // ટૂંકમાં Interview/Practical Answer:
+    // document.getElementById("in").value.trim() value ની copy store કરે છે, જ્યારે
+    // document.getElementById("in") element નો reference store કરે છે. Dynamic input માટે
+    // element store કરવું વધુ યોગ્ય છે કારણ કે current value દરેક વખતે input.value થી મેળવી
+    // શકાય છે.
+
+</script>
+
+</html>
