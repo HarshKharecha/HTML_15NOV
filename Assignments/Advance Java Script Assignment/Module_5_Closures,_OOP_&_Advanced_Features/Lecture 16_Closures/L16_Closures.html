@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L16 Closures</title>
+</head>
+<style>
+    .task7,
+    .task13 {
+        background-color: #f2f2f2;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: larger;
+    }
+</style>
+
+<body>
+    <h1>Lecture 16: Closures (In Depth) - Practical Tasks</h1>
+
+    <h2>Task 1: Your First Closure</h2>
+    <h3>Description: Create a simple closure that remembers a variable after the outer function finishes execution.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`outer()`</span></li>
+        <li>Inside: <span>`let message = "Hello Closure";`</span></li>
+        <li>Return an inner function that displays the message.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Hello Closure</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 2: Lexical Scope Demonstration</h2>
+    <h3>Description: Understand how inner functions access parent variables.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create variables: <span>`country = "India"`</span>, <span>`state = "Gujarat"`</span>, <span>`city =
+                "Ahmedabad"`</span></li>
+        <li>Create nested functions.</li>
+        <li>Display all three variables from the innermost function.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>India <br>Gujarat <br>Ahmedabad</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 3: Closure Memory Test</h2>
+    <h3>Description: Verify that closures preserve variables.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`createMessage()`</span></li>
+        <li>Inside: <span>`let msg = "Stored in Closure";`</span></li>
+        <li>Return a function that prints msg.</li>
+        <li>Call the returned function after the outer function completes.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Stored in Closure</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 4: Private Variable Example</h2>
+    <h3>Description: Create a private variable using closure.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`createUser()`</span></li>
+        <li>Private variable: <span>`password = "12345"`</span></li>
+        <li>Expose: <span>`getPassword()`</span></li>
+        <li>Try accessing password directly.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>12345 <br>undefined</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 5: Simple Counter</h2>
+    <h3>Description: Create a counter using closures.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`counter()`</span></li>
+        <li>Count starts at 0</li>
+        <li>Increment count on every call</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>1 <br>2 <br>3</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 6: Increment and Decrement Counter</h2>
+    <h3>Description: Build a more advanced counter.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Methods: <span>`increment()`</span>, <span>`decrement()`</span>, and <span>`value()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>2 <br>1</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 7: Create a Like Button Counter</h2>
+    <h3>Description: Simulate social media likes.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`createLikes()`</span></li>
+        <li>Each call should increase likes.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Likes: 1 <br>Likes: 2 <br>Likes: 3</output>
+    <h3>Answer: Here Output or Check in console</h3>
+    <button type="button" class="task7" onclick="likes()">👍 <span id="likeCountText">0</span></button>
+
+    <h2>Task 8: Factory Function for Employees</h2>
+    <h3>Description: Create employee objects using closures.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`createEmployee(name)`</span></li>
+        <li>Method: <span>`getName()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John <br>Sarah</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 9: Factory Function for Products</h2>
+    <h3>Description: Create reusable product objects.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Store: <span>`productName`</span> and <span>`price`</span></li>
+        <li>Expose: <span>`getProduct()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>{ name: "Laptop", price: 50000 }</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 10: Independent Closure Instances</h2>
+    <h3>Description: Understand independent memory.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create independent instances: <span>`counter1`</span> and <span>`counter2`</span></li>
+        <li>Each should maintain separate count values.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>counter1 → 1 <br>counter1 → 2 <br>counter2 → 1</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 11: Bank Account System</h2>
+    <h3>Description: Create a secure bank account.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Private: <span>`balance`</span></li>
+        <li>Methods: <span>`deposit()`</span>, <span>`withdraw()`</span>, and <span>`getBalance()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Balance: 1500</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 12: Shopping Cart Closure</h2>
+    <h3>Description: Create a cart system.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Private: <span>`items`</span> array</li>
+        <li>Methods: <span>`addItem()`</span> and <span>`viewItems()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>["Laptop", "Mouse"]</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 13: Event Handler Closure</h2>
+    <h3>Description: Track button clicks.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>HTML: <span>`<button class="task13" id="btn">Click Me</button>`</span></li>
+        <li>JavaScript: Maintain click count using closure.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Clicked: 1 <br>Clicked: 2 <br>Clicked: 3</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 14: setTimeout Closure</h2>
+    <h3>Description: Observe closure behavior with delayed execution.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`greet(name)`</span></li>
+        <li>Display name after 2 seconds.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 15: User Session Manager</h2>
+    <h3>Description: Simulate login sessions.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Private: <span>`userName`</span></li>
+        <li>Methods: <span>`login()`</span>, <span>`logout()`</span>, and <span>`getUser()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Logged In <br>John <br>Logged Out</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 16: Memoization Cache</h2>
+    <h3>Description: Create a simple caching system.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Store results inside closure cache.</li>
+        <li>Example execution: <span>`double(5)`</span></li>
+        <li>Should calculate once and reuse later.</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Calculated <br>Cached</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 17: API Configuration Factory</h2>
+    <h3>Description: Create API instances.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create: <span>`createAPI(baseURL)`</span></li>
+        <li>Usage example: <span>`api("/users")`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>https://api.com/users</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 18: Module Pattern</h2>
+    <h3>Description: Create a private module.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Private: <span>`userName`</span></li>
+        <li>Public methods: <span>`getUser()`</span> and <span>`setUser()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John <br>Sarah</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 19: Theme Manager</h2>
+    <h3>Description: Manage application themes.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Private: <span>`theme`</span></li>
+        <li>Methods: <span>`setTheme()`</span> and <span>`getTheme()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>dark <br>light</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 20: Build a Mini Authentication System</h2>
+    <h3>Description: Combine closures and private variables.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Private: <span>`email`</span> and <span>`password`</span></li>
+        <li>Methods: <span>`login()`</span>, <span>`logout()`</span>, and <span>`getStatus()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Logged In <br>Status: Active <br>Logged Out</output>
+    <h3>Answer: Check in console</h3>
+</body>
+<script>
+    // Task 1: Your First Closure
+    console.log("Task 1");
+
+    function outer() {
+        let message = "Hello Closure";
+        return {
+            inner() {
+                console.log(message);
+            }
+        };
+    }
+    outer().inner();
+
+    // function outer() {
+    //     let message = "Hello Closure";
+
+    //     return function inner() {
+    //         console.log(message);
+    //     };
+    // }
+
+    // const closure1 = outer(); // outer runs, returns the inner function
+    // closure1();              // Output: Hello Closure
+
+
+    // Task 2: Lexical Scope Demonstration
+    console.log("Task 2");
+
+    // function Lexical() {
+    //     let country = "India";
+    //     let state = "Gujarat";
+    //     let city = "Ahmedabad";
+    //     return {
+    //         main() {
+    //             console.log(country);
+    //             return {
+    //                 sub() {
+    //                     console.log(state);
+    //                     return {
+    //                         des() {
+    //                             console.log(city);
+    //                         }
+    //                     };
+    //                 }
+    //             };
+    //         }
+    //     };
+
+
+    // }
+    // Lexical().main().sub().des(); // Output: India, Gujarat, Ahmedabad
+
+    function Lexical() {
+        let country = "India";
+        return function main() {
+            let state = "Gujarat";
+            return function sub() {
+                let city = "Ahmedabad";
+                return function des() {
+                    console.log(country);
+                    console.log(state);
+                    console.log(city);
+                }
+            };
+        }
+    };
+
+    const goto1 = Lexical();
+    goto1()()(); // Output: India, Gujarat, Ahmedabad
+
+    // Task 3: Closure Memory Test
+    console.log("Task 3");
+
+    function createMessage() {
+        let msg = "Stored in Closure";
+        return function displayMessage() {
+            console.log(msg);
+        };
+    }
+
+    const messageClosure = createMessage();
+    messageClosure(); // Output: Stored in Closure
+
+    // Task 4: Private Variable Example
+    console.log("Task 4");
+
+    function createUser() {
+        let password = "12345";
+        return {
+            getPassword() {
+                return password;
+            }
+        };
+    }
+
+    const user = createUser();
+    console.log(user.getPassword()); // Output: 12345
+    console.log(user.password); // Output: undefined
+
+    // Task 5: Simple Counter
+    console.log("Task 5");
+
+    function counter() {
+        let count = 0;
+
+        return () => ++count;
+    }
+
+    const counterstart = counter();
+    console.log(counterstart()); // Output: only one time is 1.
+    for (count = 0; count < 5; count++) {
+        console.log(counterstart()); // Output: is in loop till 5 time so 1 to 5.
+    } // When "console.log(counterstart());" this run befour loop so loop start 2 to 6 becouse count = 1.
+
+    // Task 6: Increment and Decrement Counter
+    console.log("Task 6");
+
+    function IDC() {
+        let idc = 0;
+
+        return {
+            increment() {
+                ++idc;
+            },
+
+            decrement() {
+                --idc;
+            },
+            vcount() {
+                return idc;
+            }
+        };
+    }
+
+    const vc = IDC();
+    for (idc = 0; idc < 11; idc++) {
+        vc.increment();
+    }
+    for (idc = 0; idc < 2; idc++) {
+        vc.decrement();
+    }
+    console.log(vc.vcount());
+
+    // Task 7: Create a Like Button Counter
+    console.log("Task 7");
+
+    let likecount = 0;
+    function likes() {
+        const text = document.getElementById('likeCountText');
+        ++likecount;
+        // console.log(likecount); // See For In console
+        text.textContent = likecount;
+    }
+    console.log("likecount Block See Here See in Web");
+
+    // Task 8: Factory Function for Employees
+    console.log("Task 8");
+
+    let names = ["User1", "User2", "User3", "User4", "User5"]
+    function employees(name) {
+        return {
+            getName() {
+                return name;
+            }
+        };
+    }
+
+    for (let index = 0; index < names.length; index++) {
+        const employname = names[index];
+        const getname = employees(employname);
+        console.log(getname.getName());
+    }
+
+    // Task 9: Factory Function for Products
+    console.log("Task 9");
+
+    let productNames = ["The Frostfire Titan Intel pc", "Smartphone", "Wireless Headphones", "Smartwatch", "Bluetooth Speaker"]
+    let prices = ["3,20,000", "1,05,000", "9000", "15000", "5000"]
+    function createProduct(productName, price) {
+        return {
+            getProduct() {
+                return {
+                    name: productName,
+                    price: price
+                };
+            }
+        };
+    }
+
+    for (let index = 0; index < productNames.length && index < prices.length; index++) {
+        const productnam = productNames[index];
+        const pri = prices[index];
+        const proandpri = createProduct(productnam, pri)
+        console.log(proandpri.getProduct());
+    }
+
+    // Task 10: Independent Closure Instances
+    console.log("Task 10");
+
+    function INDC() {
+        let indc = 0;
+
+        return () => ++indc;
+    }
+
+    const indcstart = INDC();
+    const indcstart1 = INDC();
+
+    for (indc = 0; indc < 5; indc++) {
+        console.log("indcstart:", indcstart());
+    }
+    for (indc = 0; indc < 5; indc++) {
+        console.log("indcstart1:", indcstart1());
+    }
+
+    // Task 11: Bank Account System
+    console.log("Task 11");
+
+    let bal = 10000;
+    let dep = [5000, 9000, 15000, 19000, 25000]
+    let wit = [500, 1000, 5000, 900, 1500]
+
+    function Balance(ba) {
+        let balance = ba;
+        // console.log(balance, Deposit, Withdraw);
+
+        return {
+            deposit(Deposit) {
+                console.log("Balance:", balance);
+                balance = balance + Deposit;
+                console.log("Deposit:", Deposit);
+                console.log("After Deposit:", balance);
+            },
+
+            withdraw(Withdraw) {
+                balance = balance - Withdraw;
+                console.log("Withdraw:", Withdraw);
+                console.log("After Withdraw:", balance);
+            },
+            getBalance() {
+                return balance;
+            }
+        };
+    }
+
+    const total = Balance(bal);
+    for (let index = 0; index < dep.length && index < wit.length; index++) {
+        const da = dep[index];
+        const wi = wit[index];
+        total.deposit(da);
+        total.withdraw(wi);
+        console.log(`--- End Statemant ${index + 1} ---`);
+        console.log("--- Total Balance:", total.getBalance(), " ---");
+        console.log("\n");
+    }
+    console.log("Final Grand Total Balance:", total.getBalance());
+
+    // Task 12: Shopping Cart Closure
+    console.log("Task 12");
+
+    let items = ["The Frostfire Titan Intel pc", "Smartphone", "Wireless Headphones", "Smartwatch", "Bluetooth Speaker"]
+    let itemsprices = ["3,20,000", "1,05,000", "9000", "15000", "5000"]
+    function Cartitems(items, itemsprice) {
+        return {
+            getItems() {
+                return [items, itemsprice];
+            }
+        };
+    }
+
+    for (let index = 0; index < items.length && index < itemsprices.length; index++) {
+        const itemsnam = items[index];
+        const itemspri = itemsprices[index];
+        const Itemspri = Cartitems(itemsnam, itemspri)
+        console.log(Itemspri.getItems());
+    }
+
+    // Task 13: Event Handler Closure
+    console.log("Task 13");
+
+    function sclickhandel() {
+        let clickcount = 0;
+
+        return () => {
+            ++clickcount;
+            console.log(`Clicked: ${clickcount}`);
+        }
+    }
+
+    const handleBtnClick = sclickhandel();
+    const button = document.getElementById("btn");
+    button.addEventListener("click", handleBtnClick)
+
+    // Task 14: setTimeout Closure
+    console.log("Task 14");
+
+    function greet(name) {
+        setTimeout(() => {
+            console.log(name);
+        }, 2000);
+    }
+
+    greet("User1");
+
+    // Task 15: User Session Manager
+    console.log("Task 15");
+
+    function createSessionManager() {
+        let userName = ""; // Private state variable
+
+        return {
+            login(name) {
+                userName = name;
+                console.log("Logged In");
+            },
+            getUser() {
+                return userName;
+            },
+            logout() {
+                userName = "";
+                console.log("Logged Out");
+            }
+        };
+    }
+
+    const session = createSessionManager();
+    session.login("User");
+    console.log(session.getUser());
+    session.logout();
+
+    // Task 16: Memoization Cache
+    console.log("Task 16");
+
+    function createMemoizedDouble() {
+        const cache = {}; // Private object to store computed results
+
+        return function (num) {
+            // Check if we have already calculated this number before
+            if (num === cache) { // === or in
+                console.log("Cached");
+                return cache[num];
+            }
+
+            // Otherwise, calculate it, save it, and return it
+            console.log("Calculated");
+            const result = num * 2;
+            cache[num] = result;
+            return result;
+        };
+    }
+
+    const double = createMemoizedDouble();
+    console.log(double(5)); // Output: Calculated, 10
+    console.log(double(5)); // Output: Cached, 10
+
+    // Task 17: API Configuration Factory
+    console.log("Task 17");
+
+    function createAPI(baseURL) {
+        // Returns a function that locks in the baseURL prefix
+        return function (endpoint) {
+            return `${baseURL}${endpoint}`;
+        };
+    }
+
+    const api = createAPI("https://api.com");
+    console.log(api("/users"));
+
+    // Task 18: Module Pattern
+    console.log("Task 18");
+
+    // Immediately Invoked Function Expression (IIFE) creating a singleton module
+    const userModule = (function () {
+        let userName = "User1"; // Private variable
+
+        return {
+            getUser() {
+                return userName;
+            },
+            setUser(newName) {
+                userName = newName;
+            }
+        };
+    })();
+
+    console.log(userModule.getUser()); // Output: User1
+    userModule.setUser("User2");
+    console.log(userModule.getUser()); // Output: User2
+
+    // Task 19: Theme Manager
+    console.log("Task 19");
+
+    function createThemeManager() {
+        let theme = "dark"; // Private default theme
+
+        return {
+            getTheme() {
+                return theme;
+            },
+            setTheme(newTheme) {
+                theme = newTheme;
+            }
+        };
+    }
+
+    const themeManager = createThemeManager();
+    console.log(themeManager.getTheme()); // Output: dark
+    themeManager.setTheme("light");
+    console.log(themeManager.getTheme()); // Output: light
+
+    // Task 20: Build a Mini Authentication System
+    console.log("Task 20");
+
+    function createAuthSystem(savedEmail, savedPassword) {
+        // Private credentials and session state variables
+        const email = savedEmail;
+        const password = savedPassword;
+        let isLoggedIn = false;
+
+        return {
+            login(inputEmail, inputPassword) {
+                if (inputEmail === email && inputPassword === password) {
+                    isLoggedIn = true;
+                    console.log("Logged In");
+                } else {
+                    console.log("Invalid Credentials");
+                }
+            },
+            getStatus() {
+                return isLoggedIn ? "Status: Active" : "Status: Inactive";
+            },
+            logout() {
+                isLoggedIn = false;
+                console.log("Logged Out");
+            }
+        };
+    }
+
+    const auth = createAuthSystem("user@example.com", "secure125");
+    auth.login("user@example.com", "secure125"); // Output: Logged In
+    console.log(auth.getStatus()); // Output: Status: Active
+    auth.logout(); // Output: Logged Out
+
+</script>
+
+</html>

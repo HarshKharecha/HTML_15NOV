@@ -1,0 +1,534 @@
+https://flareapp.io/share/87nJd867
+
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`u160370062_ilGoq`.`assignment_submissions`, CONSTRAINT `assignment_submissions_student_id_foreign` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE)
+insert into `assignment_submissions` (`student_id`, `course_item_id`, `file`, `note`, `status`, `submitted_at`, `updated_at`, `created_at`) values (55, 1743, students/assignments/advance-js-25-may-2026-4pm-denish-sir/108/advance-js-25-may-2026-4pm-denish-sir_108_20260621_235832.html, ?, submitted, 2026-06-21 23:58:32, 2026-06-21 23:58:32, 2026-06-21 23:58:32)
+
+
+
+
+Expand vendor frames
+21 vendor frames
+App
+ \ 
+Filament
+ \ 
+Pages
+ \ 
+ViewCourseItem
+ : 515
+submitAssignment
+52 vendor frames
+app
+ / 
+Filament
+ / 
+Pages
+ / 
+ViewCourseItem
+.php
+ : 515
+
+
+
+    /*
+
+    |--------------------------------------------------------------------------
+
+    | DATABASE PATH
+
+    |--------------------------------------------------------------------------
+
+    */
+
+
+
+    $path = $directory . '/' . $fileName;
+
+
+
+    /*
+
+    |--------------------------------------------------------------------------
+
+    | SAVE SUBMISSION
+
+    |--------------------------------------------------------------------------
+
+    */
+
+
+
+   $submission = \App\Models\AssignmentSubmission::updateOrCreate(
+
+
+
+    [
+
+        'student_id' => auth()->id(),
+
+
+
+        'course_item_id' => $this->item->id,
+
+    ],
+
+
+
+    [
+
+        'file' => $path,
+
+
+
+        'note' => $this->assignment_notes,
+
+
+
+        'status' => 'submitted',
+
+
+Request
+Browser
+
+Headers
+
+Body
+App
+Routing
+
+Livewire
+Component
+
+Updates
+
+Data
+Context
+User
+
+Versions
+
+Exception
+Request
+
+https://troopystack.com/admin/student/course-item
+GET
+curl "https://troopystack.com/admin/student/course-item" \   -X GET \   -H 'accept: text/html, application/xhtml+xml' \   -H 'accept-encoding: br' \   -H 'accept-language: en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7,gu;q=0.6' \   -H 'content-type: application/json' \   -H 'content-length: 1041' \   -H 'cookie: <CENSORED>' \   -H 'host: troopystack.com' \   -H 'referer: https://troopystack.com/admin/student/course-item?item=1743&batch=4' \   -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36' \   -H 'x-forwarded-for: 2402:3a80:1b84:a7d6:a0a2:b0a:2a28:fc4e' \   -H 'x-forwarded-proto: https' \   -H 'x-real-ip: 2402:3a80:1b84:a7d6:a0a2:b0a:2a28:fc4e' \   -H 'x-real-port: 61198' \   -H 'x-forwarded-port: 443' \   -H 'x-port: 443' \   -H 'x-lscache: 1' \   -H 'sec-ch-ua-platform: "Windows"' \   -H 'x-csrf-token: <CENSORED>' \   -H 'sec-ch-ua: "Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"' \   -H 'sec-ch-ua-mobile: ?0' \   -H 'x-livewire: true' \   -H 'origin: https://troopystack.com' \   -H 'sec-fetch-site: same-origin' \   -H 'sec-fetch-mode: cors' \   -H 'sec-fetch-dest: empty' \   -H 'priority: u=1, i' \   -F 'fingerprint=[object Object]' -F 'serverMemo=[object Object]' -F 'updates=[object Object]'
+
+
+
+Browser
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+
+Headers
+accept
+text/html, application/xhtml+xml
+
+accept-encoding
+br
+
+accept-language
+en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7,gu;q=0.6
+
+content-type
+application/json
+
+content-length
+1041
+
+cookie
+<CENSORED>
+
+host
+troopystack.com
+
+referer
+https://troopystack.com/admin/student/course-item?item=1743&batch=4
+
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+
+x-forwarded-for
+2402:3a80:1b84:a7d6:a0a2:b0a:2a28:fc4e
+
+x-forwarded-proto
+https
+
+x-real-ip
+2402:3a80:1b84:a7d6:a0a2:b0a:2a28:fc4e
+
+x-real-port
+61198
+
+x-forwarded-port
+443
+
+x-port
+443
+
+x-lscache
+1
+
+sec-ch-ua-platform
+"Windows"
+
+x-csrf-token
+<CENSORED>
+
+sec-ch-ua
+"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+
+sec-ch-ua-mobile
+?0
+
+x-livewire
+true
+
+origin
+https://troopystack.com
+
+sec-fetch-site
+same-origin
+
+sec-fetch-mode
+cors
+
+sec-fetch-dest
+empty
+
+priority
+u=1, i
+
+Body
+{
+    "fingerprint": {
+        "id": "9R90PtXbEKP5UmVJolgb",
+        "name": "app.filament.pages.view-course-item",
+        "locale": "en",
+        "path": "admin/student/course-item",
+        "method": "GET",
+        "v": "acj"
+    },
+    "serverMemo": {
+        "children": [],
+        "errors": [],
+        "htmlHash": "b42a039f",
+        "data": {
+            "assignment_due_date": "2026-06-22T00:00",
+            "assignment_file": "livewire-file:KznZCMFqwAqPPZsD8JCPVd5paA7iyp-metaTDE2X0Nsb3N1cmVzLmh0bWw=-.html",
+            "assignment_notes": null,
+            "existingSubmission": null,
+            "batchId": "4",
+            "item": [],
+            "mountedAction": null,
+            "mountedActionData": [],
+            "componentFileAttachments": [],
+            "mountedFormComponentAction": null,
+            "mountedFormComponentActionArguments": [],
+            "mountedFormComponentActionData": [],
+            "mountedFormComponentActionComponent": null
+        },
+        "dataMeta": {
+            "models": {
+                "item": {
+                    "class": "App\\Models\\CourseItem",
+                    "id": 1743,
+                    "relations": [
+                        "article",
+                        "video",
+                        "quiz",
+                        "assignment",
+                        "liveClass"
+                    ],
+                    "connection": "mysql",
+                    "collectionClass": null
+                }
+            }
+        },
+        "checksum": "f3172b6777a0438bf1d6087e1342f274c9338b1d20ded8d618b1f734ecbbdaa8"
+    },
+    "updates": [
+        {
+            "type": "callMethod",
+            "payload": {
+                "id": "qzzuh",
+                "method": "submitAssignment",
+                "params": []
+            }
+        }
+    ]
+}
+
+
+
+App
+
+Routing
+Controller
+Livewire\Controllers\HttpConnectionHandler
+
+Route name
+livewire.message
+
+Middleware
+web
+
+Livewire
+Component
+Component
+App\Filament\Pages\ViewCourseItem
+
+Alias
+app.filament.pages.view-course-item
+
+ID
+9R90PtXbEKP5UmVJolgb
+
+Updates
+callMethod
+{    "method": "submitAssignment",    "params": []}
+
+Data
+assignment_due_date
+2026-06-22T00:00
+
+assignment_file
+livewire-file:KznZCMFqwAqPPZsD8JCPVd5paA7iyp-metaTDE2X0Nsb3N1cmVzLmh0bWw=-.html
+
+assignment_notes
+null
+
+existingSubmission
+null
+
+batchId
+4
+
+item
+{    "class": "App\\Models\\CourseItem",    "id": 1743,    "relations": [        "article",        "video",        "quiz",        "assignment",        "liveClass"    ],    "connection": "mysql",    "collectionClass": null}
+
+
+
+mountedAction
+null
+
+mountedActionData
+[]
+
+componentFileAttachments
+[]
+
+mountedFormComponentAction
+null
+
+mountedFormComponentActionArguments
+[]
+
+mountedFormComponentActionData
+[]
+
+mountedFormComponentActionComponent
+null
+
+Context
+User
+
+Harsh Sanjaybhai Kharecha
+hkheracha363@gmail.com
+{    "id": 55,    "institute_id": 1,    "name": "Harsh Sanjaybhai Kharecha",    "email": "hkheracha363@gmail.com",    "google_id": null,    "google_email": null,    "google_access_token": null,    "google_refresh_token": null,    "google_token_expires_at": null,    "email_verified_at": null,    "is_approved": 1,    "approved_at": "2026-06-11 14:58:43",    "google_token": null,    "created_at": "2026-06-11T09:28:43.000000Z",    "updated_at": "2026-06-11T09:28:43.000000Z",    "approved_by": 4,    "last_login_ip": null,    "last_login_mac": null,    "last_login_location": null,    "branch_id": 4,    "roles": [        {            "id": 5,            "name": "student",            "guard_name": "web",            "created_at": "2026-01-05T22:31:44.000000Z",            "updated_at": "2026-01-05T22:31:44.000000Z",            "pivot": {                "model_type": "App\\Models\\User",                "model_id": 55,                "role_id": 5            }
+        }
+    ]
+}
+
+
+
+Versions
+Php Version
+8.3.30
+
+Laravel Version
+10.46.0
+
+Laravel Locale
+en
+
+Laravel Config Cached
+
+false
+App Debug
+
+true
+App Env
+local
+
+Exception
+Raw Sql
+insert into `assignment_submissions` (`student_id`, `course_item_id`, `file`, `note`, `status`, `submitted_at`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?, ?)
+
+12
+Queries
+11:58:32 PM
+
+1.14ms
+mysql
+select * from `users` where `id` = 55 limit 1
+
+
+
+1 query parameter
+11:58:32 PM
+
+0.33ms
+mysql
+select `roles`.*, `model_has_roles`.`model_id` as `pivot_model_id`, `model_has_roles`.`role_id` as `pivot_role_id`, `model_has_roles`.`model_type` as `pivot_model_type` from `roles` inner join `model_has_roles` on `roles`.`id` = `model_has_roles`.`role_id` where `model_has_roles`.`model_id` in (55) and `model_has_roles`.`model_type` = App\Models\User
+
+
+
+1 query parameter
+11:58:32 PM
+
+0.26ms
+mysql
+select exists(select * from `google_tokens` where `google_tokens`.`user_id` = 55 and `google_tokens`.`user_id` is not null) as `exists`
+
+
+
+1 query parameter
+11:58:32 PM
+
+0.23ms
+mysql
+select * from `course_items` where `course_items`.`id` = 1743 limit 1
+
+
+
+1 query parameter
+11:58:32 PM
+
+0.21ms
+mysql
+select * from `course_articles` where `course_articles`.`course_item_id` in (1743)
+
+
+11:58:32 PM
+
+0.19ms
+mysql
+select * from `course_videos` where `course_videos`.`course_item_id` in (1743)
+
+
+11:58:32 PM
+
+0.2ms
+mysql
+select * from `course_quizzes` where `course_quizzes`.`course_item_id` in (1743)
+
+
+11:58:32 PM
+
+0.2ms
+mysql
+select * from `course_assignments` where `course_assignments`.`course_item_id` in (1743)
+
+
+11:58:32 PM
+
+0.27ms
+mysql
+select * from `course_live_classes` where `course_live_classes`.`course_item_id` in (1743)
+
+
+11:58:32 PM
+
+0.27ms
+mysql
+select * from `batches` where `batches`.`id` = 4 and `batches`.`branch_id` = 4 limit 1
+
+
+
+2 query parameters
+11:58:32 PM
+
+0.35ms
+mysql
+select * from `students` where `user_id` = 55 and `students`.`branch_id` = 4 limit 1
+
+
+
+2 query parameters
+11:58:32 PM
+
+0.26ms
+mysql
+select * from `assignment_submissions` where (`student_id` = 55 and `course_item_id` = 1743) limit 1
+
+
+
+2 query parameters
+
+·
+Source
+·
+Docs
+·
+Laravel
+
+Why not submit
+
+The assignment submission is failing due to a **Database Foreign Key mismatch** inside your Laravel backend code.
+
+### Why it failed
+
+Look closely at the error message and how your code is mapping the user data:
+
+* **The Error:** The `assignment_submissions` table expects the `student_id` column to reference a valid primary key `id` inside the **`students`** table.
+* **The Bug:** Inside `ViewCourseItem.php` on line 515, you are saving the submission using:
+`'student_id' => auth()->id(),`
+* **The Problem:** `auth()->id()` returns your **Authenticated User ID** (which is `55`). However, `55` is your ID in the `users` table, not your ID in the `students` table! Since there is no row in the `students` table where `id = 55`, MySQL rejects the insert statement to protect database integrity.
+
+---
+
+### The Fix
+
+You need to update your Filament page component code (`ViewCourseItem.php`) to fetch the actual `id` from the `students` table instead of using the `user_id` directly.
+
+Locate your `submitAssignment` method around line 515 and change the database mapping:
+
+```php
+/*
+|--------------------------------------------------------------------------
+| SAVE SUBMISSION
+|--------------------------------------------------------------------------
+*/
+
+// 1. Fetch the actual student record linked to the logged-in user
+$student = \App\Models\Student::where('user_id', auth()->id())->first();
+
+if (!$student) {
+    // Optional: handle exception if user is logged in but has no student profile
+    throw new \Exception("Student profile not found for this user.");
+}
+
+$submission = \App\Models\AssignmentSubmission::updateOrCreate(
+    [
+        // CHANGE THIS LINE: Use the student primary key, not auth()->id()
+        'student_id' => $student->id, 
+
+        'course_item_id' => $this->item->id,
+    ],
+    [
+        'file' => $path,
+
+        'note' => $this->assignment_notes,
+
+        'status' => 'submitted',
+    ]
+);
+
+```
+
+### Why this fixes it
+
+If you look at the SQL query logs provided in your error report, the app actually looks up the student correctly right before attempting the insert:
+`select * from students where user_id = 55 and students.branch_id = 4 limit 1`
+
+This confirms that the `students` table treats `55` as a `user_id` column rather than its main `id` column. Making this small modification ensures the correct key is sent over, allowing your assignment to post successfully.
