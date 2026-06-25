@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L17 Prototypes & Classes</title>
+</head>
+
+<body>
+    <h1>Lecture 17: Prototypes, Classes & OOP Basics - Practical Tasks</h1>
+
+    <h2>Task 1: Create a Simple Object</h2>
+    <h3>Description: Create a basic JavaScript object and access its properties.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create an object <span>`user`</span></li>
+        <li>Include properties: <span>`name`</span> and <span>`age`</span></li>
+        <li>Display <span>`user.name`</span></li>
+        <li>Display <span>`user.age`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John <br>25</output>
+
+    <h2>Task 2: Explore Object Prototype</h2>
+    <h3>Description: Inspect an object's prototype.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create an object <span>`user`</span></li>
+        <li>Print <span>`user.__proto__`</span></li>
+        <li>Print <span>`Object.getPrototypeOf(user)`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Prototype object details in console</output>
+
+    <h2>Task 3: Understand Prototype Chain</h2>
+    <h3>Description: Observe inherited methods from prototype chain.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create an object <span>`user`</span></li>
+        <li>Call <span>`user.toString()`</span></li>
+        <li>Understand where <span>`toString()`</span> comes from</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>[object Object]</output>
+
+    <h2>Task 4: Create Object Using Object.create()</h2>
+    <h3>Description: Implement inheritance using <span>`Object.create()`</span>.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create parent object <span>`person`</span> with method <span>`greet()`</span></li>
+        <li>Create child object using <span>`Object.create(person)`</span></li>
+        <li>Call <span>`user.greet()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Hello</output>
+
+    <h2>Task 5: Add Properties to Object.create()</h2>
+    <h3>Description: Combine inherited and own properties.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create object <span>`animal`</span> with method <span>`sound()`</span></li>
+        <li>Create <span>`dog`</span> using <span>`Object.create(animal)`</span></li>
+        <li>Add property <span>`dog.name = "Tommy"`</span></li>
+        <li>Print <span>`dog.name`</span> and call <span>`dog.sound()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Tommy <br>Animal Sound</output>
+
+    <h2>Task 6: Create a Constructor Function</h2>
+    <h3>Description: Build your first constructor function.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create function <span>`User(name)`</span></li>
+        <li>Assign <span>`this.name = name`</span></li>
+        <li>Create object using <span>`new User("John")`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John</output>
+
+    <h2>Task 7: Create Multiple Objects</h2>
+    <h3>Description: Reuse constructor functions.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create multiple objects using <span>`User`</span> constructor</li>
+        <li>Create <span>`user1`</span>, <span>`user2`</span>, <span>`user3`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John <br>Sarah <br>Mike</output>
+
+    <h2>Task 8: Add Prototype Method</h2>
+    <h3>Description: Share methods using prototype.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Add method <span>`User.prototype.greet`</span></li>
+        <li>Method should print greeting with name</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Hello John</output>
+
+    <h2>Task 9: Verify Shared Prototype</h2>
+    <h3>Description: Check method sharing between instances.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>`user1`</span> and <span>`user2`</span></li>
+        <li>Compare <span>`user1.greet === user2.greet`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>true</output>
+
+    <h2>Task 10: Inspect Constructor Prototype</h2>
+    <h3>Description: Explore prototype relationships.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Print <span>`User.prototype`</span></li>
+        <li>Print <span>`user.__proto__`</span></li>
+        <li>Verify both are same object</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>true (same reference)</output>
+
+    <h2>Task 11: Create Your First ES6 Class</h2>
+    <h3>Description: Build a basic ES6 class.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>`class User`</span></li>
+        <li>Create instance using <span>`new User()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Object instance created</output>
+
+    <h2>Task 12: Add Constructor to Class</h2>
+    <h3>Description: Initialize class properties.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Add <span>`constructor(name)`</span></li>
+        <li>Assign <span>`this.name = name`</span></li>
+        <li>Create instance with "John"</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John</output>
+
+    <h2>Task 13: Add Class Method</h2>
+    <h3>Description: Create reusable class methods.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Add method <span>`greet()`</span></li>
+        <li>Method should print greeting with name</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Hello John</output>
+
+    <h2>Task 14: Create Multiple Class Objects</h2>
+    <h3>Description: Reuse class blueprint.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>`user1`</span>, <span>`user2`</span>, <span>`user3`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John <br>Sarah <br>Mike</output>
+
+    <h2>Task 15: Create an Employee Class</h2>
+    <h3>Description: Build a real-world model.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Properties: <span>`name`</span>, <span>`role`</span></li>
+        <li>Method: <span>`getInfo()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>John - Developer</output>
+
+    <h2>Task 16: Create a Product Class</h2>
+    <h3>Description: Model products using class.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Properties: <span>`name`</span>, <span>`price`</span></li>
+        <li>Method: <span>`display()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Laptop ₹50000</output>
+
+    <h2>Task 17: Create a Bank Account Class</h2>
+    <h3>Description: Implement banking operations.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Methods: <span>`deposit()`</span></li>
+        <li><span>`withdraw()`</span></li>
+        <li><span>`getBalance()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Balance: 1500</output>
+
+    <h2>Task 18: Compare Class Prototype Methods</h2>
+    <h3>Description: Verify method sharing.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create <span>`user1`</span> and <span>`user2`</span></li>
+        <li>Compare <span>`user1.greet === user2.greet`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>true</output>
+
+    <h2>Task 19: Build a Student Management System</h2>
+    <h3>Description: Practice OOP design.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Class: <span>`Student`</span></li>
+        <li>Properties: <span>`name`</span>, <span>`course`</span></li>
+        <li>Method: <span>`getDetails()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Denish - JavaScript</output>
+
+    <h2>Task 20: Create an E-Commerce Product System</h2>
+    <h3>Description: Build a production-style object model.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Class: <span>`Product`</span></li>
+        <li>Properties: <span>`id`</span>, <span>`name`</span>, <span>`price`</span></li>
+        <li>Methods: <span>`displayProduct()`</span>, <span>`updatePrice()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>101 Laptop ₹50000 <br>Updated Price: ₹55000</output>
+</body>
+<script>
+    //  Task 1: Create a Simple Object
+
+    console.log("Task 1");
+
+    const user1 = {
+        name: "User1",
+        age: 25
+    };
+
+    console.log(user1.name);
+    console.log(user1.age);
+
+    //  Task 2: Explore Object Prototype
+    
+    console.log("Task 2");
+
+    const user2 = { name: "User2" };
+
+    console.log(user2.__proto__);
+    console.log(Object.getPrototypeOf(user2));
+
+    //  Task 3: Understand Prototype Chain
+   
+    console.log("Task 3");
+
+    const user3 = { name: "User3" };
+
+    console.log(user3.toString());
+
+    //  Task 4: Create Object Using Object.create()
+
+    console.log("Task 4");
+
+    const person = {
+        greet() {
+            console.log("Hello");
+        }
+    };
+
+    const user4 = Object.create(person);
+    user4.greet();
+
+    //  Task 5: Add Properties to Object.create()
+    
+    console.log("Task 5");
+
+    const animal = {
+        sound() {
+            console.log("Animal Sound");
+        }
+    };
+
+    const dog = Object.create(animal);
+
+    dog.name = "Tommy";
+
+    console.log(dog.name);
+    dog.sound();
+
+    //  Task 6: Create a Constructor Function
+    
+    console.log("Task 6");
+
+    function User(name) {
+        this.name = name;
+    }
+
+    const u1 = new User("User4");
+    console.log(u1.name);
+
+    //  Task 7: Create Multiple Objects
+
+    console.log("Task 7");
+
+    const user5 = new User("User5");
+    const user6 = new User("User6");
+    const user7 = new User("User7");
+
+    console.log(user5.name);
+    console.log(user6.name);
+    console.log(user7.name);
+
+    //  Task 8: Add Prototype Method
+
+    console.log("Task 8");
+
+    User.prototype.greet = function () {
+        console.log("Hello " + this.name);
+    };
+
+    const u8 = new User("Genius");
+    u8.greet();
+
+    //  Task 9: Verify Shared Prototype
+   
+    console.log("Task 9");
+
+    const user9a = new User("user8");
+    const user9b = new User("user9");
+
+    console.log(user9a.greet === user9b.greet);
+
+    //  Task 10: Inspect Constructor Prototype
+    
+    console.log("Task 10");
+
+    console.log(User.prototype);
+    console.log(user9a.__proto__);
+    console.log(User.prototype === user9a.__proto__);
+
+    //  Task 11: Create Your First ES6 Class
+    
+    console.log("Task 11");
+
+    class UserClass {}
+
+    const uc = new UserClass();
+    console.log(uc);
+
+    //  Task 12: Add Constructor to Class
+    
+    console.log("Task 12");
+
+    class User1 {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    const uc1 = new User1("Genius");
+    console.log(uc1.name);
+
+    //  Task 13: Add Class Method
+    
+    console.log("Task 13");
+
+    class User2 {
+        constructor(name) {
+            this.name = name;
+        }
+
+        greet() {
+            console.log("Hello " + this.name);
+        }
+    }
+
+    const uc2 = new User2("Genius");
+    uc2.greet();
+
+    //  Task 14: Create Multiple Class Objects
+    
+    console.log("Task 14");
+
+    const user14a = new User2("Genius");
+    const user14b = new User2("Sarah");
+    const user14c = new User2("Mike");
+
+    console.log(user14a.name);
+    console.log(user14b.name);
+    console.log(user14c.name);
+
+    //  Task 15: Create an Employee Class
+    
+    console.log("Task 15");
+
+    class Employee {
+        constructor(name, role) {
+            this.name = name;
+            this.role = role;
+        }
+
+        getInfo() {
+            console.log(`${this.name} - ${this.role}`);
+        }
+    }
+
+    const emp = new Employee("Genius", "Developer");
+    emp.getInfo();
+
+    //  Task 16: Create a Product Class
+
+    console.log("Task 16");
+
+    class Product {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        display() {
+            console.log(`${this.name} ₹${this.price}`);
+        }
+    }
+
+    const p1 = new Product("Laptop", 50000);
+    p1.display();
+    
+    //  Task 17: Create a Bank Account Class
+
+    console.log("Task 17");
+
+    class BankAccount {
+        constructor(balance = 0) {
+            this.balance = balance;
+        }
+
+        deposit(amount) {
+            this.balance += amount;
+        }
+
+        withdraw(amount) {
+            this.balance -= amount;
+        }
+
+        getBalance() {
+            console.log("Balance: " + this.balance);
+        }
+    }
+
+    const acc = new BankAccount(1000);
+    acc.deposit(500);
+    acc.withdraw(50);
+    acc.deposit(600);
+    acc.withdraw(99);
+    acc.getBalance();
+
+    //  Task 18: Compare Class Prototype Methods
+
+    console.log("Task 18");
+
+    class User4 {
+        greet() {
+            console.log("Hello");
+        }
+    }
+
+    const user18a = new User4();
+    const user18b = new User4();
+
+    console.log(user18a.greet === user18b.greet);    
+
+    //  Task 19: Build a Student Management System
+
+    console.log("Task 19");
+
+    class Student {
+        constructor(name, course) {
+            this.name = name;
+            this.course = course;
+        }
+
+        getDetails() {
+            console.log(`${this.name} - ${this.course}`);
+        }
+    }
+
+    const s1 = new Student("Genius", "JavaScript");
+    s1.getDetails();    
+
+    //  Task 20: Create an E-Commerce Product System
+
+    console.log("Task 20");
+
+    class ProductSystem {
+        constructor(id, name, price) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+        }
+
+        displayProduct() {
+            console.log(`${this.id} ${this.name} ₹${this.price}`);
+        }
+
+        updatePrice(newPrice) {
+            this.price = newPrice;
+            console.log("Updated Price: ₹" + this.price);
+        }
+    }
+
+    const product = new ProductSystem(101, "Laptop", 50000);
+
+    product.displayProduct();
+    product.updatePrice(55000);    
+
+</script>
+
+</html>
