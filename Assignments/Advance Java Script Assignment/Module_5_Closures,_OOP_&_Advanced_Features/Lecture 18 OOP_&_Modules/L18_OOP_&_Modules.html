@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L18 OOP & Modules</title>
+</head>
+
+<body>
+    <h1>Lecture 18: OOP Concepts & JavaScript Modules - Practical Tasks</h1>
+
+    <h2>Task 1: Create Your First Class</h2>
+    <h3>Description: Create a basic class and instantiate an object.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create class <span>`User`</span></li>
+        <li>Add property <span>`name`</span></li>
+        <li>Create object: <span>`const user = new User("Genius")`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 2: Create Multiple Objects</h2>
+    <h3>Description: Use one class to create multiple instances.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create objects: <span>`user1`</span>, <span>`user2`</span>, <span>`user3`</span></li>
+        <li>Assign different names to each object</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius<br>Sarah<br>Mike</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 3: Create a Method</h2>
+    <h3>Description: Add behavior to a class.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create method <span>`greet()`</span></li>
+        <li>Display greeting message using object's name</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Hello Genius</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 4: Basic Inheritance</h2>
+    <h3>Description: Create parent and child classes.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create parent class <span>`Animal`</span></li>
+        <li>Create method <span>`eat()`</span></li>
+        <li>Create child class <span>`Dog`</span></li>
+        <li>Call <span>`dog.eat()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Eating...</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 5: Multiple Child Classes</h2>
+    <h3>Description: Reuse parent functionality.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create parent class <span>`Animal`</span></li>
+        <li>Create child classes <span>`Dog`</span>, <span>`Cat`</span>, <span>`Bird`</span></li>
+        <li>All classes should inherit <span>`eat()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Eating...<br>Eating...<br>Eating...</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 6: Method Overriding</h2>
+    <h3>Description: Practice polymorphism through method overriding.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create parent class <span>`Animal`</span></li>
+        <li>Create method <span>`sound()`</span></li>
+        <li>Create child class <span>`Dog`</span></li>
+        <li>Override <span>`sound()`</span> method</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Bark</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 7: Polymorphism Challenge</h2>
+    <h3>Description: Same method, different behavior.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create classes <span>`Dog`</span>, <span>`Cat`</span>, <span>`Cow`</span></li>
+        <li>Implement <span>`sound()`</span> method in each class</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Bark<br>Meow<br>Moo</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 8: Encapsulation Using Private Fields</h2>
+    <h3>Description: Hide internal data using private fields.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create class <span>`BankAccount`</span></li>
+        <li>Create private field <span>`#balance`</span></li>
+        <li>Create methods <span>`deposit()`</span> and <span>`getBalance()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>500</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 9: Prevent Direct Access</h2>
+    <h3>Description: Verify encapsulation.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Try accessing <span>`account.#balance`</span></li>
+        <li>Observe JavaScript error</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Syntax Error / Private field cannot be accessed</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 10: Student Management System</h2>
+    <h3>Description: Apply OOP concepts in a practical example.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create class <span>`Student`</span></li>
+        <li>Add properties <span>`name`</span> and <span>`course`</span></li>
+        <li>Create method <span>`getDetails()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius - JavaScript</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 11: Abstraction Example</h2>
+    <h3>Description: Hide complex implementation details.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create class <span>`Payment`</span></li>
+        <li>Create method <span>`processPayment()`</span></li>
+        <li>Internally call:
+            <ul>
+                <li><span>`validate()`</span></li>
+                <li><span>`connectBank()`</span></li>
+                <li><span>`completeTransaction()`</span></li>
+            </ul>
+        </li>
+        <li>User should only call <span>`processPayment()`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Payment Processed Successfully</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 12: Create First ES Module</h2>
+    <h3>Description: Export data from another file.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create file <span>`user.js`</span></li>
+        <li>Export <span>`name`</span></li>
+        <li>Import and display it in <span>`app.js`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 13: Named Exports</h2>
+    <h3>Description: Export multiple values from a module.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Export <span>`name`</span>, <span>`age`</span>, <span>`city`</span> from <span>`user.js`</span></li>
+        <li>Import all values in <span>`app.js`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius<br>25<br>Ahmedabad</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 14: Default Export</h2>
+    <h3>Description: Create a default export.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create class <span>`Product`</span></li>
+        <li>Export it as default from <span>`product.js`</span></li>
+        <li>Import and create object in <span>`app.js`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Product Created</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 15: Mix Default and Named Exports</h2>
+    <h3>Description: Use both export styles together.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Export default <span>`Product`</span></li>
+        <li>Export named value <span>`taxRate`</span></li>
+        <li>Import both in <span>`app.js`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Product Created<br>18%</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 16: Import Everything</h2>
+    <h3>Description: Use namespace imports.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Export <span>`name`</span>, <span>`age`</span>, <span>`city`</span></li>
+        <li>Import using <span>`* as User`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius<br>25<br>Ahmedabad</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 17: Rename Imports</h2>
+    <h3>Description: Import values using aliases.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Import <span>`name as userName`</span></li>
+        <li>Display imported value</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Genius</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 18: User Module System</h2>
+    <h3>Description: Create a reusable module.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create class <span>`User`</span> in <span>`user.js`</span></li>
+        <li>Export the class</li>
+        <li>Import and create object in <span>`app.js`</span></li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Hello Genius</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 19: Product & Cart Modules</h2>
+    <h3>Description: Split application into modules.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create files:
+            <ul>
+                <li><span>`product.js`</span></li>
+                <li><span>`cart.js`</span></li>
+                <li><span>`app.js`</span></li>
+            </ul>
+        </li>
+        <li>Add products</li>
+        <li>Add products to cart</li>
+        <li>View cart items</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>Product Added<br>Added To Cart<br>Cart Items Displayed</output>
+    <h3>Answer: Check in console</h3>
+
+    <h2>Task 20: Mini E-Commerce Application</h2>
+    <h3>Description: Combine OOP and Modules in a complete project.</h3>
+    <h3>Requirements:</h3>
+    <ul>
+        <li>Create modules:
+            <ul>
+                <li><span>`user.js`</span></li>
+                <li><span>`product.js`</span></li>
+                <li><span>`cart.js`</span></li>
+                <li><span>`order.js`</span></li>
+                <li><span>`app.js`</span></li>
+            </ul>
+        </li>
+        <li>User Login</li>
+        <li>Product Listing</li>
+        <li>Add To Cart</li>
+        <li>Place Order</li>
+    </ul>
+    <h3>Expected Output:</h3>
+    <output>User Logged In<br>Products Listed<br>Product Added To Cart<br>Order Placed Successfully</output>
+    <h3>Answer: Check in console</h3>
+
+</body>
+<script>
+
+    // Task 1: Create Your First Class
+
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+
+        greet() {
+            console.log(`Hello ${this.name}`);
+        }
+    }
+
+    const user = new User("Genius");
+    console.log("Task 1:", user.name);
+
+    // Task 2: Create Multiple Objects
+    
+    console.log("Task 2:");
+
+    const user1 = new User("Genius");
+    const user2 = new User("Sarah");
+    const user3 = new User("Mike");
+
+    console.log(user1.name);
+    console.log(user2.name);
+    console.log(user3.name);
+
+    // Task 3: Create a Method
+    
+    console.log("Task 3:");
+    
+    user.greet();
+    
+    // Task 4: Basic Inheritance
+    
+    console.log("Task 4:");
+
+    class Animal {
+        eat() {
+            console.log("Eating...");
+        }
+
+        sound() {
+            console.log("Animal Sound");
+        }
+    }
+
+    class Dog extends Animal { }
+
+    const dog = new Dog();
+
+    dog.eat();
+
+    // Task 5: Multiple Child Classes
+    
+    console.log("Task 5:");
+    
+    class Cat extends Animal { }
+    class Bird extends Animal { }
+
+    new Dog().eat();
+    new Cat().eat();
+    new Bird().eat();
+    
+    // Task 6: Method Overriding
+    
+    console.log("Task 6:");
+    
+    class DogOverride extends Animal {
+        sound() {
+            console.log("Bark");
+        }
+    }
+    
+    new DogOverride().sound();
+    
+    // Task 7: Polymorphism Challenge
+    
+    console.log("Task 7:");
+    
+    class DogPoly {
+        sound() {
+            console.log("Bark");
+        }
+    }
+
+    class CatPoly {
+        sound() {
+            console.log("Meow");
+        }
+    }
+
+    class CowPoly {
+        sound() {
+            console.log("Moo");
+        }
+    }
+
+    new DogPoly().sound();
+    new CatPoly().sound();
+    new CowPoly().sound();
+    
+    // Task 8: Encapsulation Using Private Fields
+    
+    console.log("Task 8:");
+    
+    class BankAccount {
+        #balance = 0;
+
+        deposit(amount) {
+            this.#balance += amount;
+        }
+
+        getBalance() {
+            return this.#balance;
+        }
+    }
+
+    const account = new BankAccount();
+    account.deposit(500);
+    account.deposit(1400);
+
+    console.log(account.getBalance());
+    
+    // Task 9: Prevent Direct Access
+    
+    console.log("Task 9:");
+    
+    // console.log(account.#balance);
+    // This will throw a JavaScript error
+    
+    // Task 10: Student Management System
+    
+    console.log("Task 10:");
+    
+    class Student {
+        constructor(name, course) {
+            this.name = name;
+            this.course = course;
+        }
+
+        getDetails() {
+            return `${this.name} - ${this.course}`;
+        }
+    }
+
+    const student = new Student("Genius", "JavaScript");
+
+    console.log(student.getDetails());
+
+    // Task 11: Abstraction Example
+    
+    console.log("Task 11:");
+    
+    class Payment {
+        validate() {
+            console.log("Validating...");
+        }
+
+        connectBank() {
+            console.log("Connecting Bank...");
+        }
+
+        completeTransaction() {
+            console.log("Transaction Completed");
+        }
+
+        processPayment() {
+            this.validate();
+            this.connectBank();
+            this.completeTransaction();
+        }
+    }
+
+    const payment = new Payment();
+    payment.processPayment();
+
+    // Task 12: Create First ES Module
+    
+    console.log("Task 12:");
+    
+    const moduleUserName = "Genius";
+
+    console.log(moduleUserName);
+
+    // Task 13: Named Exports
+    
+    console.log("Task 13:");
+    
+    const name = "Genius";
+    const age = 25;
+    const city = "Ahmedabad";
+
+    console.log(name);
+    console.log(age);
+    console.log(city);
+
+    // Task 14: Default Export
+    
+    console.log("Task 14:");
+
+    class Product {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    const product = new Product("Laptop");
+    console.log("Product Created");
+
+    // Task 15: Mix Default and Named Exports
+    
+    console.log("Task 15:");
+    
+    const taxRate = "18%";
+
+    console.log("Product Created");
+    console.log(taxRate);
+
+    // Task 16: Import Everything
+    
+    console.log("Task 16:");
+    
+    const UserData = {
+        name: "Genius",
+        age: 25,
+        city: "Ahmedabad"
+    };
+
+    console.log(UserData.name);
+    console.log(UserData.age);
+    console.log(UserData.city);
+
+    // Task 17: Rename Imports
+    
+    console.log("Task 17:");
+    
+    const userName = name;
+    
+    console.log(userName);
+    
+    // Task 18: User Module System
+    
+    console.log("Task 18:");
+
+    class UserModule {
+        constructor(name) {
+            this.name = name;
+        }
+
+        greet() {
+            console.log(`Hello ${this.name}`);
+        }
+    }
+
+    const moduleUser = new UserModule("Genius");
+    moduleUser.greet();
+    
+    // Task 19: Product & Cart Modules
+    
+    console.log("Task 19:");
+    
+    class Cart {
+        constructor() {
+            this.items = [];
+        }
+
+        addProduct(product) {
+            this.items.push(product);
+            console.log("Added To Cart");
+        }
+
+        viewCart() {
+            console.log(this.items);
+        }
+    }
+
+    const p1 = new Product("Laptop");
+    const cart = new Cart();
+
+    cart.addProduct(p1);
+    cart.viewCart();
+
+    // Task 20: Mini E-Commerce Application
+    
+    console.log("Task 20:");
+    
+    class EcommerceUser {
+        constructor(name) {
+            this.name = name;
+        }
+
+        login() {
+            console.log("User Logged In");
+        }
+    }
+
+    class EcommerceProduct {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+    }
+
+    class EcommerceCart {
+        constructor() {
+            this.items = [];
+        }
+
+        addToCart(product) {
+            this.items.push(product);
+            console.log("Product Added To Cart");
+        }
+    }
+
+    class Order {
+        placeOrder() {
+            console.log("Order Placed Successfully");
+        }
+    }
+
+
+    const ecommerceUser = new EcommerceUser("Genius");
+    ecommerceUser.login();
+
+    console.log("Products Listed");
+
+    const ecommerceProduct = new EcommerceProduct("Laptop", 50000);
+
+    const ecommerceCart = new EcommerceCart();
+    ecommerceCart.addToCart(ecommerceProduct);
+
+    const order = new Order();
+    order.placeOrder();
+
+</script>
+
+</html>
