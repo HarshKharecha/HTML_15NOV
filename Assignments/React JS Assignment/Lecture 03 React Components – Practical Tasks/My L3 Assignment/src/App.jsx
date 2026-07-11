@@ -42,7 +42,8 @@
 
 // export default App
 
-import React from 'react';
+import { useState } from 'react'
+import './App.css'
 
 // Default Imports from components folder (Task 13 & 14)
 import Welcome from './components/Welcome';
@@ -67,83 +68,123 @@ import NewsLayout from './components/NewsLayout';
 import { getAppName, calculateTax, formatDate } from './utils/helperUtils';
 
 function App() {
+  const layouts = {
+    topBar: {
+      background: '#eff6ff',
+      borderBottom: '1px solid #bfdbfe',
+      padding: '12px 24px',
+      textAlign: 'right',
+      fontSize: '13px',
+      color: '#1e40af',
+      fontWeight: '500'
+    },
+    section: {
+      maxWidth: '1200px',
+      margin: '40px auto',
+      padding: '0 20px'
+    },
+    sectionTitle: {
+      fontSize: '1.75rem',
+      fontWeight: '700',
+      marginBottom: '20px',
+      color: '#1e293b',
+      borderBottom: '2px solid #e2e8f0',
+      paddingBottom: '8px'
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+      gap: '29px',
+      marginTop: '20px'
+    },
+    flexGroup: {
+      display: 'flex',
+      gap: '20px',
+      flexWrap: 'wrap',
+      marginTop: '20px'
+    }
+  };
+
   return (
     <div>
       {/* --- TASK 15: Named Export Output --- */}
-      <div style={{ background: '#ffeef0', padding: '10px', textAlign: 'right', fontSize: '12px' }}>
-        <span><strong>Application:</strong> {getAppName()} | </span>
-        <span><strong>Date:</strong> {formatDate()} | </span>
-        <span><strong>Tax Calculation Preview ($100 base):</strong> ${calculateTax(100)}</span>
+      <div style={layouts.topBar}>
+        <span><strong>Portal:</strong> {getAppName()} 💡 </span>
+        <span style={{ margin: '0 15px' }}>|</span>
+        <span><strong>Date:</strong> {formatDate()} </span>
+        <span style={{ margin: '0 15px' }}>|</span>
+        <span><strong>Tax (100 Base):</strong> ₹{calculateTax(100)}</span>
       </div>
 
       {/* --- TASK 20: Simple E-Commerce Homepage Ecosystem --- */}
       <Header />               {/* Component 1: Header */}
       <Navbar />               {/* Component 2: Category Menu / Navigation */}
-      
+
       {/* Component 3: Banner */}
-      <div style={{ backgroundColor: '#ffc107', padding: '30px', textAlign: 'center', margin: '15px 0' }}>
-        <h2>Mega Summer Sale! Up to 50% Off!</h2>
+      <div style={{ backgroundColor: '#2563eb', color: 'white', padding: '40px 20px', textAlign: 'center', boxShadow: 'inset 0 -10px 20px rgba(0,0,0,0.05)' }}>
+        <h2 style={{ fontSize: '2rem', margin: '0 0 10px 0' }}>Mega Summer Sale! Up to 50% Off!</h2>
+        <p style={{ opacity: 0.9, margin: 0 }}>Premium builds, unparalleled performance packages.</p>
       </div>
 
       {/* Component 4: Reusable Product Cards (Rendered 5 times: Task 12 & Task 20) */}
-      <div style={{ padding: '20px' }}>
-        <h3>Featured Products (Task 12: Identical Reusability 5x)</h3>
-        <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+      <main style={layouts.section}>
+        <h3 style={layouts.sectionTitle}>Featured Products (Task 12: Identical Reusability 5x)</h3>
+        <div style={layouts.grid}>
           <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
         </div>
-      </div>
+      </main>
 
       <hr />
 
       {/* --- SHOWCASING OTHER INDIVIDUAL TASKS (1 - 10) --- */}
-      <div style={{ padding: '20px' }}>
-        <h2>Individual Practice Component Suite (Tasks 1-10)</h2>
+      <section style={layouts.section}>
+        <h2 style={layouts.sectionTitle}>Individual Practice Component Suite (Tasks 1-10)</h2>
         <Welcome />
         <LoginMessage />
-        
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', margin: '20px 0' }}>
+
+        <div style={layouts.flexGroup}>
           <StudentProfile />
           <UserCard />
           <CourseInfo />
           <EmployeeDetails />
         </div>
-      </div>
+      </section>
 
       <hr />
 
       {/* --- TASK 11 & 16-19: Complex Component Assemblies --- */}
-      <div style={{ padding: '20px' }}>
-        <h2>Structural Layout Views (Tasks 11, 16, 17, 18, 19)</h2>
-        
-        <details style={{ margin: '10px 0', padding: '10px', border: '1px solid #aaa' }}>
-          <summary><strong>Click to expand Task 11: Main Content View</strong></summary>
-          <MainContent />
+      <section style={layouts.section}>
+        <h2 style={layouts.sectionTitle}>Structural Layout Views (Tasks 11, 16, 17, 18, 19)</h2>
+
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary>View Task 11: Main Content View</summary>
+          <div style={{ padding: '15px 0' }}><MainContent /></div>
         </details>
 
-        <details style={{ margin: '10px 0', padding: '10px', border: '1px solid #aaa' }}>
-          <summary><strong>Click to expand Task 16: College Homepage Layout</strong></summary>
-          <CollegeLayout />
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary>View Task 16: College Homepage Layout</summary>
+          <div style={{ padding: '15px 0' }}><CollegeLayout /></div>
         </details>
 
-        <details style={{ margin: '10px 0', padding: '10px', border: '1px solid #aaa' }}>
-          <summary><strong>Click to expand Task 17: Restaurant Homepage Layout</strong></summary>
-          <RestaurantLayout />
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary>View Task 17: Restaurant Homepage Layout</summary>
+          <div style={{ padding: '15px 0' }}><RestaurantLayout /></div>
         </details>
 
-        <details style={{ margin: '10px 0', padding: '10px', border: '1px solid #aaa' }}>
-          <summary><strong>Click to expand Task 18: Personal Portfolio Layout</strong></summary>
-          <PortfolioLayout />
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary>View Task 18: Personal Portfolio Layout</summary>
+          <div style={{ padding: '15px 0' }}><PortfolioLayout /></div>
         </details>
 
-        <details style={{ margin: '10px 0', padding: '10px', border: '1px solid #aaa' }}>
-          <summary><strong>Click to expand Task 19: News Website Layout</strong></summary>
-          <NewsLayout />
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary>View Task 19: News Website Layout</summary>
+          <div style={{ padding: '15px 0' }}><NewsLayout /></div>
         </details>
-      </div>
+      </section>
 
       <Footer /> {/* Component 5: Footer (Task 20) */}
     </div>
