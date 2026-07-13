@@ -14,6 +14,10 @@ import StudentReportCard from './components/StudentReportCard'
 import UseDefaultProps from './components/UseDefaultProps'
 import ArrayAndObject from './components/ArrayAndObject'
 import UserStatus from './components/UserStatus'
+import Navbar from './components/Navbar'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Parent from './components/Parent'
 
 function App() {
   // ProductCard
@@ -335,6 +339,9 @@ function App() {
     }
   ];
 
+  // Simple Props Drilling Example
+  const currentTheme = "Dark Mode";
+
   return (
     <>
       <StudentInfo name="Genius" age="25" course="Full Stack Devloper" />
@@ -410,6 +417,64 @@ function App() {
           <UserStatus name="Diya Nair" isActive={false} />
         </div>
       </div>
+      <section>
+        <h2>Tasks 16, 17, 18, 19, 20:</h2>
+
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary><strong>View Task 16: E-Commerce Product Listing</strong></summary>
+          <div style={{ padding: '15px 0' }}>
+            <ProductCard
+              images={productImages}
+              names={productNames}
+              prices={prices}
+            />
+          </div>
+        </details>
+
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary><strong>View Task 17: College Studeent Directory</strong></summary>
+          <div style={{ padding: '15px 0' }}><StudentInfo name="Genius" age="25" course="Full Stack Devloper" /></div>
+        </details>
+
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary><strong>View Task 18: Netflix Movie Gallery</strong></summary>
+          <div style={{ padding: '15px 0' }}>
+            <MovieCard
+              moviecovers={MovieCovers}
+              names={MovieTitles}
+              movieratings={MovieRatings}
+              moviereleases={MovieReleases}
+            />
+          </div>
+        </details>
+
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary><strong>View Task 19: Simple Props Drilling Example</strong></summary>
+          <div style={{ padding: '15px 0' }}>
+            <div style={{ padding: '20px', border: '2px solid #333' }}>
+              <h1>App Component</h1>
+              <p>Data originates here.</p>
+              <hr />
+              {/* Passing the prop to Parent */}
+              <Parent theme={currentTheme} />
+            </div>
+          </div>
+        </details>
+
+        <details style={{ margin: '15px 0', padding: '15px' }}>
+          <summary><strong>View Task 20: Online Shopping Homepage</strong></summary>
+          <div style={{ padding: '15px 0' }}>
+            <Header />
+            <Navbar />
+            <ProductCard
+              images={productImages}
+              names={productNames}
+              prices={prices}
+            />
+            <Footer />
+          </div>
+        </details>
+      </section>
     </>
   )
 }
