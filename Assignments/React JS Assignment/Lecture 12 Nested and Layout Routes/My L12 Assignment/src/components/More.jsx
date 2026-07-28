@@ -37,9 +37,10 @@ import FoodRestaurants from '../pages/FoodDeliveryAdminPanel/FoodRestaurants';
 import FoodDeliveryPartners from '../pages/FoodDeliveryAdminPanel/FoodDeliveryPartners';
 import FoodCustomers from '../pages/FoodDeliveryAdminPanel/FoodCustomers';
 import FoodReports from '../pages/FoodDeliveryAdminPanel/FoodReports';
-import { Task19Home, Task19Products, Task19Settings, Task19Users } from '../pages/IndexRouteImplementation/Task19Pages';
 import Task19Layout from '../pages/IndexRouteImplementation/Task19Layout';
-import { EnterpriseHome, EnterpriseOrders, EnterpriseProducts, EnterpriseReports, EnterpriseSettings, EnterpriseUsers } from '../pages/EnterpriseSubComponents/EnterprisePages';
+import { Task19Home, Task19Products, Task19Settings, Task19Users } from '../pages/IndexRouteImplementation/Task19Pages';
+import EnterpriseLayout from '../pages/EnterpriseSubComponents/EnterpriseLayout';
+import { EnterpriseHome, EnterpriseUsers, EnterpriseProducts, EnterpriseOrders, EnterpriseReports, EnterpriseSettings, } from '../pages/EnterpriseSubComponents/EnterprisePages';
 
 function More() {
     const styles = {
