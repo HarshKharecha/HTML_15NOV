@@ -1,6 +1,21 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 
 function ResponsiveCardWidth() {
+  const styles = {
+    container: {
+      padding: '20px',
+      backgroundColor: '#ffffff',
+      border: '1px solid #2563eb',
+      borderRadius: '12px',
+      margin: '10px 0',
+    },
+    starus: {
+      fontWeight: '600',
+      color: '#16a34a',
+      marginTop: '10px'
+    }
+  };
+
   const [cardWidth, setCardWidth] = useState(0);
   const cardRef = useRef(null);
 
@@ -18,9 +33,9 @@ function ResponsiveCardWidth() {
   }, []);
 
   return (
-    <div ref={cardRef} style={{ padding: '20px', backgroundColor: '#ffffff', border: '1px solid #2563eb', borderRadius: '12px' }}>
+    <div ref={cardRef} style={styles.container}>
       <h3>Task 16: Responsive Card Width</h3>
-      <p>Card Width: <strong>{cardWidth}px</strong></p>
+      <p style={styles.starus}>Card Width: <strong>{cardWidth}px</strong></p>
     </div>
   );
 }

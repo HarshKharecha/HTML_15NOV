@@ -3,6 +3,20 @@ import React, { useState, useEffect } from 'react';
 function NetworkStatus() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
+  const styles = {
+    container: {
+      padding: '20px',
+      backgroundColor: '#ffffff',
+      border: '1px solid #e2e8f0',
+      borderRadius: '12px',
+      margin: '10px 0',
+    },
+    starus: {
+      fontWeight: '600',
+      color: isOnline ? '#16a34a' : '#dc2626'
+    }
+  }
+
   // Task 7: Online/offline event listeners with cleanup
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
@@ -18,9 +32,9 @@ function NetworkStatus() {
   }, []);
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '12px' }}>
+    <div style={styles.container}>
       <h3>Task 7: Network Status</h3>
-      <p style={{ fontWeight: '600', color: isOnline ? '#16a34a' : '#dc2626' }}>
+      <p style={styles.starus}>
         Status: {isOnline ? '🟢 Online' : '🔴 Offline'}
       </p>
     </div>

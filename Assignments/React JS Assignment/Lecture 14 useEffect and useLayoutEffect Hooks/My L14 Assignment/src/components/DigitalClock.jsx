@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 function DigitalClock() {
+  const styles = {
+    container: {
+      padding: '20px',
+      backgroundColor: '#ffffff',
+      border: '1px solid #e2e8f0',
+      borderRadius: '12px',
+      margin: '10px 0',
+    },
+    times: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold',
+      color: '#2563eb'
+    }
+  }
+
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   // Task 3: Digital clock with setInterval and cleanup
@@ -13,9 +28,9 @@ function DigitalClock() {
   }, []);
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+    <div style={styles.container}>
       <h3>Task 3: Digital Clock</h3>
-      <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2563eb' }}>⏰ {time}</p>
+      <p style={styles.times}>⏰ {time}</p>
     </div>
   );
 }
