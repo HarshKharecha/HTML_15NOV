@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import optimusAvatar from '../assets/NicePng_optimus-prime-png_1168031.png';
 
 export const AuthContext = createContext();
 
@@ -9,7 +10,7 @@ export function AuthProvider({ children }) {
     setUser({
       username: username || 'Genius',
       role: 'Administrator',
-      avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Alex',
+      avatar: optimusAvatar,
     });
   };
 

@@ -17,7 +17,7 @@ function Footer() {
 
   return (
     <footer style={styles.footer}>
-      &copy; {new Date().getFullYear()} Student Management System - Lecture 15 Troopy Stack Assignment
+      &copy; {new Date().getFullYear()} Student Management System - by Harsh S Kharecha
     </footer>
   );
 }

@@ -35,6 +35,8 @@ function Header() {
       width: '36px',
       height: '36px',
       borderRadius: '50%',
+      objectFit: 'cover',
+      objectPosition: 'top',
       backgroundColor: colors.border,
     },
     userInfo: {
