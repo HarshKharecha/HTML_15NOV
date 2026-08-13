@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <p style={styles.text}>&copy; {new Date().getFullYear()} Troopy Stack - Smart Form System</p>
+      <p style={styles.text}>&copy; {new Date().getFullYear()} Smart Form System - by Harsh S Kharecha</p>
     </footer>
   );
 }

@@ -7,6 +7,7 @@ import Modal from './components/Modal';
 import AlertDialog from './components/AlertDialog';
 import VideoPlayer from './components/VideoPlayer';
 import SearchInput from './components/SearchInput';
+import Prectic from './components/Prectic';
 
 function App() {
   // Parent Refs for direct imperative method calls
@@ -56,6 +57,9 @@ function App() {
         <h2>Imperative Control Dashboard</h2>
 
         <div>
+
+          <Prectic />
+          
           {/* Section 1: Single Input Methods */}
           <div style={styles.card}>
             <h3 style={styles.cardTitle}>1. Single Input Ref</h3>
