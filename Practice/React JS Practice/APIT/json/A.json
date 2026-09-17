@@ -1,0 +1,44 @@
+{
+    "url": {
+        "url": "https://mocki.io/v1/f6adc40a-cdba-4487-94a9-34113cbbe1d6"
+    },
+    "user1": {
+        "room": {
+            "Living Room": {
+                "s1": true,
+                "s2": true,
+                "s3": false,
+                "s4": true,
+                "s5": true
+            },
+            "Kitchen": {
+                "s1": true,
+                "s2": true,
+                "s3": false,
+                "s4": true,
+                "s5": true
+            },
+            "Bedroom": {
+                "s1": true,
+                "s2": true,
+                "s3": false,
+                "s4": true,
+                "s5": true
+            },
+            "Bathroom": {
+                "s1": true,
+                "s2": true,
+                "s3": false,
+                "s4": true,
+                "s5": true
+            },
+            "Garage": {
+                "s1": true,
+                "s2": true,
+                "s3": false,
+                "s4": true,
+                "s5": true
+            }
+        }
+    }
+}

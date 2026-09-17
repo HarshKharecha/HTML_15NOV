@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 20px;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.rooms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.room-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: left;
+}
+
+.room-card h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.switches-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.switch-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.toggle-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.toggle-btn.on {
+  background-color: #e74c3c; /* Red for Turn Off */
+}
+
+.toggle-btn.on:hover {
+  background-color: #c0392b;
+}
+
+.toggle-btn.off {
+  background-color: #2ecc71; /* Green for Turn On */
+}
+
+.toggle-btn.off:hover {
+  background-color: #27ae60;
+}
+
+.loading, .error {
+  font-size: 1.2rem;
+  margin-top: 50px;
+  color: #555;
+}

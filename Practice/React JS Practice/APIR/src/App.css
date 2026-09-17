@@ -1,0 +1,149 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a; /* Dark tech background */
+  color: #f8fafc;
+  margin: 0;
+  padding: 20px;
+}
+
+.receiver-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.receiver-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 15px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.receiver-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #38bdf8;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.pulse-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #4ade80;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+.rooms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.room-card {
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 260px;
+  text-align: left;
+  border: 1px solid #334155;
+}
+
+.room-card h2 {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.led-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Individual LED Card Design */
+.led-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* LED OFF State Style */
+.led-badge.led-off {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #64748b;
+}
+
+.led-badge.led-off .led-light {
+  width: 14px;
+  height: 14px;
+  background-color: #475569;
+  border-radius: 50%;
+}
+
+/* LED ON State Style (Glowing Blue/Green LED) */
+.led-badge.led-on {
+  background-color: rgba(56, 189, 248, 0.1);
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+.led-badge.led-on .led-light {
+  width: 14px;
+  height: 14px;
+  background-color: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8; /* Glowing light effect */
+  animation: flicker 2s infinite alternate;
+}
+
+.switch-name {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.status-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+.loading, .error {
+  font-size: 1.2rem;
+  margin-top: 50px;
+  color: #94a3b8;
+}
