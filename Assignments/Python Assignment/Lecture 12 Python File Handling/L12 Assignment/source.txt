@@ -1,0 +1,4 @@
+Welcome to Python file handling!
+Line 2: Context managers (with open) close files automatically.
+Line 3: Reading all lines at once is simple with read().
+Line 4: Always handle FileNotFoundError when working with files.

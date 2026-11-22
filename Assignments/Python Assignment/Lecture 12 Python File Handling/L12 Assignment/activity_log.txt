@@ -1,0 +1,4 @@
+[Initial] User logged into the system.
+[Activity] Opened dashboard.
+[Activity] Uploaded assignment draft.
+[Activity] Downloaded practice notes.
